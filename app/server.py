@@ -12,7 +12,7 @@ import g1r
 STATIC = os.path.join(os.path.dirname(__file__), "static")
 OODLE_LIB = os.environ.get("OODLE_LIB", "/app/liboo2corelinux64.so.9")
 MAX_UPLOAD = 64 * 1024 * 1024          # .sav files are a few MB
-SESSION_TTL = 30 * 60                  # seconds
+SESSION_TTL = 5 * 60                   # seconds; the client silently re-uploads on expiry
 
 app = Flask(__name__, static_folder=None)
 app.config["MAX_CONTENT_LENGTH"] = MAX_UPLOAD

@@ -3,6 +3,7 @@ const $ = (s) => document.querySelector(s);
 const $$ = (s) => [...document.querySelectorAll(s)];
 
 let session = null;            // {token, filename, states}
+let loadedFile = null;         // cached File for silent session recovery (re-upload)
 let quests = [];               // [{id, key, name, state}]
 let attributes = [];           // [{id, set, name, label, value, tab, advanced}]
 let skills = [];               // [{id, label, category, tier, tiers}]
@@ -34,6 +35,7 @@ fileInput.onchange = () => fileInput.files[0] && upload(fileInput.files[0]);
 drop.addEventListener("drop", e => { const f = e.dataTransfer.files[0]; if (f) upload(f); });
 
 async function upload(file) {
+  loadedFile = file;                       // keep it for silent session recovery
   $("#load-error").classList.add("hidden");
   $("#loading").classList.remove("hidden");
   const fd = new FormData(); fd.append("save", file);
@@ -56,6 +58,19 @@ async function upload(file) {
   } finally {
     $("#loading").classList.add("hidden");
   }
+}
+
+// Silent session recovery. The server only keeps the decompressed save in memory
+// for a few minutes; if it has expired we re-upload the cached file to get a fresh
+// token. The save bytes are identical, so every offset-based id — and therefore all
+// pending edits — stays valid. We update only the token and leave edit state alone.
+async function reauth() {
+  if (!loadedFile) throw new Error("session expired — please re-upload your save");
+  const fd = new FormData(); fd.append("save", loadedFile);
+  const r = await fetch("/api/load", { method: "POST", body: fd });
+  const j = await r.json().catch(() => ({}));
+  if (!r.ok) throw new Error(j.error || "session recovery failed");
+  session.token = j.token;
 }
 
 // ---------------------------------------------------------------- editor
@@ -574,21 +589,28 @@ $("#clear").onclick = () => {
 $("#generate").onclick = async () => {
   const btn = $("#generate");
   btn.disabled = true; btn.textContent = "Recompiling…";
+  const doPatch = () => fetch("/api/patch", {
+    method: "POST", headers: { "Content-Type": "application/json" },
+    body: JSON.stringify({
+      token: session.token, filename: session.filename,
+      attr_changes: [...attrChanges].map(([id, value]) => ({ id, value })),
+      inv_changes: [...invChanges].map(([id, value]) => ({ id, value })),
+      inv_adds: invAdds.map(a => ({ item: a.item, count: a.count })),
+      passage_changes: [...passChanges].map(([name, value]) => ({ name, value })),
+      passage_adds: passAdds.map(a => ({ name: a.name, value: a.value })),
+      crime_forgive: [...crimeForgive].map(k => ({ criminal: k.split("|")[0], guild: k.split("|").slice(1).join("|") })),
+      skill_changes: [...skillChanges].map(([id, new_tier]) => ({ id, new_tier })),
+      quest_changes: [...questChanges].map(([id, new_state]) => ({ id, new_state })),
+    }),
+  });
   try {
-    const r = await fetch("/api/patch", {
-      method: "POST", headers: { "Content-Type": "application/json" },
-      body: JSON.stringify({
-        token: session.token, filename: session.filename,
-        attr_changes: [...attrChanges].map(([id, value]) => ({ id, value })),
-        inv_changes: [...invChanges].map(([id, value]) => ({ id, value })),
-        inv_adds: invAdds.map(a => ({ item: a.item, count: a.count })),
-        passage_changes: [...passChanges].map(([name, value]) => ({ name, value })),
-        passage_adds: passAdds.map(a => ({ name: a.name, value: a.value })),
-        crime_forgive: [...crimeForgive].map(k => ({ criminal: k.split("|")[0], guild: k.split("|").slice(1).join("|") })),
-        skill_changes: [...skillChanges].map(([id, new_tier]) => ({ id, new_tier })),
-        quest_changes: [...questChanges].map(([id, new_state]) => ({ id, new_state })),
-      }),
-    });
+    let r = await doPatch();
+    if (r.status === 410) {                 // session expired -> silently recover + retry
+      btn.textContent = "Reconnecting…";
+      await reauth();
+      btn.textContent = "Recompiling…";
+      r = await doPatch();
+    }
     if (!r.ok) { const j = await r.json().catch(() => ({})); throw new Error(j.error || "patch failed"); }
     const blob = await r.blob();
     const cd = r.headers.get("Content-Disposition") || "";
