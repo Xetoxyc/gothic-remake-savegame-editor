@@ -952,7 +952,10 @@ def find_player_inventory(payload):
         return []
     clusters = [[slots[0]]]
     for s in slots[1:]:
-        (clusters[-1] if s[0] - clusters[-1][-1][0] <= 0x4000 else clusters.append([s]) or clusters[-1]).append(s)
+        if s[0] - clusters[-1][-1][0] <= 0x4000:             # same cluster (within 16KB)
+            clusters[-1].append(s)
+        else:                                                # gap -> start a new cluster
+            clusters.append([s])
     mx = max(slots, key=lambda s: s[2])                       # biggest stack = player's
     player = next((c for c in clusters if c[0][0] <= mx[0] <= c[-1][0]), None)
     if not player:
