@@ -10,6 +10,10 @@ header{text-align:center;padding:34px 16px 10px}
 header h1{margin:0;font-size:26px;font-weight:600;letter-spacing:.3px}
 header h1 span{color:var(--accent2)}
 .sub{color:var(--muted);margin:6px 0 0}
+.tip{margin:10px 0 0;color:var(--muted);font-size:13px}
+.tip .coffee{display:inline-block;background:#FFDD00;color:#1a1209;font-weight:600;
+  padding:4px 11px;border-radius:8px;text-decoration:none;margin-left:4px}
+.tip .coffee:hover{filter:brightness(1.06)}
 main{max-width:880px;margin:18px auto;padding:0 16px 120px}
 .card{background:var(--card);border:1px solid var(--line);border-radius:14px;
   padding:18px;margin-bottom:18px;box-shadow:0 10px 30px #0006}
