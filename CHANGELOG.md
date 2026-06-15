@@ -1,5 +1,22 @@
 # Changelog
 
+## [1.2.0](https://github.com/Xetoxyc/gothic-remake-savegame-editor/compare/v1.1.0...v1.2.0) (2026-06-15)
+
+
+### Features
+
+* behaviour & crimes tabs (NPC attitudes, forgive crimes) ([a672cf7](https://github.com/Xetoxyc/gothic-remake-savegame-editor/commit/a672cf77f63871af58f2c8b3c617e47fad793ff6))
+* passages tab — edit & add world/story script flags ([f289cf7](https://github.com/Xetoxyc/gothic-remake-savegame-editor/commit/f289cf7ce9d7e304e2171de2afa29cb49afce591))
+* **session:** 5-min TTL with silent re-upload recovery ([d7d11d7](https://github.com/Xetoxyc/gothic-remake-savegame-editor/commit/d7d11d781dd7b6fe527e9900d646e62285c5f50b))
+* **skills:** add Hunting_MCPlate/Scutes/UluMulu and make Orcish a ladder ([842603e](https://github.com/Xetoxyc/gothic-remake-savegame-editor/commit/842603eba1ccc8c97657c68093c96ab0a3fe4a7c))
+* **skills:** catalog-driven skills so fresh saves can learn any skill ([f4762e1](https://github.com/Xetoxyc/gothic-remake-savegame-editor/commit/f4762e16cbd1208e45ea1e0b58504ca23a12571c))
+* **ui:** add Buy Me a Coffee tip button to the header ([3acbd16](https://github.com/Xetoxyc/gothic-remake-savegame-editor/commit/3acbd168c42c4fb8a310b5fd78d5c516586d8e5d))
+
+
+### Bug Fixes
+
+* **inventory:** stop duplicating the hero's first item on load ([21f820c](https://github.com/Xetoxyc/gothic-remake-savegame-editor/commit/21f820c16bec8be0612f1f55c425efa218391163))
+
 ## [1.1.0](https://github.com/Xetoxyc/gothic-remake-savegame-editor/compare/v1.0.0...v1.1.0) (2026-06-10)
 
 
