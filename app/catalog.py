@@ -27,7 +27,8 @@ GE_PREFIX = "/Script/Angelscript.Default__GE_Skill_"
 #   circle : Mage_Circle ladder (Amateur, 1..6); class = GE_Skill_Mage_Circle_<t>
 #   hunting: single learned state "Trained"; class = GE_Skill_<base>_Trained
 #   binary : on/off skill with NO tier suffix; class = GE_Skill_<base>
-#   language: Orcish; learned class = GE_Skill_<base>_Untrained (its only form)
+#   language: fixed single-suffix skill (machinery kept but currently unused —
+#            Orcish became a ladder once an _Master tier was observed in a save)
 #
 # Fields per skill:
 #   label        human-readable name
@@ -66,6 +67,10 @@ SKILLS = {
     "Hunting_Secretion":      dict(label="Take Secretion", category="Hunting", kind="hunting"),
     "Hunting_SkullArmor":     dict(label="Take Skull Plates", category="Hunting", kind="hunting"),
     "Hunting_SkinSwampshark": dict(label="Skin Swampshark", category="Hunting", kind="hunting"),
+    # observed in G1R-004 (labels are best-guess; rename if the in-game text differs)
+    "Hunting_MCPlate":        dict(label="Take Minecrawler Plates", category="Hunting", kind="hunting"),
+    "Hunting_Scutes":         dict(label="Take Scutes", category="Hunting", kind="hunting"),
+    "Hunting_UluMulu":        dict(label="Take Ulu-Mulu Trophies", category="Hunting", kind="hunting"),
     # ---- Movement / utility (binary) ------------------------------------
     "Acrobatics":   dict(label="Acrobatics", category="Movement", kind="binary"),
     "Wallclimbing": dict(label="Wall Climbing", category="Movement", kind="binary"),
@@ -83,7 +88,10 @@ SKILLS = {
                         ladder=["Amateur", "1", "2", "3", "4", "5", "6"],
                         has_untrained=False),
     # ---- Language -------------------------------------------------------
-    "Orcish": dict(label="Orcish Language", category="Language", kind="language"),
+    # Orcish is ranked: Untrained baseline (always present) up to Master. Only
+    # _Untrained and _Master classes observed so far; add _Trained if a save shows it.
+    "Orcish": dict(label="Orcish Language", category="Language", kind="ladder",
+                   ladder=["Master"], has_untrained=True),
 }
 
 # The UI "value" that represents the freshly-learned state for non-ladder skills,
