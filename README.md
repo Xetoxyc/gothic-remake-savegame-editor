@@ -1,61 +1,40 @@
 # Gothic 1 Remake — Savegame Editor
 
-A **local** web app to edit *Gothic 1 Remake* saves: character stats, skills,
-inventory, quest states and the bestiary/locations glossary. Upload your `.sav`,
-make changes across tabs, download a ready-to-load save. Everything runs on your
-own machine in one container — **nothing is uploaded anywhere**.
+Edit *Gothic 1 Remake* saves in your browser — character stats, skills, inventory,
+quest states and the bestiary/locations glossary. Upload your `.sav`, make changes
+across tabs, download a ready-to-load save. **Use the hosted version below, or run
+it yourself.**
+
+[![Open the editor](https://img.shields.io/badge/▶_Open_the_editor-gothic--remake--save--editor.deployo.eu-c8862a?style=for-the-badge)](https://gothic-remake-save-editor.deployo.eu/)
+[![Buy Me a Coffee](https://img.shields.io/badge/Buy_Me_a_Coffee-tip_the_dev-FFDD00?style=for-the-badge&logo=buymeacoffee&logoColor=black)](https://buymeacoffee.com/xetoxyc)
 
 [![release](https://github.com/Xetoxyc/gothic-remake-savegame-editor/actions/workflows/release.yml/badge.svg)](https://github.com/Xetoxyc/gothic-remake-savegame-editor/actions/workflows/release.yml)
 [![ghcr](https://img.shields.io/badge/ghcr.io-gothic--remake--savegame--editor-2496ed?logo=docker&logoColor=white)](https://github.com/Xetoxyc/gothic-remake-savegame-editor/pkgs/container/gothic-remake-savegame-editor)
 ![flow](https://img.shields.io/badge/upload-→_edit-→_download-c8862a)
 
+## Use it
+
+👉 **[gothic-remake-save-editor.deployo.eu](https://gothic-remake-save-editor.deployo.eu/)**
+
+No install, no account — open the link, drop in your save, edit, download. Your
+save is sent to the server only to be processed: it's held **in memory**, the
+session **auto-expires after 5 minutes**, and nothing is written to disk or shared.
+If you'd rather keep the file entirely on your own machine, [self-host](#self-hosting)
+it instead.
+
 ## What you can edit
 
 - **Character** — Strength, Dexterity, Health, Mana, Level, Experience, Learning
   Points, Toughness, … (a value sets both its base and current).
-- **Skills** — weapon & thievery tiers (I / II / III), Magic Circle (0–6), hunting
-  & crafting & movement perks; unlearn, and *experimentally* learn skills you
-  don't have yet.
+- **Skills** — weapon & thievery tiers (I / II / III), Magic Circle (0–6), hunting,
+  crafting & movement perks; unlearn, and *experimentally* learn skills you don't
+  have yet — even on a fresh hero.
 - **Inventory** — change any item's amount, or **add new items** by name/key from
   the save's own item database.
 - **Quests** — set any objective's state (`Available` / `Running` / `Succeeded` …);
   the classic fix is the stuck *Trial of Fire* `OBJ_WATERFALL` / `OBJ_SEA`.
 - **Glossary** — creatures & locations bestiary, with the in-game unlock/entry
   dependencies modelled (overviews update automatically).
-
-## Quick start
-
-### Run the published image (no build)
-
-```bash
-docker run --rm -p 5000:5000 ghcr.io/xetoxyc/gothic-remake-savegame-editor:latest
-```
-
-### …or build it yourself
-
-```bash
-docker compose up --build
-```
-
-Either way, open **http://localhost:5000**.
-
-### …or run it on GitHub (no install)
-
-[![Open in GitHub Codespaces](https://github.com/codespaces/badge.svg)](https://codespaces.new/Xetoxyc/gothic-remake-savegame-editor)
-
-Click the badge → *Create codespace*. It builds the container, starts the app,
-and forwards **port 5000** (a browser preview opens automatically). It's your own
-private instance — your save stays in your codespace, not on a shared server.
-Codespaces runs on amd64, so Oodle runs natively (no emulation).
-
-> Prefer plain `docker` for a local build?
-> ```bash
-> docker build -t gothic-remake-savegame-editor .
-> docker run --rm -p 5000:5000 gothic-remake-savegame-editor
-> ```
-
-On Apple Silicon / ARM the image runs under emulation automatically (it's amd64
-because the Oodle library is x86_64) — it just works, only a little slower.
 
 ## How to use
 
@@ -69,6 +48,22 @@ because the Oodle library is x86_64) — it just works, only a little slower.
 > The classic quest fix: the *Trial of Fire* objectives `OBJ_WATERFALL` /
 > `OBJ_SEA` get stuck on `Running` if you light the shrine early — set them to
 > `Succeeded` in the Quests tab.
+
+## Support
+
+This is a free community tool built in my spare time. If it saved your playthrough
+and you'd like to say thanks:
+
+[![Buy Me a Coffee](https://img.shields.io/badge/Buy_Me_a_Coffee-buymeacoffee.com/xetoxyc-FFDD00?logo=buymeacoffee&logoColor=black)](https://buymeacoffee.com/xetoxyc)
+
+## Safety
+
+- Always keep a **backup** of your original save.
+- Editing the save has **no known effect on achievements**: the savegame stores
+  no achievement state and no cheat/tamper flag, and it isn't integrity-checked.
+  Only the **in-game console** is known to disable achievements (it flags the
+  live session) — a path this tool never touches. Use at your own risk.
+- This is a community tool, not affiliated with Alkimia Interactive / THQ Nordic.
 
 ## How it works
 
@@ -92,21 +87,47 @@ skills / adding items clone an existing same-family entry and retarget it —
 marked *experimental* in the UI since gameplay correctness depends on the game
 re-deriving from the class on load.
 
-## Oodle library
+## Self-hosting
+
+Prefer to keep the save entirely on your own machine? Run the editor locally and
+open **http://localhost:5000**.
+
+### Run the published image (no build)
+
+```bash
+docker run --rm -p 5000:5000 ghcr.io/xetoxyc/gothic-remake-savegame-editor:latest
+```
+
+### …or build it yourself
+
+```bash
+docker compose up --build
+```
+
+### …or run it on GitHub (no install)
+
+[![Open in GitHub Codespaces](https://github.com/codespaces/badge.svg)](https://codespaces.new/Xetoxyc/gothic-remake-savegame-editor)
+
+Click the badge → *Create codespace*. It builds the container, starts the app,
+and forwards **port 5000** (a browser preview opens automatically). It's your own
+private instance — your save stays in your codespace, not on a shared server.
+Codespaces runs on amd64, so Oodle runs natively (no emulation).
+
+> Prefer plain `docker` for a local build?
+> ```bash
+> docker build -t gothic-remake-savegame-editor .
+> docker run --rm -p 5000:5000 gothic-remake-savegame-editor
+> ```
+
+On Apple Silicon / ARM the image runs under emulation automatically (it's amd64
+because the Oodle library is x86_64) — it just works, only a little slower.
+
+### Oodle library
 
 Compression uses **Oodle**, which ships with Unreal Engine / the game. This image
 **does not bundle it** — `entrypoint.sh` downloads `liboo2corelinux64.so.9` on
 first start (override the source with `OODLE_URL`, or mount your own at
 `/app/liboo2corelinux64.so.9`; see the commented block in `docker-compose.yml`).
-
-## Safety
-
-- Always keep a **backup** of your original save.
-- Editing the save has **no known effect on achievements**: the savegame stores
-  no achievement state and no cheat/tamper flag, and it isn't integrity-checked.
-  Only the **in-game console** is known to disable achievements (it flags the
-  live session) — a path this tool never touches. Use at your own risk.
-- This is a community tool, not affiliated with Alkimia Interactive / THQ Nordic.
 
 ## Releases &amp; CI
 
@@ -137,15 +158,6 @@ caught early. Everything uses the built-in `GITHUB_TOKEN` — no secrets to set 
 > visibility to **Public** (repo → *Packages* → package → *Settings*) so others
 > can `docker run` it without logging in.
 
-## Credits
-
-Container format & the decompress/recompress approach are based on
-[wealth's gist](https://gist.github.com/wealth/de5a461e02ab49060d5f418a520ee1e8).
-
-## License
-
-[MIT](LICENSE) © Tobias Sittenauer
-
 ## API (if you want to script it)
 
 | Method | Path | Body | Returns |
@@ -155,3 +167,12 @@ Container format & the decompress/recompress approach are based on
 | `GET`  | `/api/health` | — | `{ok, oodle}` |
 
 All `*_changes` arrays are optional — send only what you edit.
+
+## Credits
+
+Container format & the decompress/recompress approach are based on
+[wealth's gist](https://gist.github.com/wealth/de5a461e02ab49060d5f418a520ee1e8).
+
+## License
+
+[MIT](LICENSE) © Tobias Sittenauer
