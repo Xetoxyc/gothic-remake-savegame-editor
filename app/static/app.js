@@ -85,7 +85,7 @@ function showEditor(j) {
     (j.slot ? `“${j.slot}”  ·  ` : "") +
     `${attributes.length} attributes · ${inventory.length} items · ${quests.length - gl} quests · ${gl} glossary`;
   renderAttrs("character"); renderSkills();
-  renderItemDb(); renderInventory(); renderPassages(); renderBehaviours(); renderCrimes();
+  renderInventory(); renderPassages(); renderBehaviours(); renderCrimes();
   renderGlossaryTabs(); renderQuests();
   updateBar();
 }
@@ -172,38 +172,86 @@ function onSkill(e) {
 // ---------------------------------------------------------------- inventory
 $("#search-inv").oninput = renderInventory;
 $("#only-changed-inv").onchange = renderInventory;
-$("#add-item-btn").onclick = onAddItem;
-$("#add-item-key").onkeydown = (e) => { if (e.key === "Enter") { e.preventDefault(); onAddItem(); } };
 
 let _addUid = 0;
-const optText = (it) => `${it.label} — ${it.id}`;   // WYSIWYG: what you see is the value
 
-function renderItemDb() {
-  // option value IS the visible text (label + id), so picking it is unambiguous
-  $("#itemdb").innerHTML = itemDb.map(it => `<option value="${esc(optText(it))}"></option>`).join("");
-}
-
-function resolveItemKey(raw) {
-  raw = raw.trim();
-  if (!raw) return null;
-  const picked = itemDb.find(it => optText(it) === raw);     // selected from the list
-  if (picked) return picked.id;
-  if (/^[A-Za-z0-9_]{2,80}$/.test(raw)) return raw;          // a raw item key
-  const byLabel = itemDb.filter(it => it.label.toLowerCase() === raw.toLowerCase());
-  return byLabel.length === 1 ? byLabel[0].id : null;        // a unique friendly name
-}
-
-function onAddItem() {
-  const inp = $("#add-item-key");
-  const key = resolveItemKey(inp.value);
-  if (!key || !/^[A-Za-z0-9_]{2,80}$/.test(key)) {
-    toast("pick an item from the list, or type a key like ItAt_Amulet_Fire"); return;
+// add an item to the queued list (qty 1); if already queued, bump its count
+function addItemToQueue(key) {
+  if (!key || !/^[A-Za-z0-9_]{2,80}$/.test(key)) return null;
+  const existing = invAdds.find(a => a.item === key);
+  if (existing) { existing.count += 1; }
+  else {
+    const known = itemDb.find(it => it.id === key);
+    invAdds.push({ uid: ++_addUid, item: key, label: known ? known.label : key,
+                   count: 1, known: !!known });
   }
-  const qty = Math.max(1, Math.floor(+$("#add-item-qty").value || 1));
-  const known = itemDb.find(it => it.id === key);
-  invAdds.push({ uid: ++_addUid, item: key, label: known ? known.label : key, count: qty, known: !!known });
-  inp.value = ""; $("#add-item-qty").value = 1;
   renderInventory(); updateBar();
+  return invAdds.find(a => a.item === key);
+}
+
+// -------- item picker modal --------
+let modalCat = "All";
+const modal = $("#item-modal");
+
+$("#open-item-picker").onclick = openItemPicker;
+$("#modal-search").oninput = renderModalItems;
+modal.querySelectorAll("[data-close]").forEach(el => el.onclick = closeItemPicker);
+document.addEventListener("keydown", (e) => {
+  if (e.key === "Escape" && !modal.classList.contains("hidden")) closeItemPicker();
+});
+
+function openItemPicker() {
+  if (!itemDb.length) { toast("no item catalog loaded"); return; }
+  modalCat = "All";
+  $("#modal-search").value = "";
+  renderModalCats(); renderModalItems();
+  modal.classList.remove("hidden"); modal.setAttribute("aria-hidden", "false");
+  $("#modal-search").focus();
+}
+function closeItemPicker() {
+  modal.classList.add("hidden"); modal.setAttribute("aria-hidden", "true");
+}
+
+function renderModalCats() {
+  const counts = {};
+  itemDb.forEach(it => { counts[it.category] = (counts[it.category] || 0) + 1; });
+  const cats = Object.keys(counts).sort();
+  const row = (name, n) =>
+    `<button class="cat-btn ${name === modalCat ? "active" : ""}" data-cat="${esc(name)}">
+       <span>${esc(name)}</span><span class="cat-n">${n}</span></button>`;
+  $("#modal-cats").innerHTML =
+    row("All", itemDb.length) + cats.map(c => row(c, counts[c])).join("");
+  $("#modal-cats").querySelectorAll(".cat-btn").forEach(b => b.onclick = () => {
+    modalCat = b.dataset.cat; renderModalCats(); renderModalItems();
+  });
+}
+
+function renderModalItems() {
+  const q = $("#modal-search").value.trim().toLowerCase();
+  const list = itemDb.filter(it =>
+    (modalCat === "All" || it.category === modalCat) &&
+    (!q || it.label.toLowerCase().includes(q) || it.id.toLowerCase().includes(q)));
+  const queued = {};
+  invAdds.forEach(a => { queued[a.item] = a.count; });
+
+  $("#modal-items").innerHTML = list.length
+    ? list.map(it => {
+        const n = queued[it.id] || 0;
+        return `<button class="pick ${n ? "picked" : ""}" data-id="${esc(it.id)}" title="${esc(it.id)}">
+          <span class="pick-name">${esc(it.label)}<small>${esc(it.id)}</small></span>
+          <span class="pick-add">${n ? `×${n}` : "＋"}</span>
+        </button>`;
+      }).join("")
+    : `<div class="empty">no matching items</div>`;
+
+  $("#modal-items").querySelectorAll(".pick").forEach(b => b.onclick = () => {
+    const a = addItemToQueue(b.dataset.id);
+    if (a) {
+      b.classList.add("picked");
+      b.querySelector(".pick-add").textContent = `×${a.count}`;
+      $("#modal-status").textContent = `Added ${a.label} (×${a.count}) — adjust amounts in the list`;
+    }
+  });
 }
 
 function renderInventory() {
