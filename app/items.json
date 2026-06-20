@@ -1,0 +1,2567 @@
+[
+ {
+  "id": "Armor_SK_OC_WOC_Velaya_108_02",
+  "label": "Armor SK OC WOC Velaya 108",
+  "category": "NPC Armor"
+ },
+ {
+  "id": "BiterJaw",
+  "label": "BiterJaw",
+  "category": "Creature / Built-in"
+ },
+ {
+  "id": "BloodflySting",
+  "label": "BloodflySting",
+  "category": "Creature / Built-in"
+ },
+ {
+  "id": "BloodhoundJaw",
+  "label": "BloodhoundJaw",
+  "category": "Creature / Built-in"
+ },
+ {
+  "id": "FireGolemWeapon",
+  "label": "FireGolemWeapon",
+  "category": "Creature / Built-in"
+ },
+ {
+  "id": "HarpyClaws_Flying",
+  "label": "HarpyClaws Flying",
+  "category": "Creature / Built-in"
+ },
+ {
+  "id": "HarpyClaws_Grounded",
+  "label": "HarpyClaws Grounded",
+  "category": "Creature / Built-in"
+ },
+ {
+  "id": "HumanFist_NoWeapon",
+  "label": "HumanFist NoWeapon",
+  "category": "Creature / Built-in"
+ },
+ {
+  "id": "HumanFist_NoWeapon_Climbing",
+  "label": "HumanFist NoWeapon Climbing",
+  "category": "Creature / Built-in"
+ },
+ {
+  "id": "HumanFist_NoWeapon_Swimming",
+  "label": "HumanFist NoWeapon Swimming",
+  "category": "Creature / Built-in"
+ },
+ {
+  "id": "HumanFist_NoWeapon_WaterWalking",
+  "label": "HumanFist NoWeapon WaterWalking",
+  "category": "Creature / Built-in"
+ },
+ {
+  "id": "IceGolemWeapon",
+  "label": "IceGolemWeapon",
+  "category": "Creature / Built-in"
+ },
+ {
+  "id": "ItAI_Box",
+  "label": "ItAI Box",
+  "category": "Interactive / AI"
+ },
+ {
+  "id": "ItAI_BoxMidHigh",
+  "label": "ItAI BoxMidHigh",
+  "category": "Interactive / AI"
+ },
+ {
+  "id": "ItAI_BrushWood",
+  "label": "ItAI BrushWood",
+  "category": "Interactive / AI"
+ },
+ {
+  "id": "ItAI_Foodbag",
+  "label": "ItAI Foodbag",
+  "category": "Interactive / AI"
+ },
+ {
+  "id": "ItAI_Orebag",
+  "label": "ItAI Orebag",
+  "category": "Interactive / AI"
+ },
+ {
+  "id": "ItAI_Plank",
+  "label": "ItAI Plank",
+  "category": "Interactive / AI"
+ },
+ {
+  "id": "ItAI_PlankFromWall",
+  "label": "ItAI PlankFromWall",
+  "category": "Interactive / AI"
+ },
+ {
+  "id": "ItAm_Arrow",
+  "label": "Arrow",
+  "category": "Ammunition"
+ },
+ {
+  "id": "ItAm_Bolt",
+  "label": "Bolt",
+  "category": "Ammunition"
+ },
+ {
+  "id": "ItAr_Rune_BallLightning",
+  "label": "Rune BallLightning",
+  "category": "Spell (Rune)"
+ },
+ {
+  "id": "ItAr_Rune_ChainLightning",
+  "label": "Rune ChainLightning",
+  "category": "Spell (Rune)"
+ },
+ {
+  "id": "ItAr_Rune_Charm",
+  "label": "Rune Charm",
+  "category": "Spell (Rune)"
+ },
+ {
+  "id": "ItAr_Rune_FireBall",
+  "label": "Rune FireBall",
+  "category": "Spell (Rune)"
+ },
+ {
+  "id": "ItAr_Rune_FireBolt",
+  "label": "Rune FireBolt",
+  "category": "Spell (Rune)"
+ },
+ {
+  "id": "ItAr_Rune_FistOfWind",
+  "label": "Rune FistOfWind",
+  "category": "Spell (Rune)"
+ },
+ {
+  "id": "ItAr_Rune_Heal",
+  "label": "Rune Heal",
+  "category": "Spell (Rune)"
+ },
+ {
+  "id": "ItAr_Rune_IceBlock",
+  "label": "Rune IceBlock",
+  "category": "Spell (Rune)"
+ },
+ {
+  "id": "ItAr_Rune_IceBolt",
+  "label": "Rune IceBolt",
+  "category": "Spell (Rune)"
+ },
+ {
+  "id": "ItAr_Rune_Light",
+  "label": "Rune Light",
+  "category": "Spell (Rune)"
+ },
+ {
+  "id": "ItAr_Rune_Pyrokinesis",
+  "label": "Rune Pyrokinesis",
+  "category": "Spell (Rune)"
+ },
+ {
+  "id": "ItAr_Rune_Sleep",
+  "label": "Rune Sleep",
+  "category": "Spell (Rune)"
+ },
+ {
+  "id": "ItAr_Rune_Telekinesis",
+  "label": "Rune Telekinesis",
+  "category": "Spell (Rune)"
+ },
+ {
+  "id": "ItAr_Rune_TeleportToSwampCamp",
+  "label": "Rune TeleportToSwampCamp",
+  "category": "Spell (Rune)"
+ },
+ {
+  "id": "ItAr_Scroll_BallLightning",
+  "label": "Scroll BallLightning",
+  "category": "Spell Scroll"
+ },
+ {
+  "id": "ItAr_Scroll_ChainLightning",
+  "label": "Scroll ChainLightning",
+  "category": "Spell Scroll"
+ },
+ {
+  "id": "ItAr_Scroll_Charm",
+  "label": "Scroll Charm",
+  "category": "Spell Scroll"
+ },
+ {
+  "id": "ItAr_Scroll_Control",
+  "label": "Scroll Control",
+  "category": "Spell Scroll"
+ },
+ {
+  "id": "ItAr_Scroll_Fear",
+  "label": "Scroll Fear",
+  "category": "Spell Scroll"
+ },
+ {
+  "id": "ItAr_Scroll_FireBall",
+  "label": "Scroll FireBall",
+  "category": "Spell Scroll"
+ },
+ {
+  "id": "ItAr_Scroll_FireBolt",
+  "label": "Scroll FireBolt",
+  "category": "Spell Scroll"
+ },
+ {
+  "id": "ItAr_Scroll_FireRain",
+  "label": "Scroll FireRain",
+  "category": "Spell Scroll"
+ },
+ {
+  "id": "ItAr_Scroll_FistOfWind",
+  "label": "Scroll FistOfWind",
+  "category": "Spell Scroll"
+ },
+ {
+  "id": "ItAr_Scroll_Heal",
+  "label": "Scroll Heal",
+  "category": "Spell Scroll"
+ },
+ {
+  "id": "ItAr_Scroll_IceBlock",
+  "label": "Scroll IceBlock",
+  "category": "Spell Scroll"
+ },
+ {
+  "id": "ItAr_Scroll_IceBolt",
+  "label": "Scroll IceBolt",
+  "category": "Spell Scroll"
+ },
+ {
+  "id": "ItAr_Scroll_InnosPray",
+  "label": "Scroll InnosPray",
+  "category": "Spell Scroll"
+ },
+ {
+  "id": "ItAr_Scroll_Light",
+  "label": "Scroll Light",
+  "category": "Spell Scroll"
+ },
+ {
+  "id": "ItAr_Scroll_Pyrokinesis",
+  "label": "Scroll Pyrokinesis",
+  "category": "Spell Scroll"
+ },
+ {
+  "id": "ItAr_Scroll_Sleep",
+  "label": "Scroll Sleep",
+  "category": "Spell Scroll"
+ },
+ {
+  "id": "ItAr_Scroll_StormFist",
+  "label": "Scroll StormFist",
+  "category": "Spell Scroll"
+ },
+ {
+  "id": "ItAr_Scroll_StormOfFire",
+  "label": "Scroll StormOfFire",
+  "category": "Spell Scroll"
+ },
+ {
+  "id": "ItAr_Scroll_SummonDemon",
+  "label": "Scroll SummonDemon",
+  "category": "Spell Scroll"
+ },
+ {
+  "id": "ItAr_Scroll_Telekinesis",
+  "label": "Scroll Telekinesis",
+  "category": "Spell Scroll"
+ },
+ {
+  "id": "ItAr_Scroll_TransformBiter",
+  "label": "Scroll TransformBiter",
+  "category": "Spell Scroll"
+ },
+ {
+  "id": "ItAr_Scroll_TransformBloodfly",
+  "label": "Scroll TransformBloodfly",
+  "category": "Spell Scroll"
+ },
+ {
+  "id": "ItAr_Scroll_TransformFireLizard",
+  "label": "Scroll TransformFireLizard",
+  "category": "Spell Scroll"
+ },
+ {
+  "id": "ItAr_Scroll_TransformLizard",
+  "label": "Scroll TransformLizard",
+  "category": "Spell Scroll"
+ },
+ {
+  "id": "ItAr_Scroll_TransformLurker",
+  "label": "Scroll TransformLurker",
+  "category": "Spell Scroll"
+ },
+ {
+  "id": "ItAr_Scroll_TransformMeatbug",
+  "label": "Scroll TransformMeatbug",
+  "category": "Spell Scroll"
+ },
+ {
+  "id": "ItAr_Scroll_TransformMinecrawler",
+  "label": "Scroll TransformMinecrawler",
+  "category": "Spell Scroll"
+ },
+ {
+  "id": "ItAr_Scroll_TransformMolerat",
+  "label": "Scroll TransformMolerat",
+  "category": "Spell Scroll"
+ },
+ {
+  "id": "ItAr_Scroll_TransformOrcDog",
+  "label": "Scroll TransformOrcDog",
+  "category": "Spell Scroll"
+ },
+ {
+  "id": "ItAr_Scroll_TransformRazor",
+  "label": "Scroll TransformRazor",
+  "category": "Spell Scroll"
+ },
+ {
+  "id": "ItAr_Scroll_TransformScavenger",
+  "label": "Scroll TransformScavenger",
+  "category": "Spell Scroll"
+ },
+ {
+  "id": "ItAr_Scroll_TransformSnapper",
+  "label": "Scroll TransformSnapper",
+  "category": "Spell Scroll"
+ },
+ {
+  "id": "ItAr_Scroll_TransformWolf",
+  "label": "Scroll TransformWolf",
+  "category": "Spell Scroll"
+ },
+ {
+  "id": "ItAt_Amulet_Brotherhood",
+  "label": "Amulet Brotherhood",
+  "category": "Amulet"
+ },
+ {
+  "id": "ItAt_Amulet_Dexterity_01",
+  "label": "Amulet Dexterity 01",
+  "category": "Amulet"
+ },
+ {
+  "id": "ItAt_Amulet_Enlight",
+  "label": "Amulet Enlight",
+  "category": "Amulet"
+ },
+ {
+  "id": "ItAt_Amulet_Fire",
+  "label": "Amulet Fire",
+  "category": "Amulet"
+ },
+ {
+  "id": "ItAt_Amulet_Life",
+  "label": "Amulet Life",
+  "category": "Amulet"
+ },
+ {
+  "id": "ItAt_Amulet_Magic_01",
+  "label": "Amulet Magic 01",
+  "category": "Amulet"
+ },
+ {
+  "id": "ItAt_Amulet_Magic_02",
+  "label": "Amulet Magic 02",
+  "category": "Amulet"
+ },
+ {
+  "id": "ItAt_Amulet_Neks",
+  "label": "Amulet Neks",
+  "category": "Amulet"
+ },
+ {
+  "id": "ItAt_Amulet_OrcMummy",
+  "label": "Amulet OrcMummy",
+  "category": "Amulet"
+ },
+ {
+  "id": "ItAt_Amulet_Power",
+  "label": "Amulet Power",
+  "category": "Amulet"
+ },
+ {
+  "id": "ItAt_Amulet_Projectile",
+  "label": "Amulet Projectile",
+  "category": "Amulet"
+ },
+ {
+  "id": "ItAt_Amulet_Strong_01",
+  "label": "Amulet Strong",
+  "category": "Amulet"
+ },
+ {
+  "id": "ItAt_Amulet_Ulu_Talisman",
+  "label": "Amulet Ulu Talisman",
+  "category": "Amulet"
+ },
+ {
+  "id": "ItAt_Amulet_Weapon",
+  "label": "Amulet Weapon",
+  "category": "Amulet"
+ },
+ {
+  "id": "ItAt_Biter_01",
+  "label": "Biter",
+  "category": "Trophy"
+ },
+ {
+  "id": "ItAt_Biter_02",
+  "label": "Biter",
+  "category": "Trophy"
+ },
+ {
+  "id": "ItAt_Biter_03",
+  "label": "Biter",
+  "category": "Trophy"
+ },
+ {
+  "id": "ItAt_Bloodfly_01",
+  "label": "Bloodfly",
+  "category": "Trophy"
+ },
+ {
+  "id": "ItAt_Bloodfly_02",
+  "label": "Bloodfly",
+  "category": "Trophy"
+ },
+ {
+  "id": "ItAt_Bloodfly_03",
+  "label": "Bloodfly",
+  "category": "Trophy"
+ },
+ {
+  "id": "ItAt_Bloodhound_01",
+  "label": "Bloodhound",
+  "category": "Trophy"
+ },
+ {
+  "id": "ItAt_Bloodhound_02",
+  "label": "Bloodhound",
+  "category": "Trophy"
+ },
+ {
+  "id": "ItAt_Crawler_01",
+  "label": "Crawler",
+  "category": "Trophy"
+ },
+ {
+  "id": "ItAt_Crawler_02",
+  "label": "Crawler",
+  "category": "Trophy"
+ },
+ {
+  "id": "ItAt_Crawlerqueen",
+  "label": "Crawlerqueen",
+  "category": "Trophy"
+ },
+ {
+  "id": "ItAt_Firegolem_01",
+  "label": "Firegolem",
+  "category": "Trophy"
+ },
+ {
+  "id": "ItAt_Firegolem_02",
+  "label": "Firegolem",
+  "category": "Trophy"
+ },
+ {
+  "id": "ItAt_Firelizard_01",
+  "label": "Firelizard",
+  "category": "Trophy"
+ },
+ {
+  "id": "ItAt_Firelizard_02",
+  "label": "Firelizard",
+  "category": "Trophy"
+ },
+ {
+  "id": "ItAt_Firelizard_03",
+  "label": "Firelizard",
+  "category": "Trophy"
+ },
+ {
+  "id": "ItAt_Firelizard_04",
+  "label": "Firelizard",
+  "category": "Trophy"
+ },
+ {
+  "id": "ItAt_Harpy_01",
+  "label": "Harpy",
+  "category": "Trophy"
+ },
+ {
+  "id": "ItAt_Harpy_02",
+  "label": "Harpy",
+  "category": "Trophy"
+ },
+ {
+  "id": "ItAt_Icegolem_01",
+  "label": "Icegolem",
+  "category": "Trophy"
+ },
+ {
+  "id": "ItAt_Icegolem_02",
+  "label": "Icegolem",
+  "category": "Trophy"
+ },
+ {
+  "id": "ItAt_Lizard_01",
+  "label": "Lizard",
+  "category": "Trophy"
+ },
+ {
+  "id": "ItAt_Lizard_02",
+  "label": "Lizard",
+  "category": "Trophy"
+ },
+ {
+  "id": "ItAt_Lizard_03",
+  "label": "Lizard",
+  "category": "Trophy"
+ },
+ {
+  "id": "ItAt_Lurker_01",
+  "label": "Lurker",
+  "category": "Trophy"
+ },
+ {
+  "id": "ItAt_Lurker_02",
+  "label": "Lurker",
+  "category": "Trophy"
+ },
+ {
+  "id": "ItAt_Lurker_03",
+  "label": "Lurker",
+  "category": "Trophy"
+ },
+ {
+  "id": "ItAt_Meatbug_01",
+  "label": "Meatbug",
+  "category": "Trophy"
+ },
+ {
+  "id": "ItAt_Minecrawlerqueen_01",
+  "label": "Minecrawlerqueen",
+  "category": "Trophy"
+ },
+ {
+  "id": "ItAt_Orcdog_01",
+  "label": "Orcdog",
+  "category": "Trophy"
+ },
+ {
+  "id": "ItAt_Orcdog_02",
+  "label": "Orcdog",
+  "category": "Trophy"
+ },
+ {
+  "id": "ItAt_Razor_01",
+  "label": "Razor",
+  "category": "Trophy"
+ },
+ {
+  "id": "ItAt_Razor_02",
+  "label": "Razor",
+  "category": "Trophy"
+ },
+ {
+  "id": "ItAt_Ring_Enlight",
+  "label": "Ring Enlight",
+  "category": "Ring"
+ },
+ {
+  "id": "ItAt_Ring_Fire_01",
+  "label": "Ring Fire",
+  "category": "Ring"
+ },
+ {
+  "id": "ItAt_Ring_Fire_02",
+  "label": "Ring Fire",
+  "category": "Ring"
+ },
+ {
+  "id": "ItAt_Ring_Life_01",
+  "label": "Ring Life",
+  "category": "Ring"
+ },
+ {
+  "id": "ItAt_Ring_Life_02",
+  "label": "Ring Life",
+  "category": "Ring"
+ },
+ {
+  "id": "ItAt_Ring_Magic_01",
+  "label": "Ring Magic",
+  "category": "Ring"
+ },
+ {
+  "id": "ItAt_Ring_Magic_02",
+  "label": "Ring Magic 02",
+  "category": "Ring"
+ },
+ {
+  "id": "ItAt_Ring_Magic_03",
+  "label": "Ring Magic",
+  "category": "Ring"
+ },
+ {
+  "id": "ItAt_Ring_Magicfire_01",
+  "label": "Ring Magicfire",
+  "category": "Ring"
+ },
+ {
+  "id": "ItAt_Ring_Magicfire_02",
+  "label": "Ring Magicfire 02",
+  "category": "Ring"
+ },
+ {
+  "id": "ItAt_Ring_Mordrag",
+  "label": "Ring Mordrag",
+  "category": "Ring"
+ },
+ {
+  "id": "ItAt_Ring_Power",
+  "label": "Ring Power",
+  "category": "Ring"
+ },
+ {
+  "id": "ItAt_Ring_Projectile_01",
+  "label": "Ring Projectile",
+  "category": "Ring"
+ },
+ {
+  "id": "ItAt_Ring_Projectile_02",
+  "label": "Ring Projectile 02",
+  "category": "Ring"
+ },
+ {
+  "id": "ItAt_Ring_Ranged_01",
+  "label": "Ring Ranged 01",
+  "category": "Ring"
+ },
+ {
+  "id": "ItAt_Ring_Scatty",
+  "label": "Ring Scatty",
+  "category": "Ring"
+ },
+ {
+  "id": "ItAt_Ring_Skill_01",
+  "label": "Ring Skill",
+  "category": "Ring"
+ },
+ {
+  "id": "ItAt_Ring_Skill_02",
+  "label": "Ring Skill",
+  "category": "Ring"
+ },
+ {
+  "id": "ItAt_Ring_Strong_01",
+  "label": "Ring Strong",
+  "category": "Ring"
+ },
+ {
+  "id": "ItAt_Ring_Strong_02",
+  "label": "Ring Strong",
+  "category": "Ring"
+ },
+ {
+  "id": "ItAt_Ring_Total_01",
+  "label": "Ring Total",
+  "category": "Ring"
+ },
+ {
+  "id": "ItAt_Ring_Total_02",
+  "label": "Ring Total",
+  "category": "Ring"
+ },
+ {
+  "id": "ItAt_Ring_Weapon_01",
+  "label": "Ring Weapon",
+  "category": "Ring"
+ },
+ {
+  "id": "ItAt_Ring_Weapon_02",
+  "label": "Ring Weapon",
+  "category": "Ring"
+ },
+ {
+  "id": "ItAt_Scavenger_01",
+  "label": "Scavenger",
+  "category": "Trophy"
+ },
+ {
+  "id": "ItAt_Scavenger_02",
+  "label": "Scavenger",
+  "category": "Trophy"
+ },
+ {
+  "id": "ItAt_Shadow_01",
+  "label": "Shadow",
+  "category": "Trophy"
+ },
+ {
+  "id": "ItAt_Shadow_02",
+  "label": "Shadow",
+  "category": "Trophy"
+ },
+ {
+  "id": "ItAt_Shadow_03",
+  "label": "Shadow",
+  "category": "Trophy"
+ },
+ {
+  "id": "ItAt_Shadow_04",
+  "label": "Shadow",
+  "category": "Trophy"
+ },
+ {
+  "id": "ItAt_Shadow_06",
+  "label": "Shadow",
+  "category": "Trophy"
+ },
+ {
+  "id": "ItAt_Snapper_01",
+  "label": "Snapper",
+  "category": "Trophy"
+ },
+ {
+  "id": "ItAt_Snapper_02",
+  "label": "Snapper",
+  "category": "Trophy"
+ },
+ {
+  "id": "ItAt_Stonegolem_01",
+  "label": "Stonegolem",
+  "category": "Trophy"
+ },
+ {
+  "id": "ItAt_Stonegolem_02",
+  "label": "Stonegolem",
+  "category": "Trophy"
+ },
+ {
+  "id": "ItAt_Swampshark_01",
+  "label": "Swampshark",
+  "category": "Trophy"
+ },
+ {
+  "id": "ItAt_Swampshark_02",
+  "label": "Swampshark",
+  "category": "Trophy"
+ },
+ {
+  "id": "ItAt_Swampshark_03",
+  "label": "Swampshark",
+  "category": "Trophy"
+ },
+ {
+  "id": "ItAt_Teeth_01",
+  "label": "Teeth",
+  "category": "Trophy"
+ },
+ {
+  "id": "ItAt_Troll_01",
+  "label": "Troll",
+  "category": "Trophy"
+ },
+ {
+  "id": "ItAt_Troll_02",
+  "label": "Troll",
+  "category": "Trophy"
+ },
+ {
+  "id": "ItAt_Wolf_01",
+  "label": "Wolf",
+  "category": "Trophy"
+ },
+ {
+  "id": "ItAt_Wolf_02",
+  "label": "Wolf",
+  "category": "Trophy"
+ },
+ {
+  "id": "ItAt_Wolf_03",
+  "label": "Wolf",
+  "category": "Trophy"
+ },
+ {
+  "id": "ItFo_Apple",
+  "label": "Apple",
+  "category": "Food / Drink"
+ },
+ {
+  "id": "ItFo_Cabbage",
+  "label": "Cabbage",
+  "category": "Food / Drink"
+ },
+ {
+  "id": "ItFo_Carrot",
+  "label": "Carrot",
+  "category": "Food / Drink"
+ },
+ {
+  "id": "ItFo_Cheese",
+  "label": "Cheese",
+  "category": "Food / Drink"
+ },
+ {
+  "id": "ItFo_Crawlersoup",
+  "label": "Crawlersoup",
+  "category": "Food / Drink"
+ },
+ {
+  "id": "ItFo_DragonsbreathStew",
+  "label": "DragonsbreathStew",
+  "category": "Food / Drink"
+ },
+ {
+  "id": "ItFo_Grilledscavenger",
+  "label": "Grilledscavenger",
+  "category": "Food / Drink"
+ },
+ {
+  "id": "ItFo_Lemon",
+  "label": "Lemon",
+  "category": "Food / Drink"
+ },
+ {
+  "id": "ItFo_Loaf",
+  "label": "Loaf",
+  "category": "Food / Drink"
+ },
+ {
+  "id": "ItFo_Meatbugragout",
+  "label": "Meatbugragout",
+  "category": "Food / Drink"
+ },
+ {
+  "id": "ItFo_Meatbugsauteed",
+  "label": "Meatbugsauteed",
+  "category": "Food / Drink"
+ },
+ {
+  "id": "ItFo_MushroomStew",
+  "label": "MushroomStew",
+  "category": "Food / Drink"
+ },
+ {
+  "id": "ItFo_Mutton_01",
+  "label": "Mutton",
+  "category": "Food / Drink"
+ },
+ {
+  "id": "ItFo_Mutton_02",
+  "label": "Mutton",
+  "category": "Food / Drink"
+ },
+ {
+  "id": "ItFo_Muttonraw",
+  "label": "Muttonraw",
+  "category": "Food / Drink"
+ },
+ {
+  "id": "ItFo_Onion",
+  "label": "Onion",
+  "category": "Food / Drink"
+ },
+ {
+  "id": "ItFo_Ottostew",
+  "label": "Ottostew",
+  "category": "Food / Drink"
+ },
+ {
+  "id": "ItFo_Pear",
+  "label": "Pear",
+  "category": "Food / Drink"
+ },
+ {
+  "id": "ItFo_Plants_Berrys_01",
+  "label": "Plants Berrys",
+  "category": "Food / Drink"
+ },
+ {
+  "id": "ItFo_Plants_Darkshade",
+  "label": "Plants Darkshade",
+  "category": "Food / Drink"
+ },
+ {
+  "id": "ItFo_Plants_Dewleaf",
+  "label": "Plants Dewleaf",
+  "category": "Food / Drink"
+ },
+ {
+  "id": "ItFo_Plants_Duskbell",
+  "label": "Plants Duskbell",
+  "category": "Food / Drink"
+ },
+ {
+  "id": "ItFo_Plants_Flameberry_01",
+  "label": "Plants Flameberry",
+  "category": "Food / Drink"
+ },
+ {
+  "id": "ItFo_Plants_Herb_01",
+  "label": "Plants Herb",
+  "category": "Food / Drink"
+ },
+ {
+  "id": "ItFo_Plants_Herb_02",
+  "label": "Plants Herb",
+  "category": "Food / Drink"
+ },
+ {
+  "id": "ItFo_Plants_Herb_03",
+  "label": "Plants Herb",
+  "category": "Food / Drink"
+ },
+ {
+  "id": "ItFo_Plants_Lobelia",
+  "label": "Plants Lobelia",
+  "category": "Food / Drink"
+ },
+ {
+  "id": "ItFo_Plants_Mistcap",
+  "label": "Plants Mistcap",
+  "category": "Food / Drink"
+ },
+ {
+  "id": "ItFo_Plants_Mountainmoss_01",
+  "label": "Plants Mountainmoss",
+  "category": "Food / Drink"
+ },
+ {
+  "id": "ItFo_Plants_Mountainmoss_02",
+  "label": "Plants Mountainmoss",
+  "category": "Food / Drink"
+ },
+ {
+  "id": "ItFo_Plants_Mushroom_01",
+  "label": "Plants Mushroom",
+  "category": "Food / Drink"
+ },
+ {
+  "id": "ItFo_Plants_Mushroom_02",
+  "label": "Plants Mushroom",
+  "category": "Food / Drink"
+ },
+ {
+  "id": "ItFo_Plants_Nightshadow_01",
+  "label": "Plants Nightshadow",
+  "category": "Food / Drink"
+ },
+ {
+  "id": "ItFo_Plants_Nightshadow_02",
+  "label": "Plants Nightshadow",
+  "category": "Food / Drink"
+ },
+ {
+  "id": "ItFo_Plants_Orcherb_01",
+  "label": "Plants Orcherb",
+  "category": "Food / Drink"
+ },
+ {
+  "id": "ItFo_Plants_Orcherb_02",
+  "label": "Plants Orcherb",
+  "category": "Food / Drink"
+ },
+ {
+  "id": "ItFo_Plants_Ravenherb_01",
+  "label": "Plants Ravenherb",
+  "category": "Food / Drink"
+ },
+ {
+  "id": "ItFo_Plants_Ravenherb_02",
+  "label": "Plants Ravenherb",
+  "category": "Food / Drink"
+ },
+ {
+  "id": "ItFo_Plants_Seraphis_01",
+  "label": "Plants Seraphis",
+  "category": "Food / Drink"
+ },
+ {
+  "id": "ItFo_Plants_Siren",
+  "label": "Plants Siren",
+  "category": "Food / Drink"
+ },
+ {
+  "id": "ItFo_Plants_Stoneroot_01",
+  "label": "Plants Stoneroot",
+  "category": "Food / Drink"
+ },
+ {
+  "id": "ItFo_Plants_Stoneroot_02",
+  "label": "Plants Stoneroot",
+  "category": "Food / Drink"
+ },
+ {
+  "id": "ItFo_Plants_Trollbane",
+  "label": "Plants Trollbane",
+  "category": "Food / Drink"
+ },
+ {
+  "id": "ItFo_Plants_Velayis_01",
+  "label": "Plants Velayis",
+  "category": "Food / Drink"
+ },
+ {
+  "id": "ItFo_Plants_Widow",
+  "label": "Plants Widow",
+  "category": "Food / Drink"
+ },
+ {
+  "id": "ItFo_Potato",
+  "label": "Potato",
+  "category": "Food / Drink"
+ },
+ {
+  "id": "ItFo_Potion_Beer",
+  "label": "Potion Beer",
+  "category": "Potion"
+ },
+ {
+  "id": "ItFo_Potion_Booze",
+  "label": "Potion Booze",
+  "category": "Potion"
+ },
+ {
+  "id": "ItFo_Potion_Dex_01",
+  "label": "Potion Dex 01",
+  "category": "Potion"
+ },
+ {
+  "id": "ItFo_Potion_Health_01",
+  "label": "Potion Health",
+  "category": "Potion"
+ },
+ {
+  "id": "ItFo_Potion_Health_02",
+  "label": "Potion Health",
+  "category": "Potion"
+ },
+ {
+  "id": "ItFo_Potion_Health_03",
+  "label": "Potion Health",
+  "category": "Potion"
+ },
+ {
+  "id": "ItFo_Potion_Health_Perma_01",
+  "label": "Potion Health Perma 01",
+  "category": "Potion"
+ },
+ {
+  "id": "ItFo_Potion_Health_Perma_02",
+  "label": "Potion Health Perma 02",
+  "category": "Potion"
+ },
+ {
+  "id": "ItFo_Potion_Health_Quick",
+  "label": "Potion Health Quick",
+  "category": "Potion"
+ },
+ {
+  "id": "ItFo_Potion_Mana_01",
+  "label": "Potion Mana",
+  "category": "Potion"
+ },
+ {
+  "id": "ItFo_Potion_Mana_02",
+  "label": "Potion Mana",
+  "category": "Potion"
+ },
+ {
+  "id": "ItFo_Potion_Mana_03",
+  "label": "Potion Mana",
+  "category": "Potion"
+ },
+ {
+  "id": "ItFo_Potion_Mana_Perma_01",
+  "label": "Potion Mana Perma 01",
+  "category": "Potion"
+ },
+ {
+  "id": "ItFo_Potion_Mana_Perma_02",
+  "label": "Potion Mana Perma 02",
+  "category": "Potion"
+ },
+ {
+  "id": "ItFo_Potion_Strength_01",
+  "label": "Potion Strength 01",
+  "category": "Potion"
+ },
+ {
+  "id": "ItFo_Potion_Strength_02",
+  "label": "Potion Strength 02",
+  "category": "Potion"
+ },
+ {
+  "id": "ItFo_Potion_Strongbeer",
+  "label": "Potion Strongbeer",
+  "category": "Potion"
+ },
+ {
+  "id": "ItFo_Potion_Water_01",
+  "label": "Potion Water",
+  "category": "Potion"
+ },
+ {
+  "id": "ItFo_Potion_Wine",
+  "label": "Potion Wine",
+  "category": "Potion"
+ },
+ {
+  "id": "ItFo_Rice",
+  "label": "Rice",
+  "category": "Food / Drink"
+ },
+ {
+  "id": "ItFo_Sausage",
+  "label": "Sausage",
+  "category": "Food / Drink"
+ },
+ {
+  "id": "ItFo_Soup",
+  "label": "Soup",
+  "category": "Food / Drink"
+ },
+ {
+  "id": "ItFo_SyraRecipe",
+  "label": "SyraRecipe",
+  "category": "Food / Drink"
+ },
+ {
+  "id": "ItFo_Whitemeat",
+  "label": "Whitemeat",
+  "category": "Food / Drink"
+ },
+ {
+  "id": "ItFo_Wineberrys_01",
+  "label": "Wineberrys",
+  "category": "Food / Drink"
+ },
+ {
+  "id": "ItKe_AbandonedMine_01",
+  "label": "AbandonedMine",
+  "category": "Key / Lockpick"
+ },
+ {
+  "id": "ItKe_BanditCell",
+  "label": "BanditCell",
+  "category": "Key / Lockpick"
+ },
+ {
+  "id": "ItKe_Cavalorn_01",
+  "label": "Cavalorn",
+  "category": "Key / Lockpick"
+ },
+ {
+  "id": "ItKe_FireMagesRoom",
+  "label": "FireMagesRoom",
+  "category": "Key / Lockpick"
+ },
+ {
+  "id": "ItKe_FiskStorage",
+  "label": "FiskStorage",
+  "category": "Key / Lockpick"
+ },
+ {
+  "id": "ItKe_Focus_04",
+  "label": "Focus",
+  "category": "Key / Lockpick"
+ },
+ {
+  "id": "ItKe_GomezCastleMaster",
+  "label": "GomezCastleMaster",
+  "category": "Key / Lockpick"
+ },
+ {
+  "id": "ItKe_Gomez_01",
+  "label": "Gomez",
+  "category": "Key / Lockpick"
+ },
+ {
+  "id": "ItKe_GraveyardLever",
+  "label": "GraveyardLever",
+  "category": "Key / Lockpick"
+ },
+ {
+  "id": "ItKe_LeeDoor",
+  "label": "LeeDoor",
+  "category": "Key / Lockpick"
+ },
+ {
+  "id": "ItKe_Lockpick",
+  "label": "Lockpick",
+  "category": "Key / Lockpick"
+ },
+ {
+  "id": "ItKe_LootCage_01",
+  "label": "LootCage",
+  "category": "Key / Lockpick"
+ },
+ {
+  "id": "ItKe_Om_02",
+  "label": "Om",
+  "category": "Key / Lockpick"
+ },
+ {
+  "id": "ItKe_Om_03",
+  "label": "Om",
+  "category": "Key / Lockpick"
+ },
+ {
+  "id": "ItKe_OrcGraveyard",
+  "label": "OrcGraveyard",
+  "category": "Key / Lockpick"
+ },
+ {
+  "id": "ItKe_OrcGraveyardPiece_01",
+  "label": "OrcGraveyardPiece 01",
+  "category": "Key / Lockpick"
+ },
+ {
+  "id": "ItKe_OrcGraveyardPiece_02",
+  "label": "OrcGraveyardPiece 02",
+  "category": "Key / Lockpick"
+ },
+ {
+  "id": "ItKe_RavenTower",
+  "label": "RavenTower",
+  "category": "Key / Lockpick"
+ },
+ {
+  "id": "ItKe_Ricelord_01",
+  "label": "Ricelord",
+  "category": "Key / Lockpick"
+ },
+ {
+  "id": "ItKe_Smith_01",
+  "label": "Smith",
+  "category": "Key / Lockpick"
+ },
+ {
+  "id": "ItKe_Storage_01",
+  "label": "Storage",
+  "category": "Key / Lockpick"
+ },
+ {
+  "id": "ItKe_TavernDoor",
+  "label": "TavernDoor",
+  "category": "Key / Lockpick"
+ },
+ {
+  "id": "ItMi_Alchemy_Alcohol_01",
+  "label": "Alchemy Alcohol",
+  "category": "Alchemy Ingredient"
+ },
+ {
+  "id": "ItMi_Alchemy_Flask",
+  "label": "Alchemy Flask",
+  "category": "Alchemy Ingredient"
+ },
+ {
+  "id": "ItMi_Alchemy_Moleratlubric_01",
+  "label": "Alchemy Moleratlubric",
+  "category": "Alchemy Ingredient"
+ },
+ {
+  "id": "ItMi_Alchemy_Quicksilver_01",
+  "label": "Alchemy Quicksilver",
+  "category": "Alchemy Ingredient"
+ },
+ {
+  "id": "ItMi_Alchemy_Salt_01",
+  "label": "Alchemy Salt",
+  "category": "Alchemy Ingredient"
+ },
+ {
+  "id": "ItMi_Alchemy_Sulphur_01",
+  "label": "Alchemy Sulphur",
+  "category": "Alchemy Ingredient"
+ },
+ {
+  "id": "ItMi_Alchemy_Syranoil_01",
+  "label": "Alchemy Syranoil",
+  "category": "Alchemy Ingredient"
+ },
+ {
+  "id": "ItMi_Candle_01",
+  "label": "Candle 01",
+  "category": "Misc"
+ },
+ {
+  "id": "ItMi_Coop",
+  "label": "Coop",
+  "category": "Misc"
+ },
+ {
+  "id": "ItMi_Hammer",
+  "label": "Hammer",
+  "category": "Misc"
+ },
+ {
+  "id": "ItMi_Inscription_Parchment",
+  "label": "Inscription Parchment",
+  "category": "Misc"
+ },
+ {
+  "id": "ItMi_Joint_01",
+  "label": "Joint",
+  "category": "Misc"
+ },
+ {
+  "id": "ItMi_Joint_02",
+  "label": "Joint",
+  "category": "Misc"
+ },
+ {
+  "id": "ItMi_Joint_03",
+  "label": "Joint",
+  "category": "Misc"
+ },
+ {
+  "id": "ItMi_JudgeHat",
+  "label": "JudgeHat",
+  "category": "Misc"
+ },
+ {
+  "id": "ItMi_Lute",
+  "label": "Lute",
+  "category": "Misc"
+ },
+ {
+  "id": "ItMi_Oldcoin_01",
+  "label": "Oldcoin",
+  "category": "Misc"
+ },
+ {
+  "id": "ItMi_Orenugget",
+  "label": "Orenugget",
+  "category": "Misc"
+ },
+ {
+  "id": "ItMi_Plants_Swampherb_01",
+  "label": "Plants Swampherb",
+  "category": "Misc"
+ },
+ {
+  "id": "ItMi_Smith_Gold",
+  "label": "Smith Gold",
+  "category": "Smithing Material"
+ },
+ {
+  "id": "ItMi_Smith_Iron",
+  "label": "Smith Iron",
+  "category": "Smithing Material"
+ },
+ {
+  "id": "ItMi_Smith_Ironwood",
+  "label": "Smith Ironwood",
+  "category": "Smithing Material"
+ },
+ {
+  "id": "ItMi_Smith_Leatherstraps",
+  "label": "Smith Leatherstraps",
+  "category": "Smithing Material"
+ },
+ {
+  "id": "ItMi_Smith_Oak",
+  "label": "Smith Oak",
+  "category": "Smithing Material"
+ },
+ {
+  "id": "ItMi_Smith_Obsidian",
+  "label": "Smith Obsidian",
+  "category": "Smithing Material"
+ },
+ {
+  "id": "ItMi_Smith_Ruby",
+  "label": "Smith Ruby",
+  "category": "Smithing Material"
+ },
+ {
+  "id": "ItMi_Smith_Steel",
+  "label": "Smith Steel",
+  "category": "Smithing Material"
+ },
+ {
+  "id": "ItMi_Smith_Willow",
+  "label": "Smith Willow",
+  "category": "Smithing Material"
+ },
+ {
+  "id": "ItMi_Specialjoint",
+  "label": "Specialjoint",
+  "category": "Misc"
+ },
+ {
+  "id": "ItMi_Stomper",
+  "label": "Stomper",
+  "category": "Misc"
+ },
+ {
+  "id": "ItMi_Stuff_Alarmhorn",
+  "label": "Stuff Alarmhorn",
+  "category": "Misc"
+ },
+ {
+  "id": "ItMi_Stuff_Amphore_01",
+  "label": "Stuff Amphore",
+  "category": "Misc"
+ },
+ {
+  "id": "ItMi_Stuff_Barbknife_01",
+  "label": "Stuff Barbknife",
+  "category": "Misc"
+ },
+ {
+  "id": "ItMi_Stuff_Brush",
+  "label": "Stuff Brush",
+  "category": "Misc"
+ },
+ {
+  "id": "ItMi_Stuff_Candlestick_01",
+  "label": "Stuff Candlestick",
+  "category": "Misc"
+ },
+ {
+  "id": "ItMi_Stuff_Cup_01",
+  "label": "Stuff Cup",
+  "category": "Misc"
+ },
+ {
+  "id": "ItMi_Stuff_Cup_02",
+  "label": "Stuff Cup",
+  "category": "Misc"
+ },
+ {
+  "id": "ItMi_Stuff_Gearwheel_01",
+  "label": "Stuff Gearwheel 01",
+  "category": "Misc"
+ },
+ {
+  "id": "ItMi_Stuff_Idologront_01",
+  "label": "Stuff Idologront",
+  "category": "Misc"
+ },
+ {
+  "id": "ItMi_Stuff_Mug_01",
+  "label": "Stuff Mug",
+  "category": "Misc"
+ },
+ {
+  "id": "ItMi_Stuff_Pan_01",
+  "label": "Stuff Pan",
+  "category": "Misc"
+ },
+ {
+  "id": "ItMi_Stuff_Pipe_01",
+  "label": "Stuff Pipe",
+  "category": "Misc"
+ },
+ {
+  "id": "ItMi_Stuff_Plate_01",
+  "label": "Stuff Plate",
+  "category": "Misc"
+ },
+ {
+  "id": "ItMi_Stuff_Silverware_01",
+  "label": "Stuff Silverware",
+  "category": "Misc"
+ },
+ {
+  "id": "ItMi_Wedel",
+  "label": "Wedel",
+  "category": "Misc"
+ },
+ {
+  "id": "ItMs_Axe_Bran",
+  "label": "Axe Bran",
+  "category": "Misc (stackable)"
+ },
+ {
+  "id": "ItMs_DraxHunterKnife",
+  "label": "DraxHunterKnife",
+  "category": "Misc (stackable)"
+ },
+ {
+  "id": "ItMs_ExplosionBarrel",
+  "label": "ExplosionBarrel",
+  "category": "Misc (stackable)"
+ },
+ {
+  "id": "ItMs_ExplosionScroll",
+  "label": "ExplosionScroll",
+  "category": "Misc (stackable)"
+ },
+ {
+  "id": "ItMs_Focus_01",
+  "label": "Focus",
+  "category": "Misc (stackable)"
+ },
+ {
+  "id": "ItMs_Glossary",
+  "label": "Glossary",
+  "category": "Misc (stackable)"
+ },
+ {
+  "id": "ItMs_Remedy",
+  "label": "Remedy",
+  "category": "Misc (stackable)"
+ },
+ {
+  "id": "ItMs_ScavengerWhistle",
+  "label": "ScavengerWhistle",
+  "category": "Misc (stackable)"
+ },
+ {
+  "id": "ItMs_Scroll_InExtremo",
+  "label": "Scroll InExtremo",
+  "category": "Document / Note"
+ },
+ {
+  "id": "ItMs_Scroll_LoveInterest",
+  "label": "Scroll LoveInterest",
+  "category": "Document / Note"
+ },
+ {
+  "id": "ItMs_Scroll_LoveInterest_2",
+  "label": "Scroll LoveInterest",
+  "category": "Document / Note"
+ },
+ {
+  "id": "ItMs_Scroll_LoveStoryWomen",
+  "label": "Scroll LoveStoryWomen",
+  "category": "Document / Note"
+ },
+ {
+  "id": "ItMs_Scroll_OldRecipe",
+  "label": "Scroll OldRecipe",
+  "category": "Document / Note"
+ },
+ {
+  "id": "ItMs_Scroll_SyraRecipe",
+  "label": "Scroll SyraRecipe",
+  "category": "Document / Note"
+ },
+ {
+  "id": "ItMs_Scroll_ToyMaker",
+  "label": "Scroll ToyMaker",
+  "category": "Document / Note"
+ },
+ {
+  "id": "ItMs_ToyMaker_000",
+  "label": "ToyMaker",
+  "category": "Misc (stackable)"
+ },
+ {
+  "id": "ItMs_ToyMaker_001",
+  "label": "ToyMaker",
+  "category": "Misc (stackable)"
+ },
+ {
+  "id": "ItMs_ToyMaker_005",
+  "label": "ToyMaker",
+  "category": "Misc (stackable)"
+ },
+ {
+  "id": "ItMs_ToyMaker_007",
+  "label": "ToyMaker",
+  "category": "Misc (stackable)"
+ },
+ {
+  "id": "ItMs_ToyMaker_009",
+  "label": "ToyMaker",
+  "category": "Misc (stackable)"
+ },
+ {
+  "id": "ItMs_ToyMaker_013",
+  "label": "ToyMaker",
+  "category": "Misc (stackable)"
+ },
+ {
+  "id": "ItMs_Winch",
+  "label": "Winch",
+  "category": "Misc (stackable)"
+ },
+ {
+  "id": "ItMw_1H_Axe_01",
+  "label": "1H Axe 01",
+  "category": "Melee Weapon"
+ },
+ {
+  "id": "ItMw_1H_Axe_02",
+  "label": "1H Axe 02",
+  "category": "Melee Weapon"
+ },
+ {
+  "id": "ItMw_1H_Axe_03",
+  "label": "Axe",
+  "category": "Melee Weapon"
+ },
+ {
+  "id": "ItMw_1H_Axe_Bran",
+  "label": "1H Axe Bran",
+  "category": "Melee Weapon"
+ },
+ {
+  "id": "ItMw_1H_Axe_Cord",
+  "label": "Axe Cord",
+  "category": "Melee Weapon"
+ },
+ {
+  "id": "ItMw_1H_Axe_Hatchet_01",
+  "label": "Axe Hatchet",
+  "category": "Melee Weapon"
+ },
+ {
+  "id": "ItMw_1H_Axe_Lares",
+  "label": "Axe Lares",
+  "category": "Melee Weapon"
+ },
+ {
+  "id": "ItMw_1H_Axe_Old_01",
+  "label": "Axe Old",
+  "category": "Melee Weapon"
+ },
+ {
+  "id": "ItMw_1H_Axe_Sickle_01",
+  "label": "Axe Sickle",
+  "category": "Melee Weapon"
+ },
+ {
+  "id": "ItMw_1H_Axe_Silas",
+  "label": "Axe Silas",
+  "category": "Melee Weapon"
+ },
+ {
+  "id": "ItMw_1H_Mace_01",
+  "label": "Mace",
+  "category": "Melee Weapon"
+ },
+ {
+  "id": "ItMw_1H_Mace_02",
+  "label": "Mace",
+  "category": "Melee Weapon"
+ },
+ {
+  "id": "ItMw_1H_Mace_03",
+  "label": "Mace",
+  "category": "Melee Weapon"
+ },
+ {
+  "id": "ItMw_1H_Mace_04",
+  "label": "Mace",
+  "category": "Melee Weapon"
+ },
+ {
+  "id": "ItMw_1H_Mace_Club_01",
+  "label": "Mace Club",
+  "category": "Melee Weapon"
+ },
+ {
+  "id": "ItMw_1H_Mace_Fortuno",
+  "label": "Mace Fortuno",
+  "category": "Melee Weapon"
+ },
+ {
+  "id": "ItMw_1H_Mace_Lester",
+  "label": "Mace Lester",
+  "category": "Melee Weapon"
+ },
+ {
+  "id": "ItMw_1H_Mace_Light_01",
+  "label": "Mace Light",
+  "category": "Melee Weapon"
+ },
+ {
+  "id": "ItMw_1H_Mace_Nailmace_01",
+  "label": "Mace Nailmace",
+  "category": "Melee Weapon"
+ },
+ {
+  "id": "ItMw_1H_Mace_Namib",
+  "label": "Mace Namib",
+  "category": "Melee Weapon"
+ },
+ {
+  "id": "ItMw_1H_Mace_Orun",
+  "label": "Mace Orun",
+  "category": "Melee Weapon"
+ },
+ {
+  "id": "ItMw_1H_Mace_Poker_01",
+  "label": "Mace Poker",
+  "category": "Melee Weapon"
+ },
+ {
+  "id": "ItMw_1H_Mace_Sledgehammer_01",
+  "label": "Mace Sledgehammer",
+  "category": "Melee Weapon"
+ },
+ {
+  "id": "ItMw_1H_Mace_War_01",
+  "label": "Mace War",
+  "category": "Melee Weapon"
+ },
+ {
+  "id": "ItMw_1H_Mace_War_02",
+  "label": "Mace War",
+  "category": "Melee Weapon"
+ },
+ {
+  "id": "ItMw_1H_Mace_War_03",
+  "label": "Mace War",
+  "category": "Melee Weapon"
+ },
+ {
+  "id": "ItMw_1H_Mace_Warhammer_01",
+  "label": "1H Mace Warhammer 01",
+  "category": "Melee Weapon"
+ },
+ {
+  "id": "ItMw_1H_Mace_Warhammer_03",
+  "label": "1H Mace Warhammer 03",
+  "category": "Melee Weapon"
+ },
+ {
+  "id": "ItMw_1H_Sword_01",
+  "label": "Sword",
+  "category": "Melee Weapon"
+ },
+ {
+  "id": "ItMw_1H_Sword_02",
+  "label": "Sword",
+  "category": "Melee Weapon"
+ },
+ {
+  "id": "ItMw_1H_Sword_03",
+  "label": "Sword",
+  "category": "Melee Weapon"
+ },
+ {
+  "id": "ItMw_1H_Sword_04",
+  "label": "Sword",
+  "category": "Melee Weapon"
+ },
+ {
+  "id": "ItMw_1H_Sword_04_Diego_Sleeper",
+  "label": "Sword 04 Diego Sleeper",
+  "category": "Melee Weapon"
+ },
+ {
+  "id": "ItMw_1H_Sword_05_Darrion",
+  "label": "Sword 05 Darrion",
+  "category": "Melee Weapon"
+ },
+ {
+  "id": "ItMw_1H_Sword_Arto",
+  "label": "Sword Arto",
+  "category": "Melee Weapon"
+ },
+ {
+  "id": "ItMw_1H_Sword_Bastard_01",
+  "label": "1H Sword Bastard 01",
+  "category": "Melee Weapon"
+ },
+ {
+  "id": "ItMw_1H_Sword_Broad_01",
+  "label": "1H Sword Broad 01",
+  "category": "Melee Weapon"
+ },
+ {
+  "id": "ItMw_1H_Sword_Kalom",
+  "label": "Sword Kalom",
+  "category": "Melee Weapon"
+ },
+ {
+  "id": "ItMw_1H_Sword_Lightguard_01",
+  "label": "1H Sword Lightguard 01",
+  "category": "Melee Weapon"
+ },
+ {
+  "id": "ItMw_1H_Sword_Long_01",
+  "label": "1H Sword Long 01",
+  "category": "Melee Weapon"
+ },
+ {
+  "id": "ItMw_1H_Sword_Long_02",
+  "label": "Sword Long",
+  "category": "Melee Weapon"
+ },
+ {
+  "id": "ItMw_1H_Sword_Long_03",
+  "label": "1H Sword Long 03",
+  "category": "Melee Weapon"
+ },
+ {
+  "id": "ItMw_1H_Sword_Long_04",
+  "label": "1H Sword Long 04",
+  "category": "Melee Weapon"
+ },
+ {
+  "id": "ItMw_1H_Sword_Long_05",
+  "label": "Sword Long",
+  "category": "Melee Weapon"
+ },
+ {
+  "id": "ItMw_1H_Sword_Old_01",
+  "label": "Sword Old",
+  "category": "Melee Weapon"
+ },
+ {
+  "id": "ItMw_1H_Sword_Old_02",
+  "label": "1H Sword Old 02",
+  "category": "Melee Weapon"
+ },
+ {
+  "id": "ItMw_1H_Sword_Paw",
+  "label": "Sword Paw",
+  "category": "Melee Weapon"
+ },
+ {
+  "id": "ItMw_1H_Sword_Raven",
+  "label": "Sword Raven",
+  "category": "Melee Weapon"
+ },
+ {
+  "id": "ItMw_1H_Sword_Scar",
+  "label": "Sword Scar",
+  "category": "Melee Weapon"
+ },
+ {
+  "id": "ItMw_1H_Sword_Scythe_01",
+  "label": "Sword Scythe",
+  "category": "Melee Weapon"
+ },
+ {
+  "id": "ItMw_1H_Sword_Short_01",
+  "label": "Sword Short",
+  "category": "Melee Weapon"
+ },
+ {
+  "id": "ItMw_1H_Sword_Short_02",
+  "label": "Sword Short",
+  "category": "Melee Weapon"
+ },
+ {
+  "id": "ItMw_1H_Sword_Short_03",
+  "label": "Sword Short",
+  "category": "Melee Weapon"
+ },
+ {
+  "id": "ItMw_1H_Sword_Short_04",
+  "label": "Sword Short",
+  "category": "Melee Weapon"
+ },
+ {
+  "id": "ItMw_1H_Sword_Short_05",
+  "label": "1H Sword Short 05",
+  "category": "Melee Weapon"
+ },
+ {
+  "id": "ItMw_1H_Sword_Whistler",
+  "label": "Sword Whistler",
+  "category": "Melee Weapon"
+ },
+ {
+  "id": "ItMw_1H_Torch",
+  "label": "Torch",
+  "category": "Melee Weapon"
+ },
+ {
+  "id": "ItMw_1H_Torch_Gob",
+  "label": "Torch Gob",
+  "category": "Melee Weapon"
+ },
+ {
+  "id": "ItMw_2H_Axe_Gorn",
+  "label": "Axe Gorn",
+  "category": "Melee Weapon"
+ },
+ {
+  "id": "ItMw_2H_Axe_Heavy_02",
+  "label": "Axe Heavy",
+  "category": "Melee Weapon"
+ },
+ {
+  "id": "ItMw_2H_Axe_Lee",
+  "label": "Axe Lee",
+  "category": "Melee Weapon"
+ },
+ {
+  "id": "ItMw_2H_Axe_Orc_01",
+  "label": "Axe Orc",
+  "category": "Melee Weapon"
+ },
+ {
+  "id": "ItMw_2H_Axe_Orc_01_vOrc",
+  "label": "Axe Orc 01 vOrc",
+  "category": "Melee Weapon"
+ },
+ {
+  "id": "ItMw_2H_Axe_Orc_02",
+  "label": "Axe Orc",
+  "category": "Melee Weapon"
+ },
+ {
+  "id": "ItMw_2H_Axe_Orc_02_vOrc",
+  "label": "Axe Orc 02 vOrc",
+  "category": "Melee Weapon"
+ },
+ {
+  "id": "ItMw_2H_Axe_Orc_03_vOrc",
+  "label": "Axe Orc 03 vOrc",
+  "category": "Melee Weapon"
+ },
+ {
+  "id": "ItMw_2H_Axe_Orc_04_vOrc",
+  "label": "Axe Orc 04 vOrc",
+  "category": "Melee Weapon"
+ },
+ {
+  "id": "ItMw_2H_Axe_Orik",
+  "label": "Axe Orik",
+  "category": "Melee Weapon"
+ },
+ {
+  "id": "ItMw_2H_Axe_Pickaxe",
+  "label": "Axe Pickaxe",
+  "category": "Melee Weapon"
+ },
+ {
+  "id": "ItMw_2H_Axe_Torlof",
+  "label": "Axe Torlof",
+  "category": "Melee Weapon"
+ },
+ {
+  "id": "ItMw_2H_Mace_Orc_01_vOrc",
+  "label": "Mace Orc 01 vOrc",
+  "category": "Melee Weapon"
+ },
+ {
+  "id": "ItMw_2H_Staff_Orc_vOrc",
+  "label": "Staff Orc vOrc",
+  "category": "Melee Weapon"
+ },
+ {
+  "id": "ItMw_2H_Staff_Scepter",
+  "label": "Staff Scepter",
+  "category": "Melee Weapon"
+ },
+ {
+  "id": "ItMw_2H_Sword_Innos",
+  "label": "Sword Innos",
+  "category": "Melee Weapon"
+ },
+ {
+  "id": "ItMw_2H_Sword_Light_01",
+  "label": "Sword Light",
+  "category": "Melee Weapon"
+ },
+ {
+  "id": "ItMw_2H_Sword_Light_02",
+  "label": "Sword Light",
+  "category": "Melee Weapon"
+ },
+ {
+  "id": "ItMw_2H_Sword_Light_03",
+  "label": "Sword Light",
+  "category": "Melee Weapon"
+ },
+ {
+  "id": "ItMw_2H_Sword_Light_04",
+  "label": "Sword Light",
+  "category": "Melee Weapon"
+ },
+ {
+  "id": "ItMw_2H_Sword_Orc_01",
+  "label": "Sword Orc",
+  "category": "Melee Weapon"
+ },
+ {
+  "id": "ItMw_2H_Sword_Orc_01_vOrc",
+  "label": "Sword Orc 01 vOrc",
+  "category": "Melee Weapon"
+ },
+ {
+  "id": "ItMw_2H_Sword_Thorus",
+  "label": "Sword Thorus",
+  "category": "Melee Weapon"
+ },
+ {
+  "id": "ItMw_2H_Sword_Wind",
+  "label": "Sword Wind",
+  "category": "Melee Weapon"
+ },
+ {
+  "id": "ItRw_Bow_Diego",
+  "label": "Bow Diego",
+  "category": "Ranged Weapon"
+ },
+ {
+  "id": "ItRw_Bow_Long_01",
+  "label": "Bow Long",
+  "category": "Ranged Weapon"
+ },
+ {
+  "id": "ItRw_Bow_Long_02",
+  "label": "Bow Long",
+  "category": "Ranged Weapon"
+ },
+ {
+  "id": "ItRw_Bow_Long_03",
+  "label": "Bow Long 03",
+  "category": "Ranged Weapon"
+ },
+ {
+  "id": "ItRw_Bow_Long_04",
+  "label": "Bow Long 04",
+  "category": "Ranged Weapon"
+ },
+ {
+  "id": "ItRw_Bow_Long_05",
+  "label": "Bow Long 05",
+  "category": "Ranged Weapon"
+ },
+ {
+  "id": "ItRw_Bow_Long_10",
+  "label": "Bow Long",
+  "category": "Ranged Weapon"
+ },
+ {
+  "id": "ItRw_Bow_Small_01",
+  "label": "Bow Small",
+  "category": "Ranged Weapon"
+ },
+ {
+  "id": "ItRw_Bow_Small_02",
+  "label": "Bow Small",
+  "category": "Ranged Weapon"
+ },
+ {
+  "id": "ItRw_Bow_Small_03",
+  "label": "Bow Small",
+  "category": "Ranged Weapon"
+ },
+ {
+  "id": "ItRw_Bow_Small_04",
+  "label": "Bow Small",
+  "category": "Ranged Weapon"
+ },
+ {
+  "id": "ItRw_Bow_Small_05",
+  "label": "Bow Small",
+  "category": "Ranged Weapon"
+ },
+ {
+  "id": "ItRw_Bow_Wolf",
+  "label": "Bow Wolf",
+  "category": "Ranged Weapon"
+ },
+ {
+  "id": "ItRw_Crossbow_01",
+  "label": "Crossbow",
+  "category": "Ranged Weapon"
+ },
+ {
+  "id": "ItRw_Crossbow_03",
+  "label": "Crossbow",
+  "category": "Ranged Weapon"
+ },
+ {
+  "id": "ItRw_Crossbow_04",
+  "label": "Crossbow",
+  "category": "Ranged Weapon"
+ },
+ {
+  "id": "ItWr_Book_Arcanum",
+  "label": "Book Arcanum",
+  "category": "Book"
+ },
+ {
+  "id": "ItWr_Book_Artfighting",
+  "label": "Book Artfighting",
+  "category": "Book"
+ },
+ {
+  "id": "ItWr_Book_Bestiary_01",
+  "label": "Book Bestiary",
+  "category": "Book"
+ },
+ {
+  "id": "ItWr_Book_Bestiary_02",
+  "label": "Book Bestiary",
+  "category": "Book"
+ },
+ {
+  "id": "ItWr_Book_Bestiary_04",
+  "label": "Book Bestiary",
+  "category": "Book"
+ },
+ {
+  "id": "ItWr_Book_Bloodfly_01",
+  "label": "Book Bloodfly",
+  "category": "Book"
+ },
+ {
+  "id": "ItWr_Book_Chromanin_01",
+  "label": "Book Chromanin",
+  "category": "Book"
+ },
+ {
+  "id": "ItWr_Book_Circle_00",
+  "label": "Book Circle 00",
+  "category": "Book"
+ },
+ {
+  "id": "ItWr_Book_Circle_01",
+  "label": "Book Circle 01",
+  "category": "Book"
+ },
+ {
+  "id": "ItWr_Book_Circle_02",
+  "label": "Book Circle 02",
+  "category": "Book"
+ },
+ {
+  "id": "ItWr_Book_Circle_03",
+  "label": "Book Circle 03",
+  "category": "Book"
+ },
+ {
+  "id": "ItWr_Book_Circle_04",
+  "label": "Book Circle 04",
+  "category": "Book"
+ },
+ {
+  "id": "ItWr_Book_Circle_05",
+  "label": "Book Circle 05",
+  "category": "Book"
+ },
+ {
+  "id": "ItWr_Book_Circle_06",
+  "label": "Book Circle 06",
+  "category": "Book"
+ },
+ {
+  "id": "ItWr_Book_FireLizards",
+  "label": "Book FireLizards",
+  "category": "Book"
+ },
+ {
+  "id": "ItWr_Book_FireMages",
+  "label": "Book FireMages",
+  "category": "Book"
+ },
+ {
+  "id": "ItWr_Book_Focus",
+  "label": "Book Focus",
+  "category": "Book"
+ },
+ {
+  "id": "ItWr_Book_Gods_01",
+  "label": "Book Gods 01",
+  "category": "Book"
+ },
+ {
+  "id": "ItWr_Book_Gods_02",
+  "label": "Book Gods 02",
+  "category": "Book"
+ },
+ {
+  "id": "ItWr_Book_Gods_03",
+  "label": "Book Gods 03",
+  "category": "Book"
+ },
+ {
+  "id": "ItWr_Book_Hunt",
+  "label": "Book Hunt",
+  "category": "Book"
+ },
+ {
+  "id": "ItWr_Book_Lyric",
+  "label": "Book Lyric",
+  "category": "Book"
+ },
+ {
+  "id": "ItWr_Book_Magicore",
+  "label": "Book Magicore",
+  "category": "Book"
+ },
+ {
+  "id": "ItWr_Book_Powerfulart",
+  "label": "Book Powerfulart",
+  "category": "Book"
+ },
+ {
+  "id": "ItWr_Book_Recipes_01",
+  "label": "Book Recipes",
+  "category": "Book"
+ },
+ {
+  "id": "ItWr_Map_Cliff",
+  "label": "Map Cliff",
+  "category": "Map"
+ },
+ {
+  "id": "ItWr_Map_Lighthouse",
+  "label": "Map Lighthouse",
+  "category": "Map"
+ },
+ {
+  "id": "ItWr_Map_NewCamp",
+  "label": "Map NewCamp",
+  "category": "Map"
+ },
+ {
+  "id": "ItWr_Map_OldCamp",
+  "label": "Map OldCamp",
+  "category": "Map"
+ },
+ {
+  "id": "ItWr_Map_OldMine",
+  "label": "Map OldMine",
+  "category": "Map"
+ },
+ {
+  "id": "ItWr_Map_SwampCamp",
+  "label": "Map SwampCamp",
+  "category": "Map"
+ },
+ {
+  "id": "ItWr_Map_World",
+  "label": "Map World",
+  "category": "Map"
+ },
+ {
+  "id": "ItWr_Scroll_1H_Axe_02",
+  "label": "Scroll 1H Axe",
+  "category": "Document / Note"
+ },
+ {
+  "id": "ItWr_Scroll_1H_Mace_02",
+  "label": "Scroll 1H Mace 02",
+  "category": "Document / Note"
+ },
+ {
+  "id": "ItWr_Scroll_1H_Mace_03",
+  "label": "Scroll 1H Mace 03",
+  "category": "Document / Note"
+ },
+ {
+  "id": "ItWr_Scroll_1H_Mace_04",
+  "label": "Scroll 1H Mace 04",
+  "category": "Document / Note"
+ },
+ {
+  "id": "ItWr_Scroll_1H_Mace_Light_01",
+  "label": "Scroll 1H Mace Light",
+  "category": "Document / Note"
+ },
+ {
+  "id": "ItWr_Scroll_1H_Mace_War_01",
+  "label": "Scroll 1H Mace War 01",
+  "category": "Document / Note"
+ },
+ {
+  "id": "ItWr_Scroll_1H_Mace_War_02",
+  "label": "Scroll 1H Mace War 02",
+  "category": "Document / Note"
+ },
+ {
+  "id": "ItWr_Scroll_1H_Mace_War_03",
+  "label": "Scroll 1H Mace War",
+  "category": "Document / Note"
+ },
+ {
+  "id": "ItWr_Scroll_1H_Sword_02",
+  "label": "Scroll 1H Sword",
+  "category": "Document / Note"
+ },
+ {
+  "id": "ItWr_Scroll_1H_Sword_Broad_01",
+  "label": "Scroll 1H Sword Broad 01",
+  "category": "Document / Note"
+ },
+ {
+  "id": "ItWr_Scroll_1H_Sword_Long_01",
+  "label": "Scroll 1H Sword Long 01",
+  "category": "Document / Note"
+ },
+ {
+  "id": "ItWr_Scroll_1H_Sword_Short_02",
+  "label": "Scroll 1H Sword Short 02",
+  "category": "Document / Note"
+ },
+ {
+  "id": "ItWr_Scroll_1H_Sword_Short_04",
+  "label": "Scroll 1H Sword Short 04",
+  "category": "Document / Note"
+ },
+ {
+  "id": "ItWr_Scroll_1H_Sword_Short_05",
+  "label": "Scroll 1H Sword Short 05",
+  "category": "Document / Note"
+ },
+ {
+  "id": "ItWr_Scroll_2H_Sword_Light_01",
+  "label": "Scroll 2H Sword Light 01",
+  "category": "Document / Note"
+ },
+ {
+  "id": "ItWr_Scroll_2H_Sword_Light_03",
+  "label": "Scroll 2H Sword Light 03",
+  "category": "Document / Note"
+ },
+ {
+  "id": "ItWr_Scroll_AbandonMineSketch",
+  "label": "Scroll AbandonMineSketch",
+  "category": "Document / Note"
+ },
+ {
+  "id": "ItWr_Scroll_BallLightning",
+  "label": "Scroll BallLightning",
+  "category": "Document / Note"
+ },
+ {
+  "id": "ItWr_Scroll_Bran_01",
+  "label": "Scroll Bran",
+  "category": "Document / Note"
+ },
+ {
+  "id": "ItWr_Scroll_DragonsbreathStew",
+  "label": "Scroll DragonsbreathStew",
+  "category": "Document / Note"
+ },
+ {
+  "id": "ItWr_Scroll_FireBolt",
+  "label": "Scroll FireBolt",
+  "category": "Document / Note"
+ },
+ {
+  "id": "ItWr_Scroll_FistOfWind",
+  "label": "Scroll FistOfWind",
+  "category": "Document / Note"
+ },
+ {
+  "id": "ItWr_Scroll_Heal",
+  "label": "Scroll Heal",
+  "category": "Document / Note"
+ },
+ {
+  "id": "ItWr_Scroll_IceBolt",
+  "label": "Scroll IceBolt",
+  "category": "Document / Note"
+ },
+ {
+  "id": "ItWr_Scroll_Kalom",
+  "label": "Scroll Kalom",
+  "category": "Document / Note"
+ },
+ {
+  "id": "ItWr_Scroll_Letter_01",
+  "label": "Scroll Letter",
+  "category": "Document / Note"
+ },
+ {
+  "id": "ItWr_Scroll_List",
+  "label": "Scroll List",
+  "category": "Document / Note"
+ },
+ {
+  "id": "ItWr_Scroll_Listnc",
+  "label": "Scroll Listnc",
+  "category": "Document / Note"
+ },
+ {
+  "id": "ItWr_Scroll_Meatbugsauteed",
+  "label": "Scroll Meatbugsauteed",
+  "category": "Document / Note"
+ },
+ {
+  "id": "ItWr_Scroll_Potion_Health_02",
+  "label": "Scroll Potion Health 02",
+  "category": "Document / Note"
+ },
+ {
+  "id": "ItWr_Scroll_Potion_Mana_02",
+  "label": "Scroll Potion Mana 02",
+  "category": "Document / Note"
+ },
+ {
+  "id": "ItWr_Scroll_Sketch",
+  "label": "Scroll Sketch",
+  "category": "Document / Note"
+ },
+ {
+  "id": "ItWr_Scroll_StormOfFire",
+  "label": "Scroll StormOfFire",
+  "category": "Document / Note"
+ },
+ {
+  "id": "ItWr_Scroll_TransformBloodfly",
+  "label": "Scroll TransformBloodfly",
+  "category": "Document / Note"
+ },
+ {
+  "id": "ItWr_Scroll_TransformBloodhound",
+  "label": "Scroll TransformBloodhound",
+  "category": "Document / Note"
+ },
+ {
+  "id": "ItWr_Scroll_TransformLizard",
+  "label": "Scroll TransformLizard",
+  "category": "Document / Note"
+ },
+ {
+  "id": "ItWr_Scroll_TransformLurker",
+  "label": "Scroll TransformLurker",
+  "category": "Document / Note"
+ },
+ {
+  "id": "ItWr_Scroll_TransformMinecrawler",
+  "label": "Scroll TransformMinecrawler",
+  "category": "Document / Note"
+ },
+ {
+  "id": "ItWr_Scroll_TransformSnapper",
+  "label": "Scroll TransformSnapper",
+  "category": "Document / Note"
+ },
+ {
+  "id": "Kdf_Armor_H",
+  "label": "Kdf Armor H",
+  "category": "NPC Armor"
+ },
+ {
+  "id": "Kdf_Armor_L",
+  "label": "Kdf Armor L",
+  "category": "NPC Armor"
+ },
+ {
+  "id": "LesserDemon",
+  "label": "LesserDemon",
+  "category": "Creature / Built-in"
+ },
+ {
+  "id": "LizardJaw",
+  "label": "LizardJaw",
+  "category": "Creature / Built-in"
+ },
+ {
+  "id": "LurkerJaw",
+  "label": "LurkerJaw",
+  "category": "Creature / Built-in"
+ },
+ {
+  "id": "LurkerTail",
+  "label": "LurkerTail",
+  "category": "Creature / Built-in"
+ },
+ {
+  "id": "MCQueen_Legs",
+  "label": "MCQueen Legs",
+  "category": "Creature / Built-in"
+ },
+ {
+  "id": "MCQueen_Legs_Phase2",
+  "label": "MCQueen Legs Phase2",
+  "category": "Creature / Built-in"
+ },
+ {
+  "id": "MinecrawlerLeg",
+  "label": "MinecrawlerLeg",
+  "category": "Creature / Built-in"
+ },
+ {
+  "id": "MoleratJaw",
+  "label": "MoleratJaw",
+  "category": "Creature / Built-in"
+ },
+ {
+  "id": "OrcDogJaw",
+  "label": "OrcDogJaw",
+  "category": "Creature / Built-in"
+ },
+ {
+  "id": "Ore_Armor_M",
+  "label": "Ore Armor M",
+  "category": "NPC Armor"
+ },
+ {
+  "id": "RazorJaw",
+  "label": "RazorJaw",
+  "category": "Creature / Built-in"
+ },
+ {
+  "id": "ScavengerJaw",
+  "label": "ScavengerJaw",
+  "category": "Creature / Built-in"
+ },
+ {
+  "id": "ShadowBeastWeapon",
+  "label": "ShadowBeastWeapon",
+  "category": "Creature / Built-in"
+ },
+ {
+  "id": "SkeletonMageWeapon",
+  "label": "SkeletonMageWeapon",
+  "category": "Creature / Built-in"
+ },
+ {
+  "id": "SnapperJaw",
+  "label": "SnapperJaw",
+  "category": "Creature / Built-in"
+ },
+ {
+  "id": "StoneGolemWeapon",
+  "label": "StoneGolemWeapon",
+  "category": "Creature / Built-in"
+ },
+ {
+  "id": "StoneGolemWeapon_Small",
+  "label": "StoneGolemWeapon Small",
+  "category": "Creature / Built-in"
+ },
+ {
+  "id": "Stt_Armor",
+  "label": "Stt Armor",
+  "category": "NPC Armor"
+ },
+ {
+  "id": "SwampsharkJaw",
+  "label": "SwampsharkJaw",
+  "category": "Creature / Built-in"
+ },
+ {
+  "id": "TrollWeapon",
+  "label": "TrollWeapon",
+  "category": "Creature / Built-in"
+ },
+ {
+  "id": "WatchFightWeapon",
+  "label": "WatchFightWeapon",
+  "category": "Creature / Built-in"
+ },
+ {
+  "id": "WolfJaw",
+  "label": "WolfJaw",
+  "category": "Creature / Built-in"
+ },
+ {
+  "id": "ZombieWeapon",
+  "label": "ZombieWeapon",
+  "category": "Creature / Built-in"
+ }
+]

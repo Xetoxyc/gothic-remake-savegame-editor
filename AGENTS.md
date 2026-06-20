@@ -156,6 +156,10 @@ docker compose build && docker run -d --name g1r-test -p 5055:5000 gothic-remake
   discoverable from the save, so there is no static item catalog *yet*. If we ever
   want to add items a fresh save has never seen, mirror the skill approach here:
   a static `catalog.ITEMS` + a donor `ItemSlot` template + the inventory anchor.
+  **The item naming convention, category scheme, and the discover→merge workflow for
+  newer saves are documented in [../ITEMS.md](../ITEMS.md)** (canonical scanner:
+  root `extract_items.py` → `local-test/items.json`). Read it before extending the
+  item DB — notably `ItAr_` is *magic* (runes/scrolls), not armor.
 - **Story flags** — `add_passage` / story-flag listing. Same note: currently
   discovered from the save; promote to a static catalog only if fresh-save coverage
   is needed.

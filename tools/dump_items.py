@@ -2,6 +2,11 @@
 """Build an item DB from a decompressed G1R payload: every distinct item class
 that appears as an m_ItemDefinition anywhere in the save -> items.json.
 
+DEPRECATED: superseded by ../../extract_items.py, which also picks up items only
+referenced outside m_ItemDefinition, merges into the existing DB, and fixes the
+coarse category map below (`ItAr` is magic runes/scrolls, not Armor). See
+../../ITEMS.md. Kept for reference only.
+
 Usage:  python dump_items.py G1R-012.payload.bin [items.json]
 (payload = the decompressed blob; e.g. produced by decompress.py)
 """

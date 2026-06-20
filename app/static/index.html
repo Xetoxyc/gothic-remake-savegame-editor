@@ -74,10 +74,8 @@
     <div class="panel hidden" data-panel="inventory">
       <p class="muted">Your items &amp; amounts. Edit a count, or <b>add a new item</b> (experimental — verify in-game).</p>
       <div class="additem">
-        <input id="add-item-key" list="itemdb" placeholder="Add item — type a name or key (e.g. ItAt_Amulet_Fire)" autocomplete="off">
-        <datalist id="itemdb"></datalist>
-        <input id="add-item-qty" type="number" min="1" value="1" title="amount">
-        <button id="add-item-btn" class="primary small">+ add</button>
+        <button id="open-item-picker" class="primary small">＋ Select item…</button>
+        <span class="muted" id="add-item-hint">Pick from the catalog — it's added with quantity 1, adjust the amount below.</span>
       </div>
       <div class="toolbar">
         <input id="search-inv" type="search" placeholder="Search items…  (e.g. coin, ore, lockpick)" autocomplete="off">
@@ -155,6 +153,26 @@
   <button id="clear" class="link" disabled>clear</button>
   <button id="generate" class="primary" disabled>Generate fixed save</button>
 </footer>
+
+<!-- item picker modal -->
+<div id="item-modal" class="modal hidden" aria-hidden="true">
+  <div class="modal-backdrop" data-close></div>
+  <div class="modal-box" role="dialog" aria-label="Select an item">
+    <div class="modal-head">
+      <h3>Select an item</h3>
+      <input id="modal-search" type="search" placeholder="Filter items… (name or key)" autocomplete="off">
+      <button class="modal-x" data-close title="close">✕</button>
+    </div>
+    <div class="modal-body">
+      <aside id="modal-cats" class="modal-cats"></aside>
+      <div id="modal-items" class="modal-items"></div>
+    </div>
+    <div class="modal-foot">
+      <span id="modal-status" class="muted">Click an item to add it. Click again to add more.</span>
+      <button class="primary small" data-close>Done</button>
+    </div>
+  </div>
+</div>
 
 <div id="toast" class="toast hidden"></div>
 <script src="app.js"></script>

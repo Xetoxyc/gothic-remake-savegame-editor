@@ -484,6 +484,8 @@ def apply_edits(payload, edits):
 
 # ----------------------------------------------------------- player attributes
 import re as _re
+import os as _os
+import json as _json
 
 # The protagonist's CharacterState is keyed "Hero"; its AttributeSetsByClass map
 # holds the player's GAS attribute sets (Strength, Health, Level, skills, ...).
@@ -896,28 +898,71 @@ _ITEM_LABELS = {
 }
 
 
-_ITEM_CATS = {
-    "ItMi": "Misc", "ItFo": "Food / Potion", "ItMw": "Melee Weapon",
-    "ItRw": "Ranged Weapon", "ItAm": "Ammo", "ItAr": "Armor",
-    "ItAt": "Amulet / Trophy", "ItKe": "Key / Lockpick", "ItWr": "Written",
-    "ItMs": "Misc Stack", "ItAI": "AI / Special", "ItRu": "Rune / Scroll",
-}
+# Category rules — ordered, first match wins (mirrors ../../extract_items.py /
+# ITEMS.md). The prefix alone is NOT the category: ItAr_Rune/Scroll are magic,
+# not armor; ItAt_Amulet/Ring are jewelry while the rest are trophies; etc.
+_ITEM_RULES = [
+    (r"ItAr_Rune_", "Spell (Rune)"), (r"ItAr_Scroll_", "Spell Scroll"),
+    (r"ItAr_", "Armor"),
+    (r"ItMw_", "Melee Weapon"), (r"ItRw_", "Ranged Weapon"),
+    (r"ItAm_", "Ammunition"),
+    (r"ItFo_Potion_", "Potion"), (r"ItFo_", "Food / Drink"),
+    (r"ItAt_Amulet_", "Amulet"), (r"ItAt_Ring_", "Ring"), (r"ItAt_", "Trophy"),
+    (r"ItKe_", "Key / Lockpick"),
+    (r"ItWr_Map_", "Map"), (r"ItWr_Book_", "Book"), (r"ItWr_", "Document / Note"),
+    (r"ItMs_Scroll_", "Document / Note"), (r"ItMs_", "Misc (stackable)"),
+    (r"ItMi_Alchemy_", "Alchemy Ingredient"), (r"ItMi_Smith_", "Smithing Material"),
+    (r"ItMi_", "Misc"),
+    (r"ItAI_", "Interactive / AI"),
+    (r"[A-Za-z]+_Armor|Armor_", "NPC Armor"),
+]
+_ITEM_RULES = [(_re.compile(p), c) for p, c in _ITEM_RULES]
+_CREATURE_RE = _re.compile(r"Jaw|Sting|Claws|Tail|Leg|Weapon|Fist|Demon|Nugget|"
+                           r"LesserDemon|MCQueen|Ore_")
 
 
 def _item_category(item):
-    return _ITEM_CATS.get(item[:4], "Other") if item.startswith("It") else "Trophy / Other"
+    for rx, cat in _ITEM_RULES:
+        if rx.match(item):
+            return cat
+    return "Creature / Built-in" if _CREATURE_RE.search(item) else "Other"
 
 
-def list_item_db(payload):
-    """Every distinct item class that appears anywhere in the save (valid ids)."""
-    items = set()
+_CATALOG_PATH = _os.path.join(_os.path.dirname(_os.path.abspath(__file__)), "items.json")
+_CATALOG = None
+
+
+def _bundled_catalog():
+    """The curated cross-save item DB (built by ../../extract_items.py)."""
+    global _CATALOG
+    if _CATALOG is None:
+        try:
+            with open(_CATALOG_PATH, encoding="utf-8") as f:
+                _CATALOG = {x["id"]: x for x in _json.load(f)}
+        except (OSError, ValueError):
+            _CATALOG = {}
+    return _CATALOG
+
+
+def _save_item_ids(payload):
+    ids = set()
     for m in _ITEM_DEF.finditer(payload):
         vo = m.end() + 9
         n = _i32(payload, vo)
         if 0 < n < 200:
-            items.add(payload[vo + 4:vo + 4 + n - 1].decode("utf-8", "replace").split(".")[-1])
-    return [{"id": it, "label": _item_label(it), "category": _item_category(it)}
-            for it in sorted(items)]
+            ids.add(payload[vo + 4:vo + 4 + n - 1].decode("utf-8", "replace").split(".")[-1])
+    return ids
+
+
+def list_item_db(payload):
+    """Item-picker catalog: the curated cross-save DB, unioned with any item this
+    save references that the DB doesn't know yet (so it stays addable). Sorted by
+    category then label for the grouped picker modal."""
+    cat = dict(_bundled_catalog())
+    for it in _save_item_ids(payload):
+        if it not in cat:
+            cat[it] = {"id": it, "label": _item_label(it), "category": _item_category(it)}
+    return sorted(cat.values(), key=lambda x: (x["category"], x["label"].lower()))
 
 
 def _item_label(item):
