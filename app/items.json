@@ -1625,8 +1625,28 @@
   "category": "Misc"
  },
  {
+  "id": "ItMi_Smith_1H_Axe_Sickle_01",
+  "label": "Smith 1H Axe Sickle 01",
+  "category": "Smithing Material"
+ },
+ {
   "id": "ItMi_Smith_1H_Sword_05",
   "label": "Smith 1H Sword 05",
+  "category": "Smithing Material"
+ },
+ {
+  "id": "ItMi_Smith_1H_Sword_Long_01",
+  "label": "Smith 1H Sword Long 01",
+  "category": "Smithing Material"
+ },
+ {
+  "id": "ItMi_Smith_1H_Sword_Short_01",
+  "label": "Smith 1H Sword Short 01",
+  "category": "Smithing Material"
+ },
+ {
+  "id": "ItMi_Smith_1H_Sword_Short_03",
+  "label": "Smith 1H Sword Short 03",
   "category": "Smithing Material"
  },
  {
@@ -1645,6 +1665,21 @@
   "category": "Smithing Material"
  },
  {
+  "id": "ItMi_Smith_Blade_Long",
+  "label": "Smith Blade Long",
+  "category": "Smithing Material"
+ },
+ {
+  "id": "ItMi_Smith_Blade_Short",
+  "label": "Smith Blade Short",
+  "category": "Smithing Material"
+ },
+ {
+  "id": "ItMi_Smith_Blade_Sickle",
+  "label": "Smith Blade Sickle",
+  "category": "Smithing Material"
+ },
+ {
   "id": "ItMi_Smith_Gold",
   "label": "Smith Gold",
   "category": "Smithing Material"
@@ -1657,6 +1692,21 @@
  {
   "id": "ItMi_Smith_Intermediate_Blade_Great",
   "label": "Smith Intermediate Blade Great",
+  "category": "Smithing Material"
+ },
+ {
+  "id": "ItMi_Smith_Intermediate_Blade_Long",
+  "label": "Smith Intermediate Blade Long",
+  "category": "Smithing Material"
+ },
+ {
+  "id": "ItMi_Smith_Intermediate_Blade_Short",
+  "label": "Smith Intermediate Blade Short",
+  "category": "Smithing Material"
+ },
+ {
+  "id": "ItMi_Smith_Intermediate_Blade_Sickle",
+  "label": "Smith Intermediate Blade Sickle",
   "category": "Smithing Material"
  },
  {
@@ -3072,6 +3122,11 @@
  {
   "id": "ItWr_Scroll_Letter_01",
   "label": "Scroll Letter",
+  "category": "Document / Note"
+ },
+ {
+  "id": "ItWr_Scroll_Letter_02",
+  "label": "Scroll Letter 02",
   "category": "Document / Note"
  },
  {
