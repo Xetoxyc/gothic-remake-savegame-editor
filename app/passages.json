@@ -1,0 +1,872 @@
+[
+ {
+  "name": "AfterCinematic_Nyras",
+  "label": "After Cinematic Nyras",
+  "category": "NPC / Dialogue"
+ },
+ {
+  "name": "BaalCadar_responsive",
+  "label": "Baal Cadar responsive",
+  "category": "NPC / Dialogue"
+ },
+ {
+  "name": "BaalCadar_Sacrilege",
+  "label": "Baal Cadar Sacrilege",
+  "category": "NPC / Dialogue"
+ },
+ {
+  "name": "BaalIsidro_GotDrink",
+  "label": "Baal Isidro Got Drink",
+  "category": "NPC / Dialogue"
+ },
+ {
+  "name": "BaalLukor_BringParchment",
+  "label": "Baal Lukor Bring Parchment",
+  "category": "NPC / Dialogue"
+ },
+ {
+  "name": "BaalLukor_KeyPart01",
+  "label": "Baal Lukor Key Part01",
+  "category": "NPC / Dialogue"
+ },
+ {
+  "name": "BaalLukor_KeyPart02",
+  "label": "Baal Lukor Key Part02",
+  "category": "NPC / Dialogue"
+ },
+ {
+  "name": "BaalNamib_responsive",
+  "label": "Baal Namib responsive",
+  "category": "NPC / Dialogue"
+ },
+ {
+  "name": "BaalNamib_Sacrilege",
+  "label": "Baal Namib Sacrilege",
+  "category": "NPC / Dialogue"
+ },
+ {
+  "name": "BaalOrun_responsive",
+  "label": "Baal Orun responsive",
+  "category": "NPC / Dialogue"
+ },
+ {
+  "name": "BaalOrun_Sacrilege",
+  "label": "Baal Orun Sacrilege",
+  "category": "NPC / Dialogue"
+ },
+ {
+  "name": "BaalParvez_GotoSC_Day",
+  "label": "Baal Parvez Goto SC Day",
+  "category": "Timer / Day"
+ },
+ {
+  "name": "BaalTyon_Sacrilege",
+  "label": "Baal Tyon Sacrilege",
+  "category": "NPC / Dialogue"
+ },
+ {
+  "name": "Balor_CollectDay",
+  "label": "Balor Collect Day",
+  "category": "Timer / Day"
+ },
+ {
+  "name": "Balor_PlayerCheating",
+  "label": "Balor Player Cheating",
+  "category": "NPC / Dialogue"
+ },
+ {
+  "name": "Balor_TellsNCDealer",
+  "label": "Balor Tells NCDealer",
+  "category": "NPC / Dialogue"
+ },
+ {
+  "name": "BanditCellVisited",
+  "label": "Bandit Cell Visited",
+  "category": "NPC / Dialogue"
+ },
+ {
+  "name": "Blackmailer_Encounter",
+  "label": "Blackmailer Encounter",
+  "category": "NPC / Dialogue"
+ },
+ {
+  "name": "Blackmailer_Permission",
+  "label": "Blackmailer Permission",
+  "category": "Permission / Passage"
+ },
+ {
+  "name": "Bloodwyn_PayDay",
+  "label": "Bloodwyn Pay Day",
+  "category": "Timer / Day"
+ },
+ {
+  "name": "Bloodwyn_ProtectionPaid",
+  "label": "Bloodwyn Protection Paid",
+  "category": "NPC / Dialogue"
+ },
+ {
+  "name": "Brannok_Permission",
+  "label": "Brannok Permission",
+  "category": "Permission / Passage"
+ },
+ {
+  "name": "Brannok_Warning",
+  "label": "Brannok Warning",
+  "category": "NPC / Dialogue"
+ },
+ {
+  "name": "BranNoteRead",
+  "label": "Bran Note Read",
+  "category": "NPC / Dialogue"
+ },
+ {
+  "name": "BridgeGolemCombatActive",
+  "label": "Bridge Golem Combat Active",
+  "category": "NPC / Dialogue"
+ },
+ {
+  "name": "BridgeStoneGolemEnemy",
+  "label": "Bridge Stone Golem Enemy",
+  "category": "NPC / Dialogue"
+ },
+ {
+  "name": "CaineVanished",
+  "label": "Caine Vanished",
+  "category": "NPC / Dialogue"
+ },
+ {
+  "name": "CanUpgradeNoviceArmor",
+  "label": "Can Upgrade Novice Armor",
+  "category": "NPC / Dialogue"
+ },
+ {
+  "name": "Cavalorn_BestiaryDiscovered",
+  "label": "Cavalorn Bestiary Discovered",
+  "category": "NPC / Dialogue"
+ },
+ {
+  "name": "Cavalorn_BestiaryQuestion",
+  "label": "Cavalorn Bestiary Question",
+  "category": "NPC / Dialogue"
+ },
+ {
+  "name": "Chapter",
+  "label": "Chapter",
+  "category": "Faction / Progression"
+ },
+ {
+  "name": "ChromaninReaded",
+  "label": "Chromanin Readed",
+  "category": "NPC / Dialogue"
+ },
+ {
+  "name": "Cipher_Trade",
+  "label": "Cipher Trade",
+  "category": "NPC / Dialogue"
+ },
+ {
+  "name": "CollapseMineNotify",
+  "label": "Collapse Mine Notify",
+  "category": "NPC / Dialogue"
+ },
+ {
+  "name": "ConversationWithDiegoAtStoneHenge",
+  "label": "Conversation With Diego At Stone Henge",
+  "category": "NPC / Dialogue"
+ },
+ {
+  "name": "Convoy_Guard",
+  "label": "Convoy Guard",
+  "category": "Faction / Progression"
+ },
+ {
+  "name": "Convoy_PlayerBriefed",
+  "label": "Convoy Player Briefed",
+  "category": "Faction / Progression"
+ },
+ {
+  "name": "Convoy_RaidStart",
+  "label": "Convoy Raid Start",
+  "category": "Faction / Progression"
+ },
+ {
+  "name": "CorAngar_GotoOGY",
+  "label": "Cor Angar Goto OGY",
+  "category": "NPC / Dialogue"
+ },
+ {
+  "name": "Corristo_FireMagesTest",
+  "label": "Corristo Fire Mages Test",
+  "category": "Faction / Progression"
+ },
+ {
+  "name": "Corristo_FirsTalk",
+  "label": "Corristo Firs Talk",
+  "category": "NPC / Dialogue"
+ },
+ {
+  "name": "counter",
+  "label": "counter",
+  "category": "Faction / Progression"
+ },
+ {
+  "name": "DefeatBully",
+  "label": "Defeat Bully",
+  "category": "NPC / Dialogue"
+ },
+ {
+  "name": "Dexter_SC",
+  "label": "Dexter SC",
+  "category": "Camp"
+ },
+ {
+  "name": "Dexter_Traded",
+  "label": "Dexter Traded",
+  "category": "NPC / Dialogue"
+ },
+ {
+  "name": "Diego_After_Gamestart",
+  "label": "Diego After Gamestart",
+  "category": "NPC / Dialogue"
+ },
+ {
+  "name": "Diego_GomezAudience",
+  "label": "Diego Gomez Audience",
+  "category": "NPC / Dialogue"
+ },
+ {
+  "name": "Diego_Welcome",
+  "label": "Diego Welcome",
+  "category": "NPC / Dialogue"
+ },
+ {
+  "name": "DiggerRankUpOrder",
+  "label": "Digger Rank Up Order",
+  "category": "Faction / Progression"
+ },
+ {
+  "name": "Drax_CanTeach",
+  "label": "Drax Can Teach",
+  "category": "NPC / Dialogue"
+ },
+ {
+  "name": "Drax_GotBeer",
+  "label": "Drax Got Beer",
+  "category": "NPC / Dialogue"
+ },
+ {
+  "name": "EnteredFreeMine",
+  "label": "Entered Free Mine",
+  "category": "NPC / Dialogue"
+ },
+ {
+  "name": "ExploreSunkenTower",
+  "label": "Explore Sunken Tower",
+  "category": "Location / World"
+ },
+ {
+  "name": "FindGolemHearts",
+  "label": "Find Golem Hearts",
+  "category": "NPC / Dialogue"
+ },
+ {
+  "name": "Fingers_CanTeach",
+  "label": "Fingers Can Teach",
+  "category": "NPC / Dialogue"
+ },
+ {
+  "name": "FireMagesDead",
+  "label": "Fire Mages Dead",
+  "category": "Faction / Progression"
+ },
+ {
+  "name": "FireMagesPermission",
+  "label": "Fire Mages Permission",
+  "category": "Permission / Passage"
+ },
+ {
+  "name": "Fisk_SellSword110",
+  "label": "Fisk Sell Sword110",
+  "category": "NPC / Dialogue"
+ },
+ {
+  "name": "Fisk_SwordSold",
+  "label": "Fisk Sword Sold",
+  "category": "NPC / Dialogue"
+ },
+ {
+  "name": "Fletcher_foundNek",
+  "label": "Fletcher found Nek",
+  "category": "NPC / Dialogue"
+ },
+ {
+  "name": "Fletcher_Timer_Night",
+  "label": "Fletcher Timer Night",
+  "category": "Timer / Day"
+ },
+ {
+  "name": "Fletcher_whytalk",
+  "label": "Fletcher whytalk",
+  "category": "NPC / Dialogue"
+ },
+ {
+  "name": "FMHostile",
+  "label": "FMHostile",
+  "category": "NPC / Dialogue"
+ },
+ {
+  "name": "FMTaken",
+  "label": "FMTaken",
+  "category": "NPC / Dialogue"
+ },
+ {
+  "name": "Fortress_Inside",
+  "label": "Fortress Inside",
+  "category": "NPC / Dialogue"
+ },
+ {
+  "name": "Fortress_Outside",
+  "label": "Fortress Outside",
+  "category": "Location / World"
+ },
+ {
+  "name": "Fortuno_RationDay",
+  "label": "Fortuno Ration Day",
+  "category": "Timer / Day"
+ },
+ {
+  "name": "FourFriendsFocus",
+  "label": "Four Friends Focus",
+  "category": "NPC / Dialogue"
+ },
+ {
+  "name": "Freemine_Recovered",
+  "label": "Freemine Recovered",
+  "category": "NPC / Dialogue"
+ },
+ {
+  "name": "FriendOfUrShak",
+  "label": "Friend Of Ur Shak",
+  "category": "NPC / Dialogue"
+ },
+ {
+  "name": "Friends_SendToNC",
+  "label": "Friends Send To NC",
+  "category": "NPC / Dialogue"
+ },
+ {
+  "name": "GatheredTemplars",
+  "label": "Gathered Templars",
+  "category": "Faction / Progression"
+ },
+ {
+  "name": "Gomez_Contacts",
+  "label": "Gomez Contacts",
+  "category": "NPC / Dialogue"
+ },
+ {
+  "name": "Gorn_AloneForFM",
+  "label": "Gorn Alone For FM",
+  "category": "NPC / Dialogue"
+ },
+ {
+  "name": "Gorn_JoinedForFM",
+  "label": "Gorn Joined For FM",
+  "category": "NPC / Dialogue"
+ },
+ {
+  "name": "Graham_OMMapSold",
+  "label": "Graham OMMap Sold",
+  "category": "NPC / Dialogue"
+ },
+ {
+  "name": "Grim_ProtectionBully",
+  "label": "Grim Protection Bully",
+  "category": "NPC / Dialogue"
+ },
+ {
+  "name": "Grim_Tests",
+  "label": "Grim Tests",
+  "category": "NPC / Dialogue"
+ },
+ {
+  "name": "Guard_Order",
+  "label": "Guard Order",
+  "category": "NPC / Dialogue"
+ },
+ {
+  "name": "GuardOrcLandWarning_OC",
+  "label": "Guard Orc Land Warning OC",
+  "category": "Camp"
+ },
+ {
+  "name": "GuardPassageTavernWarning_NC",
+  "label": "Guard Passage Tavern Warning NC",
+  "category": "Permission / Passage"
+ },
+ {
+  "name": "GuardPassageWarning_NC",
+  "label": "Guard Passage Warning NC",
+  "category": "Permission / Passage"
+ },
+ {
+  "name": "GuardPassageWarning_OC",
+  "label": "Guard Passage Warning OC",
+  "category": "Permission / Passage"
+ },
+ {
+  "name": "GuardPassageWarning_SC",
+  "label": "Guard Passage Warning SC",
+  "category": "Permission / Passage"
+ },
+ {
+  "name": "GuardPassageWaterMagesWarning_NC",
+  "label": "Guard Passage Water Mages Warning NC",
+  "category": "Permission / Passage"
+ },
+ {
+  "name": "HappyFriends",
+  "label": "Happy Friends",
+  "category": "NPC / Dialogue"
+ },
+ {
+  "name": "HasULUMULU",
+  "label": "Has ULUMULU",
+  "category": "NPC / Dialogue"
+ },
+ {
+  "name": "Herek_ProtectionBully",
+  "label": "Herek Protection Bully",
+  "category": "NPC / Dialogue"
+ },
+ {
+  "name": "Jackal_ProtectionPaid",
+  "label": "Jackal Protection Paid",
+  "category": "NPC / Dialogue"
+ },
+ {
+  "name": "JackoNoteRead",
+  "label": "Jacko Note Read",
+  "category": "NPC / Dialogue"
+ },
+ {
+  "name": "Jeremiah_Brewer",
+  "label": "Jeremiah Brewer",
+  "category": "NPC / Dialogue"
+ },
+ {
+  "name": "Joru_JoinSC",
+  "label": "Joru Join SC",
+  "category": "NPC / Dialogue"
+ },
+ {
+  "name": "Joru_Tips",
+  "label": "Joru Tips",
+  "category": "NPC / Dialogue"
+ },
+ {
+  "name": "Joru_Tips_Mage",
+  "label": "Joru Tips Mage",
+  "category": "NPC / Dialogue"
+ },
+ {
+  "name": "Kalom_Counter",
+  "label": "Kalom Counter",
+  "category": "NPC / Dialogue"
+ },
+ {
+  "name": "Kalom_TalkedTo",
+  "label": "Kalom Talked To",
+  "category": "NPC / Dialogue"
+ },
+ {
+  "name": "Kharim_Challenged",
+  "label": "Kharim Challenged",
+  "category": "NPC / Dialogue"
+ },
+ {
+  "name": "Kharim_Win",
+  "label": "Kharim Win",
+  "category": "NPC / Dialogue"
+ },
+ {
+  "name": "Kirgo_Challenged",
+  "label": "Kirgo Challenged",
+  "category": "NPC / Dialogue"
+ },
+ {
+  "name": "Kirgo_Win",
+  "label": "Kirgo Win",
+  "category": "NPC / Dialogue"
+ },
+ {
+  "name": "Knows_GetMCPlates",
+  "label": "Knows Get MCPlates",
+  "category": "NPC / Dialogue"
+ },
+ {
+  "name": "KnowStone",
+  "label": "Know Stone",
+  "category": "NPC / Dialogue"
+ },
+ {
+  "name": "Lares_Permission",
+  "label": "Lares Permission",
+  "category": "Permission / Passage"
+ },
+ {
+  "name": "Lee_freeminereport",
+  "label": "Lee freeminereport",
+  "category": "NPC / Dialogue"
+ },
+ {
+  "name": "Lee_HeroProgression",
+  "label": "Lee Hero Progression",
+  "category": "NPC / Dialogue"
+ },
+ {
+  "name": "Lee_SldPossible",
+  "label": "Lee Sld Possible",
+  "category": "NPC / Dialogue"
+ },
+ {
+  "name": "Lefty_WasBeaten",
+  "label": "Lefty Was Beaten",
+  "category": "NPC / Dialogue"
+ },
+ {
+  "name": "Lefty_WorkDay",
+  "label": "Lefty Work Day",
+  "category": "Timer / Day"
+ },
+ {
+  "name": "Lester_Show",
+  "label": "Lester Show",
+  "category": "NPC / Dialogue"
+ },
+ {
+  "name": "Location_AbandonedMine_OrcGrave",
+  "label": "Location Abandoned Mine Orc Grave",
+  "category": "Location / World"
+ },
+ {
+  "name": "Location_OrcEnclave_Arena",
+  "label": "Location Orc Enclave Arena",
+  "category": "Location / World"
+ },
+ {
+  "name": "Location_SwampCamp_Temple",
+  "label": "Location Swamp Camp Temple",
+  "category": "Location / World"
+ },
+ {
+  "name": "LogBaalcadarsell",
+  "label": "Log Baalcadarsell",
+  "category": "Quest Log"
+ },
+ {
+  "name": "LogBaalcadartrain",
+  "label": "Log Baalcadartrain",
+  "category": "Quest Log"
+ },
+ {
+  "name": "LogCavalorntrain",
+  "label": "Log Cavalorntrain",
+  "category": "Quest Log"
+ },
+ {
+  "name": "LogDiegotrain",
+  "label": "Log Diegotrain",
+  "category": "Quest Log"
+ },
+ {
+  "name": "LogScattytrain",
+  "label": "Log Scattytrain",
+  "category": "Quest Log"
+ },
+ {
+  "name": "LogThorustrain",
+  "label": "Log Thorustrain",
+  "category": "Quest Log"
+ },
+ {
+  "name": "LogWedgelearn",
+  "label": "Log Wedgelearn",
+  "category": "Quest Log"
+ },
+ {
+  "name": "Magician_Level",
+  "label": "Magician Level",
+  "category": "Faction / Progression"
+ },
+ {
+  "name": "MCPlatesDelivered",
+  "label": "MCPlates Delivered",
+  "category": "NPC / Dialogue"
+ },
+ {
+  "name": "Milten_HasLetter",
+  "label": "Milten Has Letter",
+  "category": "NPC / Dialogue"
+ },
+ {
+  "name": "Milten_Time_Troll",
+  "label": "Milten Time Troll",
+  "category": "NPC / Dialogue"
+ },
+ {
+  "name": "Monastery_Outside",
+  "label": "Monastery Outside",
+  "category": "Location / World"
+ },
+ {
+  "name": "Mordrag_GotoNC_Day",
+  "label": "Mordrag Goto NC Day",
+  "category": "Timer / Day"
+ },
+ {
+  "name": "Mordrag_Traded",
+  "label": "Mordrag Traded",
+  "category": "NPC / Dialogue"
+ },
+ {
+  "name": "MordragKO_PlayerChoseOreBarons",
+  "label": "Mordrag KO Player Chose Ore Barons",
+  "category": "NPC / Dialogue"
+ },
+ {
+  "name": "MordragKO_StayAtNC",
+  "label": "Mordrag KO Stay At NC",
+  "category": "NPC / Dialogue"
+ },
+ {
+  "name": "Mud_Follow",
+  "label": "Mud Follow",
+  "category": "NPC / Dialogue"
+ },
+ {
+  "name": "Mud_Nerve",
+  "label": "Mud Nerve",
+  "category": "NPC / Dialogue"
+ },
+ {
+  "name": "Mud_NerveRealized",
+  "label": "Mud Nerve Realized",
+  "category": "NPC / Dialogue"
+ },
+ {
+  "name": "Myxir_Quest_Completed",
+  "label": "Myxir Quest Completed",
+  "category": "NPC / Dialogue"
+ },
+ {
+  "name": "NC_JointsDistributed",
+  "label": "NC Joints Distributed",
+  "category": "Camp"
+ },
+ {
+  "name": "OC_Test",
+  "label": "OC Test",
+  "category": "Camp"
+ },
+ {
+  "name": "Peasants_have_water",
+  "label": "Peasants have water",
+  "category": "NPC / Dialogue"
+ },
+ {
+  "name": "Pock_Forget_Time",
+  "label": "Pock Forget Time",
+  "category": "Timer / Day"
+ },
+ {
+  "name": "Points_NC",
+  "label": "Points NC",
+  "category": "Faction / Progression"
+ },
+ {
+  "name": "Points_OC",
+  "label": "Points OC",
+  "category": "Faction / Progression"
+ },
+ {
+  "name": "RandomDiggerPhrase_1",
+  "label": "Random Digger Phrase 1",
+  "category": "Misc / Random"
+ },
+ {
+  "name": "RandomDiggerPhrase_2",
+  "label": "Random Digger Phrase 2",
+  "category": "Misc / Random"
+ },
+ {
+  "name": "RandomDiggerPhrase_3",
+  "label": "Random Digger Phrase 3",
+  "category": "Misc / Random"
+ },
+ {
+  "name": "RandomDiggerPhrase_4",
+  "label": "Random Digger Phrase 4",
+  "category": "Misc / Random"
+ },
+ {
+  "name": "RandomDiggerPhrase_5",
+  "label": "Random Digger Phrase 5",
+  "category": "Misc / Random"
+ },
+ {
+  "name": "Rayk_Mad",
+  "label": "Rayk Mad",
+  "category": "NPC / Dialogue"
+ },
+ {
+  "name": "Rayk_Mad_BeforeConversation",
+  "label": "Rayk Mad Before Conversation",
+  "category": "NPC / Dialogue"
+ },
+ {
+  "name": "RaykBeated",
+  "label": "Rayk Beated",
+  "category": "NPC / Dialogue"
+ },
+ {
+  "name": "RecruitedDiggers",
+  "label": "Recruited Diggers",
+  "category": "Faction / Progression"
+ },
+ {
+  "name": "Rogue01_Permission",
+  "label": "Rogue01 Permission",
+  "category": "Permission / Passage"
+ },
+ {
+  "name": "Rogue01_Robbed",
+  "label": "Rogue01 Robbed",
+  "category": "NPC / Dialogue"
+ },
+ {
+  "name": "Rogue03_Permission",
+  "label": "Rogue03 Permission",
+  "category": "Permission / Passage"
+ },
+ {
+  "name": "Rogue03_Robbed",
+  "label": "Rogue03 Robbed",
+  "category": "NPC / Dialogue"
+ },
+ {
+  "name": "Saturas_BringFoci",
+  "label": "Saturas Bring Foci",
+  "category": "NPC / Dialogue"
+ },
+ {
+  "name": "SC_Walk",
+  "label": "SC Walk",
+  "category": "Camp"
+ },
+ {
+  "name": "Scavenger_Preparation",
+  "label": "Scavenger Preparation",
+  "category": "NPC / Dialogue"
+ },
+ {
+  "name": "SilasGuilty",
+  "label": "Silas Guilty",
+  "category": "NPC / Dialogue"
+ },
+ {
+  "name": "SilasRemoved",
+  "label": "Silas Removed",
+  "category": "NPC / Dialogue"
+ },
+ {
+  "name": "Snaf_FreeMBRagout",
+  "label": "Snaf Free MBRagout",
+  "category": "NPC / Dialogue"
+ },
+ {
+  "name": "Snaf_RagoutDay",
+  "label": "Snaf Ragout Day",
+  "category": "Timer / Day"
+ },
+ {
+  "name": "Snaf_SyraRecipe",
+  "label": "Snaf Syra Recipe",
+  "category": "NPC / Dialogue"
+ },
+ {
+  "name": "Stone_ImprovedOreArmor",
+  "label": "Stone Improved Ore Armor",
+  "category": "NPC / Dialogue"
+ },
+ {
+  "name": "Stone_OreArmor",
+  "label": "Stone Ore Armor",
+  "category": "NPC / Dialogue"
+ },
+ {
+  "name": "SwampCampTemple_Permision",
+  "label": "Swamp Camp Temple Permision",
+  "category": "Permission / Passage"
+ },
+ {
+  "name": "Tavern_Permission",
+  "label": "Tavern Permission",
+  "category": "Permission / Passage"
+ },
+ {
+  "name": "TeleportToWaterMagesBlockedDone",
+  "label": "Teleport To Water Mages Blocked Done",
+  "category": "NPC / Dialogue"
+ },
+ {
+  "name": "Templar_Duel",
+  "label": "Templar Duel",
+  "category": "Faction / Progression"
+ },
+ {
+  "name": "Thorus_MordragMageMessenger",
+  "label": "Thorus Mordrag Mage Messenger",
+  "category": "NPC / Dialogue"
+ },
+ {
+  "name": "Thorus_Permission_Exterior",
+  "label": "Thorus Permission Exterior",
+  "category": "Permission / Passage"
+ },
+ {
+  "name": "Thorus_Permission_Interior",
+  "label": "Thorus Permission Interior",
+  "category": "Permission / Passage"
+ },
+ {
+  "name": "Tunnel_Opened",
+  "label": "Tunnel Opened",
+  "category": "Location / World"
+ },
+ {
+  "name": "UrShak_SpokeOfUluMulu",
+  "label": "Ur Shak Spoke Of Ulu Mulu",
+  "category": "NPC / Dialogue"
+ },
+ {
+  "name": "Viran_DeliveryDay",
+  "label": "Viran Delivery Day",
+  "category": "Timer / Day"
+ },
+ {
+  "name": "WaterMaguesPermission",
+  "label": "Water Magues Permission",
+  "category": "Permission / Passage"
+ },
+ {
+  "name": "Whistler_BuyMySword_Day",
+  "label": "Whistler Buy My Sword Day",
+  "category": "Timer / Day"
+ },
+ {
+  "name": "Wolf_Crafting_Armor",
+  "label": "Wolf Crafting Armor",
+  "category": "NPC / Dialogue"
+ }
+]

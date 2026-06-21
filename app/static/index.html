@@ -100,9 +100,8 @@
       <p class="muted">World &amp; story script flags (guard passages, permissions, quest conditions…). Edit the raw
         value, or <b>add a flag</b> that doesn't exist yet (e.g. grant a permission). <b>Experimental</b> — verify in-game.</p>
       <div class="additem">
-        <input id="add-pass-name" placeholder="Add flag — name (e.g. SwampCampTemple_Permision)" autocomplete="off">
-        <input id="add-pass-val" type="number" value="1" title="value">
-        <button id="add-pass-btn" class="primary small">+ add</button>
+        <button id="open-pass-picker" class="primary small">＋ Add flag / gate…</button>
+        <span class="muted">Shows flags <b>not in this save</b> (incl. permission gates) — added with value 1, adjust below.</span>
       </div>
       <div class="toolbar">
         <input id="search-pass" type="search" placeholder="Search flags…  (e.g. passage, permision, guild)" autocomplete="off">
@@ -154,21 +153,21 @@
   <button id="generate" class="primary" disabled>Generate fixed save</button>
 </footer>
 
-<!-- item picker modal -->
-<div id="item-modal" class="modal hidden" aria-hidden="true">
+<!-- reusable picker modal (items + passages/gates) -->
+<div id="picker-modal" class="modal hidden" aria-hidden="true">
   <div class="modal-backdrop" data-close></div>
-  <div class="modal-box" role="dialog" aria-label="Select an item">
+  <div class="modal-box" role="dialog" aria-label="Picker">
     <div class="modal-head">
-      <h3>Select an item</h3>
-      <input id="modal-search" type="search" placeholder="Filter items… (name or key)" autocomplete="off">
+      <h3 id="picker-title">Select</h3>
+      <input id="picker-search" type="search" placeholder="Filter…" autocomplete="off">
       <button class="modal-x" data-close title="close">✕</button>
     </div>
     <div class="modal-body">
-      <aside id="modal-cats" class="modal-cats"></aside>
-      <div id="modal-items" class="modal-items"></div>
+      <aside id="picker-cats" class="modal-cats"></aside>
+      <div id="picker-items" class="modal-items"></div>
     </div>
     <div class="modal-foot">
-      <span id="modal-status" class="muted">Click an item to add it. Click again to add more.</span>
+      <span id="picker-status" class="muted"></span>
       <button class="primary small" data-close>Done</button>
     </div>
   </div>

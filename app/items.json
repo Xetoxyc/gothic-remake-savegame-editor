@@ -1,5 +1,25 @@
 [
  {
+  "id": "Armor_BC_BAN_Arlin_852",
+  "label": "Armor BC BAN Arlin 852",
+  "category": "NPC Armor"
+ },
+ {
+  "id": "Armor_BC_BAN_Arlin_852_02",
+  "label": "Armor BC BAN Arlin 852 02",
+  "category": "NPC Armor"
+ },
+ {
+  "id": "Armor_OCR_GRD_Stone_219",
+  "label": "Armor OCR GRD Stone 219",
+  "category": "NPC Armor"
+ },
+ {
+  "id": "Armor_OC_EBR_Gomez_100",
+  "label": "Armor OC EBR Gomez 100",
+  "category": "NPC Armor"
+ },
+ {
   "id": "Armor_SK_OC_WOC_Velaya_108_02",
   "label": "Armor SK OC WOC Velaya 108",
   "category": "NPC Armor"
@@ -20,9 +40,39 @@
   "category": "Creature / Built-in"
  },
  {
+  "id": "DemonLordWeapon",
+  "label": "DemonLordWeapon",
+  "category": "Creature / Built-in"
+ },
+ {
+  "id": "Dmb_Armor_M",
+  "label": "Dmb Armor M",
+  "category": "NPC Armor"
+ },
+ {
   "id": "FireGolemWeapon",
   "label": "FireGolemWeapon",
   "category": "Creature / Built-in"
+ },
+ {
+  "id": "Grd_Armor",
+  "label": "Grd Armor",
+  "category": "NPC Armor"
+ },
+ {
+  "id": "Grd_Armor_Bot_H_01",
+  "label": "Grd Armor Bot H 01",
+  "category": "NPC Armor"
+ },
+ {
+  "id": "Grd_Armor_Mid_H_01",
+  "label": "Grd Armor Mid H 01",
+  "category": "NPC Armor"
+ },
+ {
+  "id": "Grd_Armor_Top_H_01",
+  "label": "Grd Armor Top H 01",
+  "category": "NPC Armor"
  },
  {
   "id": "HarpyClaws_Flying",
@@ -120,6 +170,16 @@
   "category": "Spell (Rune)"
  },
  {
+  "id": "ItAr_Rune_Control",
+  "label": "Rune Control",
+  "category": "Spell (Rune)"
+ },
+ {
+  "id": "ItAr_Rune_DeathToTheUndead",
+  "label": "Rune DeathToTheUndead",
+  "category": "Spell (Rune)"
+ },
+ {
   "id": "ItAr_Rune_FireBall",
   "label": "Rune FireBall",
   "category": "Spell (Rune)"
@@ -127,6 +187,11 @@
  {
   "id": "ItAr_Rune_FireBolt",
   "label": "Rune FireBolt",
+  "category": "Spell (Rune)"
+ },
+ {
+  "id": "ItAr_Rune_FireRain",
+  "label": "Rune FireRain",
   "category": "Spell (Rune)"
  },
  {
@@ -150,6 +215,11 @@
   "category": "Spell (Rune)"
  },
  {
+  "id": "ItAr_Rune_IceWave",
+  "label": "Rune IceWave",
+  "category": "Spell (Rune)"
+ },
+ {
   "id": "ItAr_Rune_Light",
   "label": "Rune Light",
   "category": "Spell (Rune)"
@@ -165,8 +235,38 @@
   "category": "Spell (Rune)"
  },
  {
+  "id": "ItAr_Rune_StormFist",
+  "label": "Rune StormFist",
+  "category": "Spell (Rune)"
+ },
+ {
+  "id": "ItAr_Rune_StormOfFire",
+  "label": "Rune StormOfFire",
+  "category": "Spell (Rune)"
+ },
+ {
   "id": "ItAr_Rune_Telekinesis",
   "label": "Rune Telekinesis",
+  "category": "Spell (Rune)"
+ },
+ {
+  "id": "ItAr_Rune_TeleportToMagiciansOfFire",
+  "label": "Rune TeleportToMagiciansOfFire",
+  "category": "Spell (Rune)"
+ },
+ {
+  "id": "ItAr_Rune_TeleportToMagiciansOfWater",
+  "label": "Rune TeleportToMagiciansOfWater",
+  "category": "Spell (Rune)"
+ },
+ {
+  "id": "ItAr_Rune_TeleportToNecromancer",
+  "label": "Rune TeleportToNecromancer",
+  "category": "Spell (Rune)"
+ },
+ {
+  "id": "ItAr_Rune_TeleportToSunkenTower",
+  "label": "Rune TeleportToSunkenTower",
   "category": "Spell (Rune)"
  },
  {
@@ -192,6 +292,11 @@
  {
   "id": "ItAr_Scroll_Control",
   "label": "Scroll Control",
+  "category": "Spell Scroll"
+ },
+ {
+  "id": "ItAr_Scroll_DeathToTheUndead",
+  "label": "Scroll DeathToTheUndead",
   "category": "Spell Scroll"
  },
  {
@@ -235,6 +340,11 @@
   "category": "Spell Scroll"
  },
  {
+  "id": "ItAr_Scroll_IceWave",
+  "label": "Scroll IceWave",
+  "category": "Spell Scroll"
+ },
+ {
   "id": "ItAr_Scroll_InnosPray",
   "label": "Scroll InnosPray",
   "category": "Spell Scroll"
@@ -247,6 +357,11 @@
  {
   "id": "ItAr_Scroll_Pyrokinesis",
   "label": "Scroll Pyrokinesis",
+  "category": "Spell Scroll"
+ },
+ {
+  "id": "ItAr_Scroll_Shrink",
+  "label": "Scroll Shrink",
   "category": "Spell Scroll"
  },
  {
@@ -270,6 +385,16 @@
   "category": "Spell Scroll"
  },
  {
+  "id": "ItAr_Scroll_SummonGolem",
+  "label": "Scroll SummonGolem",
+  "category": "Spell Scroll"
+ },
+ {
+  "id": "ItAr_Scroll_SummonSkeletons",
+  "label": "Scroll SummonSkeletons",
+  "category": "Spell Scroll"
+ },
+ {
   "id": "ItAr_Scroll_Telekinesis",
   "label": "Scroll Telekinesis",
   "category": "Spell Scroll"
@@ -285,8 +410,18 @@
   "category": "Spell Scroll"
  },
  {
+  "id": "ItAr_Scroll_TransformBloodhound",
+  "label": "Scroll TransformBloodhound",
+  "category": "Spell Scroll"
+ },
+ {
   "id": "ItAr_Scroll_TransformFireLizard",
   "label": "Scroll TransformFireLizard",
+  "category": "Spell Scroll"
+ },
+ {
+  "id": "ItAr_Scroll_TransformHarpy",
+  "label": "Scroll TransformHarpy",
   "category": "Spell Scroll"
  },
  {
@@ -330,8 +465,18 @@
   "category": "Spell Scroll"
  },
  {
+  "id": "ItAr_Scroll_TransformShadowbeast",
+  "label": "Scroll TransformShadowbeast",
+  "category": "Spell Scroll"
+ },
+ {
   "id": "ItAr_Scroll_TransformSnapper",
   "label": "Scroll TransformSnapper",
+  "category": "Spell Scroll"
+ },
+ {
+  "id": "ItAr_Scroll_TransformSwampshark",
+  "label": "Scroll TransformSwampshark",
   "category": "Spell Scroll"
  },
  {
@@ -347,6 +492,11 @@
  {
   "id": "ItAt_Amulet_Dexterity_01",
   "label": "Amulet Dexterity 01",
+  "category": "Amulet"
+ },
+ {
+  "id": "ItAt_Amulet_Dexterity_02",
+  "label": "Amulet Dexterity 02",
   "category": "Amulet"
  },
  {
@@ -375,8 +525,18 @@
   "category": "Amulet"
  },
  {
+  "id": "ItAt_Amulet_Magicfire",
+  "label": "Amulet Magicfire",
+  "category": "Amulet"
+ },
+ {
   "id": "ItAt_Amulet_Neks",
   "label": "Amulet Neks",
+  "category": "Amulet"
+ },
+ {
+  "id": "ItAt_Amulet_Orc",
+  "label": "Amulet Orc",
   "category": "Amulet"
  },
  {
@@ -395,8 +555,23 @@
   "category": "Amulet"
  },
  {
+  "id": "ItAt_Amulet_Protection",
+  "label": "Amulet Protection",
+  "category": "Amulet"
+ },
+ {
+  "id": "ItAt_Amulet_Ranged",
+  "label": "Amulet Ranged",
+  "category": "Amulet"
+ },
+ {
   "id": "ItAt_Amulet_Strong_01",
   "label": "Amulet Strong",
+  "category": "Amulet"
+ },
+ {
+  "id": "ItAt_Amulet_Strong_02",
+  "label": "Amulet Strong 02",
   "category": "Amulet"
  },
  {
@@ -492,6 +667,11 @@
  {
   "id": "ItAt_Firelizard_04",
   "label": "Firelizard",
+  "category": "Trophy"
+ },
+ {
+  "id": "ItAt_Firelizard_05",
+  "label": "Firelizard 05",
   "category": "Trophy"
  },
  {
@@ -650,6 +830,11 @@
   "category": "Ring"
  },
  {
+  "id": "ItAt_Ring_Ranged_02",
+  "label": "Ring Ranged 02",
+  "category": "Ring"
+ },
+ {
   "id": "ItAt_Ring_Scatty",
   "label": "Ring Scatty",
   "category": "Ring"
@@ -725,6 +910,11 @@
   "category": "Trophy"
  },
  {
+  "id": "ItAt_Shadow_05",
+  "label": "Shadow 05",
+  "category": "Trophy"
+ },
+ {
   "id": "ItAt_Shadow_06",
   "label": "Shadow",
   "category": "Trophy"
@@ -765,6 +955,11 @@
   "category": "Trophy"
  },
  {
+  "id": "ItAt_Swampshark_04",
+  "label": "Swampshark 04",
+  "category": "Trophy"
+ },
+ {
   "id": "ItAt_Teeth_01",
   "label": "Teeth",
   "category": "Trophy"
@@ -777,6 +972,11 @@
  {
   "id": "ItAt_Troll_02",
   "label": "Troll",
+  "category": "Trophy"
+ },
+ {
+  "id": "ItAt_Troll_03",
+  "label": "Troll 03",
   "category": "Trophy"
  },
  {
@@ -887,6 +1087,11 @@
  {
   "id": "ItFo_Plants_Berrys_01",
   "label": "Plants Berrys",
+  "category": "Food / Drink"
+ },
+ {
+  "id": "ItFo_Plants_Bloodwood_01",
+  "label": "Plants Bloodwood 01",
   "category": "Food / Drink"
  },
  {
@@ -1040,6 +1245,11 @@
   "category": "Potion"
  },
  {
+  "id": "ItFo_Potion_Dex_02",
+  "label": "Potion Dex 02",
+  "category": "Potion"
+ },
+ {
   "id": "ItFo_Potion_Health_01",
   "label": "Potion Health",
   "category": "Potion"
@@ -1095,6 +1305,16 @@
   "category": "Potion"
  },
  {
+  "id": "ItFo_Potion_Mana_Perma_03",
+  "label": "Potion Mana Perma 03",
+  "category": "Potion"
+ },
+ {
+  "id": "ItFo_Potion_Master_01",
+  "label": "Potion Master 01",
+  "category": "Potion"
+ },
+ {
   "id": "ItFo_Potion_Strength_01",
   "label": "Potion Strength 01",
   "category": "Potion"
@@ -1102,6 +1322,11 @@
  {
   "id": "ItFo_Potion_Strength_02",
   "label": "Potion Strength 02",
+  "category": "Potion"
+ },
+ {
+  "id": "ItFo_Potion_Strength_03",
+  "label": "Potion Strength 03",
   "category": "Potion"
  },
  {
@@ -1130,6 +1355,11 @@
   "category": "Food / Drink"
  },
  {
+  "id": "ItFo_SeaforestBrew",
+  "label": "SeaforestBrew",
+  "category": "Food / Drink"
+ },
+ {
   "id": "ItFo_Soup",
   "label": "Soup",
   "category": "Food / Drink"
@@ -1150,6 +1380,11 @@
   "category": "Food / Drink"
  },
  {
+  "id": "ItKe_AbandonedGallery_01",
+  "label": "AbandonedGallery 01",
+  "category": "Key / Lockpick"
+ },
+ {
   "id": "ItKe_AbandonedMine_01",
   "label": "AbandonedMine",
   "category": "Key / Lockpick"
@@ -1160,8 +1395,18 @@
   "category": "Key / Lockpick"
  },
  {
+  "id": "ItKe_Berg_01",
+  "label": "Berg 01",
+  "category": "Key / Lockpick"
+ },
+ {
   "id": "ItKe_Cavalorn_01",
   "label": "Cavalorn",
+  "category": "Key / Lockpick"
+ },
+ {
+  "id": "ItKe_CellarCages_01",
+  "label": "CellarCages 01",
   "category": "Key / Lockpick"
  },
  {
@@ -1177,6 +1422,11 @@
  {
   "id": "ItKe_Focus_04",
   "label": "Focus",
+  "category": "Key / Lockpick"
+ },
+ {
+  "id": "ItKe_Freemine",
+  "label": "Freemine",
   "category": "Key / Lockpick"
  },
  {
@@ -1257,6 +1507,11 @@
  {
   "id": "ItKe_TavernDoor",
   "label": "TavernDoor",
+  "category": "Key / Lockpick"
+ },
+ {
+  "id": "ItKe_Tower_01",
+  "label": "Tower 01",
   "category": "Key / Lockpick"
  },
  {
@@ -1385,6 +1640,11 @@
   "category": "Smithing Material"
  },
  {
+  "id": "ItMi_Smith_Petrifiedwood",
+  "label": "Smith Petrifiedwood",
+  "category": "Smithing Material"
+ },
+ {
   "id": "ItMi_Smith_Ruby",
   "label": "Smith Ruby",
   "category": "Smithing Material"
@@ -1490,6 +1750,11 @@
   "category": "Misc (stackable)"
  },
  {
+  "id": "ItMs_Book_WaterMages",
+  "label": "Book WaterMages",
+  "category": "Misc (stackable)"
+ },
+ {
   "id": "ItMs_DraxHunterKnife",
   "label": "DraxHunterKnife",
   "category": "Misc (stackable)"
@@ -1505,8 +1770,33 @@
   "category": "Misc (stackable)"
  },
  {
+  "id": "ItMs_FakeDiggerClothes",
+  "label": "FakeDiggerClothes",
+  "category": "Misc (stackable)"
+ },
+ {
   "id": "ItMs_Focus_01",
   "label": "Focus",
+  "category": "Misc (stackable)"
+ },
+ {
+  "id": "ItMs_Focus_02",
+  "label": "Focus 02",
+  "category": "Misc (stackable)"
+ },
+ {
+  "id": "ItMs_Focus_03",
+  "label": "Focus 03",
+  "category": "Misc (stackable)"
+ },
+ {
+  "id": "ItMs_Focus_04",
+  "label": "Focus 04",
+  "category": "Misc (stackable)"
+ },
+ {
+  "id": "ItMs_Focus_05",
+  "label": "Focus 05",
   "category": "Misc (stackable)"
  },
  {
@@ -1550,6 +1840,11 @@
   "category": "Document / Note"
  },
  {
+  "id": "ItMs_Scroll_PaintersCave",
+  "label": "Scroll PaintersCave",
+  "category": "Document / Note"
+ },
+ {
   "id": "ItMs_Scroll_SyraRecipe",
   "label": "Scroll SyraRecipe",
   "category": "Document / Note"
@@ -1558,6 +1853,21 @@
   "id": "ItMs_Scroll_ToyMaker",
   "label": "Scroll ToyMaker",
   "category": "Document / Note"
+ },
+ {
+  "id": "ItMs_Scroll_WeaponDesign",
+  "label": "Scroll WeaponDesign",
+  "category": "Document / Note"
+ },
+ {
+  "id": "ItMs_SunkenTowerStone_01",
+  "label": "SunkenTowerStone 01",
+  "category": "Misc (stackable)"
+ },
+ {
+  "id": "ItMs_SunkenTowerStone_02",
+  "label": "SunkenTowerStone 02",
+  "category": "Misc (stackable)"
  },
  {
   "id": "ItMs_ToyMaker_000",
@@ -1775,8 +2085,38 @@
   "category": "Melee Weapon"
  },
  {
+  "id": "ItMw_1H_Sword_Bastard_02",
+  "label": "1H Sword Bastard 02",
+  "category": "Melee Weapon"
+ },
+ {
+  "id": "ItMw_1H_Sword_Bastard_03",
+  "label": "1H Sword Bastard 03",
+  "category": "Melee Weapon"
+ },
+ {
+  "id": "ItMw_1H_Sword_Bastard_04",
+  "label": "1H Sword Bastard 04",
+  "category": "Melee Weapon"
+ },
+ {
   "id": "ItMw_1H_Sword_Broad_01",
   "label": "1H Sword Broad 01",
+  "category": "Melee Weapon"
+ },
+ {
+  "id": "ItMw_1H_Sword_Broad_02",
+  "label": "1H Sword Broad 02",
+  "category": "Melee Weapon"
+ },
+ {
+  "id": "ItMw_1H_Sword_Broad_03",
+  "label": "1H Sword Broad 03",
+  "category": "Melee Weapon"
+ },
+ {
+  "id": "ItMw_1H_Sword_Broad_04",
+  "label": "1H Sword Broad 04",
   "category": "Melee Weapon"
  },
  {
@@ -1890,13 +2230,58 @@
   "category": "Melee Weapon"
  },
  {
+  "id": "ItMw_2H_Axe_Heavy_01",
+  "label": "2H Axe Heavy 01",
+  "category": "Melee Weapon"
+ },
+ {
   "id": "ItMw_2H_Axe_Heavy_02",
   "label": "Axe Heavy",
   "category": "Melee Weapon"
  },
  {
+  "id": "ItMw_2H_Axe_Heavy_03",
+  "label": "2H Axe Heavy 03",
+  "category": "Melee Weapon"
+ },
+ {
+  "id": "ItMw_2H_Axe_Heavy_04",
+  "label": "2H Axe Heavy 04",
+  "category": "Melee Weapon"
+ },
+ {
   "id": "ItMw_2H_Axe_Lee",
   "label": "Axe Lee",
+  "category": "Melee Weapon"
+ },
+ {
+  "id": "ItMw_2H_Axe_Light_01",
+  "label": "2H Axe Light 01",
+  "category": "Melee Weapon"
+ },
+ {
+  "id": "ItMw_2H_Axe_Light_02",
+  "label": "2H Axe Light 02",
+  "category": "Melee Weapon"
+ },
+ {
+  "id": "ItMw_2H_Axe_Light_03",
+  "label": "2H Axe Light 03",
+  "category": "Melee Weapon"
+ },
+ {
+  "id": "ItMw_2H_Axe_Old_01",
+  "label": "2H Axe Old 01",
+  "category": "Melee Weapon"
+ },
+ {
+  "id": "ItMw_2H_Axe_Old_02",
+  "label": "2H Axe Old 02",
+  "category": "Melee Weapon"
+ },
+ {
+  "id": "ItMw_2H_Axe_Old_03",
+  "label": "2H Axe Old 03",
   "category": "Melee Weapon"
  },
  {
@@ -1920,8 +2305,18 @@
   "category": "Melee Weapon"
  },
  {
+  "id": "ItMw_2H_Axe_Orc_03",
+  "label": "2H Axe Orc 03",
+  "category": "Melee Weapon"
+ },
+ {
   "id": "ItMw_2H_Axe_Orc_03_vOrc",
   "label": "Axe Orc 03 vOrc",
+  "category": "Melee Weapon"
+ },
+ {
+  "id": "ItMw_2H_Axe_Orc_04",
+  "label": "2H Axe Orc 04",
   "category": "Melee Weapon"
  },
  {
@@ -1950,6 +2345,11 @@
   "category": "Melee Weapon"
  },
  {
+  "id": "ItMw_2H_Staff_02",
+  "label": "2H Staff 02",
+  "category": "Melee Weapon"
+ },
+ {
   "id": "ItMw_2H_Staff_Orc_vOrc",
   "label": "Staff Orc vOrc",
   "category": "Melee Weapon"
@@ -1957,6 +2357,46 @@
  {
   "id": "ItMw_2H_Staff_Scepter",
   "label": "Staff Scepter",
+  "category": "Melee Weapon"
+ },
+ {
+  "id": "ItMw_2H_Staff_Ulumulu",
+  "label": "2H Staff Ulumulu",
+  "category": "Melee Weapon"
+ },
+ {
+  "id": "ItMw_2H_Sword_01",
+  "label": "2H Sword 01",
+  "category": "Melee Weapon"
+ },
+ {
+  "id": "ItMw_2H_Sword_02",
+  "label": "2H Sword 02",
+  "category": "Melee Weapon"
+ },
+ {
+  "id": "ItMw_2H_Sword_03",
+  "label": "2H Sword 03",
+  "category": "Melee Weapon"
+ },
+ {
+  "id": "ItMw_2H_Sword_Heavy_01",
+  "label": "2H Sword Heavy 01",
+  "category": "Melee Weapon"
+ },
+ {
+  "id": "ItMw_2H_Sword_Heavy_02",
+  "label": "2H Sword Heavy 02",
+  "category": "Melee Weapon"
+ },
+ {
+  "id": "ItMw_2H_Sword_Heavy_03",
+  "label": "2H Sword Heavy 03",
+  "category": "Melee Weapon"
+ },
+ {
+  "id": "ItMw_2H_Sword_Heavy_04",
+  "label": "2H Sword Heavy 04",
   "category": "Melee Weapon"
  },
  {
@@ -1982,6 +2422,16 @@
  {
   "id": "ItMw_2H_Sword_Light_04",
   "label": "Sword Light",
+  "category": "Melee Weapon"
+ },
+ {
+  "id": "ItMw_2H_Sword_Light_05",
+  "label": "2H Sword Light 05",
+  "category": "Melee Weapon"
+ },
+ {
+  "id": "ItMw_2H_Sword_Old_01",
+  "label": "2H Sword Old 01",
   "category": "Melee Weapon"
  },
  {
@@ -2035,6 +2485,26 @@
   "category": "Ranged Weapon"
  },
  {
+  "id": "ItRw_Bow_Long_06",
+  "label": "Bow Long 06",
+  "category": "Ranged Weapon"
+ },
+ {
+  "id": "ItRw_Bow_Long_07",
+  "label": "Bow Long 07",
+  "category": "Ranged Weapon"
+ },
+ {
+  "id": "ItRw_Bow_Long_08",
+  "label": "Bow Long 08",
+  "category": "Ranged Weapon"
+ },
+ {
+  "id": "ItRw_Bow_Long_09",
+  "label": "Bow Long 09",
+  "category": "Ranged Weapon"
+ },
+ {
   "id": "ItRw_Bow_Long_10",
   "label": "Bow Long",
   "category": "Ranged Weapon"
@@ -2065,6 +2535,21 @@
   "category": "Ranged Weapon"
  },
  {
+  "id": "ItRw_Bow_War_01",
+  "label": "Bow War 01",
+  "category": "Ranged Weapon"
+ },
+ {
+  "id": "ItRw_Bow_War_02",
+  "label": "Bow War 02",
+  "category": "Ranged Weapon"
+ },
+ {
+  "id": "ItRw_Bow_War_03",
+  "label": "Bow War 03",
+  "category": "Ranged Weapon"
+ },
+ {
   "id": "ItRw_Bow_Wolf",
   "label": "Bow Wolf",
   "category": "Ranged Weapon"
@@ -2072,6 +2557,11 @@
  {
   "id": "ItRw_Crossbow_01",
   "label": "Crossbow",
+  "category": "Ranged Weapon"
+ },
+ {
+  "id": "ItRw_Crossbow_02",
+  "label": "Crossbow 02",
   "category": "Ranged Weapon"
  },
  {
@@ -2095,6 +2585,21 @@
   "category": "Book"
  },
  {
+  "id": "ItWr_Book_Astronomy",
+  "label": "Book Astronomy",
+  "category": "Book"
+ },
+ {
+  "id": "ItWr_Book_Battle_Varant_01",
+  "label": "Book Battle Varant 01",
+  "category": "Book"
+ },
+ {
+  "id": "ItWr_Book_Battle_Varant_02",
+  "label": "Book Battle Varant 02",
+  "category": "Book"
+ },
+ {
   "id": "ItWr_Book_Bestiary_01",
   "label": "Book Bestiary",
   "category": "Book"
@@ -2102,6 +2607,11 @@
  {
   "id": "ItWr_Book_Bestiary_02",
   "label": "Book Bestiary",
+  "category": "Book"
+ },
+ {
+  "id": "ItWr_Book_Bestiary_03",
+  "label": "Book Bestiary 03",
   "category": "Book"
  },
  {
@@ -2117,6 +2627,31 @@
  {
   "id": "ItWr_Book_Chromanin_01",
   "label": "Book Chromanin",
+  "category": "Book"
+ },
+ {
+  "id": "ItWr_Book_Chromanin_02",
+  "label": "Book Chromanin 02",
+  "category": "Book"
+ },
+ {
+  "id": "ItWr_Book_Chromanin_03",
+  "label": "Book Chromanin 03",
+  "category": "Book"
+ },
+ {
+  "id": "ItWr_Book_Chromanin_04",
+  "label": "Book Chromanin 04",
+  "category": "Book"
+ },
+ {
+  "id": "ItWr_Book_Chromanin_05",
+  "label": "Book Chromanin 05",
+  "category": "Book"
+ },
+ {
+  "id": "ItWr_Book_Chromanin_06",
+  "label": "Book Chromanin 06",
   "category": "Book"
  },
  {
@@ -2155,6 +2690,11 @@
   "category": "Book"
  },
  {
+  "id": "ItWr_Book_Demon",
+  "label": "Book Demon",
+  "category": "Book"
+ },
+ {
   "id": "ItWr_Book_FireLizards",
   "label": "Book FireLizards",
   "category": "Book"
@@ -2185,6 +2725,21 @@
   "category": "Book"
  },
  {
+  "id": "ItWr_Book_Godsgift",
+  "label": "Book Godsgift",
+  "category": "Book"
+ },
+ {
+  "id": "ItWr_Book_Golem_01",
+  "label": "Book Golem 01",
+  "category": "Book"
+ },
+ {
+  "id": "ItWr_Book_Golem_02",
+  "label": "Book Golem 02",
+  "category": "Book"
+ },
+ {
   "id": "ItWr_Book_Hunt",
   "label": "Book Hunt",
   "category": "Book"
@@ -2210,8 +2765,23 @@
   "category": "Book"
  },
  {
+  "id": "ItWr_Book_Secrets",
+  "label": "Book Secrets",
+  "category": "Book"
+ },
+ {
+  "id": "ItWr_Book_True_Power",
+  "label": "Book True Power",
+  "category": "Book"
+ },
+ {
   "id": "ItWr_Map_Cliff",
   "label": "Map Cliff",
+  "category": "Map"
+ },
+ {
+  "id": "ItWr_Map_Focus",
+  "label": "Map Focus",
   "category": "Map"
  },
  {
@@ -2243,6 +2813,16 @@
   "id": "ItWr_Map_World",
   "label": "Map World",
   "category": "Map"
+ },
+ {
+  "id": "ItWr_Map_WorldComplete",
+  "label": "Map WorldComplete",
+  "category": "Map"
+ },
+ {
+  "id": "ItWr_Scroll_1H_Axe_01",
+  "label": "Scroll 1H Axe 01",
+  "category": "Document / Note"
  },
  {
   "id": "ItWr_Scroll_1H_Axe_02",
@@ -2315,8 +2895,38 @@
   "category": "Document / Note"
  },
  {
+  "id": "ItWr_Scroll_2H_Axe_Heavy_02",
+  "label": "Scroll 2H Axe Heavy 02",
+  "category": "Document / Note"
+ },
+ {
+  "id": "ItWr_Scroll_2H_Axe_Light_02",
+  "label": "Scroll 2H Axe Light 02",
+  "category": "Document / Note"
+ },
+ {
+  "id": "ItWr_Scroll_2H_Axe_Old_02",
+  "label": "Scroll 2H Axe Old 02",
+  "category": "Document / Note"
+ },
+ {
+  "id": "ItWr_Scroll_2H_Sword_01",
+  "label": "Scroll 2H Sword 01",
+  "category": "Document / Note"
+ },
+ {
+  "id": "ItWr_Scroll_2H_Sword_Heavy_01",
+  "label": "Scroll 2H Sword Heavy 01",
+  "category": "Document / Note"
+ },
+ {
   "id": "ItWr_Scroll_2H_Sword_Light_01",
   "label": "Scroll 2H Sword Light 01",
+  "category": "Document / Note"
+ },
+ {
+  "id": "ItWr_Scroll_2H_Sword_Light_02",
+  "label": "Scroll 2H Sword Light 02",
   "category": "Document / Note"
  },
  {
@@ -2340,6 +2950,11 @@
   "category": "Document / Note"
  },
  {
+  "id": "ItWr_Scroll_Certificate",
+  "label": "Scroll Certificate",
+  "category": "Document / Note"
+ },
+ {
   "id": "ItWr_Scroll_DragonsbreathStew",
   "label": "Scroll DragonsbreathStew",
   "category": "Document / Note"
@@ -2347,6 +2962,11 @@
  {
   "id": "ItWr_Scroll_FireBolt",
   "label": "Scroll FireBolt",
+  "category": "Document / Note"
+ },
+ {
+  "id": "ItWr_Scroll_FireRain",
+  "label": "Scroll FireRain",
   "category": "Document / Note"
  },
  {
@@ -2362,6 +2982,16 @@
  {
   "id": "ItWr_Scroll_IceBolt",
   "label": "Scroll IceBolt",
+  "category": "Document / Note"
+ },
+ {
+  "id": "ItWr_Scroll_IceWave",
+  "label": "Scroll IceWave",
+  "category": "Document / Note"
+ },
+ {
+  "id": "ItWr_Scroll_Jacko_01",
+  "label": "Scroll Jacko 01",
   "category": "Document / Note"
  },
  {
@@ -2390,8 +3020,28 @@
   "category": "Document / Note"
  },
  {
+  "id": "ItWr_Scroll_MushroomStew",
+  "label": "Scroll MushroomStew",
+  "category": "Document / Note"
+ },
+ {
+  "id": "ItWr_Scroll_Mysteriousnote",
+  "label": "Scroll Mysteriousnote",
+  "category": "Document / Note"
+ },
+ {
   "id": "ItWr_Scroll_Potion_Health_02",
   "label": "Scroll Potion Health 02",
+  "category": "Document / Note"
+ },
+ {
+  "id": "ItWr_Scroll_Potion_Health_03",
+  "label": "Scroll Potion Health 03",
+  "category": "Document / Note"
+ },
+ {
+  "id": "ItWr_Scroll_Potion_Health_Perma_03",
+  "label": "Scroll Potion Health Perma 03",
   "category": "Document / Note"
  },
  {
@@ -2400,13 +3050,53 @@
   "category": "Document / Note"
  },
  {
+  "id": "ItWr_Scroll_Potion_Mana_Perma_03",
+  "label": "Scroll Potion Mana Perma 03",
+  "category": "Document / Note"
+ },
+ {
+  "id": "ItWr_Scroll_Potion_Master_02",
+  "label": "Scroll Potion Master 02",
+  "category": "Document / Note"
+ },
+ {
+  "id": "ItWr_Scroll_RankWaterMages",
+  "label": "Scroll RankWaterMages",
+  "category": "Document / Note"
+ },
+ {
   "id": "ItWr_Scroll_Sketch",
   "label": "Scroll Sketch",
   "category": "Document / Note"
  },
  {
+  "id": "ItWr_Scroll_Soup",
+  "label": "Scroll Soup",
+  "category": "Document / Note"
+ },
+ {
+  "id": "ItWr_Scroll_StormFist",
+  "label": "Scroll StormFist",
+  "category": "Document / Note"
+ },
+ {
   "id": "ItWr_Scroll_StormOfFire",
   "label": "Scroll StormOfFire",
+  "category": "Document / Note"
+ },
+ {
+  "id": "ItWr_Scroll_SyraNote",
+  "label": "Scroll SyraNote",
+  "category": "Document / Note"
+ },
+ {
+  "id": "ItWr_Scroll_Telekinesis",
+  "label": "Scroll Telekinesis",
+  "category": "Document / Note"
+ },
+ {
+  "id": "ItWr_Scroll_TransformBiter",
+  "label": "Scroll TransformBiter",
   "category": "Document / Note"
  },
  {
@@ -2417,6 +3107,11 @@
  {
   "id": "ItWr_Scroll_TransformBloodhound",
   "label": "Scroll TransformBloodhound",
+  "category": "Document / Note"
+ },
+ {
+  "id": "ItWr_Scroll_TransformHarpy",
+  "label": "Scroll TransformHarpy",
   "category": "Document / Note"
  },
  {
@@ -2435,8 +3130,23 @@
   "category": "Document / Note"
  },
  {
+  "id": "ItWr_Scroll_TransformOrcDog",
+  "label": "Scroll TransformOrcDog",
+  "category": "Document / Note"
+ },
+ {
+  "id": "ItWr_Scroll_TransformShadowbeast",
+  "label": "Scroll TransformShadowbeast",
+  "category": "Document / Note"
+ },
+ {
   "id": "ItWr_Scroll_TransformSnapper",
   "label": "Scroll TransformSnapper",
+  "category": "Document / Note"
+ },
+ {
+  "id": "ItWr_Scroll_TransformSwampshark",
+  "label": "Scroll TransformSwampshark",
   "category": "Document / Note"
  },
  {
@@ -2447,6 +3157,16 @@
  {
   "id": "Kdf_Armor_L",
   "label": "Kdf Armor L",
+  "category": "NPC Armor"
+ },
+ {
+  "id": "Kdw_Armor_H",
+  "label": "Kdw Armor H",
+  "category": "NPC Armor"
+ },
+ {
+  "id": "Kdw_Armor_L",
+  "label": "Kdw Armor L",
   "category": "NPC Armor"
  },
  {
@@ -2495,14 +3215,29 @@
   "category": "Creature / Built-in"
  },
  {
+  "id": "Ore_Armor_H",
+  "label": "Ore Armor H",
+  "category": "NPC Armor"
+ },
+ {
   "id": "Ore_Armor_M",
   "label": "Ore Armor M",
+  "category": "NPC Armor"
+ },
+ {
+  "id": "Org_Armor",
+  "label": "Org Armor",
   "category": "NPC Armor"
  },
  {
   "id": "RazorJaw",
   "label": "RazorJaw",
   "category": "Creature / Built-in"
+ },
+ {
+  "id": "Ryl_Armor",
+  "label": "Ryl Armor",
+  "category": "NPC Armor"
  },
  {
   "id": "ScavengerJaw",
@@ -2518,6 +3253,11 @@
   "id": "SkeletonMageWeapon",
   "label": "SkeletonMageWeapon",
   "category": "Creature / Built-in"
+ },
+ {
+  "id": "Sld_Armor",
+  "label": "Sld Armor",
+  "category": "NPC Armor"
  },
  {
   "id": "SnapperJaw",
@@ -2537,6 +3277,21 @@
  {
   "id": "Stt_Armor",
   "label": "Stt Armor",
+  "category": "NPC Armor"
+ },
+ {
+  "id": "Stt_Armor_Bot_H_02",
+  "label": "Stt Armor Bot H 02",
+  "category": "NPC Armor"
+ },
+ {
+  "id": "Stt_Armor_Mid_H_01",
+  "label": "Stt Armor Mid H 01",
+  "category": "NPC Armor"
+ },
+ {
+  "id": "Stt_Armor_Top_H_01",
+  "label": "Stt Armor Top H 01",
   "category": "NPC Armor"
  },
  {

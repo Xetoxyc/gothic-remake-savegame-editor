@@ -160,9 +160,12 @@ docker compose build && docker run -d --name g1r-test -p 5055:5000 gothic-remake
   newer saves are documented in [../ITEMS.md](../ITEMS.md)** (canonical scanner:
   root `extract_items.py` → `local-test/items.json`). Read it before extending the
   item DB — notably `ItAr_` is *magic* (runes/scrolls), not armor.
-- **Story flags** — `add_passage` / story-flag listing. Same note: currently
-  discovered from the save; promote to a static catalog only if fresh-save coverage
-  is needed.
+- **Story flags ("passages")** — `add_passage` / `list_passages`, scanned from the
+  save's `StoryPropertyValues` maps. **The flag schema, the (heuristic) category
+  scheme, and the discover→merge workflow are documented in
+  [../PASSAGES.md](../PASSAGES.md)** (canonical scanner: root `extract_passages.py`
+  → `local-test/passages.json`). Flags have no strict naming convention, so
+  categories are best-effort and most land in "NPC / Dialogue".
 
-When you build either of those, document the schema and the discover→add workflow
+When you extend either catalog, document the schema and the discover→add workflow
 here next to the skills section.

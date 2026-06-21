@@ -11,6 +11,7 @@ let inventory = [];            // [{id, item, label, count}]
 let itemDb = [];               // [{id, label, category}] valid items from the save
 const invAdds = [];            // [{item, label, count}] queued new items to add
 let passages = [];             // [{name, value}] world/story script flags
+let passageDb = [];            // [{name, label, category}] full curated flag catalog
 const passChanges = new Map(); // name -> int
 const passAdds = [];           // [{name, value}] queued new flags to add
 let behaviours = [];           // [{npc, role, status, detail}] read-only
@@ -47,7 +48,7 @@ async function upload(file) {
     quests = j.quests; attributes = j.attributes || []; skills = j.skills || [];
     inventory = j.inventory || [];
     itemDb = j.item_db || []; invAdds.length = 0;
-    passages = j.passages || []; passAdds.length = 0;
+    passages = j.passages || []; passAdds.length = 0; passageDb = j.passage_db || [];
     behaviours = j.behaviours || [];
     crimes = j.crimes || []; crimeForgive.clear();
     questChanges.clear(); attrChanges.clear(); skillChanges.clear(); invChanges.clear(); passChanges.clear();
@@ -175,84 +176,111 @@ $("#only-changed-inv").onchange = renderInventory;
 
 let _addUid = 0;
 
-// add an item to the queued list (qty 1); if already queued, bump its count
+// queue a NEW stack of an item (qty 1). Each call adds a separate entry, so
+// clicking "Arrow" twice queues two independent stacks you can each set to 99.
 function addItemToQueue(key) {
   if (!key || !/^[A-Za-z0-9_]{2,80}$/.test(key)) return null;
-  const existing = invAdds.find(a => a.item === key);
-  if (existing) { existing.count += 1; }
-  else {
-    const known = itemDb.find(it => it.id === key);
-    invAdds.push({ uid: ++_addUid, item: key, label: known ? known.label : key,
-                   count: 1, known: !!known });
-  }
+  const known = itemDb.find(it => it.id === key);
+  const entry = { uid: ++_addUid, item: key, label: known ? known.label : key,
+                  count: 1, known: !!known };
+  invAdds.push(entry);
   renderInventory(); updateBar();
-  return invAdds.find(a => a.item === key);
+  return entry;
 }
 
-// -------- item picker modal --------
-let modalCat = "All";
-const modal = $("#item-modal");
+// -------- reusable picker modal (items + passages/gates) --------
+// cfg: {title, placeholder, status, items:[{key,label,category}],
+//       badge:(key)->string, onPick:(key)->statusString|null}
+let _picker = null, pickerCat = "All";
+const pickerModal = $("#picker-modal");
 
-$("#open-item-picker").onclick = openItemPicker;
-$("#modal-search").oninput = renderModalItems;
-modal.querySelectorAll("[data-close]").forEach(el => el.onclick = closeItemPicker);
+$("#picker-search").oninput = renderPickerItems;
+pickerModal.querySelectorAll("[data-close]").forEach(el => el.onclick = closePicker);
 document.addEventListener("keydown", (e) => {
-  if (e.key === "Escape" && !modal.classList.contains("hidden")) closeItemPicker();
+  if (e.key === "Escape" && !pickerModal.classList.contains("hidden")) closePicker();
 });
 
-function openItemPicker() {
-  if (!itemDb.length) { toast("no item catalog loaded"); return; }
-  modalCat = "All";
-  $("#modal-search").value = "";
-  renderModalCats(); renderModalItems();
-  modal.classList.remove("hidden"); modal.setAttribute("aria-hidden", "false");
-  $("#modal-search").focus();
+function openPicker(cfg) {
+  _picker = cfg; pickerCat = "All";
+  $("#picker-title").textContent = cfg.title;
+  $("#picker-search").value = "";
+  $("#picker-search").placeholder = cfg.placeholder || "Filter…";
+  $("#picker-status").textContent = cfg.status || "";
+  renderPickerCats(); renderPickerItems();
+  pickerModal.classList.remove("hidden"); pickerModal.setAttribute("aria-hidden", "false");
+  $("#picker-search").focus();
 }
-function closeItemPicker() {
-  modal.classList.add("hidden"); modal.setAttribute("aria-hidden", "true");
+function closePicker() {
+  pickerModal.classList.add("hidden"); pickerModal.setAttribute("aria-hidden", "true");
+  _picker = null;
 }
 
-function renderModalCats() {
+function renderPickerCats() {
   const counts = {};
-  itemDb.forEach(it => { counts[it.category] = (counts[it.category] || 0) + 1; });
-  const cats = Object.keys(counts).sort();
+  _picker.items.forEach(it => { counts[it.category] = (counts[it.category] || 0) + 1; });
   const row = (name, n) =>
-    `<button class="cat-btn ${name === modalCat ? "active" : ""}" data-cat="${esc(name)}">
+    `<button class="cat-btn ${name === pickerCat ? "active" : ""}" data-cat="${esc(name)}">
        <span>${esc(name)}</span><span class="cat-n">${n}</span></button>`;
-  $("#modal-cats").innerHTML =
-    row("All", itemDb.length) + cats.map(c => row(c, counts[c])).join("");
-  $("#modal-cats").querySelectorAll(".cat-btn").forEach(b => b.onclick = () => {
-    modalCat = b.dataset.cat; renderModalCats(); renderModalItems();
+  $("#picker-cats").innerHTML =
+    row("All", _picker.items.length) + Object.keys(counts).sort().map(c => row(c, counts[c])).join("");
+  $("#picker-cats").querySelectorAll(".cat-btn").forEach(b => b.onclick = () => {
+    pickerCat = b.dataset.cat; renderPickerCats(); renderPickerItems();
   });
 }
 
-function renderModalItems() {
-  const q = $("#modal-search").value.trim().toLowerCase();
-  const list = itemDb.filter(it =>
-    (modalCat === "All" || it.category === modalCat) &&
-    (!q || it.label.toLowerCase().includes(q) || it.id.toLowerCase().includes(q)));
-  const queued = {};
-  invAdds.forEach(a => { queued[a.item] = a.count; });
+function renderPickerItems() {
+  const q = $("#picker-search").value.trim().toLowerCase();
+  const list = _picker.items.filter(it =>
+    (pickerCat === "All" || it.category === pickerCat) &&
+    (!q || it.label.toLowerCase().includes(q) || it.key.toLowerCase().includes(q)));
 
-  $("#modal-items").innerHTML = list.length
+  $("#picker-items").innerHTML = list.length
     ? list.map(it => {
-        const n = queued[it.id] || 0;
-        return `<button class="pick ${n ? "picked" : ""}" data-id="${esc(it.id)}" title="${esc(it.id)}">
-          <span class="pick-name">${esc(it.label)}<small>${esc(it.id)}</small></span>
-          <span class="pick-add">${n ? `×${n}` : "＋"}</span>
+        const b = _picker.badge(it.key);
+        return `<button class="pick ${b && b !== "＋" ? "picked" : ""}" data-key="${esc(it.key)}" title="${esc(it.key)}">
+          <span class="pick-name">${esc(it.label)}<small>${esc(it.key)}</small></span>
+          <span class="pick-add">${esc(b)}</span>
         </button>`;
       }).join("")
-    : `<div class="empty">no matching items</div>`;
+    : `<div class="empty">nothing matches</div>`;
 
-  $("#modal-items").querySelectorAll(".pick").forEach(b => b.onclick = () => {
-    const a = addItemToQueue(b.dataset.id);
-    if (a) {
-      b.classList.add("picked");
-      b.querySelector(".pick-add").textContent = `×${a.count}`;
-      $("#modal-status").textContent = `Added ${a.label} (×${a.count}) — adjust amounts in the list`;
-    }
+  $("#picker-items").querySelectorAll(".pick").forEach(el => el.onclick = () => {
+    const status = _picker.onPick(el.dataset.key);
+    const b = _picker.badge(el.dataset.key);
+    el.classList.toggle("picked", !!b && b !== "＋");
+    el.querySelector(".pick-add").textContent = b;
+    if (status) $("#picker-status").textContent = status;
   });
 }
+
+// item picker
+$("#open-item-picker").onclick = () => {
+  if (!itemDb.length) { toast("no item catalog loaded"); return; }
+  openPicker({
+    title: "Select an item",
+    placeholder: "Filter items… (name or key)",
+    status: "Click an item to add it. Click again to add more.",
+    items: itemDb.map(it => ({ key: it.id, label: it.label, category: it.category })),
+    badge: (k) => { const n = invAdds.filter(x => x.item === k).length; return n ? `×${n}` : "＋"; },
+    onPick: (k) => { const a = addItemToQueue(k); const n = invAdds.filter(x => x.item === k).length;
+      return a && `Added ${a.label} — ${n} stack${n > 1 ? "s" : ""} queued (set each amount in the list)`; },
+  });
+};
+
+// passage / gate picker — shows flags NOT already in this save
+$("#open-pass-picker").onclick = () => {
+  const present = new Set(passages.map(p => p.name));
+  const avail = passageDb.filter(p => !present.has(p.name));
+  if (!avail.length) { toast(passageDb.length ? "every known flag is already in this save" : "no flag catalog loaded"); return; }
+  openPicker({
+    title: "Add a flag / gate",
+    placeholder: "Filter flags… (name)",
+    status: `${avail.length} flags not in this save — click to add (value 1), adjust below`,
+    items: avail.map(p => ({ key: p.name, label: p.label, category: p.category })),
+    badge: (k) => passAdds.some(a => a.name === k) ? "✓" : "＋",
+    onPick: (k) => { const added = togglePassQueue(k); return added ? `Added ${k} (value 1) — set the value below` : `Removed ${k}`; },
+  });
+};
 
 function renderInventory() {
   const q = $("#search-inv").value.trim().toLowerCase();
@@ -306,25 +334,27 @@ function onInvPick(e) {
 // ---------------------------------------------------------------- passages (script flags)
 $("#search-pass").oninput = renderPassages;
 $("#only-changed-pass").onchange = renderPassages;
-$("#add-pass-btn").onclick = onAddPass;
-$("#add-pass-name").onkeydown = (e) => { if (e.key === "Enter") { e.preventDefault(); onAddPass(); } };
 
-function onAddPass() {
-  const name = $("#add-pass-name").value.trim();
-  if (!/^[A-Za-z][A-Za-z0-9_]{2,62}$/.test(name)) { toast("enter a valid flag name (letters/digits/underscore)"); return; }
-  if (passages.some(p => p.name === name) || passAdds.some(a => a.name === name)) { toast("that flag already exists"); return; }
-  passAdds.push({ name, value: Math.trunc(+$("#add-pass-val").value || 1) });
-  $("#add-pass-name").value = ""; $("#add-pass-val").value = 1;
+// queue/unqueue a flag from the catalog (added with value 1); returns true if added
+function togglePassQueue(name) {
+  if (passages.some(p => p.name === name)) { toast("that flag is already in this save"); return false; }
+  const i = passAdds.findIndex(a => a.name === name);
+  if (i >= 0) { passAdds.splice(i, 1); renderPassages(); updateBar(); return false; }
+  passAdds.push({ name, value: 1 });
   renderPassages(); updateBar();
+  return true;
 }
 
+// group present flags by their catalog category (Permission/Passage first)
 function passCat(name) {
-  if (/Warning/i.test(name)) return "Warnings (escalation: 0 none · 1 warned · 2 threatened)";
-  if (/Permision|Permission|Access|Allow|Member|Join|Guild|Unlock/i.test(name)) return "Permissions / access";
-  return "Other story flags";
+  const e = passageDb.find(p => p.name === name);
+  if (e) return e.category;
+  return /Warning|Permis/i.test(name) ? "Permission / Passage" : "NPC / Dialogue";
 }
-const PASS_ORDER = ["Permissions / access",
-  "Warnings (escalation: 0 none · 1 warned · 2 threatened)", "Other story flags"];
+function passOrder(cats) {
+  return cats.sort((a, b) =>
+    (b === "Permission / Passage") - (a === "Permission / Passage") || a.localeCompare(b));
+}
 
 function passRow(p) {
   const val = passChanges.has(p.name) ? passChanges.get(p.name) : p.value;
@@ -351,7 +381,7 @@ function renderPassages() {
   const groups = {};
   rows.forEach(p => (groups[passCat(p.name)] ??= []).push(p));
   let html = adds ? `<div class="grp"><h3>To add — new flags (experimental)</h3><div class="grid">${adds}</div></div>` : "";
-  html += PASS_ORDER.filter(c => groups[c]).map(cat =>
+  html += passOrder(Object.keys(groups)).map(cat =>
     `<div class="grp"><h3>${esc(cat)}</h3><div class="grid">${groups[cat].slice(0, 1000).map(passRow).join("")}</div></div>`
   ).join("");
   el.innerHTML = html || `<div class="empty">no matching flags</div>`;

@@ -94,6 +94,7 @@ def load():
                     "count": it["count"]} for it in inventory],
         item_db=item_db,
         passages=[{"name": p["name"], "value": p["value"]} for p in passages],
+        passage_db=g1r.list_passage_db(),
         behaviours=behaviours,
         crimes=[{"criminal": c["criminal"], "guild": c["guild"], "guild_label": c["guild_label"],
                  "count": c["count"], "active": c["active"]} for c in crimes],

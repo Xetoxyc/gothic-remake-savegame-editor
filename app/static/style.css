@@ -174,9 +174,10 @@ select:disabled{opacity:.6}
   background:var(--card);border:1px solid var(--line);border-radius:14px;box-shadow:0 18px 50px #000a;overflow:hidden}
 .modal-head{display:flex;align-items:center;gap:12px;padding:14px 16px;border-bottom:1px solid var(--line)}
 .modal-head h3{margin:0;font-size:16px;font-weight:600;white-space:nowrap}
-.modal-head #modal-search{flex:1;background:var(--bg2);border:1px solid var(--line);color:var(--text);
+.modal-head input[type="search"]{flex:1;background:var(--bg2);border:1px solid var(--line);color:var(--text);
   padding:9px 12px;border-radius:9px;font-size:14px}
-.modal-head #modal-search:focus{outline:none;border-color:var(--accent)}
+.modal-head input[type="search"]:focus{outline:none;border-color:var(--accent)}
+.modal-head h3{white-space:nowrap}
 .modal-x{background:none;border:none;color:var(--muted);font-size:18px;line-height:1;padding:4px 6px;border-radius:7px}
 .modal-x:hover{color:var(--text);background:var(--bg2)}
 .modal-body{display:flex;min-height:0;flex:1}
@@ -202,7 +203,7 @@ select:disabled{opacity:.6}
 @media (max-width:560px){.modal-cats{width:130px}.modal-items{grid-template-columns:1fr}}
 
 /* add-item / add-flag form + queued additions */
-.additem{display:flex;gap:8px;margin-bottom:12px;align-items:center}
+.additem{display:flex;gap:8px;margin:14px 0 12px;align-items:center}
 .additem .muted{font-size:12px}
 .additem input{background:var(--bg2);border:1px solid var(--line);color:var(--text);
   padding:9px 12px;border-radius:9px;font-size:14px}

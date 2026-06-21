@@ -1140,6 +1140,24 @@ def _scan_flags(payload):
     return out
 
 
+_PASS_CATALOG_PATH = _os.path.join(_os.path.dirname(_os.path.abspath(__file__)), "passages.json")
+_PASS_CATALOG = None
+
+
+def list_passage_db():
+    """Curated cross-save flag/gate catalog (built by ../../extract_passages.py).
+    Static — the frontend diffs it against the save's own flags to offer the
+    'unavailable' ones (flags this save doesn't have yet) in the add-gate picker."""
+    global _PASS_CATALOG
+    if _PASS_CATALOG is None:
+        try:
+            with open(_PASS_CATALOG_PATH, encoding="utf-8") as f:
+                _PASS_CATALOG = _json.load(f)
+        except (OSError, ValueError):
+            _PASS_CATALOG = []
+    return _PASS_CATALOG
+
+
 def list_passages(payload):
     """Distinct script flags (name -> int). A name may occur in several memory
     containers; we keep every value offset so an edit updates them all."""
