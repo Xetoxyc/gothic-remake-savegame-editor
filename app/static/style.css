@@ -237,6 +237,7 @@ select:disabled{opacity:.6}
 .npc-row:last-child{border-bottom:none}
 .npc-row:hover{background:#2c2417}
 .npc-row.active{background:var(--accent);color:#1a1209}
+.npc-row.dead:not(.active) .npc-name{opacity:.55;text-decoration:line-through}
 .npc-row.edited .npc-name::after{content:"●";color:var(--accent2);margin-left:6px;font-size:10px}
 .npc-row.active.edited .npc-name::after{color:#1a1209}
 .npc-name{flex:1;min-width:0;font-size:13px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}

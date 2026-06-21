@@ -1208,8 +1208,10 @@ def list_npcs(payload):
         if not key or key.startswith("None"):
             continue
         name, role, area, human = _npc_parse_key(key)
+        h, mh = hp.get(idx), mhp.get(idx)
         out.append({"id": key, "name": name, "role": role, "area": area,
-                    "human": human, "hp": hp.get(idx), "maxhp": mhp.get(idx),
+                    "human": human, "hp": h, "maxhp": mh,
+                    "dead": (h == 0 and bool(mh) and mh > 0),
                     "attitude": att.get(key, "Default")})
     out.sort(key=lambda x: (not x["human"], x["name"].lower()))
     return out
@@ -1485,10 +1487,13 @@ def npc_detail(payload, key):
     inv = [{k: v for k, v in it.items() if k not in ("offs", "defs")}
            for it in npc_inventory(payload, key)]
     trade = [{k: v for k, v in t.items() if k != "offs"} for t in npc_trade(payload, key)]
+    stats = _attrs_in_region(payload, *reg) if reg else []
+    hp = next((s for s in stats if s["name"] == "Health"), None)
+    mh = next((s for s in stats if s["name"] == "MaxHealth"), None)
+    dead = bool(hp and hp["value"] == 0 and mh and mh["value"] > 0)
     return {"id": key, "name": name, "role": role, "area": area, "human": human,
-            "attitude": _npc_attitudes(payload).get(key, "Default"),
-            "stats": _attrs_in_region(payload, *reg) if reg else [],
-            "inventory": inv, "trade": trade, "is_trader": bool(trade)}
+            "attitude": _npc_attitudes(payload).get(key, "Default"), "dead": dead,
+            "stats": stats, "inventory": inv, "trade": trade, "is_trader": bool(trade)}
 
 
 def apply_npc_stat_edits(payload, edits):
