@@ -93,7 +93,8 @@ def load():
                  "tier": s["tier"], "tiers": s["tiers"], "learned": s["learned"],
                  "loc": loc.skill(s["base"], s["label"])} for s in skills],
         inventory=[{"id": it["id"], "item": it["item"], "label": it["label"],
-                    "count": it["count"], "loc": loc.item(it["item"], it["label"])}
+                    "count": it["count"], "loc": loc.item(it["item"], it["label"]),
+                    "stats": g1r.item_stats(it["item"])}
                    for it in inventory],
         item_db=[{**x, "loc": loc.item(x["id"], x["label"])} for x in item_db],
         npcs=[{**n, "loc": loc.npc(n["id"], n.get("name") or n["id"])}

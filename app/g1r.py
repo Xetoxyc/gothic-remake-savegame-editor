@@ -944,6 +944,12 @@ def _bundled_catalog():
     return _CATALOG
 
 
+def item_stats(item_id):
+    """Weapon/combat stats for an item id, or None (from the bundled catalog)."""
+    e = _bundled_catalog().get(item_id)
+    return e.get("stats") if e else None
+
+
 def _save_item_ids(payload):
     ids = set()
     for m in _ITEM_DEF.finditer(payload):

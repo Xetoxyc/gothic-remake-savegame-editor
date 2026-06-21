@@ -2007,162 +2007,354 @@
  {
   "id": "ItMw_1H_Axe_01",
   "label": "1H Axe 01",
-  "category": "Melee Weapon"
+  "category": "Melee Weapon",
+  "stats": {
+   "damage": 29,
+   "requirement": 23,
+   "requirement_attribute": "STR",
+   "damage_type": "Edge"
+  }
  },
  {
   "id": "ItMw_1H_Axe_02",
   "label": "1H Axe 02",
-  "category": "Melee Weapon"
+  "category": "Melee Weapon",
+  "stats": {
+   "damage": 53,
+   "requirement": 43,
+   "requirement_attribute": "STR",
+   "damage_type": "Edge"
+  }
  },
  {
   "id": "ItMw_1H_Axe_03",
   "label": "Axe",
-  "category": "Melee Weapon"
+  "category": "Melee Weapon",
+  "stats": {
+   "damage": 54,
+   "requirement": 44,
+   "requirement_attribute": "STR",
+   "damage_type": "Edge"
+  }
  },
  {
   "id": "ItMw_1H_Axe_Bran",
   "label": "1H Axe Bran",
-  "category": "Melee Weapon"
+  "category": "Melee Weapon",
+  "stats": {
+   "damage": 20,
+   "requirement": 10,
+   "requirement_attribute": "STR",
+   "damage_type": "Edge"
+  }
  },
  {
   "id": "ItMw_1H_Axe_Cord",
   "label": "Axe Cord",
-  "category": "Melee Weapon"
+  "category": "Melee Weapon",
+  "stats": {
+   "damage": 60,
+   "requirement": 50,
+   "requirement_attribute": "STR",
+   "damage_type": "Edge"
+  }
  },
  {
   "id": "ItMw_1H_Axe_Hatchet_01",
   "label": "Axe Hatchet",
-  "category": "Melee Weapon"
+  "category": "Melee Weapon",
+  "stats": {
+   "damage": 9,
+   "requirement": 5,
+   "requirement_attribute": "STR",
+   "damage_type": "Edge"
+  }
  },
  {
   "id": "ItMw_1H_Axe_Lares",
   "label": "Axe Lares",
-  "category": "Melee Weapon"
+  "category": "Melee Weapon",
+  "stats": {
+   "damage": 65,
+   "requirement": 52,
+   "requirement_attribute": "STR",
+   "damage_type": "Edge"
+  }
  },
  {
   "id": "ItMw_1H_Axe_Old_01",
   "label": "Axe Old",
-  "category": "Melee Weapon"
+  "category": "Melee Weapon",
+  "stats": {
+   "damage": 13,
+   "requirement": 9,
+   "requirement_attribute": "STR",
+   "damage_type": "Edge"
+  }
  },
  {
   "id": "ItMw_1H_Axe_Sickle_01",
   "label": "Axe Sickle",
-  "category": "Melee Weapon"
+  "category": "Melee Weapon",
+  "stats": {
+   "damage": 7,
+   "requirement": 5,
+   "requirement_attribute": "STR",
+   "damage_type": "Edge"
+  }
  },
  {
   "id": "ItMw_1H_Axe_Silas",
   "label": "Axe Silas",
-  "category": "Melee Weapon"
+  "category": "Melee Weapon",
+  "stats": {
+   "damage": 55,
+   "requirement": 45,
+   "requirement_attribute": "STR",
+   "damage_type": "Edge"
+  }
  },
  {
   "id": "ItMw_1H_Mace_01",
   "label": "Mace",
-  "category": "Melee Weapon"
+  "category": "Melee Weapon",
+  "stats": {
+   "damage": 23,
+   "requirement": 19,
+   "requirement_attribute": "STR",
+   "damage_type": "Blunt"
+  }
  },
  {
   "id": "ItMw_1H_Mace_02",
   "label": "Mace",
-  "category": "Melee Weapon"
+  "category": "Melee Weapon",
+  "stats": {
+   "damage": 25,
+   "requirement": 22,
+   "requirement_attribute": "STR",
+   "damage_type": "Blunt"
+  }
  },
  {
   "id": "ItMw_1H_Mace_03",
   "label": "Mace",
-  "category": "Melee Weapon"
+  "category": "Melee Weapon",
+  "stats": {
+   "damage": 26,
+   "requirement": 21,
+   "requirement_attribute": "STR",
+   "damage_type": "Blunt"
+  }
  },
  {
   "id": "ItMw_1H_Mace_04",
   "label": "Mace",
-  "category": "Melee Weapon"
+  "category": "Melee Weapon",
+  "stats": {
+   "damage": 29,
+   "requirement": 26,
+   "requirement_attribute": "STR",
+   "damage_type": "Blunt"
+  }
  },
  {
   "id": "ItMw_1H_Mace_Club_01",
   "label": "Mace Club",
-  "category": "Melee Weapon"
+  "category": "Melee Weapon",
+  "stats": {
+   "damage": 5,
+   "requirement": 5,
+   "requirement_attribute": "STR",
+   "damage_type": "Blunt"
+  }
  },
  {
   "id": "ItMw_1H_Mace_Fortuno",
   "label": "Mace Fortuno",
-  "category": "Melee Weapon"
+  "category": "Melee Weapon",
+  "stats": {
+   "damage": 20,
+   "requirement": 12,
+   "requirement_attribute": "STR",
+   "damage_type": "Blunt"
+  }
  },
  {
   "id": "ItMw_1H_Mace_Lester",
   "label": "Mace Lester",
-  "category": "Melee Weapon"
+  "category": "Melee Weapon",
+  "stats": {
+   "damage": 60,
+   "requirement": 52,
+   "requirement_attribute": "STR",
+   "damage_type": "Blunt"
+  }
  },
  {
   "id": "ItMw_1H_Mace_Light_01",
   "label": "Mace Light",
-  "category": "Melee Weapon"
+  "category": "Melee Weapon",
+  "stats": {
+   "damage": 8,
+   "requirement": 5,
+   "requirement_attribute": "STR",
+   "damage_type": "Blunt"
+  }
  },
  {
   "id": "ItMw_1H_Mace_Nailmace_01",
   "label": "Mace Nailmace",
-  "category": "Melee Weapon"
+  "category": "Melee Weapon",
+  "stats": {
+   "damage": 11,
+   "requirement": 7,
+   "requirement_attribute": "STR",
+   "damage_type": "Blunt"
+  }
  },
  {
   "id": "ItMw_1H_Mace_Namib",
   "label": "Mace Namib",
-  "category": "Melee Weapon"
+  "category": "Melee Weapon",
+  "stats": {
+   "damage": 55,
+   "requirement": 47,
+   "requirement_attribute": "STR",
+   "damage_type": "Blunt"
+  }
  },
  {
   "id": "ItMw_1H_Mace_Orun",
   "label": "Mace Orun",
-  "category": "Melee Weapon"
+  "category": "Melee Weapon",
+  "stats": {
+   "damage": 60,
+   "requirement": 52,
+   "requirement_attribute": "STR",
+   "damage_type": "Blunt"
+  }
  },
  {
   "id": "ItMw_1H_Mace_Poker_01",
   "label": "Mace Poker",
-  "category": "Melee Weapon"
+  "category": "Melee Weapon",
+  "stats": {
+   "damage": 6,
+   "requirement": 5,
+   "requirement_attribute": "STR",
+   "damage_type": "Blunt"
+  }
  },
  {
   "id": "ItMw_1H_Mace_Sledgehammer_01",
   "label": "Mace Sledgehammer",
-  "category": "Melee Weapon"
+  "category": "Melee Weapon",
+  "stats": {
+   "damage": 10,
+   "requirement": 5,
+   "requirement_attribute": "STR",
+   "damage_type": "Blunt"
+  }
  },
  {
   "id": "ItMw_1H_Mace_War_01",
   "label": "Mace War",
-  "category": "Melee Weapon"
+  "category": "Melee Weapon",
+  "stats": {
+   "damage": 35,
+   "requirement": 27,
+   "requirement_attribute": "STR",
+   "damage_type": "Blunt"
+  }
  },
  {
   "id": "ItMw_1H_Mace_War_02",
   "label": "Mace War",
-  "category": "Melee Weapon"
+  "category": "Melee Weapon",
+  "stats": {
+   "damage": 36,
+   "requirement": 28,
+   "requirement_attribute": "STR",
+   "damage_type": "Blunt"
+  }
  },
  {
   "id": "ItMw_1H_Mace_War_03",
   "label": "Mace War",
-  "category": "Melee Weapon"
+  "category": "Melee Weapon",
+  "stats": {
+   "damage": 37,
+   "requirement": 29,
+   "requirement_attribute": "STR",
+   "damage_type": "Blunt"
+  }
  },
  {
   "id": "ItMw_1H_Mace_Warhammer_01",
   "label": "1H Mace Warhammer 01",
-  "category": "Melee Weapon"
+  "category": "Melee Weapon",
+  "stats": {
+   "damage": 50,
+   "requirement": 42,
+   "requirement_attribute": "STR",
+   "damage_type": "Blunt"
+  }
  },
  {
   "id": "ItMw_1H_Mace_Warhammer_03",
   "label": "1H Mace Warhammer 03",
-  "category": "Melee Weapon"
+  "category": "Melee Weapon",
+  "stats": {
+   "damage": 52,
+   "requirement": 44,
+   "requirement_attribute": "STR",
+   "damage_type": "Blunt"
+  }
  },
  {
   "id": "ItMw_1H_Sword_01",
   "label": "Sword",
-  "category": "Melee Weapon"
+  "category": "Melee Weapon",
+  "stats": {
+   "damage": 17,
+   "requirement": 14,
+   "requirement_attribute": "STR",
+   "damage_type": "Edge"
+  }
  },
  {
   "id": "ItMw_1H_Sword_02",
   "label": "Sword",
-  "category": "Melee Weapon"
+  "category": "Melee Weapon",
+  "stats": {
+   "damage": 30,
+   "requirement": 20,
+   "requirement_attribute": "STR",
+   "damage_type": "Edge"
+  }
  },
  {
   "id": "ItMw_1H_Sword_03",
   "label": "Sword",
-  "category": "Melee Weapon"
+  "category": "Melee Weapon",
+  "stats": {
+   "damage": 32,
+   "requirement": 22,
+   "requirement_attribute": "STR",
+   "damage_type": "Edge"
+  }
  },
  {
   "id": "ItMw_1H_Sword_04",
   "label": "Sword",
-  "category": "Melee Weapon"
+  "category": "Melee Weapon",
+  "stats": {
+   "damage": 33,
+   "requirement": 23,
+   "requirement_attribute": "STR",
+   "damage_type": "Edge"
+  }
  },
  {
   "id": "ItMw_1H_Sword_04_Diego_Sleeper",
@@ -2172,7 +2364,13 @@
  {
   "id": "ItMw_1H_Sword_05",
   "label": "1H Sword 05",
-  "category": "Melee Weapon"
+  "category": "Melee Weapon",
+  "stats": {
+   "damage": 34,
+   "requirement": 24,
+   "requirement_attribute": "STR",
+   "damage_type": "Edge"
+  }
  },
  {
   "id": "ItMw_1H_Sword_05_Darrion",
@@ -2182,507 +2380,1113 @@
  {
   "id": "ItMw_1H_Sword_Arto",
   "label": "Sword Arto",
-  "category": "Melee Weapon"
+  "category": "Melee Weapon",
+  "stats": {
+   "damage": 65,
+   "requirement": 54,
+   "requirement_attribute": "STR",
+   "damage_type": "Edge"
+  }
  },
  {
   "id": "ItMw_1H_Sword_Bastard_01",
   "label": "1H Sword Bastard 01",
-  "category": "Melee Weapon"
+  "category": "Melee Weapon",
+  "stats": {
+   "damage": 45,
+   "requirement": 35,
+   "requirement_attribute": "STR",
+   "damage_type": "Edge"
+  }
  },
  {
   "id": "ItMw_1H_Sword_Bastard_02",
   "label": "1H Sword Bastard 02",
-  "category": "Melee Weapon"
+  "category": "Melee Weapon",
+  "stats": {
+   "damage": 64,
+   "requirement": 51,
+   "requirement_attribute": "STR",
+   "damage_type": "Edge"
+  }
  },
  {
   "id": "ItMw_1H_Sword_Bastard_03",
   "label": "1H Sword Bastard 03",
-  "category": "Melee Weapon"
+  "category": "Melee Weapon",
+  "stats": {
+   "damage": 65,
+   "requirement": 53,
+   "requirement_attribute": "STR",
+   "damage_type": "Edge"
+  }
  },
  {
   "id": "ItMw_1H_Sword_Bastard_04",
   "label": "1H Sword Bastard 04",
-  "category": "Melee Weapon"
+  "category": "Melee Weapon",
+  "stats": {
+   "damage": 66,
+   "requirement": 54,
+   "requirement_attribute": "STR",
+   "damage_type": "Edge"
+  }
  },
  {
   "id": "ItMw_1H_Sword_Broad_01",
   "label": "1H Sword Broad 01",
-  "category": "Melee Weapon"
+  "category": "Melee Weapon",
+  "stats": {
+   "damage": 55,
+   "requirement": 45,
+   "requirement_attribute": "STR",
+   "damage_type": "Edge"
+  }
  },
  {
   "id": "ItMw_1H_Sword_Broad_02",
   "label": "1H Sword Broad 02",
-  "category": "Melee Weapon"
+  "category": "Melee Weapon",
+  "stats": {
+   "damage": 57,
+   "requirement": 47,
+   "requirement_attribute": "STR",
+   "damage_type": "Edge"
+  }
  },
  {
   "id": "ItMw_1H_Sword_Broad_03",
   "label": "1H Sword Broad 03",
-  "category": "Melee Weapon"
+  "category": "Melee Weapon",
+  "stats": {
+   "damage": 58,
+   "requirement": 48,
+   "requirement_attribute": "STR",
+   "damage_type": "Edge"
+  }
  },
  {
   "id": "ItMw_1H_Sword_Broad_04",
   "label": "1H Sword Broad 04",
-  "category": "Melee Weapon"
+  "category": "Melee Weapon",
+  "stats": {
+   "damage": 59,
+   "requirement": 49,
+   "requirement_attribute": "STR",
+   "damage_type": "Edge"
+  }
  },
  {
   "id": "ItMw_1H_Sword_Kalom",
   "label": "Sword Kalom",
-  "category": "Melee Weapon"
+  "category": "Melee Weapon",
+  "stats": {
+   "damage": 70,
+   "requirement": 55,
+   "requirement_attribute": "STR",
+   "damage_type": "Edge"
+  }
  },
  {
   "id": "ItMw_1H_Sword_Lightguard_01",
   "label": "1H Sword Lightguard 01",
-  "category": "Melee Weapon"
+  "category": "Melee Weapon",
+  "stats": {
+   "damage": 22,
+   "requirement": 16,
+   "requirement_attribute": "STR",
+   "damage_type": "Edge"
+  }
  },
  {
   "id": "ItMw_1H_Sword_Long_01",
   "label": "1H Sword Long 01",
-  "category": "Melee Weapon"
+  "category": "Melee Weapon",
+  "stats": {
+   "damage": 40,
+   "requirement": 30,
+   "requirement_attribute": "STR",
+   "damage_type": "Edge"
+  }
  },
  {
   "id": "ItMw_1H_Sword_Long_02",
   "label": "Sword Long",
-  "category": "Melee Weapon"
+  "category": "Melee Weapon",
+  "stats": {
+   "damage": 42,
+   "requirement": 32,
+   "requirement_attribute": "STR",
+   "damage_type": "Edge"
+  }
  },
  {
   "id": "ItMw_1H_Sword_Long_03",
   "label": "1H Sword Long 03",
-  "category": "Melee Weapon"
+  "category": "Melee Weapon",
+  "stats": {
+   "damage": 44,
+   "requirement": 34,
+   "requirement_attribute": "STR",
+   "damage_type": "Edge"
+  }
  },
  {
   "id": "ItMw_1H_Sword_Long_04",
   "label": "1H Sword Long 04",
-  "category": "Melee Weapon"
+  "category": "Melee Weapon",
+  "stats": {
+   "damage": 46,
+   "requirement": 36,
+   "requirement_attribute": "STR",
+   "damage_type": "Edge"
+  }
  },
  {
   "id": "ItMw_1H_Sword_Long_05",
   "label": "Sword Long",
-  "category": "Melee Weapon"
+  "category": "Melee Weapon",
+  "stats": {
+   "damage": 48,
+   "requirement": 38,
+   "requirement_attribute": "STR",
+   "damage_type": "Edge"
+  }
  },
  {
   "id": "ItMw_1H_Sword_Old_01",
   "label": "Sword Old",
-  "category": "Melee Weapon"
+  "category": "Melee Weapon",
+  "stats": {
+   "damage": 10,
+   "requirement": 5,
+   "requirement_attribute": "STR",
+   "damage_type": "Edge"
+  }
  },
  {
   "id": "ItMw_1H_Sword_Old_02",
   "label": "1H Sword Old 02",
-  "category": "Melee Weapon"
+  "category": "Melee Weapon",
+  "stats": {
+   "damage": 12,
+   "requirement": 8,
+   "requirement_attribute": "STR",
+   "damage_type": "Edge"
+  }
  },
  {
   "id": "ItMw_1H_Sword_Paw",
   "label": "Sword Paw",
-  "category": "Melee Weapon"
+  "category": "Melee Weapon",
+  "stats": {
+   "damage": 55,
+   "requirement": 45,
+   "requirement_attribute": "STR",
+   "damage_type": "Edge"
+  }
  },
  {
   "id": "ItMw_1H_Sword_Raven",
   "label": "Sword Raven",
-  "category": "Melee Weapon"
+  "category": "Melee Weapon",
+  "stats": {
+   "damage": 70,
+   "requirement": 55,
+   "requirement_attribute": "STR",
+   "damage_type": "Edge"
+  }
  },
  {
   "id": "ItMw_1H_Sword_Scar",
   "label": "Sword Scar",
-  "category": "Melee Weapon"
+  "category": "Melee Weapon",
+  "stats": {
+   "damage": 85,
+   "requirement": 70,
+   "requirement_attribute": "STR",
+   "damage_type": "Edge"
+  }
  },
  {
   "id": "ItMw_1H_Sword_Scythe_01",
   "label": "Sword Scythe",
-  "category": "Melee Weapon"
+  "category": "Melee Weapon",
+  "stats": {
+   "damage": 15,
+   "requirement": 10,
+   "requirement_attribute": "STR",
+   "damage_type": "Edge"
+  }
  },
  {
   "id": "ItMw_1H_Sword_Short_01",
   "label": "Sword Short",
-  "category": "Melee Weapon"
+  "category": "Melee Weapon",
+  "stats": {
+   "damage": 12,
+   "requirement": 8,
+   "requirement_attribute": "STR",
+   "damage_type": "Edge"
+  }
  },
  {
   "id": "ItMw_1H_Sword_Short_02",
   "label": "Sword Short",
-  "category": "Melee Weapon"
+  "category": "Melee Weapon",
+  "stats": {
+   "damage": 14,
+   "requirement": 10,
+   "requirement_attribute": "STR",
+   "damage_type": "Edge"
+  }
  },
  {
   "id": "ItMw_1H_Sword_Short_03",
   "label": "Sword Short",
-  "category": "Melee Weapon"
+  "category": "Melee Weapon",
+  "stats": {
+   "damage": 21,
+   "requirement": 15,
+   "requirement_attribute": "STR",
+   "damage_type": "Edge"
+  }
  },
  {
   "id": "ItMw_1H_Sword_Short_04",
   "label": "Sword Short",
-  "category": "Melee Weapon"
+  "category": "Melee Weapon",
+  "stats": {
+   "damage": 18,
+   "requirement": 15,
+   "requirement_attribute": "STR",
+   "damage_type": "Edge"
+  }
  },
  {
   "id": "ItMw_1H_Sword_Short_05",
   "label": "1H Sword Short 05",
-  "category": "Melee Weapon"
+  "category": "Melee Weapon",
+  "stats": {
+   "damage": 20,
+   "requirement": 17,
+   "requirement_attribute": "STR",
+   "damage_type": "Edge"
+  }
  },
  {
   "id": "ItMw_1H_Sword_Whistler",
   "label": "Sword Whistler",
-  "category": "Melee Weapon"
+  "category": "Melee Weapon",
+  "stats": {
+   "damage": 20,
+   "requirement": 17,
+   "requirement_attribute": "STR",
+   "damage_type": "Edge"
+  }
  },
  {
   "id": "ItMw_1H_Torch",
   "label": "Torch",
-  "category": "Melee Weapon"
+  "category": "Melee Weapon",
+  "stats": {
+   "damage": 1,
+   "requirement": 2,
+   "requirement_attribute": "STR",
+   "damage_type": "Edge"
+  }
  },
  {
   "id": "ItMw_1H_Torch_Gob",
   "label": "Torch Gob",
-  "category": "Melee Weapon"
+  "category": "Melee Weapon",
+  "stats": {
+   "damage": 1,
+   "requirement": 14,
+   "requirement_attribute": "STR",
+   "damage_type": "Edge"
+  }
  },
  {
   "id": "ItMw_2H_Axe_Gorn",
   "label": "Axe Gorn",
-  "category": "Melee Weapon"
+  "category": "Melee Weapon",
+  "stats": {
+   "damage": 100,
+   "requirement": 85,
+   "requirement_attribute": "STR",
+   "damage_type": "Edge"
+  }
  },
  {
   "id": "ItMw_2H_Axe_Heavy_01",
   "label": "2H Axe Heavy 01",
-  "category": "Melee Weapon"
+  "category": "Melee Weapon",
+  "stats": {
+   "damage": 94,
+   "requirement": 79,
+   "requirement_attribute": "STR",
+   "damage_type": "Edge"
+  }
  },
  {
   "id": "ItMw_2H_Axe_Heavy_02",
   "label": "Axe Heavy",
-  "category": "Melee Weapon"
+  "category": "Melee Weapon",
+  "stats": {
+   "damage": 96,
+   "requirement": 81,
+   "requirement_attribute": "STR",
+   "damage_type": "Edge"
+  }
  },
  {
   "id": "ItMw_2H_Axe_Heavy_03",
   "label": "2H Axe Heavy 03",
-  "category": "Melee Weapon"
+  "category": "Melee Weapon",
+  "stats": {
+   "damage": 98,
+   "requirement": 83,
+   "requirement_attribute": "STR",
+   "damage_type": "Edge"
+  }
  },
  {
   "id": "ItMw_2H_Axe_Heavy_04",
   "label": "2H Axe Heavy 04",
-  "category": "Melee Weapon"
+  "category": "Melee Weapon",
+  "stats": {
+   "damage": 100,
+   "requirement": 85,
+   "requirement_attribute": "STR",
+   "damage_type": "Edge"
+  }
  },
  {
   "id": "ItMw_2H_Axe_Lee",
   "label": "Axe Lee",
-  "category": "Melee Weapon"
+  "category": "Melee Weapon",
+  "stats": {
+   "damage": 105,
+   "requirement": 90,
+   "requirement_attribute": "STR",
+   "damage_type": "Edge"
+  }
  },
  {
   "id": "ItMw_2H_Axe_Light_01",
   "label": "2H Axe Light 01",
-  "category": "Melee Weapon"
+  "category": "Melee Weapon",
+  "stats": {
+   "damage": 77,
+   "requirement": 62,
+   "requirement_attribute": "STR",
+   "damage_type": "Edge"
+  }
  },
  {
   "id": "ItMw_2H_Axe_Light_02",
   "label": "2H Axe Light 02",
-  "category": "Melee Weapon"
+  "category": "Melee Weapon",
+  "stats": {
+   "damage": 79,
+   "requirement": 64,
+   "requirement_attribute": "STR",
+   "damage_type": "Edge"
+  }
  },
  {
   "id": "ItMw_2H_Axe_Light_03",
   "label": "2H Axe Light 03",
-  "category": "Melee Weapon"
+  "category": "Melee Weapon",
+  "stats": {
+   "damage": 80,
+   "requirement": 65,
+   "requirement_attribute": "STR",
+   "damage_type": "Edge"
+  }
  },
  {
   "id": "ItMw_2H_Axe_Old_01",
   "label": "2H Axe Old 01",
-  "category": "Melee Weapon"
+  "category": "Melee Weapon",
+  "stats": {
+   "damage": 67,
+   "requirement": 54,
+   "requirement_attribute": "STR",
+   "damage_type": "Edge"
+  }
  },
  {
   "id": "ItMw_2H_Axe_Old_02",
   "label": "2H Axe Old 02",
-  "category": "Melee Weapon"
+  "category": "Melee Weapon",
+  "stats": {
+   "damage": 68,
+   "requirement": 55,
+   "requirement_attribute": "STR",
+   "damage_type": "Edge"
+  }
  },
  {
   "id": "ItMw_2H_Axe_Old_03",
   "label": "2H Axe Old 03",
-  "category": "Melee Weapon"
+  "category": "Melee Weapon",
+  "stats": {
+   "damage": 69,
+   "requirement": 55,
+   "requirement_attribute": "STR",
+   "damage_type": "Edge"
+  }
  },
  {
   "id": "ItMw_2H_Axe_Orc_01",
   "label": "Axe Orc",
-  "category": "Melee Weapon"
+  "category": "Melee Weapon",
+  "stats": {
+   "damage": 50,
+   "requirement": 42,
+   "requirement_attribute": "STR",
+   "damage_type": "Edge"
+  }
  },
  {
   "id": "ItMw_2H_Axe_Orc_01_vOrc",
   "label": "Axe Orc 01 vOrc",
-  "category": "Melee Weapon"
+  "category": "Melee Weapon",
+  "stats": {
+   "damage": 50,
+   "requirement": 42,
+   "requirement_attribute": "STR",
+   "damage_type": "Edge"
+  }
  },
  {
   "id": "ItMw_2H_Axe_Orc_02",
   "label": "Axe Orc",
-  "category": "Melee Weapon"
+  "category": "Melee Weapon",
+  "stats": {
+   "damage": 55,
+   "requirement": 47,
+   "requirement_attribute": "STR",
+   "damage_type": "Edge"
+  }
  },
  {
   "id": "ItMw_2H_Axe_Orc_02_vOrc",
   "label": "Axe Orc 02 vOrc",
-  "category": "Melee Weapon"
+  "category": "Melee Weapon",
+  "stats": {
+   "damage": 55,
+   "requirement": 47,
+   "requirement_attribute": "STR",
+   "damage_type": "Edge"
+  }
  },
  {
   "id": "ItMw_2H_Axe_Orc_03",
   "label": "2H Axe Orc 03",
-  "category": "Melee Weapon"
+  "category": "Melee Weapon",
+  "stats": {
+   "damage": 60,
+   "requirement": 52,
+   "requirement_attribute": "STR",
+   "damage_type": "Edge"
+  }
  },
  {
   "id": "ItMw_2H_Axe_Orc_03_vOrc",
   "label": "Axe Orc 03 vOrc",
-  "category": "Melee Weapon"
+  "category": "Melee Weapon",
+  "stats": {
+   "damage": 60,
+   "requirement": 52,
+   "requirement_attribute": "STR",
+   "damage_type": "Edge"
+  }
  },
  {
   "id": "ItMw_2H_Axe_Orc_04",
   "label": "2H Axe Orc 04",
-  "category": "Melee Weapon"
+  "category": "Melee Weapon",
+  "stats": {
+   "damage": 65,
+   "requirement": 54,
+   "requirement_attribute": "STR",
+   "damage_type": "Edge"
+  }
  },
  {
   "id": "ItMw_2H_Axe_Orc_04_vOrc",
   "label": "Axe Orc 04 vOrc",
-  "category": "Melee Weapon"
+  "category": "Melee Weapon",
+  "stats": {
+   "damage": 65,
+   "requirement": 54,
+   "requirement_attribute": "STR",
+   "damage_type": "Edge"
+  }
  },
  {
   "id": "ItMw_2H_Axe_Orik",
   "label": "Axe Orik",
-  "category": "Melee Weapon"
+  "category": "Melee Weapon",
+  "stats": {
+   "damage": 95,
+   "requirement": 80,
+   "requirement_attribute": "STR",
+   "damage_type": "Edge"
+  }
  },
  {
   "id": "ItMw_2H_Axe_Pickaxe",
   "label": "Axe Pickaxe",
-  "category": "Melee Weapon"
+  "category": "Melee Weapon",
+  "stats": {
+   "damage": 7,
+   "requirement": 5,
+   "requirement_attribute": "STR",
+   "damage_type": "Edge"
+  }
  },
  {
   "id": "ItMw_2H_Axe_Torlof",
   "label": "Axe Torlof",
-  "category": "Melee Weapon"
+  "category": "Melee Weapon",
+  "stats": {
+   "damage": 99,
+   "requirement": 84,
+   "requirement_attribute": "STR",
+   "damage_type": "Edge"
+  }
  },
  {
   "id": "ItMw_2H_Mace_Orc_01_vOrc",
   "label": "Mace Orc 01 vOrc",
-  "category": "Melee Weapon"
+  "category": "Melee Weapon",
+  "stats": {
+   "damage": 75,
+   "requirement": 60,
+   "requirement_attribute": "STR",
+   "damage_type": "Blunt"
+  }
  },
  {
   "id": "ItMw_2H_Staff_02",
   "label": "2H Staff 02",
-  "category": "Melee Weapon"
+  "category": "Melee Weapon",
+  "stats": {
+   "damage": 19,
+   "requirement": 16,
+   "requirement_attribute": "STR",
+   "damage_type": "Blunt"
+  }
  },
  {
   "id": "ItMw_2H_Staff_Orc_vOrc",
   "label": "Staff Orc vOrc",
-  "category": "Melee Weapon"
+  "category": "Melee Weapon",
+  "stats": {
+   "damage": 50,
+   "requirement": 0,
+   "requirement_attribute": "STR",
+   "damage_type": "Blunt"
+  }
  },
  {
   "id": "ItMw_2H_Staff_Scepter",
   "label": "Staff Scepter",
-  "category": "Melee Weapon"
+  "category": "Melee Weapon",
+  "stats": {
+   "damage": 26,
+   "requirement": 20,
+   "requirement_attribute": "STR",
+   "damage_type": "Blunt"
+  }
  },
  {
   "id": "ItMw_2H_Staff_Ulumulu",
   "label": "2H Staff Ulumulu",
-  "category": "Melee Weapon"
+  "category": "Melee Weapon",
+  "stats": {
+   "damage": 35,
+   "requirement": 25,
+   "requirement_attribute": "STR",
+   "damage_type": "Blunt"
+  }
  },
  {
   "id": "ItMw_2H_Sword_01",
   "label": "2H Sword 01",
-  "category": "Melee Weapon"
+  "category": "Melee Weapon",
+  "stats": {
+   "damage": 81,
+   "requirement": 66,
+   "requirement_attribute": "STR",
+   "damage_type": "Edge"
+  }
  },
  {
   "id": "ItMw_2H_Sword_02",
   "label": "2H Sword 02",
-  "category": "Melee Weapon"
+  "category": "Melee Weapon",
+  "stats": {
+   "damage": 83,
+   "requirement": 68,
+   "requirement_attribute": "STR",
+   "damage_type": "Edge"
+  }
  },
  {
   "id": "ItMw_2H_Sword_03",
   "label": "2H Sword 03",
-  "category": "Melee Weapon"
+  "category": "Melee Weapon",
+  "stats": {
+   "damage": 85,
+   "requirement": 70,
+   "requirement_attribute": "STR",
+   "damage_type": "Edge"
+  }
  },
  {
   "id": "ItMw_2H_Sword_Heavy_01",
   "label": "2H Sword Heavy 01",
-  "category": "Melee Weapon"
+  "category": "Melee Weapon",
+  "stats": {
+   "damage": 86,
+   "requirement": 71,
+   "requirement_attribute": "STR",
+   "damage_type": "Edge"
+  }
  },
  {
   "id": "ItMw_2H_Sword_Heavy_02",
   "label": "2H Sword Heavy 02",
-  "category": "Melee Weapon"
+  "category": "Melee Weapon",
+  "stats": {
+   "damage": 88,
+   "requirement": 73,
+   "requirement_attribute": "STR",
+   "damage_type": "Edge"
+  }
  },
  {
   "id": "ItMw_2H_Sword_Heavy_03",
   "label": "2H Sword Heavy 03",
-  "category": "Melee Weapon"
+  "category": "Melee Weapon",
+  "stats": {
+   "damage": 90,
+   "requirement": 75,
+   "requirement_attribute": "STR",
+   "damage_type": "Edge"
+  }
  },
  {
   "id": "ItMw_2H_Sword_Heavy_04",
   "label": "2H Sword Heavy 04",
-  "category": "Melee Weapon"
+  "category": "Melee Weapon",
+  "stats": {
+   "damage": 92,
+   "requirement": 77,
+   "requirement_attribute": "STR",
+   "damage_type": "Edge"
+  }
  },
  {
   "id": "ItMw_2H_Sword_Innos",
   "label": "Sword Innos",
-  "category": "Melee Weapon"
+  "category": "Melee Weapon",
+  "stats": {
+   "damage": 110,
+   "requirement": 95,
+   "requirement_attribute": "STR",
+   "damage_type": "Edge"
+  }
  },
  {
   "id": "ItMw_2H_Sword_Light_01",
   "label": "Sword Light",
-  "category": "Melee Weapon"
+  "category": "Melee Weapon",
+  "stats": {
+   "damage": 60,
+   "requirement": 50,
+   "requirement_attribute": "STR",
+   "damage_type": "Edge"
+  }
  },
  {
   "id": "ItMw_2H_Sword_Light_02",
   "label": "Sword Light",
-  "category": "Melee Weapon"
+  "category": "Melee Weapon",
+  "stats": {
+   "damage": 71,
+   "requirement": 56,
+   "requirement_attribute": "STR",
+   "damage_type": "Edge"
+  }
  },
  {
   "id": "ItMw_2H_Sword_Light_03",
   "label": "Sword Light",
-  "category": "Melee Weapon"
+  "category": "Melee Weapon",
+  "stats": {
+   "damage": 73,
+   "requirement": 58,
+   "requirement_attribute": "STR",
+   "damage_type": "Edge"
+  }
  },
  {
   "id": "ItMw_2H_Sword_Light_04",
   "label": "Sword Light",
-  "category": "Melee Weapon"
+  "category": "Melee Weapon",
+  "stats": {
+   "damage": 74,
+   "requirement": 59,
+   "requirement_attribute": "STR",
+   "damage_type": "Edge"
+  }
  },
  {
   "id": "ItMw_2H_Sword_Light_05",
   "label": "2H Sword Light 05",
-  "category": "Melee Weapon"
+  "category": "Melee Weapon",
+  "stats": {
+   "damage": 76,
+   "requirement": 61,
+   "requirement_attribute": "STR",
+   "damage_type": "Edge"
+  }
  },
  {
   "id": "ItMw_2H_Sword_Old_01",
   "label": "2H Sword Old 01",
-  "category": "Melee Weapon"
+  "category": "Melee Weapon",
+  "stats": {
+   "damage": 61,
+   "requirement": 50,
+   "requirement_attribute": "STR",
+   "damage_type": "Edge"
+  }
  },
  {
   "id": "ItMw_2H_Sword_Orc_01",
   "label": "Sword Orc",
-  "category": "Melee Weapon"
+  "category": "Melee Weapon",
+  "stats": {
+   "damage": 45,
+   "requirement": 37,
+   "requirement_attribute": "STR",
+   "damage_type": "Edge"
+  }
  },
  {
   "id": "ItMw_2H_Sword_Orc_01_vOrc",
   "label": "Sword Orc 01 vOrc",
-  "category": "Melee Weapon"
+  "category": "Melee Weapon",
+  "stats": {
+   "damage": 45,
+   "requirement": 37,
+   "requirement_attribute": "STR",
+   "damage_type": "Edge"
+  }
  },
  {
   "id": "ItMw_2H_Sword_Thorus",
   "label": "Sword Thorus",
-  "category": "Melee Weapon"
+  "category": "Melee Weapon",
+  "stats": {
+   "damage": 90,
+   "requirement": 75,
+   "requirement_attribute": "STR",
+   "damage_type": "Edge"
+  }
  },
  {
   "id": "ItMw_2H_Sword_Wind",
   "label": "Sword Wind",
-  "category": "Melee Weapon"
+  "category": "Melee Weapon",
+  "stats": {
+   "damage": 105,
+   "requirement": 90,
+   "requirement_attribute": "STR",
+   "damage_type": "Edge"
+  }
  },
  {
   "id": "ItRw_Bow_Diego",
   "label": "Bow Diego",
-  "category": "Ranged Weapon"
+  "category": "Ranged Weapon",
+  "stats": {
+   "damage": 70,
+   "requirement": 55,
+   "requirement_attribute": "DEX",
+   "damage_type": "Point"
+  }
  },
  {
   "id": "ItRw_Bow_Long_01",
   "label": "Bow Long",
-  "category": "Ranged Weapon"
+  "category": "Ranged Weapon",
+  "stats": {
+   "damage": 40,
+   "requirement": 30,
+   "requirement_attribute": "DEX",
+   "damage_type": "Point"
+  }
  },
  {
   "id": "ItRw_Bow_Long_02",
   "label": "Bow Long",
-  "category": "Ranged Weapon"
+  "category": "Ranged Weapon",
+  "stats": {
+   "damage": 44,
+   "requirement": 34,
+   "requirement_attribute": "DEX",
+   "damage_type": "Point"
+  }
  },
  {
   "id": "ItRw_Bow_Long_03",
   "label": "Bow Long 03",
-  "category": "Ranged Weapon"
+  "category": "Ranged Weapon",
+  "stats": {
+   "damage": 48,
+   "requirement": 38,
+   "requirement_attribute": "DEX",
+   "damage_type": "Point"
+  }
  },
  {
   "id": "ItRw_Bow_Long_04",
   "label": "Bow Long 04",
-  "category": "Ranged Weapon"
+  "category": "Ranged Weapon",
+  "stats": {
+   "damage": 52,
+   "requirement": 40,
+   "requirement_attribute": "DEX",
+   "damage_type": "Point"
+  }
  },
  {
   "id": "ItRw_Bow_Long_05",
   "label": "Bow Long 05",
-  "category": "Ranged Weapon"
+  "category": "Ranged Weapon",
+  "stats": {
+   "damage": 56,
+   "requirement": 43,
+   "requirement_attribute": "DEX",
+   "damage_type": "Point"
+  }
  },
  {
   "id": "ItRw_Bow_Long_06",
   "label": "Bow Long 06",
-  "category": "Ranged Weapon"
+  "category": "Ranged Weapon",
+  "stats": {
+   "damage": 60,
+   "requirement": 45,
+   "requirement_attribute": "DEX",
+   "damage_type": "Point"
+  }
  },
  {
   "id": "ItRw_Bow_Long_07",
   "label": "Bow Long 07",
-  "category": "Ranged Weapon"
+  "category": "Ranged Weapon",
+  "stats": {
+   "damage": 64,
+   "requirement": 49,
+   "requirement_attribute": "DEX",
+   "damage_type": "Point"
+  }
  },
  {
   "id": "ItRw_Bow_Long_08",
   "label": "Bow Long 08",
-  "category": "Ranged Weapon"
+  "category": "Ranged Weapon",
+  "stats": {
+   "damage": 68,
+   "requirement": 53,
+   "requirement_attribute": "DEX",
+   "damage_type": "Point"
+  }
  },
  {
   "id": "ItRw_Bow_Long_09",
   "label": "Bow Long 09",
-  "category": "Ranged Weapon"
+  "category": "Ranged Weapon",
+  "stats": {
+   "damage": 72,
+   "requirement": 57,
+   "requirement_attribute": "DEX",
+   "damage_type": "Point"
+  }
  },
  {
   "id": "ItRw_Bow_Long_10",
   "label": "Bow Long",
-  "category": "Ranged Weapon"
+  "category": "Ranged Weapon",
+  "stats": {
+   "damage": 30,
+   "requirement": 20,
+   "requirement_attribute": "DEX",
+   "damage_type": "Point"
+  }
  },
  {
   "id": "ItRw_Bow_Long_12",
   "label": "Bow Long 12",
-  "category": "Ranged Weapon"
+  "category": "Ranged Weapon",
+  "stats": {
+   "damage": 37,
+   "requirement": 27,
+   "requirement_attribute": "DEX",
+   "damage_type": "Point"
+  }
  },
  {
   "id": "ItRw_Bow_Small_01",
   "label": "Bow Small",
-  "category": "Ranged Weapon"
+  "category": "Ranged Weapon",
+  "stats": {
+   "damage": 20,
+   "requirement": 10,
+   "requirement_attribute": "DEX",
+   "damage_type": "Point"
+  }
  },
  {
   "id": "ItRw_Bow_Small_02",
   "label": "Bow Small",
-  "category": "Ranged Weapon"
+  "category": "Ranged Weapon",
+  "stats": {
+   "damage": 24,
+   "requirement": 14,
+   "requirement_attribute": "DEX",
+   "damage_type": "Point"
+  }
  },
  {
   "id": "ItRw_Bow_Small_03",
   "label": "Bow Small",
-  "category": "Ranged Weapon"
+  "category": "Ranged Weapon",
+  "stats": {
+   "damage": 28,
+   "requirement": 18,
+   "requirement_attribute": "DEX",
+   "damage_type": "Point"
+  }
  },
  {
   "id": "ItRw_Bow_Small_04",
   "label": "Bow Small",
-  "category": "Ranged Weapon"
+  "category": "Ranged Weapon",
+  "stats": {
+   "damage": 32,
+   "requirement": 22,
+   "requirement_attribute": "DEX",
+   "damage_type": "Point"
+  }
  },
  {
   "id": "ItRw_Bow_Small_05",
   "label": "Bow Small",
-  "category": "Ranged Weapon"
+  "category": "Ranged Weapon",
+  "stats": {
+   "damage": 36,
+   "requirement": 26,
+   "requirement_attribute": "DEX",
+   "damage_type": "Point"
+  }
  },
  {
   "id": "ItRw_Bow_War_01",
   "label": "Bow War 01",
-  "category": "Ranged Weapon"
+  "category": "Ranged Weapon",
+  "stats": {
+   "damage": 76,
+   "requirement": 61,
+   "requirement_attribute": "DEX",
+   "damage_type": "Point"
+  }
  },
  {
   "id": "ItRw_Bow_War_02",
   "label": "Bow War 02",
-  "category": "Ranged Weapon"
+  "category": "Ranged Weapon",
+  "stats": {
+   "damage": 79,
+   "requirement": 64,
+   "requirement_attribute": "DEX",
+   "damage_type": "Point"
+  }
  },
  {
   "id": "ItRw_Bow_War_03",
   "label": "Bow War 03",
-  "category": "Ranged Weapon"
+  "category": "Ranged Weapon",
+  "stats": {
+   "damage": 82,
+   "requirement": 67,
+   "requirement_attribute": "DEX",
+   "damage_type": "Point"
+  }
  },
  {
   "id": "ItRw_Bow_Wolf",
   "label": "Bow Wolf",
-  "category": "Ranged Weapon"
+  "category": "Ranged Weapon",
+  "stats": {
+   "damage": 35,
+   "requirement": 25,
+   "requirement_attribute": "DEX",
+   "damage_type": "Point"
+  }
  },
  {
   "id": "ItRw_Crossbow_01",
   "label": "Crossbow",
-  "category": "Ranged Weapon"
+  "category": "Ranged Weapon",
+  "stats": {
+   "damage": 60,
+   "requirement": 30,
+   "requirement_attribute": "DEX",
+   "damage_type": "Point"
+  }
  },
  {
   "id": "ItRw_Crossbow_02",
   "label": "Crossbow 02",
-  "category": "Ranged Weapon"
+  "category": "Ranged Weapon",
+  "stats": {
+   "damage": 102,
+   "requirement": 65,
+   "requirement_attribute": "DEX",
+   "damage_type": "Point"
+  }
  },
  {
   "id": "ItRw_Crossbow_03",
   "label": "Crossbow",
-  "category": "Ranged Weapon"
+  "category": "Ranged Weapon",
+  "stats": {
+   "damage": 108,
+   "requirement": 70,
+   "requirement_attribute": "DEX",
+   "damage_type": "Point"
+  }
  },
  {
   "id": "ItRw_Crossbow_04",
   "label": "Crossbow",
-  "category": "Ranged Weapon"
+  "category": "Ranged Weapon",
+  "stats": {
+   "damage": 120,
+   "requirement": 80,
+   "requirement_attribute": "DEX",
+   "damage_type": "Point"
+  }
  },
  {
   "id": "ItWr_Book_Arcanum",
