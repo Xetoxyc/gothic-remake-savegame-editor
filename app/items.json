@@ -65,6 +65,11 @@
   "category": "NPC Armor"
  },
  {
+  "id": "Grd_Armor_Bot_H_02",
+  "label": "Grd Armor Bot H 02",
+  "category": "NPC Armor"
+ },
+ {
   "id": "Grd_Armor_Mid_H_01",
   "label": "Grd Armor Mid H 01",
   "category": "NPC Armor"
@@ -507,6 +512,11 @@
  {
   "id": "ItAt_Amulet_Fire",
   "label": "Amulet Fire",
+  "category": "Amulet"
+ },
+ {
+  "id": "ItAt_Amulet_Innos",
+  "label": "Amulet Innos",
   "category": "Amulet"
  },
  {
@@ -1315,6 +1325,11 @@
   "category": "Potion"
  },
  {
+  "id": "ItFo_Potion_Orcmedicine",
+  "label": "Potion Orcmedicine",
+  "category": "Potion"
+ },
+ {
   "id": "ItFo_Potion_Strength_01",
   "label": "Potion Strength 01",
   "category": "Potion"
@@ -1610,8 +1625,38 @@
   "category": "Misc"
  },
  {
+  "id": "ItMi_Smith_1H_Sword_05",
+  "label": "Smith 1H Sword 05",
+  "category": "Smithing Material"
+ },
+ {
+  "id": "ItMi_Smith_2H_Sword_Light_01",
+  "label": "Smith 2H Sword Light 01",
+  "category": "Smithing Material"
+ },
+ {
+  "id": "ItMi_Smith_Blade_Arming",
+  "label": "Smith Blade Arming",
+  "category": "Smithing Material"
+ },
+ {
+  "id": "ItMi_Smith_Blade_Great",
+  "label": "Smith Blade Great",
+  "category": "Smithing Material"
+ },
+ {
   "id": "ItMi_Smith_Gold",
   "label": "Smith Gold",
+  "category": "Smithing Material"
+ },
+ {
+  "id": "ItMi_Smith_Intermediate_Blade_Arming",
+  "label": "Smith Intermediate Blade Arming",
+  "category": "Smithing Material"
+ },
+ {
+  "id": "ItMi_Smith_Intermediate_Blade_Great",
+  "label": "Smith Intermediate Blade Great",
   "category": "Smithing Material"
  },
  {
@@ -1747,6 +1792,11 @@
  {
   "id": "ItMs_Axe_Bran",
   "label": "Axe Bran",
+  "category": "Misc (stackable)"
+ },
+ {
+  "id": "ItMs_Book_Innos",
+  "label": "Book Innos",
   "category": "Misc (stackable)"
  },
  {
@@ -2067,6 +2117,11 @@
  {
   "id": "ItMw_1H_Sword_04_Diego_Sleeper",
   "label": "Sword 04 Diego Sleeper",
+  "category": "Melee Weapon"
+ },
+ {
+  "id": "ItMw_1H_Sword_05",
+  "label": "1H Sword 05",
   "category": "Melee Weapon"
  },
  {
@@ -2510,6 +2565,11 @@
   "category": "Ranged Weapon"
  },
  {
+  "id": "ItRw_Bow_Long_12",
+  "label": "Bow Long 12",
+  "category": "Ranged Weapon"
+ },
+ {
   "id": "ItRw_Bow_Small_01",
   "label": "Bow Small",
   "category": "Ranged Weapon"
@@ -2875,6 +2935,11 @@
   "category": "Document / Note"
  },
  {
+  "id": "ItWr_Scroll_1H_Sword_Broad_02",
+  "label": "Scroll 1H Sword Broad 02",
+  "category": "Document / Note"
+ },
+ {
   "id": "ItWr_Scroll_1H_Sword_Long_01",
   "label": "Scroll 1H Sword Long 01",
   "category": "Document / Note"
@@ -2952,6 +3017,11 @@
  {
   "id": "ItWr_Scroll_Certificate",
   "label": "Scroll Certificate",
+  "category": "Document / Note"
+ },
+ {
+  "id": "ItWr_Scroll_Crawlersoup",
+  "label": "Scroll Crawlersoup",
   "category": "Document / Note"
  },
  {
@@ -3062,6 +3132,11 @@
  {
   "id": "ItWr_Scroll_RankWaterMages",
   "label": "Scroll RankWaterMages",
+  "category": "Document / Note"
+ },
+ {
+  "id": "ItWr_Scroll_SeaforestBrew",
+  "label": "Scroll SeaforestBrew",
   "category": "Document / Note"
  },
  {

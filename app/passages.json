@@ -105,6 +105,11 @@
   "category": "NPC / Dialogue"
  },
  {
+  "name": "Bow_Artisan",
+  "label": "Bow Artisan",
+  "category": "NPC / Dialogue"
+ },
+ {
   "name": "Brannok_Permission",
   "label": "Brannok Permission",
   "category": "Permission / Passage"
@@ -425,6 +430,11 @@
   "category": "Permission / Passage"
  },
  {
+  "name": "Haenno_Bow_Knowledge",
+  "label": "Haenno Bow Knowledge",
+  "category": "NPC / Dialogue"
+ },
+ {
   "name": "HappyFriends",
   "label": "Happy Friends",
   "category": "NPC / Dialogue"
@@ -437,6 +447,11 @@
  {
   "name": "Herek_ProtectionBully",
   "label": "Herek Protection Bully",
+  "category": "NPC / Dialogue"
+ },
+ {
+  "name": "Huno_WaitAfterTraining",
+  "label": "Huno Wait After Training",
   "category": "NPC / Dialogue"
  },
  {
@@ -527,6 +542,11 @@
  {
   "name": "Lee_SldPossible",
   "label": "Lee Sld Possible",
+  "category": "NPC / Dialogue"
+ },
+ {
+  "name": "Lefty_CarriedWater",
+  "label": "Lefty Carried Water",
   "category": "NPC / Dialogue"
  },
  {
@@ -735,6 +755,11 @@
   "category": "Faction / Progression"
  },
  {
+  "name": "Ricelord_AskedForWater",
+  "label": "Ricelord Asked For Water",
+  "category": "NPC / Dialogue"
+ },
+ {
   "name": "Rogue01_Permission",
   "label": "Rogue01 Permission",
   "category": "Permission / Passage"
@@ -770,6 +795,11 @@
   "category": "NPC / Dialogue"
  },
  {
+  "name": "SilasFound",
+  "label": "Silas Found",
+  "category": "NPC / Dialogue"
+ },
+ {
   "name": "SilasGuilty",
   "label": "Silas Guilty",
   "category": "NPC / Dialogue"
@@ -802,6 +832,11 @@
  {
   "name": "Stone_OreArmor",
   "label": "Stone Ore Armor",
+  "category": "NPC / Dialogue"
+ },
+ {
+  "name": "Stone_Teacher",
+  "label": "Stone Teacher",
   "category": "NPC / Dialogue"
  },
  {
