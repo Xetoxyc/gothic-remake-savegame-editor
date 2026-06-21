@@ -1,5 +1,18 @@
 # Changelog
 
+## [1.3.0](https://github.com/Xetoxyc/gothic-remake-savegame-editor/compare/v1.2.0...v1.3.0) (2026-06-21)
+
+
+### Features
+
+* **catalog:** grow item/passage DBs from all savegames ([573a403](https://github.com/Xetoxyc/gothic-remake-savegame-editor/commit/573a40362a3630f57ee74afe6b39f448ffc76b56))
+* **header/footer:** byline, support pledge, imprint + privacy footer ([e94747e](https://github.com/Xetoxyc/gothic-remake-savegame-editor/commit/e94747ea4561f0332d7bf9505e44977b9bb8277f))
+* **header:** link "open-source" to the repo ([e744a09](https://github.com/Xetoxyc/gothic-remake-savegame-editor/commit/e744a09887c9832b6ea33ced9b3beb090d40ab9d))
+* **inventory:** item picker modal with category filter + full catalog ([7497068](https://github.com/Xetoxyc/gothic-remake-savegame-editor/commit/7497068a829350c8e44c5e5740a408f764c71f60))
+* **npc:** NPC tab — profile, inventory, merchant, equip & add items ([180721e](https://github.com/Xetoxyc/gothic-remake-savegame-editor/commit/180721ec0a298e893c01a246705fb92154c72641))
+* **npc:** real merchant sell list (m_Items) + add to trade ([6e77ef2](https://github.com/Xetoxyc/gothic-remake-savegame-editor/commit/6e77ef2eb1079dc0e07591f7efe17a3efd6c1633))
+* **passages:** gate/flag picker + reusable modal; grow catalogs ([9a2bb18](https://github.com/Xetoxyc/gothic-remake-savegame-editor/commit/9a2bb182a5d86acd0e13a8bc5173cfba75b6fefc))
+
 ## [1.2.0](https://github.com/Xetoxyc/gothic-remake-savegame-editor/compare/v1.1.0...v1.2.0) (2026-06-15)
 
 
