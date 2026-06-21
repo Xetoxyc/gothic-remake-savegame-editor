@@ -1016,21 +1016,15 @@ def find_player_inventory(payload):
 _ITEM_ID = b"m_Id\x00\x0c\x00\x00\x00IntProperty\x00"
 
 
-def add_item(payload, item_key, count=1):
-    """EXPERIMENTAL: add an item by cloning the hero's coin slot and retargeting it.
-    The clone is APPENDED to the container's slot array (not inserted mid-array) and
-    given m_Id = the container's item count — because m_Id is the per-container slot
-    index the game selects by; inserting mid-array or using a global id makes the UI
-    select the wrong item. Re-validated structurally."""
+def _clone_add(payload, donor_cnt_off, item_key, count):
+    """Clone the item slot whose m_ItemCount value is at donor_cnt_off, APPEND it to
+    its container's slot array (no existing slot moves), set count + fresh m_Id, and
+    retarget the class. m_Id = the container's item count (the per-container index the
+    game selects by). Re-validated structurally."""
     item_key = item_key.strip().split(".")[-1]
     if not _re.fullmatch(r"[A-Za-z0-9_]{2,80}", item_key):
         raise ValueError("invalid item key")
-    inv = find_player_inventory(payload)
-    if not inv:
-        raise ValueError("no player inventory found")
-
-    donor = next((s for s in inv if s["item"] == "ItMi_Oldcoin_01"), inv[0])
-    cnt_off = donor["id"]
+    cnt_off = donor_cnt_off
     dm = None
     for m in _ITEM_DEF.finditer(payload, max(0, cnt_off - 400), cnt_off):
         dm = m
@@ -1039,20 +1033,17 @@ def add_item(payload, item_key, count=1):
     def_voff = dm.end() + 9
     estart, eend, count_off, above = _find_array_element(payload, def_voff)
     donor_size = eend - estart
-    # append point = end of the container's slot array; m_Id = next per-container index
     arr = [c for c in _chain(payload, def_voff) if c["kind"] == "ArrayProperty"][-1]
     _, arr_end, _ = _value_end(payload, arr["size_off"], "ArrayProperty")
     new_id = struct.unpack_from("<i", payload, count_off)[0]
     idm = _re.search(_ITEM_ID, payload[estart:eend])
-    id_rel = (idm.end() + 9) if idm else None        # m_Id value offset within the element
+    id_rel = (idm.end() + 9) if idm else None
 
-    # step A: append the donor slot at the array end (no existing slot moves)
     d = bytearray(payload)
     for so in above:
         struct.pack_into("<i", d, so, struct.unpack_from("<i", d, so)[0] + donor_size)
     struct.pack_into("<i", d, count_off, struct.unpack_from("<i", d, count_off)[0] + 1)
     d[arr_end:arr_end] = payload[estart:eend]
-    # step B: set the clone's count, fresh m_Id, then retarget the class
     struct.pack_into("<i", d, arr_end + (cnt_off - estart), int(count))
     if id_rel is not None:
         struct.pack_into("<i", d, arr_end + id_rel, new_id)
@@ -1060,6 +1051,15 @@ def add_item(payload, item_key, count=1):
     if not validate(p2):
         raise ValueError("item insert (clone) produced an invalid structure")
     return apply_ops(p2, replaces=[(arr_end + (def_voff - estart), "/Script/Angelscript." + item_key)])
+
+
+def add_item(payload, item_key, count=1):
+    """EXPERIMENTAL: add an item to the hero by cloning the coin slot + retargeting."""
+    inv = find_player_inventory(payload)
+    if not inv:
+        raise ValueError("no player inventory found")
+    donor = next((s for s in inv if s["item"] == "ItMi_Oldcoin_01"), inv[0])
+    return _clone_add(payload, donor["id"], item_key, count)
 
 
 def apply_inventory_edits(payload, edits):
@@ -1074,6 +1074,312 @@ def apply_inventory_edits(payload, edits):
         if not (0 <= v <= 2_000_000_000):
             raise ValueError("count out of range")
         struct.pack_into("<i", d, off, v)
+    return bytes(d)
+
+
+# --------------------------------------------------------------- NPCs / characters
+# Every NPC & creature has a CharacterState (keyed by GlobalID) whose first prop is
+# AttributeSetsByClass (same layout as the Hero) -> stats incl. Health. Inventories
+# live in a separate `InventoryByGlobalId` map keyed by the SAME GlobalID. So one
+# GlobalID links a character's profile (stats) and inventory.
+_NPC_STATE = b"\x15\x00\x00\x00AttributeSetsByClass\x00"
+_NPC_INV_ITEMS = b"\x0f\x00\x00\x00InventoryItems\x00"
+_NPC_HP_PAT = _re.compile(b"\x07\x00\x00\x00Health\x00\x0a\x00\x00\x00BaseValue\x00" + _re.escape(_FLOAT))
+_NPC_MHP_PAT = _re.compile(b"\x0a\x00\x00\x00MaxHealth\x00\x0a\x00\x00\x00BaseValue\x00" + _re.escape(_FLOAT))
+_NPC_ROLE2 = {"KDW": "Water Mage", "KDF": "Fire Mage", "GRD": "Guard", "NOV": "Novice",
+              "VLK": "Townsfolk", "ORG": "Digger", "TPL": "Templar", "SLD": "Mercenary",
+              "GUR": "Guru", "BAN": "Bandit", "STT": "Townsperson", "EBR": "Ore Baron",
+              "BAU": "Farmer", "PIR": "Pirate", "SFB": "Convict",
+              "OSC": "Orc Scout", "OWR": "Orc Warrior", "OSH": "Orc Shaman",
+              "OEL": "Orc Elite", "OSL": "Orc Slave"}
+_NPC_AREA = {"OC": "Old Camp", "OCR": "Old Camp", "NC": "New Camp", "NCR": "New Camp",
+             "SC": "Swamp Camp", "SCR": "Swamp Camp", "OM": "Old Mine", "FM": "Free Mine",
+             "OW": "Surface", "OG": "Orc Lands", "UL": "Sect"}
+
+
+def _key_before(b, o):
+    """The FString key that ends right before offset o (GlobalID before a marker)."""
+    for kp in range(o - 5, max(0, o - 130), -1):
+        n = _i32(b, kp)
+        if n > 0 and kp + 4 + n == o:
+            try:
+                return b[kp + 4:o - 1].decode("ascii")
+            except UnicodeDecodeError:
+                return None
+    return None
+
+
+def _npc_parse_key(key):
+    """(name, role, area, human) from a GlobalID. Humans: AREA_ROLE_Name_id-spawn."""
+    base = key.split("-")[0]
+    parts = base.split("_")
+    if len(parts) >= 3 and _re.match(r"^[A-Z]{2,4}$", parts[0]) and _re.match(r"^[A-Z]{2,4}$", parts[1]):
+        return parts[2], _NPC_ROLE2.get(parts[1], parts[1]), _NPC_AREA.get(parts[0], parts[0]), True
+    return base.replace("_", " "), "Creature", "", False
+
+
+def _npc_anchors(payload):
+    out = []
+    pos = 0
+    while True:
+        i = payload.find(_NPC_STATE, pos)
+        if i < 0:
+            break
+        pos = i + 1
+        out.append((i, _key_before(payload, i)))
+    return out
+
+
+_NPC_GID_RE = _re.compile(rb"[A-Z]{2,4}_[A-Z]{2,4}_[A-Za-z0-9]+_\d+-[A-Za-z0-9_]+")
+_REL_ARR2 = b"ActivePersonalRelationshipModifiers\x00"
+
+
+def _npc_attitudes(payload):
+    """{GlobalID: status} for the few NPCs that carry a relationship modifier
+    (RelationshipByGlobalId). Everyone else is the default disposition."""
+    out = {}
+    pos = 0
+    while True:
+        o = payload.find(_REL_ARR2, pos)
+        if o < 0:
+            break
+        pos = o + 1
+        ids = _NPC_GID_RE.findall(payload[max(0, o - 600):o])
+        if not ids:
+            continue
+        seg = payload[o:o + 1500]
+        mods = []
+        for mm in _REL_MOD.finditer(seg):
+            rest = seg[mm.end():mm.end() + 320]
+            rel = _re.search(rb"ERelationship::([A-Za-z]+)", rest)
+            mods.append({"type": mm.group(1).decode(),
+                         "relationship": rel.group(1).decode() if rel else None})
+        if mods:
+            out[ids[-1].decode()] = _behaviour_status(mods)
+    return out
+
+
+def list_npcs(payload):
+    """Lightweight roster: every character's GlobalID, parsed name/role/area, the
+    human flag, current/max Health, and disposition. Detail (stats + inventory)
+    is lazy."""
+    import bisect
+    anchors = _npc_anchors(payload)
+    starts = [a[0] for a in anchors]
+    att = _npc_attitudes(payload)
+
+    import math
+
+    def assign(pat):
+        d = {}
+        for m in pat.finditer(payload):
+            idx = bisect.bisect_right(starts, m.start()) - 1
+            if idx >= 0 and m.start() - starts[idx] < 0x20000 and idx not in d:
+                v = struct.unpack_from("<f", payload, m.end())[0]
+                d[idx] = round(v, 1) if math.isfinite(v) else None
+        return d
+
+    hp, mhp = assign(_NPC_HP_PAT), assign(_NPC_MHP_PAT)
+    out = []
+    for idx, (off, key) in enumerate(anchors):
+        if not key or key.startswith("None"):
+            continue
+        name, role, area, human = _npc_parse_key(key)
+        out.append({"id": key, "name": name, "role": role, "area": area,
+                    "human": human, "hp": hp.get(idx), "maxhp": mhp.get(idx),
+                    "attitude": att.get(key, "Default")})
+    out.sort(key=lambda x: (not x["human"], x["name"].lower()))
+    return out
+
+
+def _attrs_in_region(payload, start, end):
+    """Editable stats in a CharacterState block (mirrors list_player_attributes)."""
+    sets = [(m.start(), m.group(1).decode()) for m in _SET_PAT.finditer(payload, start, end)]
+    curs = [(m.start(), m.end()) for m in _CUR_PAT.finditer(payload, start, end)]
+    import math
+    attrs = []
+    for m in _BASE_PAT.finditer(payload, start, end):
+        base_off = m.end()
+        name = _name_before(payload, m.start())
+        if not name or name in _HIDE_ATTRS:
+            continue
+        current_off = next((ce for cs, ce in curs if cs > base_off), None)
+        if current_off is None:
+            continue
+        v = struct.unpack_from("<f", payload, base_off)[0]
+        if not math.isfinite(v):                 # skip Infinity/NaN (invulnerable creatures)
+            continue
+        st = None
+        for so, sn in sets:
+            if so < m.start():
+                st = sn
+            else:
+                break
+        attrs.append({"set": st or "?", "name": name,
+                      "label": _ATTR_LABELS.get(name, name),
+                      "value": round(v, 4),
+                      "base_off": base_off, "current_off": current_off})
+    return attrs
+
+
+def _npc_region(payload, key):
+    anchors = _npc_anchors(payload)
+    for i, (off, k) in enumerate(anchors):
+        if k == key:
+            end = anchors[i + 1][0] if i + 1 < len(anchors) else min(off + 0x20000, len(payload))
+            return off, end
+    return None
+
+
+def _inv_entries(payload):
+    out = []
+    pos = payload.find(b"InventoryByGlobalId")
+    if pos < 0:
+        return out
+    while True:
+        i = payload.find(_NPC_INV_ITEMS, pos)
+        if i < 0:
+            break
+        pos = i + 1
+        out.append((i, _key_before(payload, i)))
+    return out
+
+
+_ITEM_DEF_TOK = b"m_ItemDefinition\x00\x0f\x00\x00\x00ObjectProperty\x00"
+_INV_TYPE_RE = _re.compile(rb"EInventoryTypes::([A-Za-z]+)")
+# m_InventoryType per item: equipped weapons vs the pack vs the pouch. A trader
+# sells from MainContainer; equipped weapons aren't sold.
+_INV_TYPE_LABEL = {"MeleeSlot": "Equipped (melee)", "RangedSlot": "Equipped (ranged)",
+                   "MainContainer": "Carried", "QuickItems": "Quick slot", "Pouch": "Pouch"}
+_INV_TYPE_ORDER = {"MeleeSlot": 0, "RangedSlot": 1, "MainContainer": 2, "QuickItems": 3, "Pouch": 4}
+
+
+def _items_in_region(payload, start, end):
+    """Raw (item, type, count_offset, count) for every ItemSlot in the region.
+    The save lists each slot twice (virtual + real copy); the caller dedupes."""
+    out = []
+    p = start
+    while True:
+        i = payload.find(_ITEM_DEF_TOK, p, end)
+        if i < 0:
+            break
+        p = i + 1
+        vo = i + len(_ITEM_DEF_TOK) + 9
+        n = _i32(payload, vo)
+        if not (0 < n < 200):
+            continue
+        item = payload[vo + 4:vo + 4 + n - 1].decode("utf-8", "replace").split(".")[-1]
+        if any(x in item for x in _INV_DROP):
+            continue
+        ci = payload.find(_ITEM_CNT, i, i + 260)
+        if ci < 0:
+            continue
+        cvo = ci + len(_ITEM_CNT) + 9
+        tm = None
+        for t in _INV_TYPE_RE.finditer(payload, max(start, i - 400), i):
+            tm = t                                  # nearest m_InventoryType before this slot
+        typ = tm.group(1).decode() if tm else "MainContainer"
+        out.append((item, typ, cvo, vo, struct.unpack_from("<i", payload, cvo)[0]))
+    return out
+
+
+def npc_inventory(payload, key):
+    """Deduped inventory grouped by (item, slot-type). Each logical slot keeps every
+    physical count-offset and item-definition offset (the dup copies) so an edit
+    updates all of them."""
+    ents = _inv_entries(payload)
+    raw = []
+    for i, (off, k) in enumerate(ents):
+        if k == key:
+            end = ents[i + 1][0] if i + 1 < len(ents) else min(off + 0x10000, len(payload))
+            raw = _items_in_region(payload, off, end)
+            break
+    groups = {}
+    for item, typ, cvo, vo, cnt in raw:
+        g = groups.setdefault((item, typ), {"count": cnt, "offs": [], "defs": []})
+        g["offs"].append(cvo)
+        g["defs"].append(vo)
+    out = [{"id": f"{item}|{typ}", "item": item, "label": _item_label(item),
+            "type": typ, "type_label": _INV_TYPE_LABEL.get(typ, typ),
+            "count": g["count"], "offs": g["offs"], "defs": g["defs"]}
+           for (item, typ), g in groups.items()]
+    out.sort(key=lambda x: (_INV_TYPE_ORDER.get(x["type"], 9), x["label"].lower()))
+    return out
+
+
+def _npc_main_donor(payload, key):
+    """A real MainContainer slot to clone when adding an item to an NPC."""
+    inv = npc_inventory(payload, key)
+    main = [s for s in inv if s["type"] == "MainContainer" and s["offs"]]
+    if not main:
+        raise ValueError("npc has no main inventory to clone from")
+    pref = next((s for s in main if s["item"].startswith(("ItMi", "ItFo", "ItAm"))), main[0])
+    return pref["offs"][0]
+
+
+def add_item_to_npc(payload, key, item_key, count=1):
+    """EXPERIMENTAL: add an item to an NPC's pack (clone a MainContainer slot)."""
+    return _clone_add(payload, _npc_main_donor(payload, key), item_key, count)
+
+
+def set_npc_equipment(payload, key, slot_type, new_item):
+    """EXPERIMENTAL: retarget the NPC's equipped weapon (MeleeSlot/RangedSlot) to a
+    different item — an m_ItemDefinition FString replace on every copy of that slot."""
+    new_item = new_item.strip().split(".")[-1]
+    if not _re.fullmatch(r"[A-Za-z0-9_]{2,80}", new_item):
+        raise ValueError("invalid item")
+    slot = next((s for s in npc_inventory(payload, key) if s["type"] == slot_type), None)
+    if not slot:
+        raise ValueError("no equipped slot of that type")
+    repls = [(vo, "/Script/Angelscript." + new_item) for vo in slot["defs"]]
+    return apply_ops(payload, replaces=repls)
+
+
+def npc_detail(payload, key):
+    reg = _npc_region(payload, key)
+    name, role, area, human = _npc_parse_key(key)
+    inv = [{k: v for k, v in it.items() if k not in ("offs", "defs")}
+           for it in npc_inventory(payload, key)]
+    return {"id": key, "name": name, "role": role, "area": area, "human": human,
+            "attitude": _npc_attitudes(payload).get(key, "Default"),
+            "stats": _attrs_in_region(payload, *reg) if reg else [],
+            "inventory": inv}
+
+
+def apply_npc_stat_edits(payload, edits):
+    """edits: [{npc, base_off, value}] -> set base+current float in place (neutral)."""
+    d = bytearray(payload)
+    cache = {}
+    for e in edits:
+        npc = e["npc"]
+        if npc not in cache:
+            cache[npc] = {a["base_off"]: a for a in (npc_detail(payload, npc)["stats"])}
+        a = cache[npc].get(int(e["base_off"]))
+        if not a:
+            raise ValueError("unknown npc stat")
+        v = float(e["value"])
+        struct.pack_into("<f", d, a["base_off"], v)
+        struct.pack_into("<f", d, a["current_off"], v)
+    return bytes(d)
+
+
+def apply_npc_inventory_edits(payload, edits):
+    """edits: [{npc, id, value}] where id is "item|type". Writes the count to every
+    physical copy of that slot (virtual + real) in place (length-neutral)."""
+    d = bytearray(payload)
+    cache = {}
+    for e in edits:
+        npc = e["npc"]
+        if npc not in cache:
+            cache[npc] = {s["id"]: s["offs"] for s in npc_inventory(payload, npc)}
+        offs = cache[npc].get(e["id"])
+        if offs is None:
+            raise ValueError("unknown npc item slot")
+        v = int(e["value"])
+        if not (0 <= v <= 2_000_000_000):
+            raise ValueError("count out of range")
+        for off in offs:
+            struct.pack_into("<i", d, off, v)
     return bytes(d)
 
 

@@ -93,6 +93,7 @@ def load():
         inventory=[{"id": it["id"], "item": it["item"], "label": it["label"],
                     "count": it["count"]} for it in inventory],
         item_db=item_db,
+        npcs=g1r.list_npcs(payload),
         passages=[{"name": p["name"], "value": p["value"]} for p in passages],
         passage_db=g1r.list_passage_db(),
         behaviours=behaviours,
@@ -101,6 +102,25 @@ def load():
         quests=[{"id": q["val_off"], "key": q["key"], "name": q["name"], "state": q["state"]}
                 for q in quests],
     )
+
+
+@app.post("/api/npc")
+def npc_detail():
+    """Lazy per-NPC detail (stats + inventory + attitude) from the session payload."""
+    body = request.get_json(force=True, silent=True) or {}
+    with _lock:
+        sess = _sessions.get(body.get("token"))
+        if sess:
+            sess["ts"] = time.time()
+    if not sess:
+        return jsonify(error="session expired; please re-upload your save"), 410
+    key = body.get("id")
+    if not key:
+        return jsonify(error="no npc id"), 400
+    try:
+        return jsonify(g1r.npc_detail(sess["payload"], key))
+    except Exception as e:
+        return jsonify(error=str(e)), 400
 
 
 @app.post("/api/patch")
@@ -115,6 +135,10 @@ def patch():
     passage_changes = body.get("passage_changes") or []
     passage_adds = body.get("passage_adds") or []
     crime_forgive = body.get("crime_forgive") or []
+    npc_stat_changes = body.get("npc_stat_changes") or []
+    npc_inv_changes = body.get("npc_inv_changes") or []
+    npc_inv_adds = body.get("npc_inv_adds") or []
+    npc_equip_changes = body.get("npc_equip_changes") or []
     with _lock:
         sess = _sessions.get(token)
         if sess:
@@ -122,7 +146,8 @@ def patch():
     if not sess:
         return jsonify(error="session expired; please re-upload your save"), 410
     if not (quest_changes or attr_changes or skill_changes or inv_changes or inv_adds
-            or passage_changes or passage_adds or crime_forgive):
+            or passage_changes or passage_adds or crime_forgive
+            or npc_stat_changes or npc_inv_changes or npc_inv_adds or npc_equip_changes):
         return jsonify(error="no changes selected"), 400
 
     aedits = [{"base_off": int(ch["id"]), "value": ch["value"]} for ch in attr_changes]
@@ -138,6 +163,10 @@ def patch():
             payload = g1r.apply_passage_edits(payload, passage_changes)   # length-neutral too
         if crime_forgive:
             payload = g1r.apply_crime_edits(payload, crime_forgive)       # length-neutral too
+        if npc_stat_changes:
+            payload = g1r.apply_npc_stat_edits(payload, npc_stat_changes)  # length-neutral
+        if npc_inv_changes:
+            payload = g1r.apply_npc_inventory_edits(payload, npc_inv_changes)  # length-neutral
 
         # quest + skill edits are length-changing and share ancestors
         # (m_GenericData), so they must be applied together in one pass.
@@ -164,6 +193,10 @@ def patch():
             payload = g1r.add_item(payload, add["item"], int(add.get("count", 1)))
         for add in passage_adds:                            # experimental: new story flag
             payload = g1r.add_passage(payload, add["name"], int(add.get("value", 1)))
+        for add in npc_inv_adds:                             # experimental: clone slot into NPC pack
+            payload = g1r.add_item_to_npc(payload, add["npc"], add["item"], int(add.get("count", 1)))
+        for ch in npc_equip_changes:                         # experimental: retarget equipped weapon
+            payload = g1r.set_npc_equipment(payload, ch["npc"], ch["slot_type"], ch["item"])
 
         c = g1r.Container(sess["sav"])
         out = g1r.rebuild(c, oodle(), payload)

@@ -48,6 +48,7 @@
       <button class="tab active" data-tab="character">Character</button>
       <button class="tab" data-tab="skills">Skills</button>
       <button class="tab" data-tab="inventory">Inventory</button>
+      <button class="tab" data-tab="npcs">NPCs</button>
       <button class="tab" data-tab="quests">Quests</button>
       <button class="tab" data-tab="passages">Passages</button>
       <button class="tab" data-tab="glossary">Glossary</button>
@@ -85,6 +86,24 @@
         <span id="count-inv" class="count"></span>
       </div>
       <div id="list-inv" class="attrs"></div>
+    </div>
+
+    <!-- NPCs -->
+    <div class="panel hidden" data-panel="npcs">
+      <p class="muted">Every character in the world. Pick one to edit its <b>Profile</b> (health/stats)
+        and <b>Inventory</b>. <b>Merchant</b> mirrors the inventory (trade lists are script-defined,
+        not in the save). Attitude is shown; editing it is coming later.</p>
+      <div class="npc-layout">
+        <aside class="npc-listpane">
+          <input id="search-npc" type="search" placeholder="Search name or id…" autocomplete="off">
+          <label class="check"><input type="checkbox" id="npc-creatures"> include creatures</label>
+          <span id="count-npc" class="count"></span>
+          <div id="npc-list" class="npc-list"></div>
+        </aside>
+        <section id="npc-detail" class="npc-detail">
+          <div class="empty">Select a character from the list to edit it.</div>
+        </section>
+      </div>
     </div>
 
     <!-- Quests -->

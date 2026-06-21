@@ -223,6 +223,43 @@ select:disabled{opacity:.6}
 .modal-foot .muted{flex:1;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
 @media (max-width:560px){.modal-cats{width:130px}.modal-items{grid-template-columns:1fr}}
 
+/* NPC tab — two-pane layout */
+.npc-layout{display:flex;gap:14px;align-items:flex-start}
+.npc-listpane{width:300px;flex:none;display:flex;flex-direction:column;gap:8px}
+.npc-listpane #search-npc{background:var(--bg2);border:1px solid var(--line);color:var(--text);
+  padding:9px 12px;border-radius:9px;font-size:14px}
+.npc-listpane #search-npc:focus{outline:none;border-color:var(--accent)}
+.npc-listpane .check{margin:0}
+.npc-listpane .count{margin:0}
+.npc-list{max-height:56vh;overflow:auto;border:1px solid var(--line);border-radius:10px;background:var(--bg2)}
+.npc-row{display:flex;align-items:center;gap:8px;justify-content:space-between;width:100%;text-align:left;
+  background:none;border:none;border-bottom:1px solid #00000030;color:var(--text);padding:8px 11px}
+.npc-row:last-child{border-bottom:none}
+.npc-row:hover{background:#2c2417}
+.npc-row.active{background:var(--accent);color:#1a1209}
+.npc-row.edited .npc-name::after{content:"●";color:var(--accent2);margin-left:6px;font-size:10px}
+.npc-row.active.edited .npc-name::after{color:#1a1209}
+.npc-name{flex:1;min-width:0;font-size:13px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.npc-name small{display:block;font-size:10px;color:var(--muted);overflow:hidden;text-overflow:ellipsis}
+.npc-row.active .npc-name small{color:#1a120999}
+.npc-detail{flex:1;min-width:0;border:1px solid var(--line);border-radius:10px;padding:14px;min-height:200px}
+.npc-head{display:flex;align-items:center;justify-content:space-between;gap:12px;
+  border-bottom:1px solid var(--line);padding-bottom:10px;margin-bottom:4px}
+.npc-head h3{margin:0;font-size:17px}
+.npc-head code{font-size:10px;color:var(--muted)}
+.npc-subbody{max-height:46vh;overflow:auto;padding-top:4px;padding-right:6px}
+.attr .npc-equip{flex:none;font-size:11px;white-space:nowrap;padding:0 4px}
+.attr .eq-badge{flex:none;font-size:10px;text-transform:uppercase;letter-spacing:.4px;
+  color:#9ad07e;background:#1f3318;border:1px solid #34552a;border-radius:20px;padding:2px 8px;white-space:nowrap}
+/* wider columns so weapon/item names aren't truncated to "Sword…" */
+.npc-grid{grid-template-columns:repeat(auto-fill,minmax(300px,1fr))}
+.npc-grid .attr label{font-size:13px}
+/* add-item row: button doesn't wrap, hint flows to its own line, never overflows */
+.npc-subbody .additem{margin:4px 0 14px;flex-wrap:wrap}
+.npc-subbody .additem .primary.small{white-space:nowrap;flex:none}
+.npc-subbody .additem .muted{flex:1 1 220px;min-width:0}
+@media (max-width:640px){.npc-layout{flex-direction:column}.npc-listpane{width:100%}}
+
 /* add-item / add-flag form + queued additions */
 .additem{display:flex;gap:8px;margin:14px 0 12px;align-items:center}
 .additem .muted{font-size:12px}
