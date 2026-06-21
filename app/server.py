@@ -8,6 +8,7 @@ import threading
 from flask import Flask, request, jsonify, send_file, send_from_directory, abort
 
 import g1r
+import loc
 
 STATIC = os.path.join(os.path.dirname(__file__), "static")
 OODLE_LIB = os.environ.get("OODLE_LIB", "/app/liboo2corelinux64.so.9")
@@ -86,21 +87,24 @@ def load():
         states=g1r.EQUEST_STATES,
         attributes=[{"id": a["base_off"], "set": a["set"], "name": a["name"],
                      "label": a["label"], "value": a["value"], "tab": a["tab"],
-                     "advanced": a["advanced"]} for a in attrs],
+                     "advanced": a["advanced"],
+                     "loc": loc.attribute(a["name"], a["label"])} for a in attrs],
         skills=[{"id": s["fid"], "label": s["label"], "category": s["category"],
-                 "tier": s["tier"], "tiers": s["tiers"], "learned": s["learned"]}
-                for s in skills],
+                 "tier": s["tier"], "tiers": s["tiers"], "learned": s["learned"],
+                 "loc": loc.skill(s["base"], s["label"])} for s in skills],
         inventory=[{"id": it["id"], "item": it["item"], "label": it["label"],
-                    "count": it["count"]} for it in inventory],
-        item_db=item_db,
-        npcs=g1r.list_npcs(payload),
+                    "count": it["count"], "loc": loc.item(it["item"], it["label"])}
+                   for it in inventory],
+        item_db=[{**x, "loc": loc.item(x["id"], x["label"])} for x in item_db],
+        npcs=[{**n, "loc": loc.npc(n["id"], n.get("name") or n["id"])}
+              for n in g1r.list_npcs(payload)],
         passages=[{"name": p["name"], "value": p["value"]} for p in passages],
         passage_db=g1r.list_passage_db(),
         behaviours=behaviours,
         crimes=[{"criminal": c["criminal"], "guild": c["guild"], "guild_label": c["guild_label"],
                  "count": c["count"], "active": c["active"]} for c in crimes],
-        quests=[{"id": q["val_off"], "key": q["key"], "name": q["name"], "state": q["state"]}
-                for q in quests],
+        quests=[{"id": q["val_off"], "key": q["key"], "name": q["name"], "state": q["state"],
+                 "loc": loc.quest(q["key"], q["name"])} for q in quests],
     )
 
 
@@ -118,7 +122,14 @@ def npc_detail():
     if not key:
         return jsonify(error="no npc id"), 400
     try:
-        return jsonify(g1r.npc_detail(sess["payload"], key))
+        d = g1r.npc_detail(sess["payload"], key)
+        d["loc"] = loc.npc(d["id"], d.get("name") or d["id"])
+        for coll in ("inventory", "trade"):
+            for it in d.get(coll, []):
+                it["loc"] = loc.item(it["item"], it["label"])
+        for st in d.get("stats", []):
+            st["loc"] = loc.attribute(st["name"], st["label"])
+        return jsonify(d)
     except Exception as e:
         return jsonify(error=str(e)), 400
 
