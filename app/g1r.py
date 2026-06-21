@@ -501,8 +501,9 @@ _SKILL_ATTRS = set()         # the Skills tab has no editable attribute values
 # stats the user never wants to edit -> hidden from both tabs
 _HIDE_ATTRS = {
     "MagicianLevel",
-    "Resistance_Blunt", "Resistance_Edge", "Resistance_Point", "Resistance_Fire",
-    "Resistance_Energy", "Resistance_Ice", "Resistance_Wind", "Resistance_Falling",
+    # armor "defense layers" (the in-game Klinge/Stumpf/Feuer/Wind/Eis/Energie) are
+    # shown — only Point (arrow) and Falling stay hidden (not in the armor screen).
+    "Resistance_Point", "Resistance_Falling",
     "Critical_Fists", "Critical_OneHand", "Critical_TwoHand", "Critical_Orc",
     "CriticalLevelPercent", "Fatigue", "MaxFatigue",
     "LockpickDurability", "LockpickPrecision", "PickPocketing",
@@ -519,7 +520,17 @@ _ATTR_LABELS = {
     "Critical_OneHand": "1H critical", "Critical_TwoHand": "2H critical",
     "Critical_Fists": "Fist critical", "Critical_Orc": "Orc critical",
     "PickPocketing": "Pickpocketing", "MaxOxygen": "Max Oxygen",
+    # armor defense layers (resistances)
+    "Resistance_Edge": "Edge resist", "Resistance_Blunt": "Blunt resist",
+    "Resistance_Fire": "Fire resist", "Resistance_Wind": "Wind resist",
+    "Resistance_Ice": "Ice resist", "Resistance_Energy": "Energy resist",
 }
+
+# Resistances have base 0 and get their value from equipped armor on the CURRENT
+# field — so show current (the number the in-game armor screen shows). Editing
+# writes both base+current, which overrides the equipped total.
+_SHOW_CURRENT = {"Resistance_Edge", "Resistance_Blunt", "Resistance_Fire",
+                 "Resistance_Wind", "Resistance_Ice", "Resistance_Energy"}
 
 
 def _name_before(b, o):
@@ -570,7 +581,8 @@ def list_player_attributes(payload):
             "set": st or "?",
             "name": name,
             "label": _ATTR_LABELS.get(name, name),
-            "value": round(struct.unpack_from("<f", payload, base_off)[0], 4),
+            "value": round(struct.unpack_from(
+                "<f", payload, current_off if name in _SHOW_CURRENT else base_off)[0], 4),
             "base_off": base_off,
             "current_off": current_off,
             "tab": "skills" if name in _SKILL_ATTRS else "character",

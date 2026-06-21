@@ -89,6 +89,11 @@ _ATTR_DE = {
     "Critical_OneHand": "Krit. (Einhand)", "Critical_TwoHand": "Krit. (Zweihand)",
     "Critical_Fists": "Krit. (Fäuste)", "Critical_Orc": "Krit. (Ork)",
     "PickPocketing": "Taschendiebstahl",
+    # armor defense layers (resistances) — match the in-game armor screen
+    "Resistance_Edge": "Klinge", "Resistance_Blunt": "Stumpf", "Resistance_Fire": "Feuer",
+    "Resistance_Wind": "Wind", "Resistance_Ice": "Eis", "Resistance_Energy": "Energie",
+    "Edge resist": "Klinge", "Blunt resist": "Stumpf", "Fire resist": "Feuer",
+    "Wind resist": "Wind", "Ice resist": "Eis", "Energy resist": "Energie",
 }
 
 
