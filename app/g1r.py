@@ -990,26 +990,47 @@ def _all_item_slots(payload):
     return slots
 
 
+_PLAYER_INV_NAME = b"\x0c\x00\x00\x00m_Inventory\x00"   # 'm_Inventory' (len 12 -> prefix 0x0c)
+
+
+def _player_inventory_bounds(payload):
+    """The hero's own inventory is PlayerSaveData -> m_Inventory (a self-contained
+    ReplicatedInventoryMap), NOT the per-NPC InventoryByGlobalId map. Return its
+    value byte-range, or None."""
+    psd = payload.find(b"PlayerSaveData")
+    if psd < 0:
+        return None
+    mi = payload.find(_PLAYER_INV_NAME, psd, psd + 6000)
+    if mi < 0:
+        return None
+    try:
+        _, o2 = _fstr(payload, mi)
+        root, o3 = _typename(payload, o2)
+        if root != "StructProperty":
+            return None
+        vs, ve, _ = _value_end(payload, o3, root)
+    except Exception:
+        return None
+    return vs, ve
+
+
 def find_player_inventory(payload):
-    """Returns [{id (count offset), item, label, count}] for the hero's items."""
-    slots = sorted(_all_item_slots(payload), key=lambda s: s[0])
-    if not slots:
+    """Hero items, read precisely from PlayerSaveData.m_Inventory (so no other
+    character's/container's items leak in) and deduped by (item, slot-type) — the
+    save stores each slot twice (virtual + real copy); `offs` keeps both so an edit
+    updates all of them. `id` is a stable representative offset."""
+    bnd = _player_inventory_bounds(payload)
+    if not bnd:
         return []
-    clusters = [[slots[0]]]
-    for s in slots[1:]:
-        if s[0] - clusters[-1][-1][0] <= 0x4000:             # same cluster (within 16KB)
-            clusters[-1].append(s)
-        else:                                                # gap -> start a new cluster
-            clusters.append([s])
-    mx = max(slots, key=lambda s: s[2])                       # biggest stack = player's
-    player = next((c for c in clusters if c[0][0] <= mx[0] <= c[-1][0]), None)
-    if not player:
-        return []
-    out = []
-    for _off, item, cnt, cvo in player:
-        if any(x in item for x in _INV_DROP):
-            continue
-        out.append({"id": cvo, "item": item, "label": _item_label(item), "count": cnt})
+    vs, ve = bnd
+    groups = {}
+    for item, typ, cvo, vo, cnt in _items_in_region(payload, vs, ve):
+        g = groups.setdefault((item, typ), {"count": cnt, "offs": []})
+        g["offs"].append(cvo)
+    out = [{"id": g["offs"][0], "item": item, "label": _item_label(item),
+            "count": g["count"], "offs": g["offs"]}
+           for (item, typ), g in groups.items()]
+    out.sort(key=lambda x: -x["count"])
     return out
 
 
@@ -1063,17 +1084,19 @@ def add_item(payload, item_key, count=1):
 
 
 def apply_inventory_edits(payload, edits):
-    """edits: [{id, value}] -> set m_ItemCount in place (length-neutral)."""
-    valid = {s["id"] for s in find_player_inventory(payload)}
+    """edits: [{id, value}] -> set m_ItemCount in place for every copy of the slot
+    (virtual + real), length-neutral."""
+    valid = {s["id"]: s["offs"] for s in find_player_inventory(payload)}
     d = bytearray(payload)
     for e in edits:
-        off = int(e["id"])
-        if off not in valid:
+        offs = valid.get(int(e["id"]))
+        if offs is None:
             raise ValueError("unknown item slot")
         v = int(e["value"])
         if not (0 <= v <= 2_000_000_000):
             raise ValueError("count out of range")
-        struct.pack_into("<i", d, off, v)
+        for off in offs:
+            struct.pack_into("<i", d, off, v)
     return bytes(d)
 
 
