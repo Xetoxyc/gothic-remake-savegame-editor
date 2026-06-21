@@ -139,6 +139,8 @@ def patch():
     npc_inv_changes = body.get("npc_inv_changes") or []
     npc_inv_adds = body.get("npc_inv_adds") or []
     npc_equip_changes = body.get("npc_equip_changes") or []
+    npc_trade_changes = body.get("npc_trade_changes") or []
+    npc_trade_adds = body.get("npc_trade_adds") or []
     with _lock:
         sess = _sessions.get(token)
         if sess:
@@ -147,7 +149,8 @@ def patch():
         return jsonify(error="session expired; please re-upload your save"), 410
     if not (quest_changes or attr_changes or skill_changes or inv_changes or inv_adds
             or passage_changes or passage_adds or crime_forgive
-            or npc_stat_changes or npc_inv_changes or npc_inv_adds or npc_equip_changes):
+            or npc_stat_changes or npc_inv_changes or npc_inv_adds or npc_equip_changes
+            or npc_trade_changes or npc_trade_adds):
         return jsonify(error="no changes selected"), 400
 
     aedits = [{"base_off": int(ch["id"]), "value": ch["value"]} for ch in attr_changes]
@@ -167,6 +170,8 @@ def patch():
             payload = g1r.apply_npc_stat_edits(payload, npc_stat_changes)  # length-neutral
         if npc_inv_changes:
             payload = g1r.apply_npc_inventory_edits(payload, npc_inv_changes)  # length-neutral
+        if npc_trade_changes:
+            payload = g1r.apply_npc_trade_edits(payload, npc_trade_changes)    # length-neutral
 
         # quest + skill edits are length-changing and share ancestors
         # (m_GenericData), so they must be applied together in one pass.
@@ -197,6 +202,8 @@ def patch():
             payload = g1r.add_item_to_npc(payload, add["npc"], add["item"], int(add.get("count", 1)))
         for ch in npc_equip_changes:                         # experimental: retarget equipped weapon
             payload = g1r.set_npc_equipment(payload, ch["npc"], ch["slot_type"], ch["item"])
+        for add in npc_trade_adds:                            # experimental: add to trader sell list
+            payload = g1r.add_trade_item(payload, add["npc"], add["item"], int(add.get("count", 1)))
 
         c = g1r.Container(sess["sav"])
         out = g1r.rebuild(c, oodle(), payload)

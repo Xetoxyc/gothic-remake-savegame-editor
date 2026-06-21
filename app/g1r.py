@@ -1322,6 +1322,127 @@ def add_item_to_npc(payload, key, item_key, count=1):
     return _clone_add(payload, _npc_main_donor(payload, key), item_key, count)
 
 
+# Traders carry a separate sell list: a block with m_TradersUniqueName (the
+# GlobalID minus the "-WorldPointActor…" suffix) + an m_Items map (item path ->
+# stock count). This is the real "what he sells", distinct from his pack.
+_TRADER_NAME = b"m_TradersUniqueName\x00"
+_TRADER_ITEM_RE = _re.compile(rb"/Script/Angelscript\.([A-Za-z0-9_]+)\x00")
+
+
+def _trader_blocks(payload):
+    offs = [m.start() for m in _re.finditer(_re.escape(_TRADER_NAME), payload)]
+    out = []
+    for i, o in enumerate(offs):
+        p = payload.find(b"NameProperty\x00", o, o + 64)
+        name = None
+        if p >= 0:
+            vo = p + len(b"NameProperty\x00") + 9
+            n = _i32(payload, vo)
+            if 0 < n < 200:
+                name = payload[vo + 4:vo + 4 + n - 1].decode("utf-8", "replace")
+        end = offs[i + 1] if i + 1 < len(offs) else min(o + 8000, len(payload))
+        out.append((name, o, end))
+    return out
+
+
+def npc_trade(payload, key):
+    """Deduped sell list (item -> stock) for a trader, keyed by GlobalID. Each item
+    keeps every physical count offset (dup copies) so an edit updates all."""
+    uname = key.split("-")[0]
+    blk = next((b for b in _trader_blocks(payload) if b[0] == uname), None)
+    if not blk:
+        return []
+    _, s, e = blk
+    groups = {}
+    for m in _TRADER_ITEM_RE.finditer(payload, s, e):
+        item = m.group(1).decode()
+        vo = m.end()
+        cnt = struct.unpack_from("<i", payload, vo)[0]
+        if not (0 <= cnt < 1_000_000):
+            continue
+        g = groups.setdefault(item, {"count": cnt, "offs": []})
+        g["offs"].append(vo)
+    out = [{"id": item, "item": item, "label": _item_label(item),
+            "count": g["count"], "offs": g["offs"]} for item, g in groups.items()]
+    out.sort(key=lambda x: x["label"].lower())
+    return out
+
+
+def apply_npc_trade_edits(payload, edits):
+    """edits: [{npc, id (item), value}] -> set trade-stock count in place (neutral)."""
+    d = bytearray(payload)
+    cache = {}
+    for e in edits:
+        npc = e["npc"]
+        if npc not in cache:
+            cache[npc] = {t["id"]: t["offs"] for t in npc_trade(payload, npc)}
+        offs = cache[npc].get(e["id"])
+        if offs is None:
+            raise ValueError("unknown trade item")
+        v = int(e["value"])
+        if not (0 <= v <= 2_000_000_000):
+            raise ValueError("count out of range")
+        for off in offs:
+            struct.pack_into("<i", d, off, v)
+    return bytes(d)
+
+
+def _append_object_int_pair(payload, name_prefix_off, item_key, value):
+    """Append an (ObjectProperty path -> i32) pair to the Map whose property-name
+    FString length-prefix is at name_prefix_off. No-op if the key already exists."""
+    _, o2 = _fstr(payload, name_prefix_off)
+    root, o3 = _typename(payload, o2)
+    if root != "MapProperty":
+        raise ValueError("not a map property")
+    vstart, vend, _ = _value_end(payload, o3, root)
+    path = "/Script/Angelscript." + item_key
+    if path.encode("utf-8") + b"\x00" in payload[vstart:vend]:
+        return payload                                       # already sells it
+    fk = payload.find(b"/Script/Angelscript.", vstart, vend)
+    if fk < 0:
+        raise ValueError("empty trade map — cannot locate insert point")
+    first = fk - 4                                           # length-prefix of first key
+    count_off = first - 4
+    n0 = _i32(payload, first)
+    anchor = first + 4 + n0                                  # value offset of first pair
+    p = first
+    while p < vend:                                          # walk to end of pairs
+        n = _i32(payload, p)
+        if not (0 < n < 400) or payload[p + 4 + n - 1] != 0:
+            break
+        p = p + 4 + n + 4
+    pb = path.encode("utf-8") + b"\x00"
+    pair = struct.pack("<i", len(pb)) + pb + struct.pack("<i", int(value))
+    above = [c["size_off"] for c in _chain(payload, anchor)]
+    d = bytearray(payload)
+    for so in above:
+        struct.pack_into("<i", d, so, _i32(d, so) + len(pair))
+    struct.pack_into("<i", d, count_off, _i32(d, count_off) + 1)
+    d[p:p] = pair
+    return bytes(d)
+
+
+def add_trade_item(payload, key, item, count=1):
+    """EXPERIMENTAL: add an item to a trader's sell list (its m_Items current stock
+    and m_DefaultItems template), so the merchant offers it. Re-validated."""
+    item = item.strip().split(".")[-1]
+    if not _re.fullmatch(r"[A-Za-z0-9_]{2,80}", item):
+        raise ValueError("invalid item")
+    uname = key.split("-")[0]
+    for map_name in (b"m_Items\x00", b"m_DefaultItems\x00"):
+        blk = next((bl for bl in _trader_blocks(payload) if bl[0] == uname), None)
+        if not blk:
+            raise ValueError("not a trader")
+        _, s, e = blk
+        mt = payload.find(map_name, s, e)
+        if mt < 0:
+            continue
+        payload = _append_object_int_pair(payload, mt - 4, item, count)
+    if not validate(payload):
+        raise ValueError("adding the trade item produced an invalid structure")
+    return payload
+
+
 def set_npc_equipment(payload, key, slot_type, new_item):
     """EXPERIMENTAL: retarget the NPC's equipped weapon (MeleeSlot/RangedSlot) to a
     different item — an m_ItemDefinition FString replace on every copy of that slot."""
@@ -1340,10 +1461,11 @@ def npc_detail(payload, key):
     name, role, area, human = _npc_parse_key(key)
     inv = [{k: v for k, v in it.items() if k not in ("offs", "defs")}
            for it in npc_inventory(payload, key)]
+    trade = [{k: v for k, v in t.items() if k != "offs"} for t in npc_trade(payload, key)]
     return {"id": key, "name": name, "role": role, "area": area, "human": human,
             "attitude": _npc_attitudes(payload).get(key, "Default"),
             "stats": _attrs_in_region(payload, *reg) if reg else [],
-            "inventory": inv}
+            "inventory": inv, "trade": trade, "is_trader": bool(trade)}
 
 
 def apply_npc_stat_edits(payload, edits):
