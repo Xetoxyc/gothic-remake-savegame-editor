@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.3.1](https://github.com/Xetoxyc/gothic-remake-savegame-editor/compare/v1.3.0...v1.3.1) (2026-06-21)
+
+
+### Bug Fixes
+
+* **inventory:** read hero items from PlayerSaveData, not a proximity guess ([e3ab4e1](https://github.com/Xetoxyc/gothic-remake-savegame-editor/commit/e3ab4e152cac7f9727d173d0a0ba08fa6cebcc96))
+
 ## [1.3.0](https://github.com/Xetoxyc/gothic-remake-savegame-editor/compare/v1.2.0...v1.3.0) (2026-06-21)
 
 
