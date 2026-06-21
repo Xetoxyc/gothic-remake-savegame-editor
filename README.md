@@ -44,10 +44,49 @@ it instead.
    changes. Search where lists are long; only what you change is applied.
 3. Click **Generate fixed save** → you get `<name>.fixed.sav`.
 4. **Back up your original**, then rename the `.fixed.sav` over it and load.
+   *(On Steam? Read [Using it with Steam Cloud](#using-it-with-steam-cloud) first —
+   otherwise the cloud can overwrite your edit.)*
 
 > The classic quest fix: the *Trial of Fire* objectives `OBJ_WATERFALL` /
 > `OBJ_SEA` get stuck on `Running` if you light the shrine early — set them to
 > `Succeeded` in the Quests tab.
+
+## Using it with Steam Cloud
+
+**Steam Cloud** only syncs your saves when the game **launches and exits** — *not*
+while it's running. So the trick is to **never restart the game**: edit and swap the
+file with the game still open, then just reload from inside it. No conflict, nothing
+to overwrite.
+
+### Recommended — edit while the game stays running
+
+1. **Run the game** and start your gameplay (this makes the save you want to edit).
+2. **Tab out** of the game (`Alt`+`Tab`) — leave it running, don't quit.
+3. **Edit the save** here, download the `*.fixed.sav`, then **back up your original**
+   and rename the new file to the *exact* original name in the save folder
+   (e.g. `…\Saved\SaveGames\` — overwrite the same `G1R-0XX.sav`).
+4. **Tab back into** the game.
+5. **Reload your save** from the in-game load menu — it re-reads the file from disk,
+   so your edited version loads.
+
+When you later quit the game normally, Steam uploads the current (edited) local save
+to the cloud — your edit sticks.
+
+> Loading from within the running session is what avoids Steam Cloud entirely: since
+> the game never relaunches, Steam never re-syncs and can't restore the old cloud copy.
+
+### Alternative — turn Cloud off for this game
+
+Prefer not to keep the game open? Disable cloud sync, edit freely, re-enable if you like:
+
+1. Steam → **Library** → right-click **Gothic 1 Remake** → **Properties → General**.
+2. Uncheck **“Keep game saves in the Steam Cloud…”**.
+3. Swap the file as in step 3 above and launch — the **local** save is now authoritative.
+4. *(Optional)* re-tick the box later; Steam uploads the current (edited) local save
+   as the new cloud copy.
+
+> Keep your **backup of the untouched original** *outside* the save folder, so you
+> can roll back no matter what the cloud does.
 
 ## Support
 
