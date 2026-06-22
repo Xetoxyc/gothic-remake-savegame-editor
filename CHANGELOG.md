@@ -1,5 +1,13 @@
 # Changelog
 
+## [1.4.0](https://github.com/Xetoxyc/gothic-remake-savegame-editor/compare/v1.3.1...v1.4.0) (2026-06-21)
+
+
+### Features
+
+* **catalog:** add items from the 4-friends saves (679 -&gt; 690) ([edb31c7](https://github.com/Xetoxyc/gothic-remake-savegame-editor/commit/edb31c74fb0469fb4b8674f8d525bc38ca217d62))
+* **npc:** show dead characters (hp 0) in the list and detail ([7b82b11](https://github.com/Xetoxyc/gothic-remake-savegame-editor/commit/7b82b112daff324078063417240fbcd8692c3d87))
+
 ## [1.3.1](https://github.com/Xetoxyc/gothic-remake-savegame-editor/compare/v1.3.0...v1.3.1) (2026-06-21)
 
 
