@@ -273,3 +273,15 @@ select:disabled{opacity:.6}
 .attr.added{border-color:var(--ok);background:#1c2417}
 .attr.added label{color:#9ad07e}
 .attr .rm{color:var(--fail);font-size:13px;padding:0 2px}
+
+/* language picker (EN/DE segmented toggle) */
+.savebar-right{display:flex;align-items:center;gap:12px}
+.lang-pick{display:inline-flex;border:1px solid var(--line);border-radius:8px;overflow:hidden;background:var(--bg2)}
+.lang-pick button{background:none;border:none;color:var(--muted);font-size:12px;font-weight:600;
+  padding:5px 11px;cursor:pointer;letter-spacing:.04em}
+.lang-pick button+button{border-left:1px solid var(--line)}
+.lang-pick button:hover{color:var(--text)}
+.lang-pick button.active{background:var(--accent);color:#1a130b}
+
+/* weapon stat line (e.g. "110 Dmg / 95 Str") — small, between name and id */
+small.stat{color:var(--accent2);font-weight:600}
