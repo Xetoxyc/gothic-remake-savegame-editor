@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.5.0](https://github.com/Xetoxyc/gothic-remake-savegame-editor/compare/v1.4.0...v1.5.0) (2026-06-22)
+
+
+### Features
+
+* **quests:** show quest code as title, translation as subtitle ([cfb2c63](https://github.com/Xetoxyc/gothic-remake-savegame-editor/commit/cfb2c634efeaf7a4c2ab9f355b6148a133b18f6b))
+
 ## [1.4.0](https://github.com/Xetoxyc/gothic-remake-savegame-editor/compare/v1.3.1...v1.4.0) (2026-06-21)
 
 
