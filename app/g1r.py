@@ -933,7 +933,8 @@ _CATALOG = None
 
 
 def _bundled_catalog():
-    """The curated cross-save item DB (built by ../../extract_items.py)."""
+    """The full game-file item DB (built by ../../build_app_catalog.py from the
+    cache extraction), unioned with save-derived creatures/NPC-armor extras."""
     global _CATALOG
     if _CATALOG is None:
         try:
