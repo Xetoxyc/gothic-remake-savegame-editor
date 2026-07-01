@@ -168,6 +168,24 @@ button{font:inherit;cursor:pointer}
 .tag{font-size:9px;text-transform:uppercase;letter-spacing:.4px;color:var(--muted);
   border:1px solid var(--line);border-radius:4px;padding:1px 4px;margin-left:4px;vertical-align:middle}
 
+/* savegame compare page */
+.cmp-pick{display:flex;gap:16px;align-items:flex-end;flex-wrap:wrap}
+.cmp-slot{flex:1;min-width:220px;display:flex;flex-direction:column;gap:6px}
+.cmp-label{font-weight:600;color:var(--text)}
+.cmp-arrow{font-size:22px;color:var(--muted);padding-bottom:6px}
+.cmp-actions{display:flex;gap:12px;align-items:center;margin-top:14px;flex-wrap:wrap}
+.diff-grp{margin:0 0 18px}
+.diff-grp h3{margin:0 0 6px;border-bottom:1px solid var(--line);padding-bottom:4px}
+.diff-sub{font-size:11px;text-transform:uppercase;letter-spacing:.5px;color:var(--muted);margin:8px 0 3px}
+.diff-row{display:flex;gap:8px;align-items:center;padding:3px 10px;border-left:3px solid var(--line)}
+.diff-row.add{border-color:var(--ok)}
+.diff-row.rem{border-color:var(--fail)}
+.diff-row.chg{border-color:var(--accent)}
+.diff-row .k{flex:1;color:var(--text)}
+.diff-row .v{color:var(--muted);font-variant-numeric:tabular-nums}
+.diff-row .arrow{color:var(--muted)}
+.d-add{color:var(--ok);font-size:13px} .d-rem{color:var(--fail);font-size:13px} .d-chg{color:var(--accent);font-size:13px}
+
 /* glossary collapsible groups */
 details.gloss{border:1px solid var(--line);border-radius:9px;margin-bottom:8px;background:var(--bg2)}
 details.gloss summary{cursor:pointer;padding:10px 12px;font-weight:600;list-style:none;

@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Gothic 1 Remake — Savegame Compare</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header>
+  <h1>Gothic&nbsp;1 Remake <span>Savegame Compare</span></h1>
+  <p class="sub">Diff two saves — see exactly which quests, story flags, stats, skills &amp; items changed.</p>
+  <p class="byline"><a href="/">← back to the editor</a></p>
+</header>
+
+<main>
+  <section class="card">
+    <div class="cmp-pick">
+      <div class="cmp-slot">
+        <label class="cmp-label">A — base <span class="muted">(the “before”)</span></label>
+        <input type="file" id="file-a" accept=".sav">
+      </div>
+      <div class="cmp-arrow">→</div>
+      <div class="cmp-slot">
+        <label class="cmp-label">B — compare <span class="muted">(the “after”)</span></label>
+        <input type="file" id="file-b" accept=".sav">
+      </div>
+    </div>
+    <div class="cmp-actions">
+      <button id="go" class="primary" disabled>Compare</button>
+      <span class="hint">Saves are processed locally by the container — nothing is uploaded elsewhere.</span>
+    </div>
+    <div id="cmp-loading" class="loading hidden"><span class="spinner"></span><span>Decompressing &amp; diffing…</span></div>
+    <div id="cmp-error" class="error hidden"></div>
+  </section>
+
+  <section id="cmp-results" class="card hidden">
+    <div class="savebar">
+      <div><span class="badge">diff</span> <strong id="cmp-a"></strong> <span class="meta">→</span> <strong id="cmp-b"></strong></div>
+      <div class="savebar-right">
+        <label class="check"><input type="checkbox" id="cmp-only-changed"> changed only</label>
+        <span id="cmp-total" class="count"></span>
+      </div>
+    </div>
+    <div id="cmp-body"></div>
+  </section>
+</main>
+
+<script src="compare.js"></script>
+</body>
+</html>

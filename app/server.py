@@ -9,6 +9,7 @@ from flask import Flask, request, jsonify, send_file, send_from_directory, abort
 
 import g1r
 import loc
+import savediff
 
 STATIC = os.path.join(os.path.dirname(__file__), "static")
 OODLE_LIB = os.environ.get("OODLE_LIB", "/app/liboo2corelinux64.so.9")
@@ -226,6 +227,43 @@ def patch():
     base = fname[:-4] if fname.lower().endswith(".sav") else fname
     return send_file(io.BytesIO(out), mimetype="application/octet-stream",
                      as_attachment=True, download_name=f"{base}.fixed.sav")
+
+
+@app.post("/api/diff")
+def diff():
+    """Read-only diff of two saves (base A vs compare B). Stateless — no session."""
+    fa, fb = request.files.get("save_a"), request.files.get("save_b")
+    if not fa or not fb:
+        return jsonify(error="please choose two saves to compare"), 400
+    try:
+        da, db = fa.read(), fb.read()
+        ca, cb = g1r.Container(da), g1r.Container(db)
+        pa = g1r.decompress_payload(ca, oodle())
+        pb = g1r.decompress_payload(cb, oodle())
+        result = savediff.diff_payloads(pa, pb)
+        # attach a localized {en,de} object per entry (frontend picks the language).
+        # Story flags are internal identifiers with no game-localized name -> skipped.
+        loc_fns = {
+            "quests": lambda e: loc.quest(e["key"], e.get("name") or e["key"]),
+            "inventory": lambda e: loc.item(e["key"], e.get("name") or e["key"]),
+            "skills": lambda e: loc.skill(e["key"], e.get("name") or e["key"]),
+            "attributes": lambda e: loc.attribute(e["key"], e.get("name") or e["key"]),
+        }
+        for cat_key, fn in loc_fns.items():
+            cat = result["categories"].get(cat_key)
+            if not cat:
+                continue
+            for grp in ("added", "removed", "changed"):
+                for e in cat.get(grp, []):
+                    try:
+                        e["loc"] = fn(e)
+                    except Exception:
+                        pass
+    except Exception as e:
+        return jsonify(error=str(e)), 400
+    return jsonify(a_name=g1r.slot_name(ca) or (fa.filename or "A"),
+                   b_name=g1r.slot_name(cb) or (fb.filename or "B"),
+                   **result)
 
 
 @app.get("/api/health")
