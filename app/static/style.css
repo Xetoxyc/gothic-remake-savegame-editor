@@ -185,6 +185,10 @@ button{font:inherit;cursor:pointer}
 .diff-row .v{color:var(--muted);font-variant-numeric:tabular-nums}
 .diff-row .arrow{color:var(--muted)}
 .d-add{color:var(--ok);font-size:13px} .d-rem{color:var(--fail);font-size:13px} .d-chg{color:var(--accent);font-size:13px}
+.diff-row .cmp-edit{width:96px;background:var(--bg2);border:1px solid var(--line);color:var(--text);border-radius:4px;padding:2px 6px;font:inherit}
+.diff-row select.cmp-edit{width:auto}
+.diff-row .cmp-edit.edited{border-color:var(--accent2);color:var(--accent2)}
+.diff-row .cmp-copy{font-size:12px;white-space:nowrap}
 
 /* glossary collapsible groups */
 details.gloss{border:1px solid var(--line);border-radius:9px;margin-bottom:8px;background:var(--bg2)}

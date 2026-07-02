@@ -82,6 +82,36 @@ def diff_inventory(pa, pb):
     return d
 
 
+def diff_npcs(pa, pb):
+    """NPC roster diff (HEAVY: scans every character). Reports per-field changes in
+    HP / Max HP / disposition, plus NPCs present in only one save. Emitted as normal
+    rows (one per changed field) so the standard renderer handles them."""
+    a = {n["id"]: n for n in g1r.list_npcs(pa)}
+    b = {n["id"]: n for n in g1r.list_npcs(pb)}
+
+    def disp(n):
+        bits = [n.get("name") or n["id"]]
+        if n.get("area"):
+            bits.append(f"[{n['area']}]")
+        return " ".join(bits)
+
+    added = [{"key": k, "name": disp(b[k]), "b": b[k].get("hp")} for k in b if k not in a]
+    removed = [{"key": k, "name": disp(a[k]), "a": a[k].get("hp")} for k in a if k not in b]
+    changed = []
+    FIELDS = [("hp", "HP"), ("maxhp", "Max HP"), ("attitude", "Disposition")]
+    for k in a:
+        if k not in b:
+            continue
+        for f, flabel in FIELDS:
+            if a[k].get(f) != b[k].get(f):
+                changed.append({"key": f"{k}#{f}", "name": f"{disp(a[k])} · {flabel}",
+                                "a": a[k].get(f), "b": b[k].get(f)})
+    for lst in (added, removed, changed):
+        lst.sort(key=lambda x: str(x["name"]).lower())
+    return {"added": added, "removed": removed, "changed": changed,
+            "counts": {"added": len(added), "removed": len(removed), "changed": len(changed)}}
+
+
 CATEGORIES = [
     ("flags", "Story flags", diff_flags),
     ("quests", "Quests", diff_quests),
@@ -89,18 +119,82 @@ CATEGORIES = [
     ("skills", "Skills", diff_skills),
     ("inventory", "Inventory", diff_inventory),
 ]
+# categories whose B-values the Compare page can edit + export (skills/npcs are read-only)
+EDITABLE = {"flags", "quests", "attributes", "inventory"}
 
 
-def diff_payloads(pa, pb):
-    """Full structured diff of two decompressed payloads."""
+def diff_payloads(pa, pb, include_npcs=False):
+    """Full structured diff of two decompressed payloads. NPCs are opt-in (heavy)."""
+    cats = list(CATEGORIES)
+    if include_npcs:
+        cats.append(("npcs", "NPCs", diff_npcs))
     out = {}
-    for key, label, fn in CATEGORIES:
+    for key, label, fn in cats:
         try:
             d = fn(pa, pb)
         except Exception as e:
             d = {"error": str(e), "counts": {"added": 0, "removed": 0, "changed": 0}}
         d["label"] = label
+        d["editable"] = key in EDITABLE
         out[key] = d
     total = sum(d["counts"]["added"] + d["counts"]["removed"] + d["counts"]["changed"]
                 for d in out.values())
     return {"categories": out, "total": total}
+
+
+def apply_diff_edits(payload, edits):
+    """Apply Compare-page edits to save B and return the patched payload.
+    edits: [{cat, key, value}]. In-place edits first, then length-changing ones;
+    unknown/read-only categories are ignored. Re-validated.
+      flags      -> set existing (apply_passage_edits) or add new (add_passage)
+      attributes -> apply_attribute_edits (float, in place)
+      inventory  -> set existing count, or add the item (clone) if absent
+      quests     -> apply_edits (EQuestState)
+    """
+    by = {}
+    for e in edits:
+        by.setdefault(e.get("cat"), []).append(e)
+
+    flag_adds, inv_adds = [], []
+
+    if by.get("attributes"):
+        amap = {a["name"]: a for a in g1r.list_player_attributes(payload)}
+        ae = [{"base_off": amap[e["key"]]["base_off"], "value": float(e["value"])}
+              for e in by["attributes"] if e["key"] in amap]
+        if ae:
+            payload = g1r.apply_attribute_edits(payload, ae)
+
+    if by.get("inventory"):
+        imap = {s["item"]: s for s in g1r.find_player_inventory(payload)}
+        ie = []
+        for e in by["inventory"]:
+            if e["key"] in imap:
+                ie.append({"id": imap[e["key"]]["id"], "value": int(e["value"])})
+            else:
+                inv_adds.append((e["key"], int(e["value"])))
+        if ie:
+            payload = g1r.apply_inventory_edits(payload, ie)
+
+    if by.get("flags"):
+        present = {f["name"] for f in g1r.list_passages(payload)}
+        sets = [{"name": e["key"], "value": int(e["value"])}
+                for e in by["flags"] if e["key"] in present]
+        flag_adds = [(e["key"], int(e["value"])) for e in by["flags"] if e["key"] not in present]
+        if sets:
+            payload = g1r.apply_passage_edits(payload, sets)
+
+    if by.get("quests"):
+        qmap = {q["key"]: q for q in g1r.list_quests(payload)}
+        qe = [{"val_off": qmap[e["key"]]["val_off"], "new_state": e["value"]}
+              for e in by["quests"] if e["key"] in qmap and e["value"] in g1r.EQUEST_STATES]
+        if qe:
+            payload = g1r.apply_edits(payload, qe)
+
+    for name, val in flag_adds:
+        payload = g1r.add_passage(payload, name, val)
+    for item, cnt in inv_adds:
+        payload = g1r.add_item(payload, item, cnt)
+
+    if not g1r.validate(payload):
+        raise ValueError("edited save failed structural validation; refused")
+    return payload

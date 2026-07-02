@@ -1,6 +1,7 @@
 """Flask server for the Gothic 1 Remake savegame editor (local web app)."""
 import io
 import os
+import json
 import time
 import uuid
 import threading
@@ -240,7 +241,8 @@ def diff():
         ca, cb = g1r.Container(da), g1r.Container(db)
         pa = g1r.decompress_payload(ca, oodle())
         pb = g1r.decompress_payload(cb, oodle())
-        result = savediff.diff_payloads(pa, pb)
+        include_npcs = (request.form.get("include_npcs") or "").lower() in ("1", "true", "on", "yes")
+        result = savediff.diff_payloads(pa, pb, include_npcs=include_npcs)
         # attach a localized {en,de} object per entry (frontend picks the language).
         # Story flags are internal identifiers with no game-localized name -> skipped.
         loc_fns = {
@@ -264,6 +266,32 @@ def diff():
     return jsonify(a_name=g1r.slot_name(ca) or (fa.filename or "A"),
                    b_name=g1r.slot_name(cb) or (fb.filename or "B"),
                    **result)
+
+
+@app.post("/api/diff_apply")
+def diff_apply():
+    """Apply Compare-page edits to save B and return the patched .sav for download."""
+    fb = request.files.get("save_b")
+    if not fb:
+        return jsonify(error="missing save B"), 400
+    try:
+        edits = json.loads(request.form.get("edits") or "[]")
+    except ValueError:
+        return jsonify(error="bad edits payload"), 400
+    if not edits:
+        return jsonify(error="no edits to apply"), 400
+    try:
+        db = fb.read()
+        cb = g1r.Container(db)
+        pb = g1r.decompress_payload(cb, oodle())
+        patched = savediff.apply_diff_edits(pb, edits)
+        out = g1r.rebuild(cb, oodle(), patched)
+    except Exception as e:
+        return jsonify(error=str(e)), 400
+    base = fb.filename or "G1R.sav"
+    base = base[:-4] if base.lower().endswith(".sav") else base
+    return send_file(io.BytesIO(out), mimetype="application/octet-stream",
+                     as_attachment=True, download_name=f"{base}.edited.sav")
 
 
 @app.get("/api/health")

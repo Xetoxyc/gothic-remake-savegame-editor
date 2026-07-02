@@ -28,6 +28,7 @@
     </div>
     <div class="cmp-actions">
       <button id="go" class="primary" disabled>Compare</button>
+      <label class="check"><input type="checkbox" id="inc-npcs"> include NPC changes <span class="muted">(slower — scans every character)</span></label>
       <span class="hint">Saves are processed locally by the container — nothing is uploaded elsewhere.</span>
     </div>
     <div id="cmp-loading" class="loading hidden"><span class="spinner"></span><span>Decompressing &amp; diffing…</span></div>
@@ -40,6 +41,7 @@
       <div class="savebar-right">
         <label class="check"><input type="checkbox" id="cmp-only-changed"> changed only</label>
         <span id="cmp-total" class="count"></span>
+        <button id="cmp-export" class="primary small hidden">Export edited B</button>
       </div>
     </div>
     <div id="cmp-body"></div>
