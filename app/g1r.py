@@ -1503,21 +1503,125 @@ def npc_detail(payload, key):
             "stats": stats, "inventory": inv, "trade": trade, "is_trader": bool(trade)}
 
 
+def _iter_npc_stat_regions(payload):
+    """Yield (key, start, end) for every character's CharacterState block, in one
+    pass. `end` is the next character's block (or a bounded window for the last)."""
+    anchors = _npc_anchors(payload)
+    starts = [a[0] for a in anchors]
+    for i, (off, key) in enumerate(anchors):
+        if not key or key.startswith("None"):
+            continue
+        end = starts[i + 1] if i + 1 < len(anchors) else min(off + 0x20000, len(payload))
+        yield key, off, end
+
+
+def _npc_stat_index(payload):
+    """{base_off: current_off} for every editable NPC stat in the save (single pass).
+    A stat's base offset is globally unique, so this alone validates and applies any
+    NPC-stat edit — no per-character re-derivation, so a whole-world difficulty switch
+    stays O(save size)."""
+    idx = {}
+    for _key, off, end in _iter_npc_stat_regions(payload):
+        for a in _attrs_in_region(payload, off, end):
+            idx[a["base_off"]] = a["current_off"]
+    return idx
+
+
 def apply_npc_stat_edits(payload, edits):
     """edits: [{npc, base_off, value}] -> set base+current float in place (neutral)."""
+    idx = _npc_stat_index(payload)
     d = bytearray(payload)
-    cache = {}
     for e in edits:
-        npc = e["npc"]
-        if npc not in cache:
-            cache[npc] = {a["base_off"]: a for a in (npc_detail(payload, npc)["stats"])}
-        a = cache[npc].get(int(e["base_off"]))
-        if not a:
+        base_off = int(e["base_off"])
+        current_off = idx.get(base_off)
+        if current_off is None:
             raise ValueError("unknown npc stat")
         v = float(e["value"])
-        struct.pack_into("<f", d, a["base_off"], v)
-        struct.pack_into("<f", d, a["current_off"], v)
+        struct.pack_into("<f", d, base_off, v)
+        struct.pack_into("<f", d, current_off, v)
     return bytes(d)
+
+
+# ------------------------------------------------- difficulty presets (NPC stats)
+# Bundled "new game" reference saves (../data), one per difficulty, hold every
+# character's baseline stats for that difficulty. Their per-NPC values differ only in
+# the combat stats the game scales by difficulty; we copy just those, matched by
+# GlobalID, so the whole world's NPC stats can be switched to a difficulty in one go.
+# A save is matched to a difficulty by its filename suffix (…_novice.sav / …_gothic.sav /
+# …_hard.sav), so swapping in a fresh reference save needs no code change. A difficulty
+# with no matching file is just omitted, so listing one here before its save exists is
+# harmless — the UI hides presets whose reference save isn't bundled.
+_DIFFICULTIES = ("novice", "gothic", "hard")
+# stats that actually vary between the reference saves (everything else is identical,
+# so writing it would be a pointless no-op). "Health" is the CURRENT hitpoints
+# attribute — we never raise it on a corpse (see npc_difficulty_edits).
+_DIFF_STATS = {"Health", "MaxHealth", "Strength", "Dexterity",
+               "SuperArmor", "MaxSuperArmor", "Mana", "MaxMana"}
+
+
+def build_difficulty_reference(oodle, data_dir):
+    """Parse the bundled per-difficulty saves into
+    {difficulty: {GlobalID: {stat_name: base_value}}}, keeping only difficulty stats.
+    Each difficulty's save is found by the '…_<difficulty>.sav' filename suffix; a
+    difficulty with no matching/readable file is simply omitted."""
+    refs = {}
+    try:
+        files = sorted(_os.listdir(data_dir))
+    except OSError:
+        return refs
+    for diff in _DIFFICULTIES:
+        match = next((f for f in files if f.lower().endswith(f"_{diff}.sav")), None)
+        if not match:
+            continue
+        try:
+            with open(_os.path.join(data_dir, match), "rb") as f:
+                payload = decompress_payload(Container(f.read()), oodle)
+        except (OSError, ValueError, RuntimeError):
+            continue
+        m = {}
+        for key, off, end in _iter_npc_stat_regions(payload):
+            stats = {a["name"]: a["value"]
+                     for a in _attrs_in_region(payload, off, end)
+                     if a["name"] in _DIFF_STATS}
+            if stats:
+                m[key] = stats
+        refs[diff] = m
+    return refs
+
+
+def npc_difficulty_edits(payload, refs, difficulty, scope="both"):
+    """Length-neutral stat edits that switch the loaded save's NPCs to a difficulty's
+    balance, matched by GlobalID. scope: 'both' | 'humans' | 'creatures'. Skips stats
+    already at the target value, and never revives the dead (current Health on a
+    corpse is left at 0). Returns (edits, info): edits=[{npc, base_off, value, name}]."""
+    ref = refs.get(difficulty)
+    if not ref:
+        raise ValueError(f"no reference data for difficulty {difficulty!r}")
+    edits = []
+    matched = 0
+    for key, off, end in _iter_npc_stat_regions(payload):
+        refstats = ref.get(key)
+        if not refstats:
+            continue
+        _n, _r, _a, human = _npc_parse_key(key)
+        if (scope == "humans" and not human) or (scope == "creatures" and human):
+            continue
+        attrs = {a["name"]: a for a in _attrs_in_region(payload, off, end)}
+        h, mh = attrs.get("Health"), attrs.get("MaxHealth")
+        dead = bool(h and h["value"] == 0 and mh and mh["value"] > 0)
+        touched = False
+        for sname, val in refstats.items():
+            a = attrs.get(sname)
+            if not a or a["value"] == val:
+                continue
+            if sname == "Health" and dead:              # don't resurrect corpses
+                continue
+            edits.append({"npc": key, "base_off": a["base_off"],
+                          "value": val, "name": sname})
+            touched = True
+        if touched:
+            matched += 1
+    return edits, {"matched": matched, "reference_npcs": len(ref)}
 
 
 def apply_npc_inventory_edits(payload, edits):

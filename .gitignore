@@ -2,6 +2,8 @@ __pycache__/
 *.pyc
 # never commit saves or the proprietary Oodle lib
 *.sav
+# ...except the bundled per-difficulty reference saves the NPC difficulty preset needs
+!data/*.sav
 *.bin
 liboo2corelinux64.so*
 .DS_Store

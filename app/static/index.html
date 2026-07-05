@@ -103,6 +103,20 @@
         <aside class="npc-listpane">
           <input id="search-npc" type="search" placeholder="Search name or id…" autocomplete="off">
           <label class="check"><input type="checkbox" id="npc-creatures"> include creatures</label>
+          <div id="npc-difficulty" class="npc-difficulty hidden">
+            <span class="diff-title">Set stats to difficulty</span>
+            <select id="diff-scope" title="Which characters this affects">
+              <option value="both">All characters</option>
+              <option value="humans">Humans only</option>
+              <option value="creatures">Creatures only</option>
+            </select>
+            <div class="diff-btns">
+              <button type="button" class="primary small" data-diff="novice">Novice</button>
+              <button type="button" class="primary small" data-diff="gothic">Gothic</button>
+              <button type="button" class="primary small" data-diff="hard">Hard</button>
+            </div>
+            <span class="diff-note">Copies each matching character's combat stats from a new-game save. Queues them as pending changes — review, then <b>Generate</b>.</span>
+          </div>
           <span id="count-npc" class="count"></span>
           <div id="npc-list" class="npc-list"></div>
         </aside>

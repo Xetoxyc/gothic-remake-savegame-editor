@@ -12,6 +12,7 @@ let inventory = [];            // [{id, item, label, count}]
 let itemDb = [];               // [{id, label, category}] valid items from the save
 const invAdds = [];            // [{item, label, count}] queued new items to add
 let npcs = [];                 // [{id,name,role,area,human,hp,maxhp,attitude}]
+let difficulties = [];         // available NPC-stat presets from bundled saves, e.g. ["gothic","hard"]
 let npcSel = null;             // selected npc id
 let npcSub = "profile";        // active sub-tab
 const npcCache = {};           // id -> detail {stats, inventory, attitude}
@@ -103,7 +104,7 @@ async function upload(file) {
     inventory = j.inventory || [];
     itemDb = j.item_db || []; invAdds.length = 0;
     passages = j.passages || []; passAdds.length = 0; passageDb = j.passage_db || [];
-    npcs = j.npcs || []; npcSel = null; npcSub = "profile";
+    npcs = j.npcs || []; difficulties = j.difficulties || []; npcSel = null; npcSub = "profile";
     for (const k in npcCache) delete npcCache[k];
     npcStatChanges.clear(); npcInvChanges.clear(); npcInvAdds.length = 0; npcEquip.clear(); npcTradeChanges.clear(); npcTradeAdds.length = 0;
     behaviours = j.behaviours || [];
@@ -144,7 +145,7 @@ function showEditor(j) {
     (j.slot ? `“${j.slot}”  ·  ` : "") +
     `${attributes.length} attributes · ${inventory.length} items · ${quests.length - gl} quests · ${gl} glossary`;
   renderAttrs("character"); renderSkills();
-  renderInventory(); renderNpcList(); renderNpcDetail(); renderPassages(); renderBehaviours(); renderCrimes();
+  renderInventory(); renderDifficulty(); renderNpcList(); renderNpcDetail(); renderPassages(); renderBehaviours(); renderCrimes();
   renderGlossaryTabs(); renderQuests();
   updateBar();
 }
@@ -781,6 +782,43 @@ const ATT_CLASS = { Friendly: "Friendly", Angry: "Angry", Hostile: "Hostile",
 
 $("#search-npc").oninput = renderNpcList;
 $("#npc-creatures").onchange = renderNpcList;
+
+// ---- difficulty presets: copy every matching character's combat stats from a
+// bundled new-game save (matched by GlobalID) and queue them as pending changes.
+$("#npc-difficulty").querySelectorAll("button[data-diff]").forEach(b =>
+  b.onclick = () => applyDifficulty(b.dataset.diff));
+
+function renderDifficulty() {
+  const box = $("#npc-difficulty");
+  if (!difficulties.length) { box.classList.add("hidden"); return; }
+  box.classList.remove("hidden");
+  box.querySelectorAll("button[data-diff]").forEach(b =>
+    b.classList.toggle("hidden", !difficulties.includes(b.dataset.diff)));
+}
+
+async function applyDifficulty(difficulty) {
+  const scope = $("#diff-scope").value;
+  const btns = $("#npc-difficulty").querySelectorAll("button, select");
+  btns.forEach(x => x.disabled = true);
+  const doIt = () => fetch("/api/npc_difficulty", {
+    method: "POST", headers: { "Content-Type": "application/json" },
+    body: JSON.stringify({ token: session.token, difficulty, scope }) });
+  try {
+    let r = await doIt();
+    if (r.status === 410) { await reauth(); r = await doIt(); }
+    const j = await r.json();
+    if (!r.ok) throw new Error(j.error || "could not apply difficulty");
+    (j.edits || []).forEach(e => npcStatChanges.set(`${e.npc} ${e.base_off}`, e.value));
+    renderNpcList(); renderNpcDetail(); updateBar();
+    const D = difficulty.charAt(0).toUpperCase() + difficulty.slice(1);
+    if (!j.count) toast(`Already at ${D} balance — no stats changed (${j.matched} characters matched).`);
+    else toast(`Queued ${j.count} stat change${j.count === 1 ? "" : "s"} across ${j.matched} character${j.matched === 1 ? "" : "s"} → ${D}. Click “Generate fixed save” to write them.`);
+  } catch (e) {
+    toast("⚠ " + e.message);
+  } finally {
+    btns.forEach(x => x.disabled = false);
+  }
+}
 
 function renderNpcList() {
   const q = $("#search-npc").value.trim().toLowerCase();

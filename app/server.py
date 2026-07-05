@@ -12,6 +12,9 @@ import loc
 
 STATIC = os.path.join(os.path.dirname(__file__), "static")
 OODLE_LIB = os.environ.get("OODLE_LIB", "/app/liboo2corelinux64.so.9")
+# bundled per-difficulty reference saves live here (../data relative to app/)
+DATA_DIR = os.environ.get(
+    "DATA_DIR", os.path.join(os.path.dirname(os.path.dirname(os.path.abspath(__file__))), "data"))
 MAX_UPLOAD = 64 * 1024 * 1024          # .sav files are a few MB
 SESSION_TTL = 5 * 60                   # seconds; the client silently re-uploads on expiry
 
@@ -19,6 +22,7 @@ app = Flask(__name__, static_folder=None)
 app.config["MAX_CONTENT_LENGTH"] = MAX_UPLOAD
 
 _oodle = None
+_diff_refs = None                      # cached difficulty reference (built once, lazily)
 _sessions = {}                         # token -> {sav, payload, quests, ts}
 _lock = threading.Lock()
 
@@ -30,6 +34,17 @@ def oodle():
             raise RuntimeError(f"Oodle library not found at {OODLE_LIB}")
         _oodle = g1r.Oodle(OODLE_LIB)
     return _oodle
+
+
+def difficulty_refs():
+    """Cached {difficulty: {GlobalID: {stat: value}}} from the bundled reference saves.
+    Built once (needs Oodle); {} if the data/Oodle isn't available."""
+    global _diff_refs
+    if _diff_refs is None:
+        with _lock:
+            if _diff_refs is None:
+                _diff_refs = g1r.build_difficulty_reference(oodle(), DATA_DIR)
+    return _diff_refs
 
 
 def _gc():
@@ -79,6 +94,11 @@ def load():
             oldest = min(_sessions, key=lambda t: _sessions[t]["ts"])
             _sessions.pop(oldest, None)
 
+    try:                                   # which difficulty presets are available
+        difficulties = [k for k, v in difficulty_refs().items() if v]
+    except Exception:
+        difficulties = []
+
     return jsonify(
         token=token,
         filename=f.filename or "G1R.sav",
@@ -106,6 +126,7 @@ def load():
                  "count": c["count"], "active": c["active"]} for c in crimes],
         quests=[{"id": q["val_off"], "key": q["key"], "name": q["name"], "state": q["state"],
                  "loc": loc.quest(q["key"], q["name"])} for q in quests],
+        difficulties=difficulties,
     )
 
 
@@ -133,6 +154,34 @@ def npc_detail():
         return jsonify(d)
     except Exception as e:
         return jsonify(error=str(e)), 400
+
+
+@app.post("/api/npc_difficulty")
+def npc_difficulty():
+    """Compute the NPC stat edits that switch the loaded save to a difficulty's balance
+    (copied from the bundled reference save, matched by GlobalID). Returns the edits so
+    the client queues them like any other pending change — nothing is applied here."""
+    body = request.get_json(force=True, silent=True) or {}
+    with _lock:
+        sess = _sessions.get(body.get("token"))
+        if sess:
+            sess["ts"] = time.time()
+    if not sess:
+        return jsonify(error="session expired; please re-upload your save"), 410
+    difficulty = body.get("difficulty")
+    scope = body.get("scope") or "both"
+    if scope not in ("both", "humans", "creatures"):
+        return jsonify(error="invalid scope"), 400
+    try:
+        refs = difficulty_refs()
+        if not refs.get(difficulty):
+            return jsonify(error=f"no reference data for difficulty {difficulty!r}"), 400
+        edits, info = g1r.npc_difficulty_edits(sess["payload"], refs, difficulty, scope)
+    except Exception as e:
+        return jsonify(error=str(e)), 400
+    return jsonify(edits=edits, count=len(edits), matched=info["matched"],
+                   reference_npcs=info["reference_npcs"],
+                   difficulty=difficulty, scope=scope)
 
 
 @app.post("/api/patch")
