@@ -1,0 +1,4 @@
+# Treat source as text so diffs render even if a stray byte trips binary detection
+*.js  diff
+*.css diff
+*.json diff

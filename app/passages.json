@@ -2,906 +2,7103 @@
  {
   "name": "AfterCinematic_Nyras",
   "label": "After Cinematic Nyras",
-  "category": "NPC / Dialogue"
+  "category": "NPC / Dialogue",
+  "type": "bool",
+  "values": [
+   0,
+   1
+  ],
+  "note": "0 = unset, 1 = set"
+ },
+ {
+  "name": "AfterCinematic_Sleeper",
+  "label": "After Cinematic Sleeper",
+  "category": "NPC / Dialogue",
+  "type": "bool",
+  "values": [
+   0,
+   1
+  ],
+  "note": "0 = unset, 1 = set"
+ },
+ {
+  "name": "AIV_GPS_BEGIN",
+  "label": "AIV GPS BEGIN",
+  "category": "NPC / Dialogue",
+  "type": "bool",
+  "values": [
+   0,
+   1
+  ],
+  "note": "0 = unset, 1 = set"
+ },
+ {
+  "name": "AIV_GPS_FIRSTWARN",
+  "label": "AIV GPS FIRSTWARN",
+  "category": "NPC / Dialogue",
+  "type": "bool",
+  "values": [
+   0,
+   1
+  ],
+  "note": "0 = unset, 1 = set"
+ },
+ {
+  "name": "AIV_GPS_LASTWARN",
+  "label": "AIV GPS LASTWARN",
+  "category": "NPC / Dialogue",
+  "type": "bool",
+  "values": [
+   0,
+   1
+  ],
+  "note": "0 = unset, 1 = set"
+ },
+ {
+  "name": "Ambient_Orc",
+  "label": "Ambient Orc",
+  "category": "NPC / Dialogue",
+  "type": "time",
+  "values": null,
+  "note": "game-time/day value (large int)"
+ },
+ {
+  "name": "Armor",
+  "label": "Armor",
+  "category": "NPC / Dialogue",
+  "type": "bool",
+  "values": [
+   0,
+   1
+  ],
+  "note": "0 = unset, 1 = set"
+ },
+ {
+  "name": "armorInstance",
+  "label": "armor Instance",
+  "category": "NPC / Dialogue",
+  "type": "bool",
+  "values": [
+   0,
+   1
+  ],
+  "note": "0 = unset, 1 = set"
  },
  {
   "name": "BaalCadar_responsive",
   "label": "Baal Cadar responsive",
-  "category": "NPC / Dialogue"
+  "category": "NPC / Dialogue",
+  "type": "bool",
+  "values": [
+   0,
+   1
+  ],
+  "note": "0 = unset, 1 = set"
  },
  {
   "name": "BaalCadar_Sacrilege",
   "label": "Baal Cadar Sacrilege",
-  "category": "NPC / Dialogue"
+  "category": "NPC / Dialogue",
+  "type": "bool",
+  "values": [
+   0,
+   1
+  ],
+  "note": "0 = unset, 1 = set"
  },
  {
   "name": "BaalIsidro_GotDrink",
   "label": "Baal Isidro Got Drink",
-  "category": "NPC / Dialogue"
+  "category": "NPC / Dialogue",
+  "type": "bool",
+  "values": [
+   0,
+   1
+  ],
+  "note": "0 = unset, 1 = set",
+  "examples": [
+   1
+  ]
+ },
+ {
+  "name": "BaalKagan_three",
+  "label": "Baal Kagan three",
+  "category": "NPC / Dialogue",
+  "type": "counter",
+  "values": null,
+  "note": "small integer counter",
+  "examples": [
+   3
+  ]
  },
  {
   "name": "BaalLukor_BringParchment",
   "label": "Baal Lukor Bring Parchment",
-  "category": "NPC / Dialogue"
+  "category": "NPC / Dialogue",
+  "type": "bool",
+  "values": [
+   0,
+   1
+  ],
+  "note": "0 = unset, 1 = set"
  },
  {
   "name": "BaalLukor_KeyPart01",
   "label": "Baal Lukor Key Part01",
-  "category": "NPC / Dialogue"
+  "category": "NPC / Dialogue",
+  "type": "bool",
+  "values": [
+   0,
+   1
+  ],
+  "note": "0 = unset, 1 = set"
  },
  {
   "name": "BaalLukor_KeyPart02",
   "label": "Baal Lukor Key Part02",
-  "category": "NPC / Dialogue"
+  "category": "NPC / Dialogue",
+  "type": "bool",
+  "values": [
+   0,
+   1
+  ],
+  "note": "0 = unset, 1 = set"
  },
  {
   "name": "BaalNamib_responsive",
   "label": "Baal Namib responsive",
-  "category": "NPC / Dialogue"
+  "category": "NPC / Dialogue",
+  "type": "bool",
+  "values": [
+   0,
+   1
+  ],
+  "note": "0 = unset, 1 = set",
+  "examples": [
+   1
+  ]
  },
  {
   "name": "BaalNamib_Sacrilege",
   "label": "Baal Namib Sacrilege",
-  "category": "NPC / Dialogue"
+  "category": "NPC / Dialogue",
+  "type": "bool",
+  "values": [
+   0,
+   1
+  ],
+  "note": "0 = unset, 1 = set"
  },
  {
   "name": "BaalOrun_responsive",
   "label": "Baal Orun responsive",
-  "category": "NPC / Dialogue"
+  "category": "NPC / Dialogue",
+  "type": "bool",
+  "values": [
+   0,
+   1
+  ],
+  "note": "0 = unset, 1 = set"
  },
  {
   "name": "BaalOrun_Sacrilege",
   "label": "Baal Orun Sacrilege",
-  "category": "NPC / Dialogue"
+  "category": "NPC / Dialogue",
+  "type": "bool",
+  "values": [
+   0,
+   1
+  ],
+  "note": "0 = unset, 1 = set"
  },
  {
   "name": "BaalParvez_GotoSC_Day",
   "label": "Baal Parvez Goto SC Day",
-  "category": "Timer / Day"
+  "category": "Timer / Day",
+  "type": "time",
+  "values": null,
+  "note": "game-time/day value (large int)",
+  "examples": [
+   119814
+  ]
+ },
+ {
+  "name": "BaalTyon_responsive",
+  "label": "Baal Tyon responsive",
+  "category": "NPC / Dialogue",
+  "type": "bool",
+  "values": [
+   0,
+   1
+  ],
+  "note": "0 = unset, 1 = set"
  },
  {
   "name": "BaalTyon_Sacrilege",
   "label": "Baal Tyon Sacrilege",
-  "category": "NPC / Dialogue"
+  "category": "NPC / Dialogue",
+  "type": "bool",
+  "values": [
+   0,
+   1
+  ],
+  "note": "0 = unset, 1 = set"
  },
  {
   "name": "Balor_CollectDay",
   "label": "Balor Collect Day",
-  "category": "Timer / Day"
+  "category": "Timer / Day",
+  "type": "time",
+  "values": null,
+  "note": "game-time/day value (large int)",
+  "examples": [
+   846115,
+   846224
+  ]
  },
  {
   "name": "Balor_PlayerCheating",
   "label": "Balor Player Cheating",
-  "category": "NPC / Dialogue"
+  "category": "NPC / Dialogue",
+  "type": "bool",
+  "values": [
+   0,
+   1
+  ],
+  "note": "0 = unset, 1 = set",
+  "examples": [
+   1
+  ]
  },
  {
   "name": "Balor_TellsNCDealer",
   "label": "Balor Tells NCDealer",
-  "category": "NPC / Dialogue"
+  "category": "NPC / Dialogue",
+  "type": "bool",
+  "values": [
+   0,
+   1
+  ],
+  "note": "0 = unset, 1 = set",
+  "examples": [
+   1
+  ]
+ },
+ {
+  "name": "Baloro_SC_choice",
+  "label": "Baloro SC choice",
+  "category": "NPC / Dialogue",
+  "type": "bool",
+  "values": [
+   0,
+   1
+  ],
+  "note": "0 = unset, 1 = set"
+ },
+ {
+  "name": "Baloro_SC_wantsToKnow",
+  "label": "Baloro SC wants To Know",
+  "category": "NPC / Dialogue",
+  "type": "bool",
+  "values": [
+   0,
+   1
+  ],
+  "note": "0 = unset, 1 = set"
  },
  {
   "name": "BanditCellVisited",
   "label": "Bandit Cell Visited",
-  "category": "NPC / Dialogue"
+  "category": "NPC / Dialogue",
+  "type": "bool",
+  "values": [
+   0,
+   1
+  ],
+  "note": "0 = unset, 1 = set"
+ },
+ {
+  "name": "BanditLockpick_Daily",
+  "label": "Bandit Lockpick Daily",
+  "category": "NPC / Dialogue",
+  "type": "time",
+  "values": null,
+  "note": "game-time/day value (large int)"
+ },
+ {
+  "name": "Bartholo_flags",
+  "label": "Bartholo flags",
+  "category": "NPC / Dialogue",
+  "type": "bool",
+  "values": [
+   0,
+   1
+  ],
+  "note": "0 = unset, 1 = set"
+ },
+ {
+  "name": "Bartholo_guild",
+  "label": "Bartholo guild",
+  "category": "NPC / Dialogue",
+  "type": "bool",
+  "values": [
+   0,
+   1
+  ],
+  "note": "0 = unset, 1 = set"
+ },
+ {
+  "name": "Blackmailer_Daily",
+  "label": "Blackmailer Daily",
+  "category": "NPC / Dialogue",
+  "type": "time",
+  "values": null,
+  "note": "game-time/day value (large int)"
  },
  {
   "name": "Blackmailer_Encounter",
   "label": "Blackmailer Encounter",
-  "category": "NPC / Dialogue"
+  "category": "NPC / Dialogue",
+  "type": "bool",
+  "values": [
+   0,
+   1
+  ],
+  "note": "0 = unset, 1 = set",
+  "examples": [
+   1
+  ]
+ },
+ {
+  "name": "Blackmailer_Mad",
+  "label": "Blackmailer Mad",
+  "category": "NPC / Dialogue",
+  "type": "time",
+  "values": null,
+  "note": "game-time/day value (large int)"
  },
  {
   "name": "Blackmailer_Permission",
   "label": "Blackmailer Permission",
-  "category": "Permission / Passage"
+  "category": "Permission / Passage",
+  "type": "counter",
+  "values": null,
+  "note": "small integer counter",
+  "examples": [
+   2
+  ]
+ },
+ {
+  "name": "Blackmailer_Warning",
+  "label": "Blackmailer Warning",
+  "category": "NPC / Dialogue",
+  "type": "bool",
+  "values": [
+   0,
+   1
+  ],
+  "note": "0 = unset, 1 = set"
  },
  {
   "name": "Bloodwyn_PayDay",
   "label": "Bloodwyn Pay Day",
-  "category": "Timer / Day"
+  "category": "Timer / Day",
+  "type": "time",
+  "values": null,
+  "note": "game-time/day value (large int)",
+  "examples": [
+   666000,
+   927690
+  ]
  },
  {
   "name": "Bloodwyn_ProtectionPaid",
   "label": "Bloodwyn Protection Paid",
-  "category": "NPC / Dialogue"
+  "category": "NPC / Dialogue",
+  "type": "bool",
+  "values": [
+   0,
+   1
+  ],
+  "note": "0 = unset, 1 = set"
+ },
+ {
+  "name": "Bouncer876_GotJoint",
+  "label": "Bouncer876 Got Joint",
+  "category": "NPC / Dialogue",
+  "type": "bool",
+  "values": [
+   0,
+   1
+  ],
+  "note": "0 = unset, 1 = set"
  },
  {
   "name": "Bow_Artisan",
   "label": "Bow Artisan",
-  "category": "NPC / Dialogue"
+  "category": "NPC / Dialogue",
+  "type": "time",
+  "values": null,
+  "note": "game-time/day value (large int)",
+  "examples": [
+   279358
+  ]
  },
  {
   "name": "Brannok_Permission",
   "label": "Brannok Permission",
-  "category": "Permission / Passage"
+  "category": "Permission / Passage",
+  "type": "bool",
+  "values": [
+   0,
+   1
+  ],
+  "note": "0 = unset, 1 = set"
  },
  {
   "name": "Brannok_Warning",
   "label": "Brannok Warning",
-  "category": "NPC / Dialogue"
+  "category": "NPC / Dialogue",
+  "type": "bool",
+  "values": [
+   0,
+   1
+  ],
+  "note": "0 = unset, 1 = set"
  },
  {
   "name": "BranNoteRead",
   "label": "Bran Note Read",
-  "category": "NPC / Dialogue"
+  "category": "NPC / Dialogue",
+  "type": "bool",
+  "values": [
+   0,
+   1
+  ],
+  "note": "0 = unset, 1 = set",
+  "examples": [
+   1
+  ]
  },
  {
   "name": "BridgeGolemCombatActive",
   "label": "Bridge Golem Combat Active",
-  "category": "NPC / Dialogue"
+  "category": "NPC / Dialogue",
+  "type": "bool",
+  "values": [
+   0,
+   1
+  ],
+  "note": "0 = unset, 1 = set"
  },
  {
   "name": "BridgeStoneGolemEnemy",
   "label": "Bridge Stone Golem Enemy",
-  "category": "NPC / Dialogue"
+  "category": "NPC / Dialogue",
+  "type": "bool",
+  "values": [
+   0,
+   1
+  ],
+  "note": "0 = unset, 1 = set"
+ },
+ {
+  "name": "Bullit_guild",
+  "label": "Bullit guild",
+  "category": "NPC / Dialogue",
+  "type": "bool",
+  "values": [
+   0,
+   1
+  ],
+  "note": "0 = unset, 1 = set"
+ },
+ {
+  "name": "BullitDefeated",
+  "label": "Bullit Defeated",
+  "category": "NPC / Dialogue",
+  "type": "bool",
+  "values": [
+   0,
+   1
+  ],
+  "note": "0 = unset, 1 = set"
  },
  {
   "name": "CaineVanished",
   "label": "Caine Vanished",
-  "category": "NPC / Dialogue"
+  "category": "NPC / Dialogue",
+  "type": "bool",
+  "values": [
+   0,
+   1
+  ],
+  "note": "0 = unset, 1 = set"
+ },
+ {
+  "name": "CanUpgradeGuardArmor",
+  "label": "Can Upgrade Guard Armor",
+  "category": "NPC / Dialogue",
+  "type": "bool",
+  "values": [
+   0,
+   1
+  ],
+  "note": "0 = unset, 1 = set"
  },
  {
   "name": "CanUpgradeNoviceArmor",
   "label": "Can Upgrade Novice Armor",
-  "category": "NPC / Dialogue"
+  "category": "NPC / Dialogue",
+  "type": "bool",
+  "values": [
+   0,
+   1
+  ],
+  "note": "0 = unset, 1 = set"
  },
  {
   "name": "Cavalorn_BestiaryDiscovered",
   "label": "Cavalorn Bestiary Discovered",
-  "category": "NPC / Dialogue"
+  "category": "NPC / Dialogue",
+  "type": "bool",
+  "values": [
+   0,
+   1
+  ],
+  "note": "0 = unset, 1 = set",
+  "examples": [
+   1
+  ]
  },
  {
   "name": "Cavalorn_BestiaryQuestion",
   "label": "Cavalorn Bestiary Question",
-  "category": "NPC / Dialogue"
+  "category": "NPC / Dialogue",
+  "type": "counter",
+  "values": null,
+  "note": "small integer counter",
+  "examples": [
+   3
+  ]
+ },
+ {
+  "name": "Cavalorn_BestiaryQuestionRunning",
+  "label": "Cavalorn Bestiary Question Running",
+  "category": "Quest Log",
+  "type": "bool",
+  "values": [
+   0,
+   1
+  ],
+  "note": "0 = unset, 1 = set"
+ },
+ {
+  "name": "Cavalorn_FirstTime",
+  "label": "Cavalorn First Time",
+  "category": "NPC / Dialogue",
+  "type": "bool",
+  "values": [
+   0,
+   1
+  ],
+  "note": "0 = unset, 1 = set"
  },
  {
   "name": "Chapter",
   "label": "Chapter",
-  "category": "Faction / Progression"
+  "category": "Faction / Progression",
+  "type": "enum",
+  "values": [
+   1,
+   2,
+   3,
+   4,
+   5,
+   6
+  ],
+  "note": "chapter/enum value",
+  "examples": [
+   1
+  ]
+ },
+ {
+  "name": "Chokta_angry",
+  "label": "Chokta angry",
+  "category": "NPC / Dialogue",
+  "type": "bool",
+  "values": [
+   0,
+   1
+  ],
+  "note": "0 = unset, 1 = set"
+ },
+ {
+  "name": "Chokta_angry_counter",
+  "label": "Chokta angry counter",
+  "category": "NPC / Dialogue",
+  "type": "bool",
+  "values": [
+   0,
+   1
+  ],
+  "note": "0 = unset, 1 = set"
  },
  {
   "name": "ChromaninReaded",
   "label": "Chromanin Readed",
-  "category": "NPC / Dialogue"
+  "category": "NPC / Dialogue",
+  "type": "bool",
+  "values": [
+   0,
+   1
+  ],
+  "note": "0 = unset, 1 = set"
  },
  {
   "name": "Cipher_Trade",
   "label": "Cipher Trade",
-  "category": "NPC / Dialogue"
+  "category": "NPC / Dialogue",
+  "type": "bool",
+  "values": [
+   0,
+   1
+  ],
+  "note": "0 = unset, 1 = set",
+  "examples": [
+   1
+  ]
  },
  {
   "name": "CollapseMineNotify",
   "label": "Collapse Mine Notify",
-  "category": "NPC / Dialogue"
+  "category": "NPC / Dialogue",
+  "type": "bool",
+  "values": [
+   0,
+   1
+  ],
+  "note": "0 = unset, 1 = set"
  },
  {
   "name": "ConversationWithDiegoAtStoneHenge",
   "label": "Conversation With Diego At Stone Henge",
-  "category": "NPC / Dialogue"
+  "category": "NPC / Dialogue",
+  "type": "bool",
+  "values": [
+   0,
+   1
+  ],
+  "note": "0 = unset, 1 = set"
+ },
+ {
+  "name": "Convoy_CleanupStep",
+  "label": "Convoy Cleanup Step",
+  "category": "Faction / Progression",
+  "type": "bool",
+  "values": [
+   0,
+   1
+  ],
+  "note": "0 = unset, 1 = set"
  },
  {
   "name": "Convoy_Guard",
   "label": "Convoy Guard",
-  "category": "Faction / Progression"
+  "category": "Faction / Progression",
+  "type": "time",
+  "values": null,
+  "note": "game-time/day value (large int)"
  },
  {
   "name": "Convoy_PlayerBriefed",
   "label": "Convoy Player Briefed",
-  "category": "Faction / Progression"
+  "category": "Faction / Progression",
+  "type": "bool",
+  "values": [
+   0,
+   1
+  ],
+  "note": "0 = unset, 1 = set"
  },
  {
   "name": "Convoy_RaidStart",
   "label": "Convoy Raid Start",
-  "category": "Faction / Progression"
+  "category": "Faction / Progression",
+  "type": "bool",
+  "values": [
+   0,
+   1
+  ],
+  "note": "0 = unset, 1 = set"
+ },
+ {
+  "name": "Convoy_RaidStartTime",
+  "label": "Convoy Raid Start Time",
+  "category": "Faction / Progression",
+  "type": "time",
+  "values": null,
+  "note": "game-time/day value (large int)"
  },
  {
   "name": "CorAngar_GotoOGY",
   "label": "Cor Angar Goto OGY",
-  "category": "NPC / Dialogue"
+  "category": "NPC / Dialogue",
+  "type": "bool",
+  "values": [
+   0,
+   1
+  ],
+  "note": "0 = unset, 1 = set"
+ },
+ {
+  "name": "CorAngar_SendToNC",
+  "label": "Cor Angar Send To NC",
+  "category": "NPC / Dialogue",
+  "type": "bool",
+  "values": [
+   0,
+   1
+  ],
+  "note": "0 = unset, 1 = set"
+ },
+ {
+  "name": "CorKalom_BringMCQBalls",
+  "label": "Cor Kalom Bring MCQBalls",
+  "category": "NPC / Dialogue",
+  "type": "bool",
+  "values": [
+   0,
+   1
+  ],
+  "note": "0 = unset, 1 = set"
  },
  {
   "name": "Corristo_FireMagesTest",
   "label": "Corristo Fire Mages Test",
-  "category": "Faction / Progression"
+  "category": "Faction / Progression",
+  "type": "bool",
+  "values": [
+   0,
+   1
+  ],
+  "note": "0 = unset, 1 = set"
  },
  {
   "name": "Corristo_FirsTalk",
   "label": "Corristo Firs Talk",
-  "category": "NPC / Dialogue"
+  "category": "NPC / Dialogue",
+  "type": "bool",
+  "values": [
+   0,
+   1
+  ],
+  "note": "0 = unset, 1 = set"
+ },
+ {
+  "name": "Counter",
+  "label": "Counter",
+  "category": "NPC / Dialogue",
+  "type": "bool",
+  "values": [
+   0,
+   1
+  ],
+  "note": "0 = unset, 1 = set"
  },
  {
   "name": "counter",
   "label": "counter",
-  "category": "Faction / Progression"
+  "category": "Faction / Progression",
+  "type": "bool",
+  "values": [
+   0,
+   1
+  ],
+  "note": "0 = unset, 1 = set"
+ },
+ {
+  "name": "Crw_Armor_H",
+  "label": "Crw Armor H",
+  "category": "NPC / Dialogue",
+  "type": "bool",
+  "values": [
+   0,
+   1
+  ],
+  "note": "0 = unset, 1 = set"
+ },
+ {
+  "name": "Damarok_GlandNegotiation",
+  "label": "Damarok Gland Negotiation",
+  "category": "NPC / Dialogue",
+  "type": "bool",
+  "values": [
+   0,
+   1
+  ],
+  "note": "0 = unset, 1 = set"
+ },
+ {
+  "name": "Darrion_MakeKey",
+  "label": "Darrion Make Key",
+  "category": "NPC / Dialogue",
+  "type": "time",
+  "values": null,
+  "note": "game-time/day value (large int)"
+ },
+ {
+  "name": "Darrion_MarkWeapon",
+  "label": "Darrion Mark Weapon",
+  "category": "NPC / Dialogue",
+  "type": "time",
+  "values": null,
+  "note": "game-time/day value (large int)"
+ },
+ {
+  "name": "Darrion_Teacher",
+  "label": "Darrion Teacher",
+  "category": "NPC / Dialogue",
+  "type": "bool",
+  "values": [
+   0,
+   1
+  ],
+  "note": "0 = unset, 1 = set"
  },
  {
   "name": "DefeatBully",
   "label": "Defeat Bully",
-  "category": "NPC / Dialogue"
+  "category": "NPC / Dialogue",
+  "type": "time",
+  "values": null,
+  "note": "game-time/day value (large int)"
  },
  {
   "name": "Dexter_SC",
   "label": "Dexter SC",
-  "category": "Camp"
+  "category": "Camp",
+  "type": "bool",
+  "values": [
+   0,
+   1
+  ],
+  "note": "0 = unset, 1 = set",
+  "examples": [
+   1
+  ]
  },
  {
   "name": "Dexter_Traded",
   "label": "Dexter Traded",
-  "category": "NPC / Dialogue"
+  "category": "NPC / Dialogue",
+  "type": "bool",
+  "values": [
+   0,
+   1
+  ],
+  "note": "0 = unset, 1 = set",
+  "examples": [
+   1
+  ]
+ },
+ {
+  "name": "DIA_Grd_216_DustyZoll_permanent",
+  "label": "DIA Grd 216 Dusty Zoll permanent",
+  "category": "NPC / Dialogue",
+  "type": "bool",
+  "values": [
+   0,
+   1
+  ],
+  "note": "0 = unset, 1 = set"
  },
  {
   "name": "Diego_After_Gamestart",
   "label": "Diego After Gamestart",
-  "category": "NPC / Dialogue"
+  "category": "NPC / Dialogue",
+  "type": "bool",
+  "values": [
+   0,
+   1
+  ],
+  "note": "0 = unset, 1 = set",
+  "examples": [
+   1
+  ]
+ },
+ {
+  "name": "Diego_Follow",
+  "label": "Diego Follow",
+  "category": "NPC / Dialogue",
+  "type": "bool",
+  "values": [
+   0,
+   1
+  ],
+  "note": "0 = unset, 1 = set"
  },
  {
   "name": "Diego_GomezAudience",
   "label": "Diego Gomez Audience",
-  "category": "NPC / Dialogue"
+  "category": "NPC / Dialogue",
+  "type": "bool",
+  "values": [
+   0,
+   1
+  ],
+  "note": "0 = unset, 1 = set",
+  "examples": [
+   1
+  ]
+ },
+ {
+  "name": "Diego_Notes_DEX",
+  "label": "Diego Notes DEX",
+  "category": "NPC / Dialogue",
+  "type": "bool",
+  "values": [
+   0,
+   1
+  ],
+  "note": "0 = unset, 1 = set"
+ },
+ {
+  "name": "Diego_Notes_STR",
+  "label": "Diego Notes STR",
+  "category": "NPC / Dialogue",
+  "type": "bool",
+  "values": [
+   0,
+   1
+  ],
+  "note": "0 = unset, 1 = set"
  },
  {
   "name": "Diego_Welcome",
   "label": "Diego Welcome",
-  "category": "NPC / Dialogue"
+  "category": "NPC / Dialogue",
+  "type": "time",
+  "values": null,
+  "note": "game-time/day value (large int)",
+  "examples": [
+   43221
+  ]
  },
  {
   "name": "DiggerRankUpOrder",
   "label": "Digger Rank Up Order",
-  "category": "Faction / Progression"
+  "category": "Faction / Progression",
+  "type": "bool",
+  "values": [
+   0,
+   1
+  ],
+  "note": "0 = unset, 1 = set"
  },
  {
   "name": "Drax_CanTeach",
   "label": "Drax Can Teach",
-  "category": "NPC / Dialogue"
+  "category": "NPC / Dialogue",
+  "type": "bool",
+  "values": [
+   0,
+   1
+  ],
+  "note": "0 = unset, 1 = set",
+  "examples": [
+   1
+  ]
  },
  {
   "name": "Drax_GotBeer",
   "label": "Drax Got Beer",
-  "category": "NPC / Dialogue"
+  "category": "NPC / Dialogue",
+  "type": "bool",
+  "values": [
+   0,
+   1
+  ],
+  "note": "0 = unset, 1 = set",
+  "examples": [
+   1
+  ]
+ },
+ {
+  "name": "DurstigeBauern",
+  "label": "Durstige Bauern",
+  "category": "NPC / Dialogue",
+  "type": "bool",
+  "values": [
+   0,
+   1
+  ],
+  "note": "0 = unset, 1 = set"
+ },
+ {
+  "name": "Dusty_aivar_AIV_PARTYMEMBER",
+  "label": "Dusty aivar AIV PARTYMEMBER",
+  "category": "NPC / Dialogue",
+  "type": "bool",
+  "values": [
+   0,
+   1
+  ],
+  "note": "0 = unset, 1 = set"
+ },
+ {
+  "name": "Dusty_flags",
+  "label": "Dusty flags",
+  "category": "NPC / Dialogue",
+  "type": "bool",
+  "values": [
+   0,
+   1
+  ],
+  "note": "0 = unset, 1 = set"
+ },
+ {
+  "name": "Dusty_guild",
+  "label": "Dusty guild",
+  "category": "NPC / Dialogue",
+  "type": "bool",
+  "values": [
+   0,
+   1
+  ],
+  "note": "0 = unset, 1 = set"
+ },
+ {
+  "name": "Dusty_LetsGo",
+  "label": "Dusty Lets Go",
+  "category": "NPC / Dialogue",
+  "type": "bool",
+  "values": [
+   0,
+   1
+  ],
+  "note": "0 = unset, 1 = set"
+ },
+ {
+  "name": "EncounteredHighPriest",
+  "label": "Encountered High Priest",
+  "category": "NPC / Dialogue",
+  "type": "bool",
+  "values": [
+   0,
+   1
+  ],
+  "note": "0 = unset, 1 = set"
  },
  {
   "name": "EnteredFreeMine",
   "label": "Entered Free Mine",
-  "category": "NPC / Dialogue"
+  "category": "NPC / Dialogue",
+  "type": "bool",
+  "values": [
+   0,
+   1
+  ],
+  "note": "0 = unset, 1 = set"
  },
  {
   "name": "ExploreSunkenTower",
   "label": "Explore Sunken Tower",
-  "category": "Location / World"
+  "category": "Location / World",
+  "type": "bool",
+  "values": [
+   0,
+   1
+  ],
+  "note": "0 = unset, 1 = set"
  },
  {
   "name": "FindGolemHearts",
   "label": "Find Golem Hearts",
-  "category": "NPC / Dialogue"
+  "category": "NPC / Dialogue",
+  "type": "bool",
+  "values": [
+   0,
+   1
+  ],
+  "note": "0 = unset, 1 = set"
+ },
+ {
+  "name": "FindXardas",
+  "label": "Find Xardas",
+  "category": "NPC / Dialogue",
+  "type": "bool",
+  "values": [
+   0,
+   1
+  ],
+  "note": "0 = unset, 1 = set"
  },
  {
   "name": "Fingers_CanTeach",
   "label": "Fingers Can Teach",
-  "category": "NPC / Dialogue"
+  "category": "NPC / Dialogue",
+  "type": "bool",
+  "values": [
+   0,
+   1
+  ],
+  "note": "0 = unset, 1 = set",
+  "examples": [
+   1
+  ]
+ },
+ {
+  "name": "Fingers_Wherecavalorn",
+  "label": "Fingers Wherecavalorn",
+  "category": "NPC / Dialogue",
+  "type": "bool",
+  "values": [
+   0,
+   1
+  ],
+  "note": "0 = unset, 1 = set"
+ },
+ {
+  "name": "FireMagesBook",
+  "label": "Fire Mages Book",
+  "category": "NPC / Dialogue",
+  "type": "bool",
+  "values": [
+   0,
+   1
+  ],
+  "note": "0 = unset, 1 = set"
  },
  {
   "name": "FireMagesDead",
   "label": "Fire Mages Dead",
-  "category": "Faction / Progression"
+  "category": "Faction / Progression",
+  "type": "bool",
+  "values": [
+   0,
+   1
+  ],
+  "note": "0 = unset, 1 = set"
  },
  {
   "name": "FireMagesPermission",
   "label": "Fire Mages Permission",
-  "category": "Permission / Passage"
+  "category": "Permission / Passage",
+  "type": "bool",
+  "values": [
+   0,
+   1
+  ],
+  "note": "0 = unset, 1 = set"
+ },
+ {
+  "name": "Fisk_ForgetSword",
+  "label": "Fisk Forget Sword",
+  "category": "NPC / Dialogue",
+  "type": "bool",
+  "values": [
+   0,
+   1
+  ],
+  "note": "0 = unset, 1 = set"
  },
  {
   "name": "Fisk_SellSword110",
   "label": "Fisk Sell Sword110",
-  "category": "NPC / Dialogue"
+  "category": "NPC / Dialogue",
+  "type": "bool",
+  "values": [
+   0,
+   1
+  ],
+  "note": "0 = unset, 1 = set",
+  "examples": [
+   1
+  ]
  },
  {
   "name": "Fisk_SwordSold",
   "label": "Fisk Sword Sold",
-  "category": "NPC / Dialogue"
+  "category": "NPC / Dialogue",
+  "type": "bool",
+  "values": [
+   0,
+   1
+  ],
+  "note": "0 = unset, 1 = set",
+  "examples": [
+   1
+  ]
  },
  {
   "name": "Fletcher_foundNek",
   "label": "Fletcher found Nek",
-  "category": "NPC / Dialogue"
+  "category": "NPC / Dialogue",
+  "type": "bool",
+  "values": [
+   0,
+   1
+  ],
+  "note": "0 = unset, 1 = set",
+  "examples": [
+   1
+  ]
  },
  {
   "name": "Fletcher_Timer_Night",
   "label": "Fletcher Timer Night",
-  "category": "Timer / Day"
+  "category": "Timer / Day",
+  "type": "time",
+  "values": null,
+  "note": "game-time/day value (large int)",
+  "examples": [
+   71126
+  ]
  },
  {
   "name": "Fletcher_whytalk",
   "label": "Fletcher whytalk",
-  "category": "NPC / Dialogue"
+  "category": "NPC / Dialogue",
+  "type": "bool",
+  "values": [
+   0,
+   1
+  ],
+  "note": "0 = unset, 1 = set",
+  "examples": [
+   1
+  ]
  },
  {
   "name": "FMHostile",
   "label": "FMHostile",
-  "category": "NPC / Dialogue"
+  "category": "NPC / Dialogue",
+  "type": "bool",
+  "values": [
+   0,
+   1
+  ],
+  "note": "0 = unset, 1 = set"
  },
  {
   "name": "FMTaken",
   "label": "FMTaken",
-  "category": "NPC / Dialogue"
+  "category": "NPC / Dialogue",
+  "type": "bool",
+  "values": [
+   0,
+   1
+  ],
+  "note": "0 = unset, 1 = set"
+ },
+ {
+  "name": "ForgedRivalries2_DarrionAngry",
+  "label": "Forged Rivalries2 Darrion Angry",
+  "category": "NPC / Dialogue",
+  "type": "bool",
+  "values": [
+   0,
+   1
+  ],
+  "note": "0 = unset, 1 = set"
+ },
+ {
+  "name": "ForgedRivalries2_DarrionBanTrade",
+  "label": "Forged Rivalries2 Darrion Ban Trade",
+  "category": "NPC / Dialogue",
+  "type": "bool",
+  "values": [
+   0,
+   1
+  ],
+  "note": "0 = unset, 1 = set"
+ },
+ {
+  "name": "ForgedRivalries2_DarrionMarkedCraft",
+  "label": "Forged Rivalries2 Darrion Marked Craft",
+  "category": "NPC / Dialogue",
+  "type": "bool",
+  "values": [
+   0,
+   1
+  ],
+  "note": "0 = unset, 1 = set"
+ },
+ {
+  "name": "ForgedRivalries2_StoneKnowsDarrionPlanFull",
+  "label": "Forged Rivalries2 Stone Knows Darrion Plan Full",
+  "category": "NPC / Dialogue",
+  "type": "bool",
+  "values": [
+   0,
+   1
+  ],
+  "note": "0 = unset, 1 = set"
+ },
+ {
+  "name": "ForgedRivalries2_StoneKnowsDarrionPlanPartial",
+  "label": "Forged Rivalries2 Stone Knows Darrion Plan Partial",
+  "category": "NPC / Dialogue",
+  "type": "bool",
+  "values": [
+   0,
+   1
+  ],
+  "note": "0 = unset, 1 = set"
+ },
+ {
+  "name": "ForgedRivalries2_StoneKnowsDesignIsGomez",
+  "label": "Forged Rivalries2 Stone Knows Design Is Gomez",
+  "category": "NPC / Dialogue",
+  "type": "bool",
+  "values": [
+   0,
+   1
+  ],
+  "note": "0 = unset, 1 = set"
+ },
+ {
+  "name": "ForgedRivalries2_StoneMarkedCraft",
+  "label": "Forged Rivalries2 Stone Marked Craft",
+  "category": "NPC / Dialogue",
+  "type": "bool",
+  "values": [
+   0,
+   1
+  ],
+  "note": "0 = unset, 1 = set"
+ },
+ {
+  "name": "ForgedRivalries3_DarrionWillAcceptStone",
+  "label": "Forged Rivalries3 Darrion Will Accept Stone",
+  "category": "NPC / Dialogue",
+  "type": "bool",
+  "values": [
+   0,
+   1
+  ],
+  "note": "0 = unset, 1 = set"
+ },
+ {
+  "name": "ForgedRivalries3_StoneKnowsDarrionAccept",
+  "label": "Forged Rivalries3 Stone Knows Darrion Accept",
+  "category": "NPC / Dialogue",
+  "type": "bool",
+  "values": [
+   0,
+   1
+  ],
+  "note": "0 = unset, 1 = set"
+ },
+ {
+  "name": "ForgedRivalries3_StoneKnowsDarrionReject",
+  "label": "Forged Rivalries3 Stone Knows Darrion Reject",
+  "category": "NPC / Dialogue",
+  "type": "bool",
+  "values": [
+   0,
+   1
+  ],
+  "note": "0 = unset, 1 = set"
+ },
+ {
+  "name": "ForgedRivalries3_StoneRefreshed",
+  "label": "Forged Rivalries3 Stone Refreshed",
+  "category": "NPC / Dialogue",
+  "type": "bool",
+  "values": [
+   0,
+   1
+  ],
+  "note": "0 = unset, 1 = set"
+ },
+ {
+  "name": "ForgedRivalries_DarrionCraftDishonest",
+  "label": "Forged Rivalries Darrion Craft Dishonest",
+  "category": "NPC / Dialogue",
+  "type": "bool",
+  "values": [
+   0,
+   1
+  ],
+  "note": "0 = unset, 1 = set"
+ },
+ {
+  "name": "ForgedRivalries_DarrionCraftHonest",
+  "label": "Forged Rivalries Darrion Craft Honest",
+  "category": "NPC / Dialogue",
+  "type": "bool",
+  "values": [
+   0,
+   1
+  ],
+  "note": "0 = unset, 1 = set"
+ },
+ {
+  "name": "ForgedRivalries_DeliverStoneCraft",
+  "label": "Forged Rivalries Deliver Stone Craft",
+  "category": "NPC / Dialogue",
+  "type": "bool",
+  "values": [
+   0,
+   1
+  ],
+  "note": "0 = unset, 1 = set"
+ },
+ {
+  "name": "ForgedRivalries_OwnCraftDishonest",
+  "label": "Forged Rivalries Own Craft Dishonest",
+  "category": "NPC / Dialogue",
+  "type": "bool",
+  "values": [
+   0,
+   1
+  ],
+  "note": "0 = unset, 1 = set"
+ },
+ {
+  "name": "ForgedRivalries_StoneCraft",
+  "label": "Forged Rivalries Stone Craft",
+  "category": "NPC / Dialogue",
+  "type": "bool",
+  "values": [
+   0,
+   1
+  ],
+  "note": "0 = unset, 1 = set"
  },
  {
   "name": "Fortress_Inside",
   "label": "Fortress Inside",
-  "category": "NPC / Dialogue"
+  "category": "NPC / Dialogue",
+  "type": "bool",
+  "values": [
+   0,
+   1
+  ],
+  "note": "0 = unset, 1 = set"
  },
  {
   "name": "Fortress_Outside",
   "label": "Fortress Outside",
-  "category": "Location / World"
+  "category": "Location / World",
+  "type": "bool",
+  "values": [
+   0,
+   1
+  ],
+  "note": "0 = unset, 1 = set"
+ },
+ {
+  "name": "Fortuno_HasYBerionHerbs",
+  "label": "Fortuno Has YBerion Herbs",
+  "category": "NPC / Dialogue",
+  "type": "bool",
+  "values": [
+   0,
+   1
+  ],
+  "note": "0 = unset, 1 = set"
  },
  {
   "name": "Fortuno_RationDay",
   "label": "Fortuno Ration Day",
-  "category": "Timer / Day"
+  "category": "Timer / Day",
+  "type": "time",
+  "values": null,
+  "note": "game-time/day value (large int)",
+  "examples": [
+   841446
+  ]
  },
  {
   "name": "FourFriendsFocus",
   "label": "Four Friends Focus",
-  "category": "NPC / Dialogue"
+  "category": "NPC / Dialogue",
+  "type": "time",
+  "values": null,
+  "note": "game-time/day value (large int)"
+ },
+ {
+  "name": "FP_NC_PATH_41_MILTEN",
+  "label": "FP NC PATH 41 MILTEN",
+  "category": "NPC / Dialogue",
+  "type": "bool",
+  "values": [
+   0,
+   1
+  ],
+  "note": "0 = unset, 1 = set"
+ },
+ {
+  "name": "FP_NC_WATER_MILTEN_IN",
+  "label": "FP NC WATER MILTEN IN",
+  "category": "NPC / Dialogue",
+  "type": "bool",
+  "values": [
+   0,
+   1
+  ],
+  "note": "0 = unset, 1 = set"
+ },
+ {
+  "name": "FP_OC_FREE_STONE",
+  "label": "FP OC FREE STONE",
+  "category": "NPC / Dialogue",
+  "type": "bool",
+  "values": [
+   0,
+   1
+  ],
+  "note": "0 = unset, 1 = set"
+ },
+ {
+  "name": "FP_OC_NORTHGATE_GUARDPASSAGE",
+  "label": "FP OC NORTHGATE GUARDPASSAGE",
+  "category": "NPC / Dialogue",
+  "type": "bool",
+  "values": [
+   0,
+   1
+  ],
+  "note": "0 = unset, 1 = set"
+ },
+ {
+  "name": "FP_OC_RAVEN_END_GUIDE",
+  "label": "FP OC RAVEN END GUIDE",
+  "category": "NPC / Dialogue",
+  "type": "bool",
+  "values": [
+   0,
+   1
+  ],
+  "note": "0 = unset, 1 = set"
+ },
+ {
+  "name": "FP_OC_STAIRCASE_TOP_CHAPEL",
+  "label": "FP OC STAIRCASE TOP CHAPEL",
+  "category": "NPC / Dialogue",
+  "type": "bool",
+  "values": [
+   0,
+   1
+  ],
+  "note": "0 = unset, 1 = set"
+ },
+ {
+  "name": "FP_OC_STANDAROUND_84_MILTEN",
+  "label": "FP OC STANDAROUND 84 MILTEN",
+  "category": "NPC / Dialogue",
+  "type": "bool",
+  "values": [
+   0,
+   1
+  ],
+  "note": "0 = unset, 1 = set"
+ },
+ {
+  "name": "FP_OW_29_TALAS",
+  "label": "FP OW 29 TALAS",
+  "category": "NPC / Dialogue",
+  "type": "bool",
+  "values": [
+   0,
+   1
+  ],
+  "note": "0 = unset, 1 = set"
+ },
+ {
+  "name": "FP_OW_DIEGO_190",
+  "label": "FP OW DIEGO 190",
+  "category": "NPC / Dialogue",
+  "type": "bool",
+  "values": [
+   0,
+   1
+  ],
+  "note": "0 = unset, 1 = set"
+ },
+ {
+  "name": "FP_OW_DIEGO_LOCATION_12_01",
+  "label": "FP OW DIEGO LOCATION 12 01",
+  "category": "NPC / Dialogue",
+  "type": "bool",
+  "values": [
+   0,
+   1
+  ],
+  "note": "0 = unset, 1 = set"
+ },
+ {
+  "name": "FP_OW_DIEGO_WHEEL",
+  "label": "FP OW DIEGO WHEEL",
+  "category": "NPC / Dialogue",
+  "type": "bool",
+  "values": [
+   0,
+   1
+  ],
+  "note": "0 = unset, 1 = set"
+ },
+ {
+  "name": "FP_OW_TALAS_BRIDGE",
+  "label": "FP OW TALAS BRIDGE",
+  "category": "NPC / Dialogue",
+  "type": "bool",
+  "values": [
+   0,
+   1
+  ],
+  "note": "0 = unset, 1 = set"
+ },
+ {
+  "name": "FP_SC_MEDITATE_17",
+  "label": "FP SC MEDITATE 17",
+  "category": "NPC / Dialogue",
+  "type": "bool",
+  "values": [
+   0,
+   1
+  ],
+  "note": "0 = unset, 1 = set"
+ },
+ {
+  "name": "FP_SC_MEDITATE_18",
+  "label": "FP SC MEDITATE 18",
+  "category": "NPC / Dialogue",
+  "type": "bool",
+  "values": [
+   0,
+   1
+  ],
+  "note": "0 = unset, 1 = set"
+ },
+ {
+  "name": "FP_SC_START_SWAMPCAMP",
+  "label": "FP SC START SWAMPCAMP",
+  "category": "NPC / Dialogue",
+  "type": "bool",
+  "values": [
+   0,
+   1
+  ],
+  "note": "0 = unset, 1 = set"
+ },
+ {
+  "name": "FP_ST_MILTEN_FORCED",
+  "label": "FP ST MILTEN FORCED",
+  "category": "NPC / Dialogue",
+  "type": "bool",
+  "values": [
+   0,
+   1
+  ],
+  "note": "0 = unset, 1 = set"
+ },
+ {
+  "name": "FP_ST_PATH_3_STONES_MILTEN",
+  "label": "FP ST PATH 3 STONES MILTEN",
+  "category": "NPC / Dialogue",
+  "type": "bool",
+  "values": [
+   0,
+   1
+  ],
+  "note": "0 = unset, 1 = set"
+ },
+ {
+  "name": "Freemine_GateOpen",
+  "label": "Freemine Gate Open",
+  "category": "NPC / Dialogue",
+  "type": "bool",
+  "values": [
+   0,
+   1
+  ],
+  "note": "0 = unset, 1 = set"
  },
  {
   "name": "Freemine_Recovered",
   "label": "Freemine Recovered",
-  "category": "NPC / Dialogue"
+  "category": "NPC / Dialogue",
+  "type": "bool",
+  "values": [
+   0,
+   1
+  ],
+  "note": "0 = unset, 1 = set"
  },
  {
   "name": "FriendOfUrShak",
   "label": "Friend Of Ur Shak",
-  "category": "NPC / Dialogue"
+  "category": "NPC / Dialogue",
+  "type": "bool",
+  "values": [
+   0,
+   1
+  ],
+  "note": "0 = unset, 1 = set"
  },
  {
   "name": "Friends_SendToNC",
   "label": "Friends Send To NC",
-  "category": "NPC / Dialogue"
+  "category": "NPC / Dialogue",
+  "type": "bool",
+  "values": [
+   0,
+   1
+  ],
+  "note": "0 = unset, 1 = set"
  },
  {
   "name": "GatheredTemplars",
   "label": "Gathered Templars",
-  "category": "Faction / Progression"
+  "category": "Faction / Progression",
+  "type": "bool",
+  "values": [
+   0,
+   1
+  ],
+  "note": "0 = unset, 1 = set"
+ },
+ {
+  "name": "GenericDiggerCrawlerQueen",
+  "label": "Generic Digger Crawler Queen",
+  "category": "NPC / Dialogue",
+  "type": "time",
+  "values": null,
+  "note": "game-time/day value (large int)"
+ },
+ {
+  "name": "GenericNCAdmission",
+  "label": "Generic NCAdmission",
+  "category": "NPC / Dialogue",
+  "type": "time",
+  "values": null,
+  "note": "game-time/day value (large int)"
+ },
+ {
+  "name": "GenericOCAdmission",
+  "label": "Generic OCAdmission",
+  "category": "NPC / Dialogue",
+  "type": "time",
+  "values": null,
+  "note": "game-time/day value (large int)"
+ },
+ {
+  "name": "GenericSCAdmission",
+  "label": "Generic SCAdmission",
+  "category": "NPC / Dialogue",
+  "type": "time",
+  "values": null,
+  "note": "game-time/day value (large int)"
  },
  {
   "name": "Gomez_Contacts",
   "label": "Gomez Contacts",
-  "category": "NPC / Dialogue"
+  "category": "NPC / Dialogue",
+  "type": "bool",
+  "values": [
+   0,
+   1
+  ],
+  "note": "0 = unset, 1 = set"
+ },
+ {
+  "name": "Gomez_flags",
+  "label": "Gomez flags",
+  "category": "NPC / Dialogue",
+  "type": "bool",
+  "values": [
+   0,
+   1
+  ],
+  "note": "0 = unset, 1 = set"
+ },
+ {
+  "name": "Gomez_guild",
+  "label": "Gomez guild",
+  "category": "NPC / Dialogue",
+  "type": "bool",
+  "values": [
+   0,
+   1
+  ],
+  "note": "0 = unset, 1 = set"
+ },
+ {
+  "name": "GorHanis_Challenged",
+  "label": "Gor Hanis Challenged",
+  "category": "NPC / Dialogue",
+  "type": "bool",
+  "values": [
+   0,
+   1
+  ],
+  "note": "0 = unset, 1 = set"
+ },
+ {
+  "name": "GorHanis_Charged",
+  "label": "Gor Hanis Charged",
+  "category": "NPC / Dialogue",
+  "type": "bool",
+  "values": [
+   0,
+   1
+  ],
+  "note": "0 = unset, 1 = set"
+ },
+ {
+  "name": "GorHanis_Lose",
+  "label": "Gor Hanis Lose",
+  "category": "NPC / Dialogue",
+  "type": "bool",
+  "values": [
+   0,
+   1
+  ],
+  "note": "0 = unset, 1 = set"
+ },
+ {
+  "name": "GorHanis_Win",
+  "label": "Gor Hanis Win",
+  "category": "NPC / Dialogue",
+  "type": "bool",
+  "values": [
+   0,
+   1
+  ],
+  "note": "0 = unset, 1 = set"
+ },
+ {
+  "name": "gorn_aivar_AIV_FINDABLE",
+  "label": "gorn aivar AIV FINDABLE",
+  "category": "NPC / Dialogue",
+  "type": "bool",
+  "values": [
+   0,
+   1
+  ],
+  "note": "0 = unset, 1 = set"
  },
  {
   "name": "Gorn_AloneForFM",
   "label": "Gorn Alone For FM",
-  "category": "NPC / Dialogue"
+  "category": "NPC / Dialogue",
+  "type": "bool",
+  "values": [
+   0,
+   1
+  ],
+  "note": "0 = unset, 1 = set"
+ },
+ {
+  "name": "Gorn_Follow",
+  "label": "Gorn Follow",
+  "category": "NPC / Dialogue",
+  "type": "bool",
+  "values": [
+   0,
+   1
+  ],
+  "note": "0 = unset, 1 = set"
+ },
+ {
+  "name": "Gorn_GotoWolf",
+  "label": "Gorn Goto Wolf",
+  "category": "NPC / Dialogue",
+  "type": "bool",
+  "values": [
+   0,
+   1
+  ],
+  "note": "0 = unset, 1 = set"
+ },
+ {
+  "name": "Gorn_Ignite",
+  "label": "Gorn Ignite",
+  "category": "NPC / Dialogue",
+  "type": "bool",
+  "values": [
+   0,
+   1
+  ],
+  "note": "0 = unset, 1 = set"
  },
  {
   "name": "Gorn_JoinedForFM",
   "label": "Gorn Joined For FM",
-  "category": "NPC / Dialogue"
+  "category": "NPC / Dialogue",
+  "type": "bool",
+  "values": [
+   0,
+   1
+  ],
+  "note": "0 = unset, 1 = set"
+ },
+ {
+  "name": "Gorn_Timer_Battle",
+  "label": "Gorn Timer Battle",
+  "category": "NPC / Dialogue",
+  "type": "time",
+  "values": null,
+  "note": "game-time/day value (large int)"
+ },
+ {
+  "name": "Graham_OMMapBlackmailed",
+  "label": "Graham OMMap Blackmailed",
+  "category": "NPC / Dialogue",
+  "type": "bool",
+  "values": [
+   0,
+   1
+  ],
+  "note": "0 = unset, 1 = set"
  },
  {
   "name": "Graham_OMMapSold",
   "label": "Graham OMMap Sold",
-  "category": "NPC / Dialogue"
+  "category": "NPC / Dialogue",
+  "type": "bool",
+  "values": [
+   0,
+   1
+  ],
+  "note": "0 = unset, 1 = set",
+  "examples": [
+   1
+  ]
+ },
+ {
+  "name": "GRD_200_Thorus_ZWEIHAND1_permanent",
+  "label": "GRD 200 Thorus ZWEIHAND1 permanent",
+  "category": "NPC / Dialogue",
+  "type": "bool",
+  "values": [
+   0,
+   1
+  ],
+  "note": "0 = unset, 1 = set"
+ },
+ {
+  "name": "GRD_200_Thorus_ZWEIHAND2_permanent",
+  "label": "GRD 200 Thorus ZWEIHAND2 permanent",
+  "category": "NPC / Dialogue",
+  "type": "bool",
+  "values": [
+   0,
+   1
+  ],
+  "note": "0 = unset, 1 = set"
+ },
+ {
+  "name": "GRD_205_Scorpio_CROSSBOW2_permanent",
+  "label": "GRD 205 Scorpio CROSSBOW2 permanent",
+  "category": "NPC / Dialogue",
+  "type": "bool",
+  "values": [
+   0,
+   1
+  ],
+  "note": "0 = unset, 1 = set"
+ },
+ {
+  "name": "GRD_205_Scorpio_CROSSBOW_permanent",
+  "label": "GRD 205 Scorpio CROSSBOW permanent",
+  "category": "NPC / Dialogue",
+  "type": "bool",
+  "values": [
+   0,
+   1
+  ],
+  "note": "0 = unset, 1 = set"
+ },
+ {
+  "name": "Grd_260_Drake_Crawler_Okay_permanent",
+  "label": "Grd 260 Drake Crawler Okay permanent",
+  "category": "NPC / Dialogue",
+  "type": "bool",
+  "values": [
+   0,
+   1
+  ],
+  "note": "0 = unset, 1 = set"
+ },
+ {
+  "name": "GRD_262_Aaron_BLUFF_permanent",
+  "label": "GRD 262 Aaron BLUFF permanent",
+  "category": "NPC / Dialogue",
+  "type": "bool",
+  "values": [
+   0,
+   1
+  ],
+  "note": "0 = unset, 1 = set"
  },
  {
   "name": "Grim_ProtectionBully",
   "label": "Grim Protection Bully",
-  "category": "NPC / Dialogue"
+  "category": "NPC / Dialogue",
+  "type": "bool",
+  "values": [
+   0,
+   1
+  ],
+  "note": "0 = unset, 1 = set",
+  "examples": [
+   1
+  ]
  },
  {
   "name": "Grim_Tests",
   "label": "Grim Tests",
-  "category": "NPC / Dialogue"
+  "category": "NPC / Dialogue",
+  "type": "bool",
+  "values": [
+   0,
+   1
+  ],
+  "note": "0 = unset, 1 = set",
+  "examples": [
+   1
+  ]
  },
  {
   "name": "Guard_Order",
   "label": "Guard Order",
-  "category": "NPC / Dialogue"
+  "category": "NPC / Dialogue",
+  "type": "bool",
+  "values": [
+   0,
+   1
+  ],
+  "note": "0 = unset, 1 = set"
+ },
+ {
+  "name": "Guard_Permission_Orc_Land",
+  "label": "Guard Permission Orc Land",
+  "category": "Permission / Passage",
+  "type": "bool",
+  "values": [
+   0,
+   1
+  ],
+  "note": "0 = unset, 1 = set"
+ },
+ {
+  "name": "GuardDistraction",
+  "label": "Guard Distraction",
+  "category": "NPC / Dialogue",
+  "type": "bool",
+  "values": [
+   0,
+   1
+  ],
+  "note": "0 = unset, 1 = set"
  },
  {
   "name": "GuardOrcLandWarning_OC",
   "label": "Guard Orc Land Warning OC",
-  "category": "Camp"
+  "category": "Camp",
+  "type": "bool",
+  "values": [
+   0,
+   1
+  ],
+  "note": "0 = unset, 1 = set"
  },
  {
   "name": "GuardPassageTavernWarning_NC",
   "label": "Guard Passage Tavern Warning NC",
-  "category": "Permission / Passage"
+  "category": "Permission / Passage",
+  "type": "counter",
+  "values": null,
+  "note": "small integer counter",
+  "examples": [
+   2
+  ]
  },
  {
   "name": "GuardPassageWarning_NC",
   "label": "Guard Passage Warning NC",
-  "category": "Permission / Passage"
+  "category": "Permission / Passage",
+  "type": "bool",
+  "values": [
+   0,
+   1
+  ],
+  "note": "0 = unset, 1 = set",
+  "examples": [
+   1
+  ]
  },
  {
   "name": "GuardPassageWarning_OC",
   "label": "Guard Passage Warning OC",
-  "category": "Permission / Passage"
+  "category": "Permission / Passage",
+  "type": "bool",
+  "values": [
+   0,
+   1
+  ],
+  "note": "0 = unset, 1 = set"
  },
  {
   "name": "GuardPassageWarning_SC",
   "label": "Guard Passage Warning SC",
-  "category": "Permission / Passage"
+  "category": "Permission / Passage",
+  "type": "bool",
+  "values": [
+   0,
+   1
+  ],
+  "note": "0 = unset, 1 = set",
+  "examples": [
+   1
+  ]
  },
  {
   "name": "GuardPassageWaterMagesWarning_NC",
   "label": "Guard Passage Water Mages Warning NC",
-  "category": "Permission / Passage"
+  "category": "Permission / Passage",
+  "type": "bool",
+  "values": [
+   0,
+   1
+  ],
+  "note": "0 = unset, 1 = set"
+ },
+ {
+  "name": "Guild",
+  "label": "Guild",
+  "category": "Faction / Progression",
+  "type": "bool",
+  "values": [
+   0,
+   1
+  ],
+  "note": "0 = unset, 1 = set"
+ },
+ {
+  "name": "Guild_Human_NewCamp_Mercenary",
+  "label": "Guild Human New Camp Mercenary",
+  "category": "Faction / Progression",
+  "type": "bool",
+  "values": [
+   0,
+   1
+  ],
+  "note": "0 = unset, 1 = set"
+ },
+ {
+  "name": "Guild_Human_NewCamp_Rogue",
+  "label": "Guild Human New Camp Rogue",
+  "category": "Faction / Progression",
+  "type": "bool",
+  "values": [
+   0,
+   1
+  ],
+  "note": "0 = unset, 1 = set"
+ },
+ {
+  "name": "Guild_Human_NewCamp_WaterMage",
+  "label": "Guild Human New Camp Water Mage",
+  "category": "Faction / Progression",
+  "type": "bool",
+  "values": [
+   0,
+   1
+  ],
+  "note": "0 = unset, 1 = set"
+ },
+ {
+  "name": "Guild_Human_OldCamp_FireMage",
+  "label": "Guild Human Old Camp Fire Mage",
+  "category": "Faction / Progression",
+  "type": "bool",
+  "values": [
+   0,
+   1
+  ],
+  "note": "0 = unset, 1 = set"
+ },
+ {
+  "name": "Guild_Human_OldCamp_Guard",
+  "label": "Guild Human Old Camp Guard",
+  "category": "Faction / Progression",
+  "type": "bool",
+  "values": [
+   0,
+   1
+  ],
+  "note": "0 = unset, 1 = set"
+ },
+ {
+  "name": "Guild_Human_SwampCamp_Novice",
+  "label": "Guild Human Swamp Camp Novice",
+  "category": "Faction / Progression",
+  "type": "bool",
+  "values": [
+   0,
+   1
+  ],
+  "note": "0 = unset, 1 = set"
+ },
+ {
+  "name": "Guild_Human_SwampCamp_Templar",
+  "label": "Guild Human Swamp Camp Templar",
+  "category": "Faction / Progression",
+  "type": "bool",
+  "values": [
+   0,
+   1
+  ],
+  "note": "0 = unset, 1 = set"
+ },
+ {
+  "name": "Guild_None",
+  "label": "Guild None",
+  "category": "Faction / Progression",
+  "type": "bool",
+  "values": [
+   0,
+   1
+  ],
+  "note": "0 = unset, 1 = set"
+ },
+ {
+  "name": "GUR_1202_CorAngar_WANNABETPL_permanent",
+  "label": "GUR 1202 Cor Angar WANNABETPL permanent",
+  "category": "NPC / Dialogue",
+  "type": "bool",
+  "values": [
+   0,
+   1
+  ],
+  "note": "0 = unset, 1 = set"
+ },
+ {
+  "name": "GUR_1202_CorAngar_ZWEIHAND1_permanent",
+  "label": "GUR 1202 Cor Angar ZWEIHAND1 permanent",
+  "category": "NPC / Dialogue",
+  "type": "bool",
+  "values": [
+   0,
+   1
+  ],
+  "note": "0 = unset, 1 = set"
+ },
+ {
+  "name": "GUR_1202_CorAngar_ZWEIHAND2_permanent",
+  "label": "GUR 1202 Cor Angar ZWEIHAND2 permanent",
+  "category": "NPC / Dialogue",
+  "type": "bool",
+  "values": [
+   0,
+   1
+  ],
+  "note": "0 = unset, 1 = set"
+ },
+ {
+  "name": "Gur_1208_BaalCadar_KREIS1_permanent",
+  "label": "Gur 1208 Baal Cadar KREIS1 permanent",
+  "category": "NPC / Dialogue",
+  "type": "bool",
+  "values": [
+   0,
+   1
+  ],
+  "note": "0 = unset, 1 = set"
+ },
+ {
+  "name": "Gur_1208_BaalCadar_KREIS2_permanent",
+  "label": "Gur 1208 Baal Cadar KREIS2 permanent",
+  "category": "NPC / Dialogue",
+  "type": "bool",
+  "values": [
+   0,
+   1
+  ],
+  "note": "0 = unset, 1 = set"
+ },
+ {
+  "name": "Gur_1208_BaalCadar_KREIS4_permanent",
+  "label": "Gur 1208 Baal Cadar KREIS4 permanent",
+  "category": "NPC / Dialogue",
+  "type": "bool",
+  "values": [
+   0,
+   1
+  ],
+  "note": "0 = unset, 1 = set"
  },
  {
   "name": "Haenno_Bow_Knowledge",
   "label": "Haenno Bow Knowledge",
-  "category": "NPC / Dialogue"
+  "category": "NPC / Dialogue",
+  "type": "bool",
+  "values": [
+   0,
+   1
+  ],
+  "note": "0 = unset, 1 = set",
+  "examples": [
+   1
+  ]
  },
  {
   "name": "HappyFriends",
   "label": "Happy Friends",
-  "category": "NPC / Dialogue"
+  "category": "NPC / Dialogue",
+  "type": "bool",
+  "values": [
+   0,
+   1
+  ],
+  "note": "0 = unset, 1 = set"
  },
  {
   "name": "HasULUMULU",
   "label": "Has ULUMULU",
-  "category": "NPC / Dialogue"
+  "category": "NPC / Dialogue",
+  "type": "bool",
+  "values": [
+   0,
+   1
+  ],
+  "note": "0 = unset, 1 = set"
  },
  {
   "name": "Herek_ProtectionBully",
   "label": "Herek Protection Bully",
-  "category": "NPC / Dialogue"
+  "category": "NPC / Dialogue",
+  "type": "bool",
+  "values": [
+   0,
+   1
+  ],
+  "note": "0 = unset, 1 = set",
+  "examples": [
+   1
+  ]
+ },
+ {
+  "name": "hero_aivar_AIV_GUARDPASSAGE_STATUS",
+  "label": "hero aivar AIV GUARDPASSAGE STATUS",
+  "category": "NPC / Dialogue",
+  "type": "bool",
+  "values": [
+   0,
+   1
+  ],
+  "note": "0 = unset, 1 = set"
+ },
+ {
+  "name": "hero_attribute_Dexterity",
+  "label": "hero attribute Dexterity",
+  "category": "NPC / Dialogue",
+  "type": "bool",
+  "values": [
+   0,
+   1
+  ],
+  "note": "0 = unset, 1 = set"
+ },
+ {
+  "name": "hero_attribute_MaxMana",
+  "label": "hero attribute Max Mana",
+  "category": "NPC / Dialogue",
+  "type": "bool",
+  "values": [
+   0,
+   1
+  ],
+  "note": "0 = unset, 1 = set"
+ },
+ {
+  "name": "hero_attribute_Strength",
+  "label": "hero attribute Strength",
+  "category": "NPC / Dialogue",
+  "type": "bool",
+  "values": [
+   0,
+   1
+  ],
+  "note": "0 = unset, 1 = set"
+ },
+ {
+  "name": "HeroInsideBanditCell",
+  "label": "Hero Inside Bandit Cell",
+  "category": "NPC / Dialogue",
+  "type": "bool",
+  "values": [
+   0,
+   1
+  ],
+  "note": "0 = unset, 1 = set"
+ },
+ {
+  "name": "HeroInsideThroneRoom",
+  "label": "Hero Inside Throne Room",
+  "category": "NPC / Dialogue",
+  "type": "bool",
+  "values": [
+   0,
+   1
+  ],
+  "note": "0 = unset, 1 = set"
+ },
+ {
+  "name": "Hlp_GetInstanceIDarmor",
+  "label": "Hlp Get Instance IDarmor",
+  "category": "NPC / Dialogue",
+  "type": "bool",
+  "values": [
+   0,
+   1
+  ],
+  "note": "0 = unset, 1 = set"
+ },
+ {
+  "name": "Huno_LearnSmith",
+  "label": "Huno Learn Smith",
+  "category": "NPC / Dialogue",
+  "type": "bool",
+  "values": [
+   0,
+   1
+  ],
+  "note": "0 = unset, 1 = set"
  },
  {
   "name": "Huno_WaitAfterTraining",
   "label": "Huno Wait After Training",
-  "category": "NPC / Dialogue"
+  "category": "NPC / Dialogue",
+  "type": "time",
+  "values": null,
+  "note": "game-time/day value (large int)"
+ },
+ {
+  "name": "IlegalWeedMixer_Permision",
+  "label": "Ilegal Weed Mixer Permision",
+  "category": "NPC / Dialogue",
+  "type": "bool",
+  "values": [
+   0,
+   1
+  ],
+  "note": "0 = unset, 1 = set"
+ },
+ {
+  "name": "InExtremoPlaying",
+  "label": "In Extremo Playing",
+  "category": "NPC / Dialogue",
+  "type": "bool",
+  "values": [
+   0,
+   1
+  ],
+  "note": "0 = unset, 1 = set"
+ },
+ {
+  "name": "Info_Bartholo_Krautbote_permanent",
+  "label": "Info Bartholo Krautbote permanent",
+  "category": "NPC / Dialogue",
+  "type": "bool",
+  "values": [
+   0,
+   1
+  ],
+  "note": "0 = unset, 1 = set"
+ },
+ {
+  "name": "Info_Kalom_KrautboteBACK_permanent",
+  "label": "Info Kalom Krautbote BACK permanent",
+  "category": "NPC / Dialogue",
+  "type": "bool",
+  "values": [
+   0,
+   1
+  ],
+  "note": "0 = unset, 1 = set"
+ },
+ {
+  "name": "Info_Xardas_LOADSWORD09_permanent",
+  "label": "Info Xardas LOADSWORD09 permanent",
+  "category": "NPC / Dialogue",
+  "type": "bool",
+  "values": [
+   0,
+   1
+  ],
+  "note": "0 = unset, 1 = set"
+ },
+ {
+  "name": "IntroInExtremo",
+  "label": "Intro In Extremo",
+  "category": "NPC / Dialogue",
+  "type": "bool",
+  "values": [
+   0,
+   1
+  ],
+  "note": "0 = unset, 1 = set"
  },
  {
   "name": "Jackal_ProtectionPaid",
   "label": "Jackal Protection Paid",
-  "category": "NPC / Dialogue"
+  "category": "NPC / Dialogue",
+  "type": "bool",
+  "values": [
+   0,
+   1
+  ],
+  "note": "0 = unset, 1 = set"
+ },
+ {
+  "name": "Jacko_Fled",
+  "label": "Jacko Fled",
+  "category": "NPC / Dialogue",
+  "type": "bool",
+  "values": [
+   0,
+   1
+  ],
+  "note": "0 = unset, 1 = set"
  },
  {
   "name": "JackoNoteRead",
   "label": "Jacko Note Read",
-  "category": "NPC / Dialogue"
+  "category": "NPC / Dialogue",
+  "type": "bool",
+  "values": [
+   0,
+   1
+  ],
+  "note": "0 = unset, 1 = set"
+ },
+ {
+  "name": "Jan_Training",
+  "label": "Jan Training",
+  "category": "NPC / Dialogue",
+  "type": "bool",
+  "values": [
+   0,
+   1
+  ],
+  "note": "0 = unset, 1 = set"
  },
  {
   "name": "Jeremiah_Brewer",
   "label": "Jeremiah Brewer",
-  "category": "NPC / Dialogue"
+  "category": "NPC / Dialogue",
+  "type": "bool",
+  "values": [
+   0,
+   1
+  ],
+  "note": "0 = unset, 1 = set",
+  "examples": [
+   1
+  ]
  },
  {
   "name": "Joru_JoinSC",
   "label": "Joru Join SC",
-  "category": "NPC / Dialogue"
+  "category": "NPC / Dialogue",
+  "type": "bool",
+  "values": [
+   0,
+   1
+  ],
+  "note": "0 = unset, 1 = set",
+  "examples": [
+   1
+  ]
  },
  {
   "name": "Joru_Tips",
   "label": "Joru Tips",
-  "category": "NPC / Dialogue"
+  "category": "NPC / Dialogue",
+  "type": "bool",
+  "values": [
+   0,
+   1
+  ],
+  "note": "0 = unset, 1 = set",
+  "examples": [
+   1
+  ]
  },
  {
   "name": "Joru_Tips_Mage",
   "label": "Joru Tips Mage",
-  "category": "NPC / Dialogue"
+  "category": "NPC / Dialogue",
+  "type": "bool",
+  "values": [
+   0,
+   1
+  ],
+  "note": "0 = unset, 1 = set",
+  "examples": [
+   1
+  ]
  },
  {
   "name": "Kalom_Counter",
   "label": "Kalom Counter",
-  "category": "NPC / Dialogue"
+  "category": "NPC / Dialogue",
+  "type": "bool",
+  "values": [
+   0,
+   1
+  ],
+  "note": "0 = unset, 1 = set",
+  "examples": [
+   1
+  ]
+ },
+ {
+  "name": "Kalom_DeliveredWeed",
+  "label": "Kalom Delivered Weed",
+  "category": "NPC / Dialogue",
+  "type": "bool",
+  "values": [
+   0,
+   1
+  ],
+  "note": "0 = unset, 1 = set"
  },
  {
   "name": "Kalom_TalkedTo",
   "label": "Kalom Talked To",
-  "category": "NPC / Dialogue"
+  "category": "NPC / Dialogue",
+  "type": "bool",
+  "values": [
+   0,
+   1
+  ],
+  "note": "0 = unset, 1 = set",
+  "examples": [
+   1
+  ]
+ },
+ {
+  "name": "KalomDead",
+  "label": "Kalom Dead",
+  "category": "NPC / Dialogue",
+  "type": "bool",
+  "values": [
+   0,
+   1
+  ],
+  "note": "0 = unset, 1 = set"
+ },
+ {
+  "name": "KDF_402_Corristo_HEAVYARMOR_permanent",
+  "label": "KDF 402 Corristo HEAVYARMOR permanent",
+  "category": "NPC / Dialogue",
+  "type": "bool",
+  "values": [
+   0,
+   1
+  ],
+  "note": "0 = unset, 1 = set"
+ },
+ {
+  "name": "KDF_402_Corristo_KREIS1_permanent",
+  "label": "KDF 402 Corristo KREIS1 permanent",
+  "category": "NPC / Dialogue",
+  "type": "bool",
+  "values": [
+   0,
+   1
+  ],
+  "note": "0 = unset, 1 = set"
+ },
+ {
+  "name": "KDF_402_Corristo_KREIS2_permanent",
+  "label": "KDF 402 Corristo KREIS2 permanent",
+  "category": "NPC / Dialogue",
+  "type": "bool",
+  "values": [
+   0,
+   1
+  ],
+  "note": "0 = unset, 1 = set"
+ },
+ {
+  "name": "KDF_402_Corristo_KREIS3_permanent",
+  "label": "KDF 402 Corristo KREIS3 permanent",
+  "category": "NPC / Dialogue",
+  "type": "bool",
+  "values": [
+   0,
+   1
+  ],
+  "note": "0 = unset, 1 = set"
+ },
+ {
+  "name": "KDF_402_Corristo_KREIS4_permanent",
+  "label": "KDF 402 Corristo KREIS4 permanent",
+  "category": "NPC / Dialogue",
+  "type": "bool",
+  "values": [
+   0,
+   1
+  ],
+  "note": "0 = unset, 1 = set"
+ },
+ {
+  "name": "KDF_402_Corristo_WANNBEKDF_permanent",
+  "label": "KDF 402 Corristo WANNBEKDF permanent",
+  "category": "NPC / Dialogue",
+  "type": "bool",
+  "values": [
+   0,
+   1
+  ],
+  "note": "0 = unset, 1 = set"
+ },
+ {
+  "name": "KDW_600_Saturas_HEAVYARMOR_permanent",
+  "label": "KDW 600 Saturas HEAVYARMOR permanent",
+  "category": "NPC / Dialogue",
+  "type": "bool",
+  "values": [
+   0,
+   1
+  ],
+  "note": "0 = unset, 1 = set"
+ },
+ {
+  "name": "KDW_600_Saturas_KREIS1_permanent",
+  "label": "KDW 600 Saturas KREIS1 permanent",
+  "category": "NPC / Dialogue",
+  "type": "bool",
+  "values": [
+   0,
+   1
+  ],
+  "note": "0 = unset, 1 = set"
+ },
+ {
+  "name": "KDW_600_Saturas_KREIS2_permanent",
+  "label": "KDW 600 Saturas KREIS2 permanent",
+  "category": "NPC / Dialogue",
+  "type": "bool",
+  "values": [
+   0,
+   1
+  ],
+  "note": "0 = unset, 1 = set"
+ },
+ {
+  "name": "KDW_600_Saturas_KREIS3_permanent",
+  "label": "KDW 600 Saturas KREIS3 permanent",
+  "category": "NPC / Dialogue",
+  "type": "bool",
+  "values": [
+   0,
+   1
+  ],
+  "note": "0 = unset, 1 = set"
+ },
+ {
+  "name": "KDW_600_Saturas_KREIS4_permanent",
+  "label": "KDW 600 Saturas KREIS4 permanent",
+  "category": "NPC / Dialogue",
+  "type": "bool",
+  "values": [
+   0,
+   1
+  ],
+  "note": "0 = unset, 1 = set"
+ },
+ {
+  "name": "KDW_600_Saturas_KREIS5_permanent",
+  "label": "KDW 600 Saturas KREIS5 permanent",
+  "category": "NPC / Dialogue",
+  "type": "bool",
+  "values": [
+   0,
+   1
+  ],
+  "note": "0 = unset, 1 = set"
  },
  {
   "name": "Kharim_Challenged",
   "label": "Kharim Challenged",
-  "category": "NPC / Dialogue"
+  "category": "NPC / Dialogue",
+  "type": "bool",
+  "values": [
+   0,
+   1
+  ],
+  "note": "0 = unset, 1 = set",
+  "examples": [
+   1
+  ]
+ },
+ {
+  "name": "Kharim_Charged",
+  "label": "Kharim Charged",
+  "category": "NPC / Dialogue",
+  "type": "bool",
+  "values": [
+   0,
+   1
+  ],
+  "note": "0 = unset, 1 = set",
+  "examples": [
+   1
+  ]
+ },
+ {
+  "name": "Kharim_Lose",
+  "label": "Kharim Lose",
+  "category": "NPC / Dialogue",
+  "type": "bool",
+  "values": [
+   0,
+   1
+  ],
+  "note": "0 = unset, 1 = set"
  },
  {
   "name": "Kharim_Win",
   "label": "Kharim Win",
-  "category": "NPC / Dialogue"
+  "category": "NPC / Dialogue",
+  "type": "bool",
+  "values": [
+   0,
+   1
+  ],
+  "note": "0 = unset, 1 = set"
  },
  {
   "name": "Kirgo_Challenged",
   "label": "Kirgo Challenged",
-  "category": "NPC / Dialogue"
+  "category": "NPC / Dialogue",
+  "type": "bool",
+  "values": [
+   0,
+   1
+  ],
+  "note": "0 = unset, 1 = set",
+  "examples": [
+   1
+  ]
+ },
+ {
+  "name": "Kirgo_Charged",
+  "label": "Kirgo Charged",
+  "category": "NPC / Dialogue",
+  "type": "bool",
+  "values": [
+   0,
+   1
+  ],
+  "note": "0 = unset, 1 = set"
+ },
+ {
+  "name": "Kirgo_Lose",
+  "label": "Kirgo Lose",
+  "category": "NPC / Dialogue",
+  "type": "bool",
+  "values": [
+   0,
+   1
+  ],
+  "note": "0 = unset, 1 = set"
  },
  {
   "name": "Kirgo_Win",
   "label": "Kirgo Win",
-  "category": "NPC / Dialogue"
+  "category": "NPC / Dialogue",
+  "type": "bool",
+  "values": [
+   0,
+   1
+  ],
+  "note": "0 = unset, 1 = set",
+  "examples": [
+   1
+  ]
+ },
+ {
+  "name": "Knows_GetClaws",
+  "label": "Knows Get Claws",
+  "category": "NPC / Dialogue",
+  "type": "bool",
+  "values": [
+   0,
+   1
+  ],
+  "note": "0 = unset, 1 = set"
+ },
+ {
+  "name": "Knows_GetFur",
+  "label": "Knows Get Fur",
+  "category": "NPC / Dialogue",
+  "type": "bool",
+  "values": [
+   0,
+   1
+  ],
+  "note": "0 = unset, 1 = set"
+ },
+ {
+  "name": "Knows_GetHide",
+  "label": "Knows Get Hide",
+  "category": "NPC / Dialogue",
+  "type": "bool",
+  "values": [
+   0,
+   1
+  ],
+  "note": "0 = unset, 1 = set"
+ },
+ {
+  "name": "Knows_GetMCMandibles",
+  "label": "Knows Get MCMandibles",
+  "category": "NPC / Dialogue",
+  "type": "bool",
+  "values": [
+   0,
+   1
+  ],
+  "note": "0 = unset, 1 = set"
  },
  {
   "name": "Knows_GetMCPlates",
   "label": "Knows Get MCPlates",
-  "category": "NPC / Dialogue"
+  "category": "NPC / Dialogue",
+  "type": "bool",
+  "values": [
+   0,
+   1
+  ],
+  "note": "0 = unset, 1 = set"
+ },
+ {
+  "name": "Knows_GetTeeth",
+  "label": "Knows Get Teeth",
+  "category": "NPC / Dialogue",
+  "type": "bool",
+  "values": [
+   0,
+   1
+  ],
+  "note": "0 = unset, 1 = set"
+ },
+ {
+  "name": "Knows_GetUluMulu",
+  "label": "Knows Get Ulu Mulu",
+  "category": "NPC / Dialogue",
+  "type": "bool",
+  "values": [
+   0,
+   1
+  ],
+  "note": "0 = unset, 1 = set"
  },
  {
   "name": "KnowStone",
   "label": "Know Stone",
-  "category": "NPC / Dialogue"
+  "category": "NPC / Dialogue",
+  "type": "bool",
+  "values": [
+   0,
+   1
+  ],
+  "note": "0 = unset, 1 = set"
+ },
+ {
+  "name": "Lares_CheatedIntoHut",
+  "label": "Lares Cheated Into Hut",
+  "category": "NPC / Dialogue",
+  "type": "bool",
+  "values": [
+   0,
+   1
+  ],
+  "note": "0 = unset, 1 = set"
  },
  {
   "name": "Lares_Permission",
   "label": "Lares Permission",
-  "category": "Permission / Passage"
+  "category": "Permission / Passage",
+  "type": "bool",
+  "values": [
+   0,
+   1
+  ],
+  "note": "0 = unset, 1 = set",
+  "examples": [
+   1
+  ]
  },
  {
   "name": "Lee_freeminereport",
   "label": "Lee freeminereport",
-  "category": "NPC / Dialogue"
+  "category": "NPC / Dialogue",
+  "type": "bool",
+  "values": [
+   0,
+   1
+  ],
+  "note": "0 = unset, 1 = set"
  },
  {
   "name": "Lee_HeroProgression",
   "label": "Lee Hero Progression",
-  "category": "NPC / Dialogue"
+  "category": "NPC / Dialogue",
+  "type": "bool",
+  "values": [
+   0,
+   1
+  ],
+  "note": "0 = unset, 1 = set"
  },
  {
   "name": "Lee_SldPossible",
   "label": "Lee Sld Possible",
-  "category": "NPC / Dialogue"
+  "category": "NPC / Dialogue",
+  "type": "bool",
+  "values": [
+   0,
+   1
+  ],
+  "note": "0 = unset, 1 = set"
  },
  {
   "name": "Lefty_CarriedWater",
   "label": "Lefty Carried Water",
-  "category": "NPC / Dialogue"
+  "category": "NPC / Dialogue",
+  "type": "bool",
+  "values": [
+   0,
+   1
+  ],
+  "note": "0 = unset, 1 = set"
+ },
+ {
+  "name": "Lefty_Dead",
+  "label": "Lefty Dead",
+  "category": "NPC / Dialogue",
+  "type": "bool",
+  "values": [
+   0,
+   1
+  ],
+  "note": "0 = unset, 1 = set"
  },
  {
   "name": "Lefty_WasBeaten",
   "label": "Lefty Was Beaten",
-  "category": "NPC / Dialogue"
+  "category": "NPC / Dialogue",
+  "type": "bool",
+  "values": [
+   0,
+   1
+  ],
+  "note": "0 = unset, 1 = set",
+  "examples": [
+   1
+  ]
  },
  {
   "name": "Lefty_WorkDay",
   "label": "Lefty Work Day",
-  "category": "Timer / Day"
+  "category": "Timer / Day",
+  "type": "time",
+  "values": null,
+  "note": "game-time/day value (large int)",
+  "examples": [
+   582741
+  ]
+ },
+ {
+  "name": "Lester_Follow",
+  "label": "Lester Follow",
+  "category": "NPC / Dialogue",
+  "type": "bool",
+  "values": [
+   0,
+   1
+  ],
+  "note": "0 = unset, 1 = set"
+ },
+ {
+  "name": "Lester_Guide",
+  "label": "Lester Guide",
+  "category": "NPC / Dialogue",
+  "type": "bool",
+  "values": [
+   0,
+   1
+  ],
+  "note": "0 = unset, 1 = set"
  },
  {
   "name": "Lester_Show",
   "label": "Lester Show",
-  "category": "NPC / Dialogue"
+  "category": "NPC / Dialogue",
+  "type": "bool",
+  "values": [
+   0,
+   1
+  ],
+  "note": "0 = unset, 1 = set",
+  "examples": [
+   1
+  ]
+ },
+ {
+  "name": "LoadSword",
+  "label": "Load Sword",
+  "category": "NPC / Dialogue",
+  "type": "bool",
+  "values": [
+   0,
+   1
+  ],
+  "note": "0 = unset, 1 = set"
+ },
+ {
+  "name": "Location_AbandonedMine_AfterAmulet",
+  "label": "Location Abandoned Mine After Amulet",
+  "category": "Location / World",
+  "type": "bool",
+  "values": [
+   0,
+   1
+  ],
+  "note": "0 = unset, 1 = set"
  },
  {
   "name": "Location_AbandonedMine_OrcGrave",
   "label": "Location Abandoned Mine Orc Grave",
-  "category": "Location / World"
+  "category": "Location / World",
+  "type": "bool",
+  "values": [
+   0,
+   1
+  ],
+  "note": "0 = unset, 1 = set"
+ },
+ {
+  "name": "Location_NewCamp_OrePile",
+  "label": "Location New Camp Ore Pile",
+  "category": "Location / World",
+  "type": "bool",
+  "values": [
+   0,
+   1
+  ],
+  "note": "0 = unset, 1 = set"
+ },
+ {
+  "name": "Location_OldCamp_Dungeons",
+  "label": "Location Old Camp Dungeons",
+  "category": "Location / World",
+  "type": "bool",
+  "values": [
+   0,
+   1
+  ],
+  "note": "0 = unset, 1 = set"
+ },
+ {
+  "name": "Location_OldMineCollapsed",
+  "label": "Location Old Mine Collapsed",
+  "category": "Location / World",
+  "type": "bool",
+  "values": [
+   0,
+   1
+  ],
+  "note": "0 = unset, 1 = set"
  },
  {
   "name": "Location_OrcEnclave_Arena",
   "label": "Location Orc Enclave Arena",
-  "category": "Location / World"
+  "category": "Location / World",
+  "type": "bool",
+  "values": [
+   0,
+   1
+  ],
+  "note": "0 = unset, 1 = set"
  },
  {
   "name": "Location_SwampCamp_Temple",
   "label": "Location Swamp Camp Temple",
-  "category": "Location / World"
+  "category": "Location / World",
+  "type": "bool",
+  "values": [
+   0,
+   1
+  ],
+  "note": "0 = unset, 1 = set"
+ },
+ {
+  "name": "Location_XardasTower_Bedroom",
+  "label": "Location Xardas Tower Bedroom",
+  "category": "Location / World",
+  "type": "bool",
+  "values": [
+   0,
+   1
+  ],
+  "note": "0 = unset, 1 = set"
+ },
+ {
+  "name": "LOG_OBSOLETE",
+  "label": "LOG OBSOLETE",
+  "category": "NPC / Dialogue",
+  "type": "bool",
+  "values": [
+   0,
+   1
+  ],
+  "note": "0 = unset, 1 = set"
+ },
+ {
+  "name": "LOG_SUCCESS",
+  "label": "LOG SUCCESS",
+  "category": "NPC / Dialogue",
+  "type": "bool",
+  "values": [
+   0,
+   1
+  ],
+  "note": "0 = unset, 1 = set"
  },
  {
   "name": "LogBaalcadarsell",
   "label": "Log Baalcadarsell",
-  "category": "Quest Log"
+  "category": "Quest Log",
+  "type": "bool",
+  "values": [
+   0,
+   1
+  ],
+  "note": "0 = unset, 1 = set"
  },
  {
   "name": "LogBaalcadartrain",
   "label": "Log Baalcadartrain",
-  "category": "Quest Log"
+  "category": "Quest Log",
+  "type": "bool",
+  "values": [
+   0,
+   1
+  ],
+  "note": "0 = unset, 1 = set"
  },
  {
   "name": "LogCavalorntrain",
   "label": "Log Cavalorntrain",
-  "category": "Quest Log"
+  "category": "Quest Log",
+  "type": "bool",
+  "values": [
+   0,
+   1
+  ],
+  "note": "0 = unset, 1 = set",
+  "examples": [
+   1
+  ]
  },
  {
   "name": "LogDiegotrain",
   "label": "Log Diegotrain",
-  "category": "Quest Log"
+  "category": "Quest Log",
+  "type": "bool",
+  "values": [
+   0,
+   1
+  ],
+  "note": "0 = unset, 1 = set",
+  "examples": [
+   1
+  ]
+ },
+ {
+  "name": "LogGornatothfight",
+  "label": "Log Gornatothfight",
+  "category": "NPC / Dialogue",
+  "type": "bool",
+  "values": [
+   0,
+   1
+  ],
+  "note": "0 = unset, 1 = set"
+ },
+ {
+  "name": "LogGornatothtrain",
+  "label": "Log Gornatothtrain",
+  "category": "NPC / Dialogue",
+  "type": "bool",
+  "values": [
+   0,
+   1
+  ],
+  "note": "0 = unset, 1 = set"
  },
  {
   "name": "LogScattytrain",
   "label": "Log Scattytrain",
-  "category": "Quest Log"
+  "category": "Quest Log",
+  "type": "bool",
+  "values": [
+   0,
+   1
+  ],
+  "note": "0 = unset, 1 = set",
+  "examples": [
+   1
+  ]
+ },
+ {
+  "name": "LogScorpiocrossbow",
+  "label": "Log Scorpiocrossbow",
+  "category": "NPC / Dialogue",
+  "type": "bool",
+  "values": [
+   0,
+   1
+  ],
+  "note": "0 = unset, 1 = set"
+ },
+ {
+  "name": "LogThorusfight",
+  "label": "Log Thorusfight",
+  "category": "NPC / Dialogue",
+  "type": "bool",
+  "values": [
+   0,
+   1
+  ],
+  "note": "0 = unset, 1 = set"
  },
  {
   "name": "LogThorustrain",
   "label": "Log Thorustrain",
-  "category": "Quest Log"
+  "category": "Quest Log",
+  "type": "bool",
+  "values": [
+   0,
+   1
+  ],
+  "note": "0 = unset, 1 = set"
  },
  {
   "name": "LogWedgelearn",
   "label": "Log Wedgelearn",
-  "category": "Quest Log"
+  "category": "Quest Log",
+  "type": "bool",
+  "values": [
+   0,
+   1
+  ],
+  "note": "0 = unset, 1 = set",
+  "examples": [
+   1
+  ]
+ },
+ {
+  "name": "LogWolftrain",
+  "label": "Log Wolftrain",
+  "category": "NPC / Dialogue",
+  "type": "bool",
+  "values": [
+   0,
+   1
+  ],
+  "note": "0 = unset, 1 = set"
+ },
+ {
+  "name": "Lukor_Open_Door",
+  "label": "Lukor Open Door",
+  "category": "NPC / Dialogue",
+  "type": "time",
+  "values": null,
+  "note": "game-time/day value (large int)"
  },
  {
   "name": "Magician_Level",
   "label": "Magician Level",
-  "category": "Faction / Progression"
+  "category": "Faction / Progression",
+  "type": "bool",
+  "values": [
+   0,
+   1
+  ],
+  "note": "0 = unset, 1 = set"
  },
  {
   "name": "MCPlatesDelivered",
   "label": "MCPlates Delivered",
-  "category": "NPC / Dialogue"
+  "category": "NPC / Dialogue",
+  "type": "bool",
+  "values": [
+   0,
+   1
+  ],
+  "note": "0 = unset, 1 = set"
+ },
+ {
+  "name": "Melvin_Meditating",
+  "label": "Melvin Meditating",
+  "category": "NPC / Dialogue",
+  "type": "time",
+  "values": null,
+  "note": "game-time/day value (large int)"
+ },
+ {
+  "name": "Melvin_Preaching",
+  "label": "Melvin Preaching",
+  "category": "NPC / Dialogue",
+  "type": "bool",
+  "values": [
+   0,
+   1
+  ],
+  "note": "0 = unset, 1 = set"
+ },
+ {
+  "name": "Milten_Follow",
+  "label": "Milten Follow",
+  "category": "NPC / Dialogue",
+  "type": "bool",
+  "values": [
+   0,
+   1
+  ],
+  "note": "0 = unset, 1 = set"
  },
  {
   "name": "Milten_HasLetter",
   "label": "Milten Has Letter",
-  "category": "NPC / Dialogue"
+  "category": "NPC / Dialogue",
+  "type": "bool",
+  "values": [
+   0,
+   1
+  ],
+  "note": "0 = unset, 1 = set",
+  "examples": [
+   1
+  ]
+ },
+ {
+  "name": "Milten_Sleeper_Battle",
+  "label": "Milten Sleeper Battle",
+  "category": "NPC / Dialogue",
+  "type": "bool",
+  "values": [
+   0,
+   1
+  ],
+  "note": "0 = unset, 1 = set"
  },
  {
   "name": "Milten_Time_Troll",
   "label": "Milten Time Troll",
-  "category": "NPC / Dialogue"
+  "category": "NPC / Dialogue",
+  "type": "time",
+  "values": null,
+  "note": "game-time/day value (large int)"
+ },
+ {
+  "name": "Milten_Timer_Battle",
+  "label": "Milten Timer Battle",
+  "category": "NPC / Dialogue",
+  "type": "time",
+  "values": null,
+  "note": "game-time/day value (large int)"
+ },
+ {
+  "name": "MiltenAlreadyKnown",
+  "label": "Milten Already Known",
+  "category": "NPC / Dialogue",
+  "type": "bool",
+  "values": [
+   0,
+   1
+  ],
+  "note": "0 = unset, 1 = set"
+ },
+ {
+  "name": "Monastery_Inside",
+  "label": "Monastery Inside",
+  "category": "NPC / Dialogue",
+  "type": "bool",
+  "values": [
+   0,
+   1
+  ],
+  "note": "0 = unset, 1 = set"
  },
  {
   "name": "Monastery_Outside",
   "label": "Monastery Outside",
-  "category": "Location / World"
+  "category": "Location / World",
+  "type": "bool",
+  "values": [
+   0,
+   1
+  ],
+  "note": "0 = unset, 1 = set"
+ },
+ {
+  "name": "MonasteryRuin_GateOpen",
+  "label": "Monastery Ruin Gate Open",
+  "category": "NPC / Dialogue",
+  "type": "bool",
+  "values": [
+   0,
+   1
+  ],
+  "note": "0 = unset, 1 = set"
  },
  {
   "name": "Mordrag_GotoNC_Day",
   "label": "Mordrag Goto NC Day",
-  "category": "Timer / Day"
+  "category": "Timer / Day",
+  "type": "time",
+  "values": null,
+  "note": "game-time/day value (large int)",
+  "examples": [
+   216144
+  ]
  },
  {
   "name": "Mordrag_Traded",
   "label": "Mordrag Traded",
-  "category": "NPC / Dialogue"
+  "category": "NPC / Dialogue",
+  "type": "bool",
+  "values": [
+   0,
+   1
+  ],
+  "note": "0 = unset, 1 = set",
+  "examples": [
+   1
+  ]
+ },
+ {
+  "name": "MordragKO_Exiled",
+  "label": "Mordrag KO Exiled",
+  "category": "NPC / Dialogue",
+  "type": "bool",
+  "values": [
+   0,
+   1
+  ],
+  "note": "0 = unset, 1 = set"
  },
  {
   "name": "MordragKO_PlayerChoseOreBarons",
   "label": "Mordrag KO Player Chose Ore Barons",
-  "category": "NPC / Dialogue"
+  "category": "NPC / Dialogue",
+  "type": "bool",
+  "values": [
+   0,
+   1
+  ],
+  "note": "0 = unset, 1 = set"
+ },
+ {
+  "name": "MordragKO_PlayerChoseThorus",
+  "label": "Mordrag KO Player Chose Thorus",
+  "category": "NPC / Dialogue",
+  "type": "bool",
+  "values": [
+   0,
+   1
+  ],
+  "note": "0 = unset, 1 = set"
  },
  {
   "name": "MordragKO_StayAtNC",
   "label": "Mordrag KO Stay At NC",
-  "category": "NPC / Dialogue"
+  "category": "NPC / Dialogue",
+  "type": "bool",
+  "values": [
+   0,
+   1
+  ],
+  "note": "0 = unset, 1 = set",
+  "examples": [
+   1
+  ]
  },
  {
   "name": "Mud_Follow",
   "label": "Mud Follow",
-  "category": "NPC / Dialogue"
+  "category": "NPC / Dialogue",
+  "type": "bool",
+  "values": [
+   0,
+   1
+  ],
+  "note": "0 = unset, 1 = set"
+ },
+ {
+  "name": "Mud_Leave",
+  "label": "Mud Leave",
+  "category": "NPC / Dialogue",
+  "type": "bool",
+  "values": [
+   0,
+   1
+  ],
+  "note": "0 = unset, 1 = set"
  },
  {
   "name": "Mud_Nerve",
   "label": "Mud Nerve",
-  "category": "NPC / Dialogue"
+  "category": "NPC / Dialogue",
+  "type": "counter",
+  "values": null,
+  "note": "small integer counter",
+  "examples": [
+   17
+  ]
  },
  {
   "name": "Mud_NerveRealized",
   "label": "Mud Nerve Realized",
-  "category": "NPC / Dialogue"
+  "category": "NPC / Dialogue",
+  "type": "bool",
+  "values": [
+   0,
+   1
+  ],
+  "note": "0 = unset, 1 = set",
+  "examples": [
+   1
+  ]
+ },
+ {
+  "name": "Mud_OrcGraveyard",
+  "label": "Mud Orc Graveyard",
+  "category": "NPC / Dialogue",
+  "type": "bool",
+  "values": [
+   0,
+   1
+  ],
+  "note": "0 = unset, 1 = set"
+ },
+ {
+  "name": "Mud_Path_OrcGraveyard",
+  "label": "Mud Path Orc Graveyard",
+  "category": "NPC / Dialogue",
+  "type": "time",
+  "values": null,
+  "note": "game-time/day value (large int)"
+ },
+ {
+  "name": "Mud_Stay_Kalomists",
+  "label": "Mud Stay Kalomists",
+  "category": "NPC / Dialogue",
+  "type": "time",
+  "values": null,
+  "note": "game-time/day value (large int)"
+ },
+ {
+  "name": "Myarmor",
+  "label": "Myarmor",
+  "category": "NPC / Dialogue",
+  "type": "bool",
+  "values": [
+   0,
+   1
+  ],
+  "note": "0 = unset, 1 = set"
  },
  {
   "name": "Myxir_Quest_Completed",
   "label": "Myxir Quest Completed",
-  "category": "NPC / Dialogue"
+  "category": "NPC / Dialogue",
+  "type": "time",
+  "values": null,
+  "note": "game-time/day value (large int)"
  },
  {
   "name": "NC_JointsDistributed",
   "label": "NC Joints Distributed",
-  "category": "Camp"
+  "category": "Camp",
+  "type": "counter",
+  "values": null,
+  "note": "small integer counter",
+  "examples": [
+   39
+  ]
+ },
+ {
+  "name": "NerveSec",
+  "label": "Nerve Sec",
+  "category": "NPC / Dialogue",
+  "type": "bool",
+  "values": [
+   0,
+   1
+  ],
+  "note": "0 = unset, 1 = set"
+ },
+ {
+  "name": "Novice_Guide_Kalom",
+  "label": "Novice Guide Kalom",
+  "category": "Faction / Progression",
+  "type": "bool",
+  "values": [
+   0,
+   1
+  ],
+  "note": "0 = unset, 1 = set"
+ },
+ {
+  "name": "Novice_Guide_MainGate",
+  "label": "Novice Guide Main Gate",
+  "category": "Faction / Progression",
+  "type": "bool",
+  "values": [
+   0,
+   1
+  ],
+  "note": "0 = unset, 1 = set"
+ },
+ {
+  "name": "Novice_Guide_Smithy",
+  "label": "Novice Guide Smithy",
+  "category": "Faction / Progression",
+  "type": "bool",
+  "values": [
+   0,
+   1
+  ],
+  "note": "0 = unset, 1 = set"
+ },
+ {
+  "name": "Novice_Guide_Temple",
+  "label": "Novice Guide Temple",
+  "category": "Faction / Progression",
+  "type": "bool",
+  "values": [
+   0,
+   1
+  ],
+  "note": "0 = unset, 1 = set"
+ },
+ {
+  "name": "Novice_Guide_Train",
+  "label": "Novice Guide Train",
+  "category": "Faction / Progression",
+  "type": "bool",
+  "values": [
+   0,
+   1
+  ],
+  "note": "0 = unset, 1 = set"
+ },
+ {
+  "name": "Novices_Mumbling",
+  "label": "Novices Mumbling",
+  "category": "Faction / Progression",
+  "type": "bool",
+  "values": [
+   0,
+   1
+  ],
+  "note": "0 = unset, 1 = set"
+ },
+ {
+  "name": "Novices_Mumbling_Phase01",
+  "label": "Novices Mumbling Phase01",
+  "category": "Faction / Progression",
+  "type": "bool",
+  "values": [
+   0,
+   1
+  ],
+  "note": "0 = unset, 1 = set"
+ },
+ {
+  "name": "Novices_Mumbling_Phase02",
+  "label": "Novices Mumbling Phase02",
+  "category": "Faction / Progression",
+  "type": "bool",
+  "values": [
+   0,
+   1
+  ],
+  "note": "0 = unset, 1 = set"
+ },
+ {
+  "name": "NoviceSaved",
+  "label": "Novice Saved",
+  "category": "Faction / Progression",
+  "type": "bool",
+  "values": [
+   0,
+   1
+  ],
+  "note": "0 = unset, 1 = set"
+ },
+ {
+  "name": "NovicesSleeper_Mumbling",
+  "label": "Novices Sleeper Mumbling",
+  "category": "Faction / Progression",
+  "type": "time",
+  "values": null,
+  "note": "game-time/day value (large int)"
+ },
+ {
+  "name": "NovicesSleeper_Mumbling_Phase01",
+  "label": "Novices Sleeper Mumbling Phase01",
+  "category": "Faction / Progression",
+  "type": "time",
+  "values": null,
+  "note": "game-time/day value (large int)"
+ },
+ {
+  "name": "NovicesSleeper_Mumbling_Phase02",
+  "label": "Novices Sleeper Mumbling Phase02",
+  "category": "Faction / Progression",
+  "type": "time",
+  "values": null,
+  "note": "game-time/day value (large int)"
+ },
+ {
+  "name": "Novize_1_senses",
+  "label": "Novize 1 senses",
+  "category": "NPC / Dialogue",
+  "type": "bool",
+  "values": [
+   0,
+   1
+  ],
+  "note": "0 = unset, 1 = set"
+ },
+ {
+  "name": "Novize_senses",
+  "label": "Novize senses",
+  "category": "NPC / Dialogue",
+  "type": "bool",
+  "values": [
+   0,
+   1
+  ],
+  "note": "0 = unset, 1 = set"
+ },
+ {
+  "name": "NPC_FLAG_IMMORTAL",
+  "label": "NPC FLAG IMMORTAL",
+  "category": "NPC / Dialogue",
+  "type": "bool",
+  "values": [
+   0,
+   1
+  ],
+  "note": "0 = unset, 1 = set"
+ },
+ {
+  "name": "Npc_GetEquippedArmorhero",
+  "label": "Npc Get Equipped Armorhero",
+  "category": "NPC / Dialogue",
+  "type": "bool",
+  "values": [
+   0,
+   1
+  ],
+  "note": "0 = unset, 1 = set"
+ },
+ {
+  "name": "Npc_GetTrueGuildhero",
+  "label": "Npc Get True Guildhero",
+  "category": "Faction / Progression",
+  "type": "bool",
+  "values": [
+   0,
+   1
+  ],
+  "note": "0 = unset, 1 = set"
+ },
+ {
+  "name": "Npc_HasItemshero_ItAt_Crawler_01",
+  "label": "Npc Has Itemshero It At Crawler 01",
+  "category": "NPC / Dialogue",
+  "type": "bool",
+  "values": [
+   0,
+   1
+  ],
+  "note": "0 = unset, 1 = set"
+ },
+ {
+  "name": "Npc_HasItemshero_ItMi_Orenugget",
+  "label": "Npc Has Itemshero It Mi Orenugget",
+  "category": "NPC / Dialogue",
+  "type": "bool",
+  "values": [
+   0,
+   1
+  ],
+  "note": "0 = unset, 1 = set"
+ },
+ {
+  "name": "NpctypeFriend",
+  "label": "Npctype Friend",
+  "category": "NPC / Dialogue",
+  "type": "bool",
+  "values": [
+   0,
+   1
+  ],
+  "note": "0 = unset, 1 = set"
+ },
+ {
+  "name": "NpctypeMain",
+  "label": "Npctype Main",
+  "category": "NPC / Dialogue",
+  "type": "bool",
+  "values": [
+   0,
+   1
+  ],
+  "note": "0 = unset, 1 = set"
+ },
+ {
+  "name": "Nyras_flags",
+  "label": "Nyras flags",
+  "category": "NPC / Dialogue",
+  "type": "bool",
+  "values": [
+   0,
+   1
+  ],
+  "note": "0 = unset, 1 = set"
  },
  {
   "name": "OC_Test",
   "label": "OC Test",
-  "category": "Camp"
+  "category": "Camp",
+  "type": "counter",
+  "values": null,
+  "note": "small integer counter",
+  "examples": [
+   5
+  ]
+ },
+ {
+  "name": "OldCampAccess",
+  "label": "Old Camp Access",
+  "category": "Permission / Passage",
+  "type": "bool",
+  "values": [
+   0,
+   1
+  ],
+  "note": "0 = unset, 1 = set"
+ },
+ {
+  "name": "oldHeroGuild",
+  "label": "old Hero Guild",
+  "category": "Faction / Progression",
+  "type": "bool",
+  "values": [
+   0,
+   1
+  ],
+  "note": "0 = unset, 1 = set"
+ },
+ {
+  "name": "Orcs_Desert",
+  "label": "Orcs Desert",
+  "category": "NPC / Dialogue",
+  "type": "bool",
+  "values": [
+   0,
+   1
+  ],
+  "note": "0 = unset, 1 = set"
+ },
+ {
+  "name": "Orcs_Desert_Timer",
+  "label": "Orcs Desert Timer",
+  "category": "Timer / Day",
+  "type": "time",
+  "values": null,
+  "note": "game-time/day value (large int)"
+ },
+ {
+  "name": "Ore",
+  "label": "Ore",
+  "category": "NPC / Dialogue",
+  "type": "bool",
+  "values": [
+   0,
+   1
+  ],
+  "note": "0 = unset, 1 = set"
+ },
+ {
+  "name": "Org_829_GotJoint",
+  "label": "Org 829 Got Joint",
+  "category": "NPC / Dialogue",
+  "type": "bool",
+  "values": [
+   0,
+   1
+  ],
+  "note": "0 = unset, 1 = set"
  },
  {
   "name": "Peasants_have_water",
   "label": "Peasants have water",
-  "category": "NPC / Dialogue"
+  "category": "NPC / Dialogue",
+  "type": "bool",
+  "values": [
+   0,
+   1
+  ],
+  "note": "0 = unset, 1 = set"
+ },
+ {
+  "name": "PlaceholderCondition",
+  "label": "Placeholder Condition",
+  "category": "NPC / Dialogue",
+  "type": "bool",
+  "values": [
+   0,
+   1
+  ],
+  "note": "0 = unset, 1 = set"
  },
  {
   "name": "Pock_Forget_Time",
   "label": "Pock Forget Time",
-  "category": "Timer / Day"
+  "category": "Timer / Day",
+  "type": "time",
+  "values": null,
+  "note": "game-time/day value (large int)",
+  "examples": [
+   256822
+  ]
+ },
+ {
+  "name": "Pock_ForgetAll",
+  "label": "Pock Forget All",
+  "category": "NPC / Dialogue",
+  "type": "bool",
+  "values": [
+   0,
+   1
+  ],
+  "note": "0 = unset, 1 = set"
  },
  {
   "name": "Points_NC",
   "label": "Points NC",
-  "category": "Faction / Progression"
+  "category": "Faction / Progression",
+  "type": "counter",
+  "values": null,
+  "note": "small integer counter",
+  "examples": [
+   35
+  ]
  },
  {
   "name": "Points_OC",
   "label": "Points OC",
-  "category": "Faction / Progression"
+  "category": "Faction / Progression",
+  "type": "counter",
+  "values": null,
+  "note": "small integer counter",
+  "examples": [
+   16
+  ]
  },
  {
   "name": "RandomDiggerPhrase_1",
   "label": "Random Digger Phrase 1",
-  "category": "Misc / Random"
+  "category": "Misc / Random",
+  "type": "bool",
+  "values": [
+   0,
+   1
+  ],
+  "note": "0 = unset, 1 = set"
  },
  {
   "name": "RandomDiggerPhrase_2",
   "label": "Random Digger Phrase 2",
-  "category": "Misc / Random"
+  "category": "Misc / Random",
+  "type": "bool",
+  "values": [
+   0,
+   1
+  ],
+  "note": "0 = unset, 1 = set"
  },
  {
   "name": "RandomDiggerPhrase_3",
   "label": "Random Digger Phrase 3",
-  "category": "Misc / Random"
+  "category": "Misc / Random",
+  "type": "bool",
+  "values": [
+   0,
+   1
+  ],
+  "note": "0 = unset, 1 = set"
  },
  {
   "name": "RandomDiggerPhrase_4",
   "label": "Random Digger Phrase 4",
-  "category": "Misc / Random"
+  "category": "Misc / Random",
+  "type": "bool",
+  "values": [
+   0,
+   1
+  ],
+  "note": "0 = unset, 1 = set"
  },
  {
   "name": "RandomDiggerPhrase_5",
   "label": "Random Digger Phrase 5",
-  "category": "Misc / Random"
+  "category": "Misc / Random",
+  "type": "bool",
+  "values": [
+   0,
+   1
+  ],
+  "note": "0 = unset, 1 = set"
  },
  {
   "name": "Rayk_Mad",
   "label": "Rayk Mad",
-  "category": "NPC / Dialogue"
+  "category": "NPC / Dialogue",
+  "type": "bool",
+  "values": [
+   0,
+   1
+  ],
+  "note": "0 = unset, 1 = set",
+  "examples": [
+   1
+  ]
  },
  {
   "name": "Rayk_Mad_BeforeConversation",
   "label": "Rayk Mad Before Conversation",
-  "category": "NPC / Dialogue"
+  "category": "NPC / Dialogue",
+  "type": "time",
+  "values": null,
+  "note": "game-time/day value (large int)",
+  "examples": [
+   489037
+  ]
  },
  {
   "name": "RaykBeated",
   "label": "Rayk Beated",
-  "category": "NPC / Dialogue"
+  "category": "NPC / Dialogue",
+  "type": "bool",
+  "values": [
+   0,
+   1
+  ],
+  "note": "0 = unset, 1 = set"
  },
  {
   "name": "RecruitedDiggers",
   "label": "Recruited Diggers",
-  "category": "Faction / Progression"
+  "category": "Faction / Progression",
+  "type": "bool",
+  "values": [
+   0,
+   1
+  ],
+  "note": "0 = unset, 1 = set"
+ },
+ {
+  "name": "RevealedKalomists",
+  "label": "Revealed Kalomists",
+  "category": "NPC / Dialogue",
+  "type": "bool",
+  "values": [
+   0,
+   1
+  ],
+  "note": "0 = unset, 1 = set"
  },
  {
   "name": "Ricelord_AskedForWater",
   "label": "Ricelord Asked For Water",
-  "category": "NPC / Dialogue"
+  "category": "NPC / Dialogue",
+  "type": "bool",
+  "values": [
+   0,
+   1
+  ],
+  "note": "0 = unset, 1 = set",
+  "examples": [
+   1
+  ]
+ },
+ {
+  "name": "Riordian_GlandNegotiation",
+  "label": "Riordian Gland Negotiation",
+  "category": "NPC / Dialogue",
+  "type": "bool",
+  "values": [
+   0,
+   1
+  ],
+  "note": "0 = unset, 1 = set"
+ },
+ {
+  "name": "Rogue01_Afraid",
+  "label": "Rogue01 Afraid",
+  "category": "NPC / Dialogue",
+  "type": "bool",
+  "values": [
+   0,
+   1
+  ],
+  "note": "0 = unset, 1 = set"
  },
  {
   "name": "Rogue01_Permission",
   "label": "Rogue01 Permission",
-  "category": "Permission / Passage"
+  "category": "Permission / Passage",
+  "type": "bool",
+  "values": [
+   0,
+   1
+  ],
+  "note": "0 = unset, 1 = set"
  },
  {
   "name": "Rogue01_Robbed",
   "label": "Rogue01 Robbed",
-  "category": "NPC / Dialogue"
+  "category": "NPC / Dialogue",
+  "type": "time",
+  "values": null,
+  "note": "game-time/day value (large int)"
+ },
+ {
+  "name": "Rogue01_ScaredPool",
+  "label": "Rogue01 Scared Pool",
+  "category": "NPC / Dialogue",
+  "type": "time",
+  "values": null,
+  "note": "game-time/day value (large int)"
+ },
+ {
+  "name": "Rogue01_Warning",
+  "label": "Rogue01 Warning",
+  "category": "NPC / Dialogue",
+  "type": "bool",
+  "values": [
+   0,
+   1
+  ],
+  "note": "0 = unset, 1 = set"
+ },
+ {
+  "name": "Rogue03_Afraid",
+  "label": "Rogue03 Afraid",
+  "category": "NPC / Dialogue",
+  "type": "bool",
+  "values": [
+   0,
+   1
+  ],
+  "note": "0 = unset, 1 = set"
  },
  {
   "name": "Rogue03_Permission",
   "label": "Rogue03 Permission",
-  "category": "Permission / Passage"
+  "category": "Permission / Passage",
+  "type": "counter",
+  "values": null,
+  "note": "small integer counter",
+  "examples": [
+   2
+  ]
  },
  {
   "name": "Rogue03_Robbed",
   "label": "Rogue03 Robbed",
-  "category": "NPC / Dialogue"
+  "category": "NPC / Dialogue",
+  "type": "time",
+  "values": null,
+  "note": "game-time/day value (large int)",
+  "examples": [
+   930444
+  ]
+ },
+ {
+  "name": "Rogue03_ScaredPool",
+  "label": "Rogue03 Scared Pool",
+  "category": "NPC / Dialogue",
+  "type": "time",
+  "values": null,
+  "note": "game-time/day value (large int)"
+ },
+ {
+  "name": "Rogue03_Warning",
+  "label": "Rogue03 Warning",
+  "category": "NPC / Dialogue",
+  "type": "bool",
+  "values": [
+   0,
+   1
+  ],
+  "note": "0 = unset, 1 = set"
+ },
+ {
+  "name": "Roscoe_aivar_AIV_PASSGATE",
+  "label": "Roscoe aivar AIV PASSGATE",
+  "category": "NPC / Dialogue",
+  "type": "bool",
+  "values": [
+   0,
+   1
+  ],
+  "note": "0 = unset, 1 = set"
  },
  {
   "name": "Saturas_BringFoci",
   "label": "Saturas Bring Foci",
-  "category": "NPC / Dialogue"
+  "category": "NPC / Dialogue",
+  "type": "bool",
+  "values": [
+   0,
+   1
+  ],
+  "note": "0 = unset, 1 = set"
  },
  {
   "name": "SC_Walk",
   "label": "SC Walk",
-  "category": "Camp"
+  "category": "Camp",
+  "type": "bool",
+  "values": [
+   0,
+   1
+  ],
+  "note": "0 = unset, 1 = set",
+  "examples": [
+   1
+  ]
  },
  {
   "name": "Scavenger_Preparation",
   "label": "Scavenger Preparation",
-  "category": "NPC / Dialogue"
+  "category": "NPC / Dialogue",
+  "type": "time",
+  "values": null,
+  "note": "game-time/day value (large int)"
+ },
+ {
+  "name": "Scorpio_Exile",
+  "label": "Scorpio Exile",
+  "category": "NPC / Dialogue",
+  "type": "bool",
+  "values": [
+   0,
+   1
+  ],
+  "note": "0 = unset, 1 = set"
+ },
+ {
+  "name": "self_aivar_AIV_GUARDPASSAGE_STATUS",
+  "label": "self aivar AIV GUARDPASSAGE STATUS",
+  "category": "NPC / Dialogue",
+  "type": "bool",
+  "values": [
+   0,
+   1
+  ],
+  "note": "0 = unset, 1 = set"
+ },
+ {
+  "name": "self_aivar_AIV_HAS_ERPRESSED",
+  "label": "self aivar AIV HAS ERPRESSED",
+  "category": "NPC / Dialogue",
+  "type": "bool",
+  "values": [
+   0,
+   1
+  ],
+  "note": "0 = unset, 1 = set"
+ },
+ {
+  "name": "self_aivar_AIV_MISSION1",
+  "label": "self aivar AIV MISSION1",
+  "category": "NPC / Dialogue",
+  "type": "bool",
+  "values": [
+   0,
+   1
+  ],
+  "note": "0 = unset, 1 = set"
+ },
+ {
+  "name": "self_aivar_AIV_PARTYMEMBER",
+  "label": "self aivar AIV PARTYMEMBER",
+  "category": "NPC / Dialogue",
+  "type": "bool",
+  "values": [
+   0,
+   1
+  ],
+  "note": "0 = unset, 1 = set"
+ },
+ {
+  "name": "self_aivar_AIV_PASSGATE",
+  "label": "self aivar AIV PASSGATE",
+  "category": "NPC / Dialogue",
+  "type": "bool",
+  "values": [
+   0,
+   1
+  ],
+  "note": "0 = unset, 1 = set"
+ },
+ {
+  "name": "Self_flags",
+  "label": "Self flags",
+  "category": "NPC / Dialogue",
+  "type": "bool",
+  "values": [
+   0,
+   1
+  ],
+  "note": "0 = unset, 1 = set"
+ },
+ {
+  "name": "self_npcType",
+  "label": "self npc Type",
+  "category": "NPC / Dialogue",
+  "type": "bool",
+  "values": [
+   0,
+   1
+  ],
+  "note": "0 = unset, 1 = set"
+ },
+ {
+  "name": "SENSE_SEESENSE_HEARSENSE_SMELL",
+  "label": "SENSE SEESENSE HEARSENSE SMELL",
+  "category": "NPC / Dialogue",
+  "type": "bool",
+  "values": [
+   0,
+   1
+  ],
+  "note": "0 = unset, 1 = set"
  },
  {
   "name": "SilasFound",
   "label": "Silas Found",
-  "category": "NPC / Dialogue"
+  "category": "NPC / Dialogue",
+  "type": "bool",
+  "values": [
+   0,
+   1
+  ],
+  "note": "0 = unset, 1 = set"
  },
  {
   "name": "SilasGuilty",
   "label": "Silas Guilty",
-  "category": "NPC / Dialogue"
+  "category": "NPC / Dialogue",
+  "type": "bool",
+  "values": [
+   0,
+   1
+  ],
+  "note": "0 = unset, 1 = set",
+  "examples": [
+   1
+  ]
  },
  {
   "name": "SilasRemoved",
   "label": "Silas Removed",
-  "category": "NPC / Dialogue"
+  "category": "NPC / Dialogue",
+  "type": "bool",
+  "values": [
+   0,
+   1
+  ],
+  "note": "0 = unset, 1 = set"
+ },
+ {
+  "name": "Skip_guild",
+  "label": "Skip guild",
+  "category": "NPC / Dialogue",
+  "type": "bool",
+  "values": [
+   0,
+   1
+  ],
+  "note": "0 = unset, 1 = set"
+ },
+ {
+  "name": "Skip_TradeFree",
+  "label": "Skip Trade Free",
+  "category": "NPC / Dialogue",
+  "type": "bool",
+  "values": [
+   0,
+   1
+  ],
+  "note": "0 = unset, 1 = set"
+ },
+ {
+  "name": "Sld_700_Lee_ZWEIHAND1_permanent",
+  "label": "Sld 700 Lee ZWEIHAND1 permanent",
+  "category": "NPC / Dialogue",
+  "type": "bool",
+  "values": [
+   0,
+   1
+  ],
+  "note": "0 = unset, 1 = set"
+ },
+ {
+  "name": "Sld_700_Lee_ZWEIHAND2_permanent",
+  "label": "Sld 700 Lee ZWEIHAND2 permanent",
+  "category": "NPC / Dialogue",
+  "type": "bool",
+  "values": [
+   0,
+   1
+  ],
+  "note": "0 = unset, 1 = set"
+ },
+ {
+  "name": "SLD_709_Cord_TRAIN_permanent",
+  "label": "SLD 709 Cord TRAIN permanent",
+  "category": "NPC / Dialogue",
+  "type": "bool",
+  "values": [
+   0,
+   1
+  ],
+  "note": "0 = unset, 1 = set"
+ },
+ {
+  "name": "SLD_709_Cord_TRAINAGAIN_permanent",
+  "label": "SLD 709 Cord TRAINAGAIN permanent",
+  "category": "NPC / Dialogue",
+  "type": "bool",
+  "values": [
+   0,
+   1
+  ],
+  "note": "0 = unset, 1 = set"
+ },
+ {
+  "name": "SLD_753_Baloro_SC_besorgt_den_Kram",
+  "label": "SLD 753 Baloro SC besorgt den Kram",
+  "category": "NPC / Dialogue",
+  "type": "bool",
+  "values": [
+   0,
+   1
+  ],
+  "note": "0 = unset, 1 = set"
  },
  {
   "name": "Snaf_FreeMBRagout",
   "label": "Snaf Free MBRagout",
-  "category": "NPC / Dialogue"
+  "category": "NPC / Dialogue",
+  "type": "bool",
+  "values": [
+   0,
+   1
+  ],
+  "note": "0 = unset, 1 = set",
+  "examples": [
+   1
+  ]
  },
  {
   "name": "Snaf_RagoutDay",
   "label": "Snaf Ragout Day",
-  "category": "Timer / Day"
+  "category": "Timer / Day",
+  "type": "time",
+  "values": null,
+  "note": "game-time/day value (large int)",
+  "examples": [
+   813599,
+   938794
+  ]
  },
  {
   "name": "Snaf_SyraRecipe",
   "label": "Snaf Syra Recipe",
-  "category": "NPC / Dialogue"
+  "category": "NPC / Dialogue",
+  "type": "time",
+  "values": null,
+  "note": "game-time/day value (large int)"
+ },
+ {
+  "name": "StartChaptersSix",
+  "label": "Start Chapters Six",
+  "category": "Quest Log",
+  "type": "bool",
+  "values": [
+   0,
+   1
+  ],
+  "note": "0 = unset, 1 = set"
+ },
+ {
+  "name": "Stone_guild",
+  "label": "Stone guild",
+  "category": "NPC / Dialogue",
+  "type": "bool",
+  "values": [
+   0,
+   1
+  ],
+  "note": "0 = unset, 1 = set"
  },
  {
   "name": "Stone_ImprovedOreArmor",
   "label": "Stone Improved Ore Armor",
-  "category": "NPC / Dialogue"
+  "category": "NPC / Dialogue",
+  "type": "bool",
+  "values": [
+   0,
+   1
+  ],
+  "note": "0 = unset, 1 = set"
  },
  {
   "name": "Stone_OreArmor",
   "label": "Stone Ore Armor",
-  "category": "NPC / Dialogue"
+  "category": "NPC / Dialogue",
+  "type": "time",
+  "values": null,
+  "note": "game-time/day value (large int)"
+ },
+ {
+  "name": "Stone_StartMaceCraft",
+  "label": "Stone Start Mace Craft",
+  "category": "NPC / Dialogue",
+  "type": "time",
+  "values": null,
+  "note": "game-time/day value (large int)"
  },
  {
   "name": "Stone_Teacher",
   "label": "Stone Teacher",
-  "category": "NPC / Dialogue"
+  "category": "NPC / Dialogue",
+  "type": "bool",
+  "values": [
+   0,
+   1
+  ],
+  "note": "0 = unset, 1 = set"
+ },
+ {
+  "name": "StoneHenge_Inside",
+  "label": "Stone Henge Inside",
+  "category": "NPC / Dialogue",
+  "type": "bool",
+  "values": [
+   0,
+   1
+  ],
+  "note": "0 = unset, 1 = set"
+ },
+ {
+  "name": "StoneHenge_Outside",
+  "label": "Stone Henge Outside",
+  "category": "NPC / Dialogue",
+  "type": "bool",
+  "values": [
+   0,
+   1
+  ],
+  "note": "0 = unset, 1 = set"
+ },
+ {
+  "name": "StoneHengeSkeletonsDead",
+  "label": "Stone Henge Skeletons Dead",
+  "category": "NPC / Dialogue",
+  "type": "bool",
+  "values": [
+   0,
+   1
+  ],
+  "note": "0 = unset, 1 = set"
  },
  {
   "name": "SwampCampTemple_Permision",
   "label": "Swamp Camp Temple Permision",
-  "category": "Permission / Passage"
+  "category": "Permission / Passage",
+  "type": "bool",
+  "values": [
+   0,
+   1
+  ],
+  "note": "0 = unset, 1 = set"
+ },
+ {
+  "name": "Tarrok",
+  "label": "Tarrok",
+  "category": "NPC / Dialogue",
+  "type": "bool",
+  "values": [
+   0,
+   1
+  ],
+  "note": "0 = unset, 1 = set"
+ },
+ {
+  "name": "Tarrok_name_0",
+  "label": "Tarrok name 0",
+  "category": "NPC / Dialogue",
+  "type": "bool",
+  "values": [
+   0,
+   1
+  ],
+  "note": "0 = unset, 1 = set"
  },
  {
   "name": "Tavern_Permission",
   "label": "Tavern Permission",
-  "category": "Permission / Passage"
+  "category": "Permission / Passage",
+  "type": "bool",
+  "values": [
+   0,
+   1
+  ],
+  "note": "0 = unset, 1 = set",
+  "examples": [
+   1
+  ]
  },
  {
   "name": "TeleportToWaterMagesBlockedDone",
   "label": "Teleport To Water Mages Blocked Done",
-  "category": "NPC / Dialogue"
+  "category": "NPC / Dialogue",
+  "type": "bool",
+  "values": [
+   0,
+   1
+  ],
+  "note": "0 = unset, 1 = set"
  },
  {
   "name": "Templar_Duel",
   "label": "Templar Duel",
-  "category": "Faction / Progression"
+  "category": "Faction / Progression",
+  "type": "bool",
+  "values": [
+   0,
+   1
+  ],
+  "note": "0 = unset, 1 = set"
+ },
+ {
+  "name": "Templer_1_senses",
+  "label": "Templer 1 senses",
+  "category": "NPC / Dialogue",
+  "type": "bool",
+  "values": [
+   0,
+   1
+  ],
+  "note": "0 = unset, 1 = set"
+ },
+ {
+  "name": "Templer_senses",
+  "label": "Templer senses",
+  "category": "NPC / Dialogue",
+  "type": "bool",
+  "values": [
+   0,
+   1
+  ],
+  "note": "0 = unset, 1 = set"
+ },
+ {
+  "name": "TemplerGuardAdvice",
+  "label": "Templer Guard Advice",
+  "category": "NPC / Dialogue",
+  "type": "bool",
+  "values": [
+   0,
+   1
+  ],
+  "note": "0 = unset, 1 = set"
+ },
+ {
+  "name": "Thorus_AmuletShown",
+  "label": "Thorus Amulet Shown",
+  "category": "NPC / Dialogue",
+  "type": "bool",
+  "values": [
+   0,
+   1
+  ],
+  "note": "0 = unset, 1 = set"
+ },
+ {
+  "name": "Thorus_flags",
+  "label": "Thorus flags",
+  "category": "NPC / Dialogue",
+  "type": "bool",
+  "values": [
+   0,
+   1
+  ],
+  "note": "0 = unset, 1 = set"
  },
  {
   "name": "Thorus_MordragMageMessenger",
   "label": "Thorus Mordrag Mage Messenger",
-  "category": "NPC / Dialogue"
+  "category": "NPC / Dialogue",
+  "type": "bool",
+  "values": [
+   0,
+   1
+  ],
+  "note": "0 = unset, 1 = set",
+  "examples": [
+   1
+  ]
  },
  {
   "name": "Thorus_Permission_Exterior",
   "label": "Thorus Permission Exterior",
-  "category": "Permission / Passage"
+  "category": "Permission / Passage",
+  "type": "bool",
+  "values": [
+   0,
+   1
+  ],
+  "note": "0 = unset, 1 = set",
+  "examples": [
+   1
+  ]
  },
  {
   "name": "Thorus_Permission_Interior",
   "label": "Thorus Permission Interior",
-  "category": "Permission / Passage"
+  "category": "Permission / Passage",
+  "type": "bool",
+  "values": [
+   0,
+   1
+  ],
+  "note": "0 = unset, 1 = set",
+  "examples": [
+   1
+  ]
+ },
+ {
+  "name": "TPL_1402_GorNaToth_TRAIN_permanent",
+  "label": "TPL 1402 Gor Na Toth TRAIN permanent",
+  "category": "NPC / Dialogue",
+  "type": "bool",
+  "values": [
+   0,
+   1
+  ],
+  "note": "0 = unset, 1 = set"
+ },
+ {
+  "name": "TPL_1402_GorNaToth_TRAINAGAIN_permanent",
+  "label": "TPL 1402 Gor Na Toth TRAINAGAIN permanent",
+  "category": "NPC / Dialogue",
+  "type": "bool",
+  "values": [
+   0,
+   1
+  ],
+  "note": "0 = unset, 1 = set"
+ },
+ {
+  "name": "Tpl_1415_Templer_ROCK_permanent",
+  "label": "Tpl 1415 Templer ROCK permanent",
+  "category": "NPC / Dialogue",
+  "type": "bool",
+  "values": [
+   0,
+   1
+  ],
+  "note": "0 = unset, 1 = set"
+ },
+ {
+  "name": "Tpl_1438_Templer_TEACHZANGEN_permanent",
+  "label": "Tpl 1438 Templer TEACHZANGEN permanent",
+  "category": "NPC / Dialogue",
+  "type": "bool",
+  "values": [
+   0,
+   1
+  ],
+  "note": "0 = unset, 1 = set"
+ },
+ {
+  "name": "Troll_Wheel",
+  "label": "Troll Wheel",
+  "category": "NPC / Dialogue",
+  "type": "bool",
+  "values": [
+   0,
+   1
+  ],
+  "note": "0 = unset, 1 = set"
+ },
+ {
+  "name": "TrollCanyon_Inside",
+  "label": "Troll Canyon Inside",
+  "category": "NPC / Dialogue",
+  "type": "bool",
+  "values": [
+   0,
+   1
+  ],
+  "note": "0 = unset, 1 = set"
+ },
+ {
+  "name": "TrollCanyon_Outside",
+  "label": "Troll Canyon Outside",
+  "category": "NPC / Dialogue",
+  "type": "bool",
+  "values": [
+   0,
+   1
+  ],
+  "note": "0 = unset, 1 = set"
  },
  {
   "name": "Tunnel_Opened",
   "label": "Tunnel Opened",
-  "category": "Location / World"
+  "category": "Location / World",
+  "type": "bool",
+  "values": [
+   0,
+   1
+  ],
+  "note": "0 = unset, 1 = set"
+ },
+ {
+  "name": "UluFight",
+  "label": "Ulu Fight",
+  "category": "NPC / Dialogue",
+  "type": "bool",
+  "values": [
+   0,
+   1
+  ],
+  "note": "0 = unset, 1 = set"
+ },
+ {
+  "name": "UNITTEST_EXPECT_CONVERSATION_ENDED",
+  "label": "UNITTEST EXPECT CONVERSATION ENDED",
+  "category": "NPC / Dialogue",
+  "type": "bool",
+  "values": [
+   0,
+   1
+  ],
+  "note": "0 = unset, 1 = set"
+ },
+ {
+  "name": "UNITTEST_SELECT_SUBDIALOG_INDEX",
+  "label": "UNITTEST SELECT SUBDIALOG INDEX",
+  "category": "NPC / Dialogue",
+  "type": "bool",
+  "values": [
+   0,
+   1
+  ],
+  "note": "0 = unset, 1 = set"
+ },
+ {
+  "name": "UNITTEST_SUCCESS",
+  "label": "UNITTEST SUCCESS",
+  "category": "NPC / Dialogue",
+  "type": "bool",
+  "values": [
+   0,
+   1
+  ],
+  "note": "0 = unset, 1 = set"
+ },
+ {
+  "name": "UrNazkrog_Permission",
+  "label": "Ur Nazkrog Permission",
+  "category": "Permission / Passage",
+  "type": "bool",
+  "values": [
+   0,
+   1
+  ],
+  "note": "0 = unset, 1 = set"
+ },
+ {
+  "name": "UrNazkrog_Spores",
+  "label": "Ur Nazkrog Spores",
+  "category": "NPC / Dialogue",
+  "type": "bool",
+  "values": [
+   0,
+   1
+  ],
+  "note": "0 = unset, 1 = set"
+ },
+ {
+  "name": "UrShak",
+  "label": "Ur Shak",
+  "category": "NPC / Dialogue",
+  "type": "bool",
+  "values": [
+   0,
+   1
+  ],
+  "note": "0 = unset, 1 = set"
+ },
+ {
+  "name": "URSHAK_FRIEND",
+  "label": "URSHAK FRIEND",
+  "category": "NPC / Dialogue",
+  "type": "bool",
+  "values": [
+   0,
+   1
+  ],
+  "note": "0 = unset, 1 = set"
+ },
+ {
+  "name": "Urshak_name_0",
+  "label": "Urshak name 0",
+  "category": "NPC / Dialogue",
+  "type": "bool",
+  "values": [
+   0,
+   1
+  ],
+  "note": "0 = unset, 1 = set"
  },
  {
   "name": "UrShak_SpokeOfUluMulu",
   "label": "Ur Shak Spoke Of Ulu Mulu",
-  "category": "NPC / Dialogue"
+  "category": "NPC / Dialogue",
+  "type": "bool",
+  "values": [
+   0,
+   1
+  ],
+  "note": "0 = unset, 1 = set"
+ },
+ {
+  "name": "VALUE_KDF_ARMOR_H",
+  "label": "VALUE KDF ARMOR H",
+  "category": "NPC / Dialogue",
+  "type": "bool",
+  "values": [
+   0,
+   1
+  ],
+  "note": "0 = unset, 1 = set"
+ },
+ {
+  "name": "VALUE_KDW_ARMOR_H",
+  "label": "VALUE KDW ARMOR H",
+  "category": "NPC / Dialogue",
+  "type": "bool",
+  "values": [
+   0,
+   1
+  ],
+  "note": "0 = unset, 1 = set"
+ },
+ {
+  "name": "VALUE_NOV_ARMOR_H",
+  "label": "VALUE NOV ARMOR H",
+  "category": "NPC / Dialogue",
+  "type": "bool",
+  "values": [
+   0,
+   1
+  ],
+  "note": "0 = unset, 1 = set"
+ },
+ {
+  "name": "VALUE_STT_ARMOR_H",
+  "label": "VALUE STT ARMOR H",
+  "category": "NPC / Dialogue",
+  "type": "bool",
+  "values": [
+   0,
+   1
+  ],
+  "note": "0 = unset, 1 = set"
  },
  {
   "name": "Viran_DeliveryDay",
   "label": "Viran Delivery Day",
-  "category": "Timer / Day"
+  "category": "Timer / Day",
+  "type": "time",
+  "values": null,
+  "note": "game-time/day value (large int)",
+  "examples": [
+   909296
+  ]
+ },
+ {
+  "name": "VLK_584_Snipes_DEAL_2_permanent",
+  "label": "VLK 584 Snipes DEAL 2 permanent",
+  "category": "NPC / Dialogue",
+  "type": "bool",
+  "values": [
+   0,
+   1
+  ],
+  "note": "0 = unset, 1 = set"
+ },
+ {
+  "name": "VLK_585_Aleph_DIRTY_permanent",
+  "label": "VLK 585 Aleph DIRTY permanent",
+  "category": "NPC / Dialogue",
+  "type": "bool",
+  "values": [
+   0,
+   1
+  ],
+  "note": "0 = unset, 1 = set"
+ },
+ {
+  "name": "VLK_585_Aleph_SCHUPPEN_permanent",
+  "label": "VLK 585 Aleph SCHUPPEN permanent",
+  "category": "NPC / Dialogue",
+  "type": "bool",
+  "values": [
+   0,
+   1
+  ],
+  "note": "0 = unset, 1 = set"
+ },
+ {
+  "name": "wache218_aivar_AIV_PASSGATE",
+  "label": "wache218 aivar AIV PASSGATE",
+  "category": "NPC / Dialogue",
+  "type": "bool",
+  "values": [
+   0,
+   1
+  ],
+  "note": "0 = unset, 1 = set"
+ },
+ {
+  "name": "Warned_Gorn_or_Lester",
+  "label": "Warned Gorn or Lester",
+  "category": "NPC / Dialogue",
+  "type": "bool",
+  "values": [
+   0,
+   1
+  ],
+  "note": "0 = unset, 1 = set"
  },
  {
   "name": "WaterMaguesPermission",
   "label": "Water Magues Permission",
-  "category": "Permission / Passage"
+  "category": "Permission / Passage",
+  "type": "bool",
+  "values": [
+   0,
+   1
+  ],
+  "note": "0 = unset, 1 = set"
+ },
+ {
+  "name": "WaterMaguesTeleportBlocked",
+  "label": "Water Magues Teleport Blocked",
+  "category": "NPC / Dialogue",
+  "type": "bool",
+  "values": [
+   0,
+   1
+  ],
+  "note": "0 = unset, 1 = set"
+ },
+ {
+  "name": "Whistler_BuyMySword",
+  "label": "Whistler Buy My Sword",
+  "category": "NPC / Dialogue",
+  "type": "bool",
+  "values": [
+   0,
+   1
+  ],
+  "note": "0 = unset, 1 = set"
  },
  {
   "name": "Whistler_BuyMySword_Day",
   "label": "Whistler Buy My Sword Day",
-  "category": "Timer / Day"
+  "category": "Timer / Day",
+  "type": "time",
+  "values": null,
+  "note": "game-time/day value (large int)",
+  "examples": [
+   1
+  ]
  },
  {
   "name": "Wolf_Crafting_Armor",
   "label": "Wolf Crafting Armor",
-  "category": "NPC / Dialogue"
+  "category": "NPC / Dialogue",
+  "type": "time",
+  "values": null,
+  "note": "game-time/day value (large int)"
+ },
+ {
+  "name": "XP_BC_BANDITSCAMP_COMPLETE",
+  "label": "XP BC BANDITSCAMP COMPLETE",
+  "category": "Location / World",
+  "type": "bool",
+  "values": [
+   0,
+   1
+  ],
+  "note": "0 = unset, 1 = set"
+ },
+ {
+  "name": "XP_BC_BANDITSCAMP_QUENTIN",
+  "label": "XP BC BANDITSCAMP QUENTIN",
+  "category": "Location / World",
+  "type": "bool",
+  "values": [
+   0,
+   1
+  ],
+  "note": "0 = unset, 1 = set"
+ },
+ {
+  "name": "XP_BC_BANDITSTRUST_COMPLETE",
+  "label": "XP BC BANDITSTRUST COMPLETE",
+  "category": "Location / World",
+  "type": "bool",
+  "values": [
+   0,
+   1
+  ],
+  "note": "0 = unset, 1 = set"
+ },
+ {
+  "name": "XP_BC_BANDITSTRUST_FIND",
+  "label": "XP BC BANDITSTRUST FIND",
+  "category": "Location / World",
+  "type": "bool",
+  "values": [
+   0,
+   1
+  ],
+  "note": "0 = unset, 1 = set"
+ },
+ {
+  "name": "XP_BC_BANDITSTRUST_KEY",
+  "label": "XP BC BANDITSTRUST KEY",
+  "category": "Location / World",
+  "type": "bool",
+  "values": [
+   0,
+   1
+  ],
+  "note": "0 = unset, 1 = set"
+ },
+ {
+  "name": "XP_FM_BALOROSWAFFE_COMPLETE",
+  "label": "XP FM BALOROSWAFFE COMPLETE",
+  "category": "Location / World",
+  "type": "bool",
+  "values": [
+   0,
+   1
+  ],
+  "note": "0 = unset, 1 = set"
+ },
+ {
+  "name": "XP_GetCronosPermission",
+  "label": "XP Get Cronos Permission",
+  "category": "Permission / Passage",
+  "type": "bool",
+  "values": [
+   0,
+   1
+  ],
+  "note": "0 = unset, 1 = set"
+ },
+ {
+  "name": "XP_NC_BANNEDFROMOC_ASKLEE",
+  "label": "XP NC BANNEDFROMOC ASKLEE",
+  "category": "Location / World",
+  "type": "bool",
+  "values": [
+   0,
+   1
+  ],
+  "note": "0 = unset, 1 = set"
+ },
+ {
+  "name": "XP_NC_BANNEDFROMOC_COMPLETE",
+  "label": "XP NC BANNEDFROMOC COMPLETE",
+  "category": "Location / World",
+  "type": "bool",
+  "values": [
+   0,
+   1
+  ],
+  "note": "0 = unset, 1 = set"
+ },
+ {
+  "name": "XP_NC_BOWARTISAN_COMPLETE",
+  "label": "XP NC BOWARTISAN COMPLETE",
+  "category": "Location / World",
+  "type": "bool",
+  "values": [
+   0,
+   1
+  ],
+  "note": "0 = unset, 1 = set"
+ },
+ {
+  "name": "XP_NC_BRINGFOCI_MEETING",
+  "label": "XP NC BRINGFOCI MEETING",
+  "category": "Location / World",
+  "type": "bool",
+  "values": [
+   0,
+   1
+  ],
+  "note": "0 = unset, 1 = set"
+ },
+ {
+  "name": "XP_NC_BRINGFOCI_YBERION",
+  "label": "XP NC BRINGFOCI YBERION",
+  "category": "Location / World",
+  "type": "bool",
+  "values": [
+   0,
+   1
+  ],
+  "note": "0 = unset, 1 = set"
+ },
+ {
+  "name": "XP_NC_BRINGLISTBACK_COMPLETE",
+  "label": "XP NC BRINGLISTBACK COMPLETE",
+  "category": "Location / World",
+  "type": "bool",
+  "values": [
+   0,
+   1
+  ],
+  "note": "0 = unset, 1 = set"
+ },
+ {
+  "name": "XP_NC_BRINGLISTBACK_GIVELIST",
+  "label": "XP NC BRINGLISTBACK GIVELIST",
+  "category": "Location / World",
+  "type": "bool",
+  "values": [
+   0,
+   1
+  ],
+  "note": "0 = unset, 1 = set"
+ },
+ {
+  "name": "XP_NC_CARRYWATER_COMPLETE",
+  "label": "XP NC CARRYWATER COMPLETE",
+  "category": "Location / World",
+  "type": "bool",
+  "values": [
+   0,
+   1
+  ],
+  "note": "0 = unset, 1 = set"
+ },
+ {
+  "name": "XP_NC_CARRYWATER_CONFRONT",
+  "label": "XP NC CARRYWATER CONFRONT",
+  "category": "Location / World",
+  "type": "bool",
+  "values": [
+   0,
+   1
+  ],
+  "note": "0 = unset, 1 = set"
+ },
+ {
+  "name": "XP_NC_CONVOY_COMPLETE",
+  "label": "XP NC CONVOY COMPLETE",
+  "category": "Location / World",
+  "type": "bool",
+  "values": [
+   0,
+   1
+  ],
+  "note": "0 = unset, 1 = set"
+ },
+ {
+  "name": "XP_NC_CONVOY_GORN",
+  "label": "XP NC CONVOY GORN",
+  "category": "Location / World",
+  "type": "bool",
+  "values": [
+   0,
+   1
+  ],
+  "note": "0 = unset, 1 = set"
+ },
+ {
+  "name": "XP_NC_CRONOSMESSENGER_COMPLETE",
+  "label": "XP NC CRONOSMESSENGER COMPLETE",
+  "category": "Location / World",
+  "type": "bool",
+  "values": [
+   0,
+   1
+  ],
+  "note": "0 = unset, 1 = set"
+ },
+ {
+  "name": "XP_NC_DAMLURKER_COMPLETE",
+  "label": "XP NC DAMLURKER COMPLETE",
+  "category": "Location / World",
+  "type": "bool",
+  "values": [
+   0,
+   1
+  ],
+  "note": "0 = unset, 1 = set"
+ },
+ {
+  "name": "XP_NC_DEALERJOB_COMPLETE",
+  "label": "XP NC DEALERJOB COMPLETE",
+  "category": "Location / World",
+  "type": "bool",
+  "values": [
+   0,
+   1
+  ],
+  "note": "0 = unset, 1 = set"
+ },
+ {
+  "name": "XP_NC_ESCAPEPLANNC_COMPLETE",
+  "label": "XP NC ESCAPEPLANNC COMPLETE",
+  "category": "Location / World",
+  "type": "bool",
+  "values": [
+   0,
+   1
+  ],
+  "note": "0 = unset, 1 = set"
+ },
+ {
+  "name": "XP_NC_FINDXARDAS_COMPLETE",
+  "label": "XP NC FINDXARDAS COMPLETE",
+  "category": "Location / World",
+  "type": "bool",
+  "values": [
+   0,
+   1
+  ],
+  "note": "0 = unset, 1 = set"
+ },
+ {
+  "name": "XP_NC_GET400ORE_COMPLETE",
+  "label": "XP NC GET400 ORE COMPLETE",
+  "category": "Location / World",
+  "type": "bool",
+  "values": [
+   0,
+   1
+  ],
+  "note": "0 = unset, 1 = set"
+ },
+ {
+  "name": "XP_NC_GOTOPSICAMP_COMPLETE",
+  "label": "XP NC GOTOPSICAMP COMPLETE",
+  "category": "Location / World",
+  "type": "bool",
+  "values": [
+   0,
+   1
+  ],
+  "note": "0 = unset, 1 = set"
+ },
+ {
+  "name": "XP_NC_INNOSAMULET_AMULET",
+  "label": "XP NC INNOSAMULET AMULET",
+  "category": "Location / World",
+  "type": "bool",
+  "values": [
+   0,
+   1
+  ],
+  "note": "0 = unset, 1 = set"
+ },
+ {
+  "name": "XP_NC_INNOSAMULET_COMPLETE",
+  "label": "XP NC INNOSAMULET COMPLETE",
+  "category": "Location / World",
+  "type": "bool",
+  "values": [
+   0,
+   1
+  ],
+  "note": "0 = unset, 1 = set"
+ },
+ {
+  "name": "XP_NC_JOINNC_COMPLETE",
+  "label": "XP NC JOINNC COMPLETE",
+  "category": "Location / World",
+  "type": "bool",
+  "values": [
+   0,
+   1
+  ],
+  "note": "0 = unset, 1 = set"
+ },
+ {
+  "name": "XP_NC_JOINNC_LARESHUT",
+  "label": "XP NC JOINNC LARESHUT",
+  "category": "Location / World",
+  "type": "bool",
+  "values": [
+   0,
+   1
+  ],
+  "note": "0 = unset, 1 = set"
+ },
+ {
+  "name": "XP_NC_JOINNC_LARESRING",
+  "label": "XP NC JOINNC LARESRING",
+  "category": "Location / World",
+  "type": "bool",
+  "values": [
+   0,
+   1
+  ],
+  "note": "0 = unset, 1 = set"
+ },
+ {
+  "name": "XP_NC_JOINWATERMAGES_COMPLETE",
+  "label": "XP NC JOINWATERMAGES COMPLETE",
+  "category": "Location / World",
+  "type": "bool",
+  "values": [
+   0,
+   1
+  ],
+  "note": "0 = unset, 1 = set"
+ },
+ {
+  "name": "XP_NC_JOINWATERMAGES_LEARNALCHEMY",
+  "label": "XP NC JOINWATERMAGES LEARNALCHEMY",
+  "category": "Location / World",
+  "type": "bool",
+  "values": [
+   0,
+   1
+  ],
+  "note": "0 = unset, 1 = set"
+ },
+ {
+  "name": "XP_NC_JOINWATERMAGES_LEARNINSCRIPTION",
+  "label": "XP NC JOINWATERMAGES LEARNINSCRIPTION",
+  "category": "Location / World",
+  "type": "bool",
+  "values": [
+   0,
+   1
+  ],
+  "note": "0 = unset, 1 = set"
+ },
+ {
+  "name": "XP_NC_MCPLATEARMOR_COMPLETE",
+  "label": "XP NC MCPLATEARMOR COMPLETE",
+  "category": "Location / World",
+  "type": "bool",
+  "values": [
+   0,
+   1
+  ],
+  "note": "0 = unset, 1 = set"
+ },
+ {
+  "name": "XP_NC_MCPLATEARMOR_DELIVER",
+  "label": "XP NC MCPLATEARMOR DELIVER",
+  "category": "Location / World",
+  "type": "bool",
+  "values": [
+   0,
+   1
+  ],
+  "note": "0 = unset, 1 = set"
+ },
+ {
+  "name": "XP_NC_MONASTERYRUIN_COMPLETE",
+  "label": "XP NC MONASTERYRUIN COMPLETE",
+  "category": "Location / World",
+  "type": "bool",
+  "values": [
+   0,
+   1
+  ],
+  "note": "0 = unset, 1 = set"
+ },
+ {
+  "name": "XP_NC_RANKUPMERCENARY_COMPLETE",
+  "label": "XP NC RANKUPMERCENARY COMPLETE",
+  "category": "Location / World",
+  "type": "bool",
+  "values": [
+   0,
+   1
+  ],
+  "note": "0 = unset, 1 = set"
+ },
+ {
+  "name": "XP_NC_RANKUPMERCENARY_VIBRATIONS",
+  "label": "XP NC RANKUPMERCENARY VIBRATIONS",
+  "category": "Location / World",
+  "type": "bool",
+  "values": [
+   0,
+   1
+  ],
+  "note": "0 = unset, 1 = set"
+ },
+ {
+  "name": "XP_NC_RECOVERFREEMINE_COMPLETE",
+  "label": "XP NC RECOVERFREEMINE COMPLETE",
+  "category": "Location / World",
+  "type": "bool",
+  "values": [
+   0,
+   1
+  ],
+  "note": "0 = unset, 1 = set"
+ },
+ {
+  "name": "XP_NC_RICELORDFOREMAN_COMPLETE",
+  "label": "XP NC RICELORDFOREMAN COMPLETE",
+  "category": "Location / World",
+  "type": "bool",
+  "values": [
+   0,
+   1
+  ],
+  "note": "0 = unset, 1 = set"
+ },
+ {
+  "name": "XP_NC_RICELORDFOREMAN_CONFRONT",
+  "label": "XP NC RICELORDFOREMAN CONFRONT",
+  "category": "Location / World",
+  "type": "bool",
+  "values": [
+   0,
+   1
+  ],
+  "note": "0 = unset, 1 = set"
+ },
+ {
+  "name": "XP_NC_RICELORDJOB_COMPLETE",
+  "label": "XP NC RICELORDJOB COMPLETE",
+  "category": "Location / World",
+  "type": "bool",
+  "values": [
+   0,
+   1
+  ],
+  "note": "0 = unset, 1 = set"
+ },
+ {
+  "name": "XP_NC_RICELORDJOB_REPORT",
+  "label": "XP NC RICELORDJOB REPORT",
+  "category": "Location / World",
+  "type": "bool",
+  "values": [
+   0,
+   1
+  ],
+  "note": "0 = unset, 1 = set"
+ },
+ {
+  "name": "XP_NC_SHRIKESHUT_COMPLETE",
+  "label": "XP NC SHRIKESHUT COMPLETE",
+  "category": "Location / World",
+  "type": "bool",
+  "values": [
+   0,
+   1
+  ],
+  "note": "0 = unset, 1 = set"
+ },
+ {
+  "name": "XP_NC_SHRIKESHUT_REPORT",
+  "label": "XP NC SHRIKESHUT REPORT",
+  "category": "Location / World",
+  "type": "bool",
+  "values": [
+   0,
+   1
+  ],
+  "note": "0 = unset, 1 = set"
+ },
+ {
+  "name": "XP_NC_SPREADJOINTS_COMPLETE",
+  "label": "XP NC SPREADJOINTS COMPLETE",
+  "category": "Location / World",
+  "type": "bool",
+  "values": [
+   0,
+   1
+  ],
+  "note": "0 = unset, 1 = set"
+ },
+ {
+  "name": "XP_OC_BRINGLIST_COMPLETE",
+  "label": "XP OC BRINGLIST COMPLETE",
+  "category": "Location / World",
+  "type": "bool",
+  "values": [
+   0,
+   1
+  ],
+  "note": "0 = unset, 1 = set"
+ },
+ {
+  "name": "XP_OC_BROWNIEPOINTS_KHARIMLOSS",
+  "label": "XP OC BROWNIEPOINTS KHARIMLOSS",
+  "category": "Location / World",
+  "type": "bool",
+  "values": [
+   0,
+   1
+  ],
+  "note": "0 = unset, 1 = set"
+ },
+ {
+  "name": "XP_OC_BROWNIEPOINTS_KHARIMVICTORY",
+  "label": "XP OC BROWNIEPOINTS KHARIMVICTORY",
+  "category": "Location / World",
+  "type": "bool",
+  "values": [
+   0,
+   1
+  ],
+  "note": "0 = unset, 1 = set"
+ },
+ {
+  "name": "XP_OC_BROWNIEPOINTS_KIRGOVICTORY",
+  "label": "XP OC BROWNIEPOINTS KIRGOVICTORY",
+  "category": "Location / World",
+  "type": "bool",
+  "values": [
+   0,
+   1
+  ],
+  "note": "0 = unset, 1 = set"
+ },
+ {
+  "name": "XP_OC_BULLYFORBULLIT_COMPLETE",
+  "label": "XP OC BULLYFORBULLIT COMPLETE",
+  "category": "Location / World",
+  "type": "bool",
+  "values": [
+   0,
+   1
+  ],
+  "note": "0 = unset, 1 = set"
+ },
+ {
+  "name": "XP_OC_DREAMEDLAND_COMPLETE",
+  "label": "XP OC DREAMEDLAND COMPLETE",
+  "category": "Location / World",
+  "type": "bool",
+  "values": [
+   0,
+   1
+  ],
+  "note": "0 = unset, 1 = set"
+ },
+ {
+  "name": "XP_OC_DREAMEDLAND_TALKSERAPHIA",
+  "label": "XP OC DREAMEDLAND TALKSERAPHIA",
+  "category": "Location / World",
+  "type": "bool",
+  "values": [
+   0,
+   1
+  ],
+  "note": "0 = unset, 1 = set"
+ },
+ {
+  "name": "XP_OC_DREAMEDLAND_TALKVELAYA",
+  "label": "XP OC DREAMEDLAND TALKVELAYA",
+  "category": "Location / World",
+  "type": "bool",
+  "values": [
+   0,
+   1
+  ],
+  "note": "0 = unset, 1 = set"
+ },
+ {
+  "name": "XP_OC_ESCAPEPLAN_COMPLETE",
+  "label": "XP OC ESCAPEPLAN COMPLETE",
+  "category": "Location / World",
+  "type": "bool",
+  "values": [
+   0,
+   1
+  ],
+  "note": "0 = unset, 1 = set"
+ },
+ {
+  "name": "XP_OC_FINGERSRING_COMPLETE",
+  "label": "XP OC FINGERSRING COMPLETE",
+  "category": "Location / World",
+  "type": "bool",
+  "values": [
+   0,
+   1
+  ],
+  "note": "0 = unset, 1 = set"
+ },
+ {
+  "name": "XP_OC_FIREMAGESLETTER_COMPLETE",
+  "label": "XP OC FIREMAGESLETTER COMPLETE",
+  "category": "Location / World",
+  "type": "bool",
+  "values": [
+   0,
+   1
+  ],
+  "note": "0 = unset, 1 = set"
+ },
+ {
+  "name": "XP_OC_FIREMAGESLETTER_OPENED",
+  "label": "XP OC FIREMAGESLETTER OPENED",
+  "category": "Location / World",
+  "type": "bool",
+  "values": [
+   0,
+   1
+  ],
+  "note": "0 = unset, 1 = set"
+ },
+ {
+  "name": "XP_OC_FISKNEWDEALER_COMPLETE",
+  "label": "XP OC FISKNEWDEALER COMPLETE",
+  "category": "Location / World",
+  "type": "bool",
+  "values": [
+   0,
+   1
+  ],
+  "note": "0 = unset, 1 = set"
+ },
+ {
+  "name": "XP_OC_FORGEDRIVALRIES1_COMPLETE",
+  "label": "XP OC FORGEDRIVALRIES1 COMPLETE",
+  "category": "Location / World",
+  "type": "bool",
+  "values": [
+   0,
+   1
+  ],
+  "note": "0 = unset, 1 = set"
+ },
+ {
+  "name": "XP_OC_FORGEDRIVALRIES1_CRAFT",
+  "label": "XP OC FORGEDRIVALRIES1 CRAFT",
+  "category": "Location / World",
+  "type": "bool",
+  "values": [
+   0,
+   1
+  ],
+  "note": "0 = unset, 1 = set"
+ },
+ {
+  "name": "XP_OC_FORGEDRIVALRIES1_FINDSWORD",
+  "label": "XP OC FORGEDRIVALRIES1 FINDSWORD",
+  "category": "Location / World",
+  "type": "bool",
+  "values": [
+   0,
+   1
+  ],
+  "note": "0 = unset, 1 = set"
+ },
+ {
+  "name": "XP_OC_FORGEDRIVALRIES3_COMPLETE",
+  "label": "XP OC FORGEDRIVALRIES3 COMPLETE",
+  "category": "Location / World",
+  "type": "bool",
+  "values": [
+   0,
+   1
+  ],
+  "note": "0 = unset, 1 = set"
+ },
+ {
+  "name": "XP_OC_FORGEDRIVALRIES3_GETDARRIONKEY",
+  "label": "XP OC FORGEDRIVALRIES3 GETDARRIONKEY",
+  "category": "Location / World",
+  "type": "bool",
+  "values": [
+   0,
+   1
+  ],
+  "note": "0 = unset, 1 = set"
+ },
+ {
+  "name": "XP_OC_FORGEDRIVALRIES3_STONENC",
+  "label": "XP OC FORGEDRIVALRIES3 STONENC",
+  "category": "Location / World",
+  "type": "bool",
+  "values": [
+   0,
+   1
+  ],
+  "note": "0 = unset, 1 = set"
+ },
+ {
+  "name": "XP_OC_FORGEDRIVALRIES3_STONESC",
+  "label": "XP OC FORGEDRIVALRIES3 STONESC",
+  "category": "Location / World",
+  "type": "bool",
+  "values": [
+   0,
+   1
+  ],
+  "note": "0 = unset, 1 = set"
+ },
+ {
+  "name": "XP_OC_FORGOTTENRECIPE_COMPLETE",
+  "label": "XP OC FORGOTTENRECIPE COMPLETE",
+  "category": "Location / World",
+  "type": "bool",
+  "values": [
+   0,
+   1
+  ],
+  "note": "0 = unset, 1 = set"
+ },
+ {
+  "name": "XP_OC_JOINOC_COMPLETE",
+  "label": "XP OC JOINOC COMPLETE",
+  "category": "Location / World",
+  "type": "bool",
+  "values": [
+   0,
+   1
+  ],
+  "note": "0 = unset, 1 = set"
+ },
+ {
+  "name": "XP_OC_KALOMSRECIPE_COMPLETE",
+  "label": "XP OC KALOMSRECIPE COMPLETE",
+  "category": "Location / World",
+  "type": "bool",
+  "values": [
+   0,
+   1
+  ],
+  "note": "0 = unset, 1 = set"
+ },
+ {
+  "name": "XP_OC_LOSTAMULET_COMPLETE",
+  "label": "XP OC LOSTAMULET COMPLETE",
+  "category": "Location / World",
+  "type": "bool",
+  "values": [
+   0,
+   1
+  ],
+  "note": "0 = unset, 1 = set"
+ },
+ {
+  "name": "XP_OC_LOSTNEK_COMPLETE",
+  "label": "XP OC LOSTNEK COMPLETE",
+  "category": "Location / World",
+  "type": "bool",
+  "values": [
+   0,
+   1
+  ],
+  "note": "0 = unset, 1 = set"
+ },
+ {
+  "name": "XP_OC_LURKERBITE_COMPLETE",
+  "label": "XP OC LURKERBITE COMPLETE",
+  "category": "Location / World",
+  "type": "bool",
+  "values": [
+   0,
+   1
+  ],
+  "note": "0 = unset, 1 = set"
+ },
+ {
+  "name": "XP_OC_LURKERBITE_FISK",
+  "label": "XP OC LURKERBITE FISK",
+  "category": "Location / World",
+  "type": "bool",
+  "values": [
+   0,
+   1
+  ],
+  "note": "0 = unset, 1 = set"
+ },
+ {
+  "name": "XP_OC_MAGICTRANSACTION_COMPLETE",
+  "label": "XP OC MAGICTRANSACTION COMPLETE",
+  "category": "Location / World",
+  "type": "bool",
+  "values": [
+   0,
+   1
+  ],
+  "note": "0 = unset, 1 = set"
+ },
+ {
+  "name": "XP_OC_MERCHANTSPRICE_COMPLETE",
+  "label": "XP OC MERCHANTSPRICE COMPLETE",
+  "category": "Location / World",
+  "type": "bool",
+  "values": [
+   0,
+   1
+  ],
+  "note": "0 = unset, 1 = set"
+ },
+ {
+  "name": "XP_OC_MORDRAGKO_CONVINCE",
+  "label": "XP OC MORDRAGKO CONVINCE",
+  "category": "Location / World",
+  "type": "bool",
+  "values": [
+   0,
+   1
+  ],
+  "note": "0 = unset, 1 = set"
+ },
+ {
+  "name": "XP_OC_MORDRAGKO_ESCORT",
+  "label": "XP OC MORDRAGKO ESCORT",
+  "category": "Location / World",
+  "type": "bool",
+  "values": [
+   0,
+   1
+  ],
+  "note": "0 = unset, 1 = set"
+ },
+ {
+  "name": "XP_OC_MORDRAGKO_KILL",
+  "label": "XP OC MORDRAGKO KILL",
+  "category": "Location / World",
+  "type": "bool",
+  "values": [
+   0,
+   1
+  ],
+  "note": "0 = unset, 1 = set"
+ },
+ {
+  "name": "XP_OC_RANKUPGUARD_COMPLETE",
+  "label": "XP OC RANKUPGUARD COMPLETE",
+  "category": "Location / World",
+  "type": "bool",
+  "values": [
+   0,
+   1
+  ],
+  "note": "0 = unset, 1 = set"
+ },
+ {
+  "name": "XP_OC_RANKUPGUARD_PROTECT",
+  "label": "XP OC RANKUPGUARD PROTECT",
+  "category": "Location / World",
+  "type": "bool",
+  "values": [
+   0,
+   1
+  ],
+  "note": "0 = unset, 1 = set"
+ },
+ {
+  "name": "XP_OC_SNAFSRECIPE_COMPLETE",
+  "label": "XP OC SNAFSRECIPE COMPLETE",
+  "category": "Location / World",
+  "type": "bool",
+  "values": [
+   0,
+   1
+  ],
+  "note": "0 = unset, 1 = set"
+ },
+ {
+  "name": "XP_OC_STONEHENGE_COMPLETE",
+  "label": "XP OC STONEHENGE COMPLETE",
+  "category": "Location / World",
+  "type": "bool",
+  "values": [
+   0,
+   1
+  ],
+  "note": "0 = unset, 1 = set"
+ },
+ {
+  "name": "XP_OC_TRIALOFFIRE_COMPLETE",
+  "label": "XP OC TRIALOFFIRE COMPLETE",
+  "category": "Location / World",
+  "type": "bool",
+  "values": [
+   0,
+   1
+  ],
+  "note": "0 = unset, 1 = set"
+ },
+ {
+  "name": "XP_OC_TRIALOFFIRE_SEA",
+  "label": "XP OC TRIALOFFIRE SEA",
+  "category": "Location / World",
+  "type": "bool",
+  "values": [
+   0,
+   1
+  ],
+  "note": "0 = unset, 1 = set"
+ },
+ {
+  "name": "XP_OC_TRIALOFFIRE_WATERFALL",
+  "label": "XP OC TRIALOFFIRE WATERFALL",
+  "category": "Location / World",
+  "type": "bool",
+  "values": [
+   0,
+   1
+  ],
+  "note": "0 = unset, 1 = set"
+ },
+ {
+  "name": "XP_OC_TROLLCANYON_COMPLETE",
+  "label": "XP OC TROLLCANYON COMPLETE",
+  "category": "Location / World",
+  "type": "bool",
+  "values": [
+   0,
+   1
+  ],
+  "note": "0 = unset, 1 = set"
+ },
+ {
+  "name": "XP_OC_WHISTLERSWORD_COMPLETE",
+  "label": "XP OC WHISTLERSWORD COMPLETE",
+  "category": "Location / World",
+  "type": "bool",
+  "values": [
+   0,
+   1
+  ],
+  "note": "0 = unset, 1 = set"
+ },
+ {
+  "name": "XP_OE_ACCESSSLEEPERTEMPLE_COMPLETE",
+  "label": "XP OE ACCESSSLEEPERTEMPLE COMPLETE",
+  "category": "Location / World",
+  "type": "bool",
+  "values": [
+   0,
+   1
+  ],
+  "note": "0 = unset, 1 = set"
+ },
+ {
+  "name": "XP_OE_MUKINCURSION_COMPLETE",
+  "label": "XP OE MUKINCURSION COMPLETE",
+  "category": "Location / World",
+  "type": "bool",
+  "values": [
+   0,
+   1
+  ],
+  "note": "0 = unset, 1 = set"
+ },
+ {
+  "name": "XP_OE_THECHAMPIONBURIAL_COMPLETE",
+  "label": "XP OE THECHAMPIONBURIAL COMPLETE",
+  "category": "Location / World",
+  "type": "bool",
+  "values": [
+   0,
+   1
+  ],
+  "note": "0 = unset, 1 = set"
+ },
+ {
+  "name": "XP_OM_BLOWTHEENTRANCE_COMPLETE",
+  "label": "XP OM BLOWTHEENTRANCE COMPLETE",
+  "category": "Location / World",
+  "type": "bool",
+  "values": [
+   0,
+   1
+  ],
+  "note": "0 = unset, 1 = set"
+ },
+ {
+  "name": "XP_OM_GEARWHEEL_COMPLETE",
+  "label": "XP OM GEARWHEEL COMPLETE",
+  "category": "Location / World",
+  "type": "bool",
+  "values": [
+   0,
+   1
+  ],
+  "note": "0 = unset, 1 = set"
+ },
+ {
+  "name": "XP_OM_SNIPESDEAL_COMPLETE",
+  "label": "XP OM SNIPESDEAL COMPLETE",
+  "category": "Location / World",
+  "type": "bool",
+  "values": [
+   0,
+   1
+  ],
+  "note": "0 = unset, 1 = set"
+ },
+ {
+  "name": "XP_OM_SNIPESDEAL_LURE",
+  "label": "XP OM SNIPESDEAL LURE",
+  "category": "Location / World",
+  "type": "bool",
+  "values": [
+   0,
+   1
+  ],
+  "note": "0 = unset, 1 = set"
+ },
+ {
+  "name": "XP_OM_STORAGESHED_COMPLETE",
+  "label": "XP OM STORAGESHED COMPLETE",
+  "category": "Location / World",
+  "type": "bool",
+  "values": [
+   0,
+   1
+  ],
+  "note": "0 = unset, 1 = set"
+ },
+ {
+  "name": "XP_SC_BOOK_COMPLETE",
+  "label": "XP SC BOOK COMPLETE",
+  "category": "Location / World",
+  "type": "bool",
+  "values": [
+   0,
+   1
+  ],
+  "note": "0 = unset, 1 = set"
+ },
+ {
+  "name": "XP_SC_BOOK_SATURAS",
+  "label": "XP SC BOOK SATURAS",
+  "category": "Location / World",
+  "type": "bool",
+  "values": [
+   0,
+   1
+  ],
+  "note": "0 = unset, 1 = set"
+ },
+ {
+  "name": "XP_SC_CLIMBINGCLIFFS_COMPLETE",
+  "label": "XP SC CLIMBINGCLIFFS COMPLETE",
+  "category": "Location / World",
+  "type": "bool",
+  "values": [
+   0,
+   1
+  ],
+  "note": "0 = unset, 1 = set"
+ },
+ {
+  "name": "XP_SC_CLIMBINGCLIFFS_GIVEJOINTS",
+  "label": "XP SC CLIMBINGCLIFFS GIVEJOINTS",
+  "category": "Location / World",
+  "type": "bool",
+  "values": [
+   0,
+   1
+  ],
+  "note": "0 = unset, 1 = set"
+ },
+ {
+  "name": "XP_SC_DELIVERWEED_BALOR",
+  "label": "XP SC DELIVERWEED BALOR",
+  "category": "Location / World",
+  "type": "bool",
+  "values": [
+   0,
+   1
+  ],
+  "note": "0 = unset, 1 = set"
+ },
+ {
+  "name": "XP_SC_DELIVERWEED_CIPHER",
+  "label": "XP SC DELIVERWEED CIPHER",
+  "category": "Location / World",
+  "type": "bool",
+  "values": [
+   0,
+   1
+  ],
+  "note": "0 = unset, 1 = set"
+ },
+ {
+  "name": "XP_SC_DELIVERWEED_COMPLETE",
+  "label": "XP SC DELIVERWEED COMPLETE",
+  "category": "Location / World",
+  "type": "bool",
+  "values": [
+   0,
+   1
+  ],
+  "note": "0 = unset, 1 = set"
+ },
+ {
+  "name": "XP_SC_DELIVERWEED_REPORT",
+  "label": "XP SC DELIVERWEED REPORT",
+  "category": "Location / World",
+  "type": "bool",
+  "values": [
+   0,
+   1
+  ],
+  "note": "0 = unset, 1 = set"
+ },
+ {
+  "name": "XP_SC_DELIVERWEED_VIRAN",
+  "label": "XP SC DELIVERWEED VIRAN",
+  "category": "Location / World",
+  "type": "bool",
+  "values": [
+   0,
+   1
+  ],
+  "note": "0 = unset, 1 = set"
+ },
+ {
+  "name": "XP_SC_DRUGMONOPOL_COMPLETE",
+  "label": "XP SC DRUGMONOPOL COMPLETE",
+  "category": "Location / World",
+  "type": "bool",
+  "values": [
+   0,
+   1
+  ],
+  "note": "0 = unset, 1 = set"
+ },
+ {
+  "name": "XP_SC_DRUGMONOPOL_JACKO",
+  "label": "XP SC DRUGMONOPOL JACKO",
+  "category": "Location / World",
+  "type": "bool",
+  "values": [
+   0,
+   1
+  ],
+  "note": "0 = unset, 1 = set"
+ },
+ {
+  "name": "XP_SC_FINDINGCAINE_ABANDONMINE",
+  "label": "XP SC FINDINGCAINE ABANDONMINE",
+  "category": "Location / World",
+  "type": "bool",
+  "values": [
+   0,
+   1
+  ],
+  "note": "0 = unset, 1 = set"
+ },
+ {
+  "name": "XP_SC_FINDINGCAINE_COMPLETE",
+  "label": "XP SC FINDINGCAINE COMPLETE",
+  "category": "Location / World",
+  "type": "bool",
+  "values": [
+   0,
+   1
+  ],
+  "note": "0 = unset, 1 = set"
+ },
+ {
+  "name": "XP_SC_FOCUS_COMPLETE",
+  "label": "XP SC FOCUS COMPLETE",
+  "category": "Location / World",
+  "type": "bool",
+  "values": [
+   0,
+   1
+  ],
+  "note": "0 = unset, 1 = set"
+ },
+ {
+  "name": "XP_SC_FORGEDRIVALRIES2_COMPLETE",
+  "label": "XP SC FORGEDRIVALRIES2 COMPLETE",
+  "category": "Location / World",
+  "type": "bool",
+  "values": [
+   0,
+   1
+  ],
+  "note": "0 = unset, 1 = set"
+ },
+ {
+  "name": "XP_SC_FORGEDRIVALRIES2_GIVEDESIGNTOSTONE",
+  "label": "XP SC FORGEDRIVALRIES2 GIVEDESIGNTOSTONE",
+  "category": "Location / World",
+  "type": "bool",
+  "values": [
+   0,
+   1
+  ],
+  "note": "0 = unset, 1 = set"
+ },
+ {
+  "name": "XP_SC_FORGEDRIVALRIES2_REFUSEDARRION",
+  "label": "XP SC FORGEDRIVALRIES2 REFUSEDARRION",
+  "category": "Location / World",
+  "type": "bool",
+  "values": [
+   0,
+   1
+  ],
+  "note": "0 = unset, 1 = set"
+ },
+ {
+  "name": "XP_SC_FORTRESS_COMPLETE",
+  "label": "XP SC FORTRESS COMPLETE",
+  "category": "Location / World",
+  "type": "bool",
+  "values": [
+   0,
+   1
+  ],
+  "note": "0 = unset, 1 = set"
+ },
+ {
+  "name": "XP_SC_GHORIMSRELIEF_COMPLETE",
+  "label": "XP SC GHORIMSRELIEF COMPLETE",
+  "category": "Location / World",
+  "type": "bool",
+  "values": [
+   0,
+   1
+  ],
+  "note": "0 = unset, 1 = set"
+ },
+ {
+  "name": "XP_SC_GREATINVOCATION_COMPLETE",
+  "label": "XP SC GREATINVOCATION COMPLETE",
+  "category": "Location / World",
+  "type": "bool",
+  "values": [
+   0,
+   1
+  ],
+  "note": "0 = unset, 1 = set"
+ },
+ {
+  "name": "XP_SC_JOINPSI_ARRIVE",
+  "label": "XP SC JOINPSI ARRIVE",
+  "category": "Location / World",
+  "type": "bool",
+  "values": [
+   0,
+   1
+  ],
+  "note": "0 = unset, 1 = set"
+ },
+ {
+  "name": "XP_SC_JOINPSI_CADARIMPRESSED",
+  "label": "XP SC JOINPSI CADARIMPRESSED",
+  "category": "Location / World",
+  "type": "bool",
+  "values": [
+   0,
+   1
+  ],
+  "note": "0 = unset, 1 = set"
+ },
+ {
+  "name": "XP_SC_JOINPSI_COMPLETE",
+  "label": "XP SC JOINPSI COMPLETE",
+  "category": "Location / World",
+  "type": "bool",
+  "values": [
+   0,
+   1
+  ],
+  "note": "0 = unset, 1 = set"
+ },
+ {
+  "name": "XP_SC_JOINPSI_NAMIBIMPRESSED",
+  "label": "XP SC JOINPSI NAMIBIMPRESSED",
+  "category": "Location / World",
+  "type": "bool",
+  "values": [
+   0,
+   1
+  ],
+  "note": "0 = unset, 1 = set"
+ },
+ {
+  "name": "XP_SC_JOINPSI_ORUNIMPRESSED",
+  "label": "XP SC JOINPSI ORUNIMPRESSED",
+  "category": "Location / World",
+  "type": "bool",
+  "values": [
+   0,
+   1
+  ],
+  "note": "0 = unset, 1 = set"
+ },
+ {
+  "name": "XP_SC_JOINPSI_TYONIMPRESSED",
+  "label": "XP SC JOINPSI TYONIMPRESSED",
+  "category": "Location / World",
+  "type": "bool",
+  "values": [
+   0,
+   1
+  ],
+  "note": "0 = unset, 1 = set"
+ },
+ {
+  "name": "XP_SC_JORUJOINTS_COMPLETE",
+  "label": "XP SC JORUJOINTS COMPLETE",
+  "category": "Location / World",
+  "type": "bool",
+  "values": [
+   0,
+   1
+  ],
+  "note": "0 = unset, 1 = set"
+ },
+ {
+  "name": "XP_SC_KALOMEXPERIMENTS_COMPLETE",
+  "label": "XP SC KALOMEXPERIMENTS COMPLETE",
+  "category": "Location / World",
+  "type": "bool",
+  "values": [
+   0,
+   1
+  ],
+  "note": "0 = unset, 1 = set"
+ },
+ {
+  "name": "XP_SC_KALOMEXPERIMENTS_RECRUITBALOR",
+  "label": "XP SC KALOMEXPERIMENTS RECRUITBALOR",
+  "category": "Location / World",
+  "type": "bool",
+  "values": [
+   0,
+   1
+  ],
+  "note": "0 = unset, 1 = set"
+ },
+ {
+  "name": "XP_SC_KALOMEXPERIMENTS_RECRUITJORU",
+  "label": "XP SC KALOMEXPERIMENTS RECRUITJORU",
+  "category": "Location / World",
+  "type": "bool",
+  "values": [
+   0,
+   1
+  ],
+  "note": "0 = unset, 1 = set"
+ },
+ {
+  "name": "XP_SC_KRAUTBOTE_COMPLETE",
+  "label": "XP SC KRAUTBOTE COMPLETE",
+  "category": "Location / World",
+  "type": "bool",
+  "values": [
+   0,
+   1
+  ],
+  "note": "0 = unset, 1 = set"
+ },
+ {
+  "name": "XP_SC_KRAUTBOTE_DELIVER",
+  "label": "XP SC KRAUTBOTE DELIVER",
+  "category": "Location / World",
+  "type": "bool",
+  "values": [
+   0,
+   1
+  ],
+  "note": "0 = unset, 1 = set"
+ },
+ {
+  "name": "XP_SC_MCEGGS_COMPLETE",
+  "label": "XP SC MCEGGS COMPLETE",
+  "category": "Location / World",
+  "type": "bool",
+  "values": [
+   0,
+   1
+  ],
+  "note": "0 = unset, 1 = set"
+ },
+ {
+  "name": "XP_SC_MCEGGS_HIREBAR",
+  "label": "XP SC MCEGGS HIREBAR",
+  "category": "Location / World",
+  "type": "bool",
+  "values": [
+   0,
+   1
+  ],
+  "note": "0 = unset, 1 = set"
+ },
+ {
+  "name": "XP_SC_MCEGGS_HIREKOSH",
+  "label": "XP SC MCEGGS HIREKOSH",
+  "category": "Location / World",
+  "type": "bool",
+  "values": [
+   0,
+   1
+  ],
+  "note": "0 = unset, 1 = set"
+ },
+ {
+  "name": "XP_SC_MCEGGS_HIREVID",
+  "label": "XP SC MCEGGS HIREVID",
+  "category": "Location / World",
+  "type": "bool",
+  "values": [
+   0,
+   1
+  ],
+  "note": "0 = unset, 1 = set"
+ },
+ {
+  "name": "XP_SC_MEETYBERION_COMPLETE",
+  "label": "XP SC MEETYBERION COMPLETE",
+  "category": "Location / World",
+  "type": "bool",
+  "values": [
+   0,
+   1
+  ],
+  "note": "0 = unset, 1 = set"
+ },
+ {
+  "name": "XP_SC_ORCGRAVEYARD_COMPLETE",
+  "label": "XP SC ORCGRAVEYARD COMPLETE",
+  "category": "Location / World",
+  "type": "bool",
+  "values": [
+   0,
+   1
+  ],
+  "note": "0 = unset, 1 = set"
+ },
+ {
+  "name": "XP_SC_ORCGRAVEYARD_LUKOR",
+  "label": "XP SC ORCGRAVEYARD LUKOR",
+  "category": "Location / World",
+  "type": "bool",
+  "values": [
+   0,
+   1
+  ],
+  "note": "0 = unset, 1 = set"
+ },
+ {
+  "name": "XP_SC_RANKUPTEMPLAR_COMPLETE",
+  "label": "XP SC RANKUPTEMPLAR COMPLETE",
+  "category": "Location / World",
+  "type": "bool",
+  "values": [
+   0,
+   1
+  ],
+  "note": "0 = unset, 1 = set"
+ },
+ {
+  "name": "XP_SC_RANKUPTEMPLAR_SCATTER",
+  "label": "XP SC RANKUPTEMPLAR SCATTER",
+  "category": "Location / World",
+  "type": "bool",
+  "values": [
+   0,
+   1
+  ],
+  "note": "0 = unset, 1 = set"
+ },
+ {
+  "name": "XP_SC_RECRUITDUSTY_BRIBE",
+  "label": "XP SC RECRUITDUSTY BRIBE",
+  "category": "Location / World",
+  "type": "bool",
+  "values": [
+   0,
+   1
+  ],
+  "note": "0 = unset, 1 = set"
+ },
+ {
+  "name": "XP_SC_RECRUITDUSTY_COMPLETE",
+  "label": "XP SC RECRUITDUSTY COMPLETE",
+  "category": "Location / World",
+  "type": "bool",
+  "values": [
+   0,
+   1
+  ],
+  "note": "0 = unset, 1 = set"
+ },
+ {
+  "name": "XP_SC_RECRUITDUSTY_JOINED",
+  "label": "XP SC RECRUITDUSTY JOINED",
+  "category": "Location / World",
+  "type": "bool",
+  "values": [
+   0,
+   1
+  ],
+  "note": "0 = unset, 1 = set"
+ },
+ {
+  "name": "XP_ST_EXPLORESLEEPERTEMPLE_COMPLETE",
+  "label": "XP ST EXPLORESLEEPERTEMPLE COMPLETE",
+  "category": "Location / World",
+  "type": "bool",
+  "values": [
+   0,
+   1
+  ],
+  "note": "0 = unset, 1 = set"
+ },
+ {
+  "name": "XP_ST_EXPLORESLEEPERTEMPLE_URIZIEL",
+  "label": "XP ST EXPLORESLEEPERTEMPLE URIZIEL",
+  "category": "Location / World",
+  "type": "bool",
+  "values": [
+   0,
+   1
+  ],
+  "note": "0 = unset, 1 = set"
+ },
+ {
+  "name": "XP_ST_URIZIEL_COMPLETE",
+  "label": "XP ST URIZIEL COMPLETE",
+  "category": "Location / World",
+  "type": "bool",
+  "values": [
+   0,
+   1
+  ],
+  "note": "0 = unset, 1 = set"
+ },
+ {
+  "name": "XP_ST_XARDASSUNKENTOWER_COMPLETE",
+  "label": "XP ST XARDASSUNKENTOWER COMPLETE",
+  "category": "Location / World",
+  "type": "bool",
+  "values": [
+   0,
+   1
+  ],
+  "note": "0 = unset, 1 = set"
+ },
+ {
+  "name": "XP_VOM_BESTIARY1_COMPLETE",
+  "label": "XP VOM BESTIARY1 COMPLETE",
+  "category": "Location / World",
+  "type": "bool",
+  "values": [
+   0,
+   1
+  ],
+  "note": "0 = unset, 1 = set"
+ },
+ {
+  "name": "XP_VOM_BESTIARY2_COMPLETE",
+  "label": "XP VOM BESTIARY2 COMPLETE",
+  "category": "Location / World",
+  "type": "bool",
+  "values": [
+   0,
+   1
+  ],
+  "note": "0 = unset, 1 = set"
+ },
+ {
+  "name": "XP_VOM_BESTIARY2_FINDSAMPLE",
+  "label": "XP VOM BESTIARY2 FINDSAMPLE",
+  "category": "Location / World",
+  "type": "bool",
+  "values": [
+   0,
+   1
+  ],
+  "note": "0 = unset, 1 = set"
+ },
+ {
+  "name": "XP_VOM_BESTIARY3_COMPLETE",
+  "label": "XP VOM BESTIARY3 COMPLETE",
+  "category": "Location / World",
+  "type": "bool",
+  "values": [
+   0,
+   1
+  ],
+  "note": "0 = unset, 1 = set"
+ },
+ {
+  "name": "XP_VOM_BESTIARY4_COMPLETE",
+  "label": "XP VOM BESTIARY4 COMPLETE",
+  "category": "Location / World",
+  "type": "bool",
+  "values": [
+   0,
+   1
+  ],
+  "note": "0 = unset, 1 = set"
+ },
+ {
+  "name": "XP_VOM_BESTIARY5_COMPLETE",
+  "label": "XP VOM BESTIARY5 COMPLETE",
+  "category": "Location / World",
+  "type": "bool",
+  "values": [
+   0,
+   1
+  ],
+  "note": "0 = unset, 1 = set"
+ },
+ {
+  "name": "XP_VOM_CHROMANIN_1",
+  "label": "XP VOM CHROMANIN 1",
+  "category": "Location / World",
+  "type": "bool",
+  "values": [
+   0,
+   1
+  ],
+  "note": "0 = unset, 1 = set"
+ },
+ {
+  "name": "XP_VOM_CHROMANIN_2",
+  "label": "XP VOM CHROMANIN 2",
+  "category": "Location / World",
+  "type": "bool",
+  "values": [
+   0,
+   1
+  ],
+  "note": "0 = unset, 1 = set"
+ },
+ {
+  "name": "XP_VOM_CHROMANIN_3",
+  "label": "XP VOM CHROMANIN 3",
+  "category": "Location / World",
+  "type": "bool",
+  "values": [
+   0,
+   1
+  ],
+  "note": "0 = unset, 1 = set"
+ },
+ {
+  "name": "XP_VOM_CHROMANIN_4",
+  "label": "XP VOM CHROMANIN 4",
+  "category": "Location / World",
+  "type": "bool",
+  "values": [
+   0,
+   1
+  ],
+  "note": "0 = unset, 1 = set"
+ },
+ {
+  "name": "XP_VOM_CHROMANIN_5",
+  "label": "XP VOM CHROMANIN 5",
+  "category": "Location / World",
+  "type": "bool",
+  "values": [
+   0,
+   1
+  ],
+  "note": "0 = unset, 1 = set"
+ },
+ {
+  "name": "XP_VOM_FIGHTER_COMPLETE",
+  "label": "XP VOM FIGHTER COMPLETE",
+  "category": "Location / World",
+  "type": "bool",
+  "values": [
+   0,
+   1
+  ],
+  "note": "0 = unset, 1 = set"
+ },
+ {
+  "name": "XP_VOM_FINDORCSHAMAN_COMPLETE",
+  "label": "XP VOM FINDORCSHAMAN COMPLETE",
+  "category": "Location / World",
+  "type": "bool",
+  "values": [
+   0,
+   1
+  ],
+  "note": "0 = unset, 1 = set"
+ },
+ {
+  "name": "XP_VOM_FIREMAGES_COMPLETE",
+  "label": "XP VOM FIREMAGES COMPLETE",
+  "category": "Location / World",
+  "type": "bool",
+  "values": [
+   0,
+   1
+  ],
+  "note": "0 = unset, 1 = set"
+ },
+ {
+  "name": "XP_VOM_GILBERTFOUND",
+  "label": "XP VOM GILBERTFOUND",
+  "category": "Location / World",
+  "type": "bool",
+  "values": [
+   0,
+   1
+  ],
+  "note": "0 = unset, 1 = set"
+ },
+ {
+  "name": "XP_VOM_ORCENCLAVE_COMPLETE",
+  "label": "XP VOM ORCENCLAVE COMPLETE",
+  "category": "Location / World",
+  "type": "bool",
+  "values": [
+   0,
+   1
+  ],
+  "note": "0 = unset, 1 = set"
+ },
+ {
+  "name": "XP_VOM_PATHTOORCENCLAVE_COMPLETE",
+  "label": "XP VOM PATHTOORCENCLAVE COMPLETE",
+  "category": "Location / World",
+  "type": "bool",
+  "values": [
+   0,
+   1
+  ],
+  "note": "0 = unset, 1 = set"
+ },
+ {
+  "name": "XP_VOM_SCAVENGERRAIDER_COMPLETE",
+  "label": "XP VOM SCAVENGERRAIDER COMPLETE",
+  "category": "Location / World",
+  "type": "bool",
+  "values": [
+   0,
+   1
+  ],
+  "note": "0 = unset, 1 = set"
+ },
+ {
+  "name": "XP_VOM_ULUMULU_BRINGINGREDIENTS",
+  "label": "XP VOM ULUMULU BRINGINGREDIENTS",
+  "category": "Location / World",
+  "type": "bool",
+  "values": [
+   0,
+   1
+  ],
+  "note": "0 = unset, 1 = set"
+ },
+ {
+  "name": "XP_VOM_ULUMULU_COMPLETE",
+  "label": "XP VOM ULUMULU COMPLETE",
+  "category": "Location / World",
+  "type": "bool",
+  "values": [
+   0,
+   1
+  ],
+  "note": "0 = unset, 1 = set"
+ },
+ {
+  "name": "XP_VOM_ULUMULU_FINDTARROK",
+  "label": "XP VOM ULUMULU FINDTARROK",
+  "category": "Location / World",
+  "type": "bool",
+  "values": [
+   0,
+   1
+  ],
+  "note": "0 = unset, 1 = set"
+ },
+ {
+  "name": "Yberion_Ashes",
+  "label": "Yberion Ashes",
+  "category": "NPC / Dialogue",
+  "type": "bool",
+  "values": [
+   0,
+   1
+  ],
+  "note": "0 = unset, 1 = set"
+ },
+ {
+  "name": "ZivilAnquatschDist",
+  "label": "Zivil Anquatsch Dist",
+  "category": "NPC / Dialogue",
+  "type": "bool",
+  "values": [
+   0,
+   1
+  ],
+  "note": "0 = unset, 1 = set"
  }
 ]
