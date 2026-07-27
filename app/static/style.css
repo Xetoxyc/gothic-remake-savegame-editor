@@ -214,6 +214,15 @@ button{font:inherit;cursor:pointer}
 .diff-row .cmp-edit.edited{border-color:var(--accent2);color:var(--accent2)}
 .diff-row .cmp-copy{font-size:12px;white-space:nowrap}
 
+/* editable-dropdown popover for passage values */
+.combo-pop{position:fixed;z-index:200;background:var(--bg2);border:1px solid var(--line);
+  border-radius:6px;box-shadow:0 8px 24px rgba(0,0,0,.55);max-height:220px;overflow:auto;padding:4px}
+.combo-pop.hidden{display:none}
+.combo-pop button{display:block;width:100%;text-align:left;background:none;border:0;color:var(--text);
+  padding:5px 12px;font:inherit;cursor:pointer;border-radius:4px}
+.combo-pop button:hover{background:var(--card)}
+.combo-pop button.sel{color:var(--accent2)}
+
 /* glossary collapsible groups */
 details.gloss{border:1px solid var(--line);border-radius:9px;margin-bottom:8px;background:var(--bg2)}
 details.gloss summary{cursor:pointer;padding:10px 12px;font-weight:600;list-style:none;
