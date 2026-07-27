@@ -6,6 +6,8 @@
 *{box-sizing:border-box}
 body{margin:0;font:15px/1.5 "Segoe UI",system-ui,sans-serif;background:
   radial-gradient(1200px 500px at 50% -10%,#2a2016,var(--bg)) fixed;color:var(--text)}
+/* base link colour — keeps any unclassed anchor off the browser's default blue */
+a{color:var(--accent2)}
 header{text-align:center;padding:34px 16px 12px}
 header h1{margin:0;font-size:26px;font-weight:600;letter-spacing:.3px}
 header h1 span{color:var(--accent2)}
@@ -46,6 +48,10 @@ main{max-width:880px;margin:18px auto;padding:0 16px 16px}
 .drop.over{border-color:var(--accent);background:#2c2317}
 .drop code{background:#0003;padding:1px 6px;border-radius:5px}
 .hint{color:var(--muted);font-size:13px;margin:8px 0 0}
+.hint a{color:var(--accent2);text-decoration:none;
+  border-bottom:1px dotted #5a4a33;transition:.15s}
+.hint a:hover{border-bottom-color:var(--accent2)}
+.cmp-cta{text-align:center;margin-top:12px}
 .loading{margin-top:14px;color:var(--accent2);display:flex;align-items:center;
   justify-content:center;gap:10px}
 .spinner{width:18px;height:18px;border:3px solid var(--line);border-top-color:var(--accent);
@@ -70,6 +76,7 @@ main{max-width:880px;margin:18px auto;padding:0 16px 16px}
   color:var(--text);padding:10px 12px;border-radius:9px;font-size:14px}
 #search:focus{outline:none;border-color:var(--accent)}
 .check{color:var(--muted);font-size:13px;display:flex;align-items:center;gap:6px;cursor:pointer}
+.check input[type=checkbox]{accent-color:var(--accent);cursor:pointer}
 .count{color:var(--muted);font-size:13px;margin-left:auto}
 
 /* list */
@@ -167,6 +174,45 @@ button{font:inherit;cursor:pointer}
 .attr.fresh label{color:var(--muted)}
 .tag{font-size:9px;text-transform:uppercase;letter-spacing:.4px;color:var(--muted);
   border:1px solid var(--line);border-radius:4px;padding:1px 4px;margin-left:4px;vertical-align:middle}
+
+/* savegame compare page */
+.cmp-pick{display:flex;gap:16px;align-items:stretch;flex-wrap:wrap}
+.cmp-slot{flex:1;min-width:220px;display:flex;flex-direction:column;gap:6px}
+.cmp-label{font-weight:600;color:var(--text)}
+.cmp-arrow{font-size:22px;color:var(--muted);align-self:center}
+/* diff header — flex gap so the arrow sits evenly between both save names */
+.cmp-title{display:flex;align-items:center;gap:8px;flex-wrap:wrap;min-width:0}
+.cmp-sep{color:var(--muted);font-size:13px}
+/* save bar at the end of the diff — sticks to the viewport bottom so it stays
+   reachable while scrolling a long list, then settles at the card's edge */
+.cmp-savebar{position:sticky;bottom:0;display:flex;justify-content:flex-end;
+  margin:14px -18px -18px;padding:14px 18px;background:var(--card);
+  border-top:1px solid var(--line);border-radius:0 0 14px 14px}
+/* per-slot dropzone — same affordance as the editor's upload box, but compact */
+.cmp-drop{flex:1;padding:20px 14px;display:flex;flex-direction:column;justify-content:center}
+.cmp-drop p{margin:0}
+.cmp-drop.filled{border-style:solid;border-color:var(--accent)}
+.cmp-file{margin-top:8px;font-size:13px;color:var(--muted);word-break:break-all}
+.cmp-file.picked{color:var(--accent2);font-weight:600}
+.cmp-actions{display:flex;gap:12px;align-items:center;margin-top:14px;flex-wrap:wrap}
+.diff-grp{margin:0 0 18px}
+.diff-grp h3{margin:0 0 6px;border-bottom:1px solid var(--line);padding-bottom:4px}
+.diff-sub{font-size:11px;text-transform:uppercase;letter-spacing:.5px;color:var(--muted);margin:8px 0 3px}
+.diff-row{display:flex;gap:8px;align-items:center;padding:3px 10px;border-left:3px solid var(--line)}
+.diff-row.add{border-color:var(--ok)}
+.diff-row.rem{border-color:var(--fail)}
+.diff-row.chg{border-color:var(--accent)}
+/* min-width:0 lets the key shrink; long quest keys ellipsize instead of
+   shoving the value/select/reset columns out of alignment (full name in title) */
+.diff-row .k{flex:1;min-width:0;color:var(--text);
+  overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.diff-row .v{color:var(--muted);font-variant-numeric:tabular-nums}
+.diff-row .arrow{color:var(--muted)}
+.d-add{color:var(--ok);font-size:13px} .d-rem{color:var(--fail);font-size:13px} .d-chg{color:var(--accent);font-size:13px}
+.diff-row .cmp-edit{width:96px;background:var(--bg2);border:1px solid var(--line);color:var(--text);border-radius:4px;padding:2px 6px;font:inherit}
+.diff-row select.cmp-edit{width:auto}
+.diff-row .cmp-edit.edited{border-color:var(--accent2);color:var(--accent2)}
+.diff-row .cmp-copy{font-size:12px;white-space:nowrap}
 
 /* editable-dropdown popover for passage values */
 .combo-pop{position:fixed;z-index:200;background:var(--bg2);border:1px solid var(--line);

@@ -1,6 +1,7 @@
 """Flask server for the Gothic 1 Remake savegame editor (local web app)."""
 import io
 import os
+import json
 import time
 import uuid
 import threading
@@ -9,6 +10,7 @@ from flask import Flask, request, jsonify, send_file, send_from_directory, abort
 
 import g1r
 import loc
+import savediff
 
 STATIC = os.path.join(os.path.dirname(__file__), "static")
 OODLE_LIB = os.environ.get("OODLE_LIB", "/app/liboo2corelinux64.so.9")
@@ -226,6 +228,70 @@ def patch():
     base = fname[:-4] if fname.lower().endswith(".sav") else fname
     return send_file(io.BytesIO(out), mimetype="application/octet-stream",
                      as_attachment=True, download_name=f"{base}.fixed.sav")
+
+
+@app.post("/api/diff")
+def diff():
+    """Read-only diff of two saves (base A vs compare B). Stateless — no session."""
+    fa, fb = request.files.get("save_a"), request.files.get("save_b")
+    if not fa or not fb:
+        return jsonify(error="please choose two saves to compare"), 400
+    try:
+        da, db = fa.read(), fb.read()
+        ca, cb = g1r.Container(da), g1r.Container(db)
+        pa = g1r.decompress_payload(ca, oodle())
+        pb = g1r.decompress_payload(cb, oodle())
+        include_npcs = (request.form.get("include_npcs") or "").lower() in ("1", "true", "on", "yes")
+        result = savediff.diff_payloads(pa, pb, include_npcs=include_npcs)
+        # attach a localized {en,de} object per entry (frontend picks the language).
+        # Story flags are internal identifiers with no game-localized name -> skipped.
+        loc_fns = {
+            "quests": lambda e: loc.quest(e["key"], e.get("name") or e["key"]),
+            "inventory": lambda e: loc.item(e["key"], e.get("name") or e["key"]),
+            "skills": lambda e: loc.skill(e["key"], e.get("name") or e["key"]),
+            "attributes": lambda e: loc.attribute(e["key"], e.get("name") or e["key"]),
+        }
+        for cat_key, fn in loc_fns.items():
+            cat = result["categories"].get(cat_key)
+            if not cat:
+                continue
+            for grp in ("added", "removed", "changed"):
+                for e in cat.get(grp, []):
+                    try:
+                        e["loc"] = fn(e)
+                    except Exception:
+                        pass
+    except Exception as e:
+        return jsonify(error=str(e)), 400
+    return jsonify(a_name=g1r.slot_name(ca) or (fa.filename or "A"),
+                   b_name=g1r.slot_name(cb) or (fb.filename or "B"),
+                   **result)
+
+
+@app.post("/api/diff_apply")
+def diff_apply():
+    """Apply Compare-page edits to save B and return the patched .sav for download."""
+    fb = request.files.get("save_b")
+    if not fb:
+        return jsonify(error="missing save B"), 400
+    try:
+        edits = json.loads(request.form.get("edits") or "[]")
+    except ValueError:
+        return jsonify(error="bad edits payload"), 400
+    if not edits:
+        return jsonify(error="no edits to apply"), 400
+    try:
+        db = fb.read()
+        cb = g1r.Container(db)
+        pb = g1r.decompress_payload(cb, oodle())
+        patched = savediff.apply_diff_edits(pb, edits)
+        out = g1r.rebuild(cb, oodle(), patched)
+    except Exception as e:
+        return jsonify(error=str(e)), 400
+    base = fb.filename or "G1R.sav"
+    base = base[:-4] if base.lower().endswith(".sav") else base
+    return send_file(io.BytesIO(out), mimetype="application/octet-stream",
+                     as_attachment=True, download_name=f"{base}.edited.sav")
 
 
 @app.get("/api/health")

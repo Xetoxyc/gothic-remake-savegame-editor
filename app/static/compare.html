@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Gothic 1 Remake — Savegame Compare</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header>
+  <h1>Gothic&nbsp;1 Remake <span>Savegame Compare</span></h1>
+  <p class="sub">Diff two saves — see exactly which quests, story flags, stats, skills &amp; items changed.</p>
+  <p class="byline"><a href="/">← back to the editor</a></p>
+</header>
+
+<main>
+  <section class="card">
+    <div class="cmp-pick">
+      <div class="cmp-slot">
+        <label class="cmp-label" for="file-a">Before</label>
+        <div class="drop cmp-drop" id="drop-a">
+          <input type="file" id="file-a" accept=".sav" hidden>
+          <p><strong>Drop the <code>.sav</code> here</strong> or <button type="button" class="link">browse…</button></p>
+          <p class="cmp-file" id="name-a"></p>
+        </div>
+      </div>
+      <div class="cmp-arrow">→</div>
+      <div class="cmp-slot">
+        <label class="cmp-label" for="file-b">After</label>
+        <div class="drop cmp-drop" id="drop-b">
+          <input type="file" id="file-b" accept=".sav" hidden>
+          <p><strong>Drop the <code>.sav</code> here</strong> or <button type="button" class="link">browse…</button></p>
+          <p class="cmp-file" id="name-b"></p>
+        </div>
+      </div>
+    </div>
+    <div class="cmp-actions">
+      <button id="go" class="primary" disabled>Compare</button>
+      <label class="check"><input type="checkbox" id="inc-npcs"> include NPC changes <span class="muted">(slower — scans every character)</span></label>
+    </div>
+    <div id="cmp-loading" class="loading hidden"><span class="spinner"></span><span>Decompressing &amp; diffing…</span></div>
+    <div id="cmp-error" class="error hidden"></div>
+  </section>
+
+  <section id="cmp-results" class="card hidden">
+    <div class="savebar">
+      <div class="cmp-title"><span class="badge">diff</span> <strong id="cmp-a"></strong> <span class="cmp-sep">→</span> <strong id="cmp-b"></strong></div>
+      <div class="savebar-right">
+        <label class="check"><input type="checkbox" id="cmp-only-changed" checked> changed only</label>
+        <span id="cmp-total" class="count"></span>
+      </div>
+    </div>
+    <div id="cmp-body"></div>
+    <div class="cmp-savebar">
+      <button id="cmp-export" class="primary" disabled>Save Changes</button>
+    </div>
+  </section>
+</main>
+
+<script src="compare.js"></script>
+</body>
+</html>
