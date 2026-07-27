@@ -1,5 +1,16 @@
 # Changelog
 
+## [1.6.0](https://github.com/Xetoxyc/gothic-remake-savegame-editor/compare/v1.5.0...v1.6.0) (2026-07-27)
+
+
+### Features
+
+* **catalog:** use the full game-file item DB (690 -&gt; 850 items) ([9015865](https://github.com/Xetoxyc/gothic-remake-savegame-editor/commit/90158656681abf0612f2038ad782376cdd38de11))
+* **compare:** new Compare view — diff two saves across quests, story flags, stats, skills &amp; inventory ([a948810](https://github.com/Xetoxyc/gothic-remake-savegame-editor/commit/a9488100eff168d9bef162e1b5c8149b45763c4c))
+* **compare:** opt-in NPC diff, plus editing save B from the diff and exporting it ([eab2231](https://github.com/Xetoxyc/gothic-remake-savegame-editor/commit/eab22310258b768b00bdc30220cc9339c3cd4a95))
+* **compare:** drop-zone pickers, sticky save bar, readable link & honest counts ([386935e](https://github.com/Xetoxyc/gothic-remake-savegame-editor/commit/386935ece7bbcf850204ff4f06c2c4a6f15de515))
+* **passages:** expand story-flag catalog (181 -&gt; 639) with types &amp; allowed values, and an editable-dropdown UI ([361ee20](https://github.com/Xetoxyc/gothic-remake-savegame-editor/commit/361ee202d79ac0edc7676f707d36cc87fce2d6eb))
+
 ## [1.5.0](https://github.com/Xetoxyc/gothic-remake-savegame-editor/compare/v1.4.0...v1.5.0) (2026-06-22)
 
 
