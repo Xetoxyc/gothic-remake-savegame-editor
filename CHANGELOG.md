@@ -1,5 +1,13 @@
 # Changelog
 
+## [1.6.0](https://github.com/Xetoxyc/gothic-remake-savegame-editor/compare/v1.5.0...v1.6.0) (2026-07-27)
+
+
+### Features
+
+* **catalog:** use the full game-file item DB (690 -&gt; 850 items) ([9015865](https://github.com/Xetoxyc/gothic-remake-savegame-editor/commit/90158656681abf0612f2038ad782376cdd38de11))
+* **compare:** drop-zone pickers, sticky save bar, readable link & honest counts ([386935e](https://github.com/Xetoxyc/gothic-remake-savegame-editor/commit/386935ece7bbcf850204ff4f06c2c4a6f15de515))
+
 ## [1.5.0](https://github.com/Xetoxyc/gothic-remake-savegame-editor/compare/v1.4.0...v1.5.0) (2026-06-22)
 
 
