@@ -8,14 +8,44 @@ let lastDiff = null;
 const edits = new Map();                     // "catkey" -> {cat, key, value}
 const LANG = localStorage.getItem("lang") || "en";
 const nameOf = (e) => (e.loc && (e.loc[LANG] || e.loc.en)) || e.name || e.key;
+// the key column ellipsizes, so keep the full name reachable on hover
+const keyCell = (e) => { const n = esc(nameOf(e)); return `<span class="k" title="${n}">${n}</span>`; };
 
 const QUEST_STATES = ["None", "Available", "Running", "Succeeded", "Failed"];
 const CREATE_CATS = new Set(["flags", "inventory"]);   // can create a value that's absent in B
 const ORDER = ["quests", "flags", "attributes", "skills", "inventory", "npcs"];
 
 function ready() { goBtn.disabled = !(fileA.files[0] && fileB.files[0]); }
-fileA.onchange = ready;
-fileB.onchange = ready;
+
+// --- file slots: click-to-browse + drag & drop ------------------------------
+function wireSlot(dropEl, input, nameEl) {
+  const show = () => {
+    const f = input.files[0];
+    nameEl.textContent = f ? f.name : "no file selected";
+    nameEl.classList.toggle("picked", !!f);
+    dropEl.classList.toggle("filled", !!f);
+    ready();
+  };
+  dropEl.onclick = (e) => { if (e.target.tagName !== "BUTTON") input.click(); };
+  dropEl.querySelector("button.link").onclick = () => input.click();
+  input.onchange = show;
+  ["dragenter", "dragover"].forEach(ev => dropEl.addEventListener(ev, e => {
+    e.preventDefault(); dropEl.classList.add("over");
+  }));
+  ["dragleave", "drop"].forEach(ev => dropEl.addEventListener(ev, e => {
+    e.preventDefault(); dropEl.classList.remove("over");
+  }));
+  dropEl.addEventListener("drop", e => {
+    const f = e.dataTransfer.files[0];
+    if (!f) return;
+    const dt = new DataTransfer(); dt.items.add(f);   // keep the input as the single source of truth
+    input.files = dt.files;
+    show();
+  });
+  show();
+}
+wireSlot($("#drop-a"), fileA, $("#name-a"));
+wireSlot($("#drop-b"), fileB, $("#name-b"));
 
 goBtn.onclick = async () => {
   const a = fileA.files[0], b = fileB.files[0];
@@ -59,8 +89,8 @@ function recordEdit(inp) {
 }
 function updateExport() {
   const btn = $("#cmp-export");
-  btn.textContent = `Export edited B (${edits.size})`;
-  btn.classList.toggle("hidden", edits.size === 0);
+  btn.textContent = edits.size ? `Save Changes (${edits.size})` : "Save Changes";
+  btn.disabled = edits.size === 0;          // stays visible, greys out until something is edited
 }
 
 // --- value cell (editable for editable categories) -------------------------
@@ -75,7 +105,7 @@ function editCell(cat, key, aVal, bVal, hasB, hasA) {
     field = `<input ${common} type="number" step="any" value="${hasB ? esc(bVal) : ""}"` +
       `${hasB ? "" : ' placeholder="(absent)"'}>`;
   }
-  const copy = hasA ? `<button type="button" class="link cmp-copy" data-a="${esc(aVal)}" title="copy A's value">← A</button>` : "";
+  const copy = hasA ? `<button type="button" class="link cmp-copy" data-a="${esc(aVal)}" title="reset to A's value">Reset</button>` : "";
   return `<span class="arrow">→</span>${field}${copy}`;
 }
 
@@ -90,21 +120,21 @@ function rowsHTML(catKey, cat, onlyChanged) {
     const cell = editable
       ? editCell(catKey, e.key, e.a, e.b, true, true)
       : `<span class="arrow">→</span><span class="v">${esc(e.b)}</span>`;
-    return `<div class="diff-row chg"><span class="k">${esc(nameOf(e))}</span><span class="v">${esc(e.a)}</span>${cell}</div>`;
+    return `<div class="diff-row chg">${keyCell(e)}<span class="v">${esc(e.a)}</span>${cell}</div>`;
   };
   if (!onlyChanged) {
     sub("Added", cat.added, "add", (e) => {
       const cell = editable
         ? editCell(catKey, e.key, undefined, e.b, true, false)   // B present, no A
         : `<span class="v">${esc(e.b)}</span>`;
-      return `<div class="diff-row add"><span class="k">${esc(nameOf(e))}</span>${cell}</div>`;
+      return `<div class="diff-row add">${keyCell(e)}${cell}</div>`;
     });
     sub("Removed", cat.removed, "rem", (e) => {
       const canCreate = editable && CREATE_CATS.has(catKey);
       const cell = canCreate
         ? editCell(catKey, e.key, e.a, undefined, false, true)   // B absent, offer copy-A to create
         : `<span class="v">${esc(e.a)}</span>`;
-      return `<div class="diff-row rem"><span class="k">${esc(nameOf(e))}</span><span class="v">${esc(e.a)}</span>${cell}</div>`;
+      return `<div class="diff-row rem">${keyCell(e)}<span class="v">${esc(e.a)}</span>${cell}</div>`;
     });
   }
   sub("Changed", cat.changed, "chg", changedRow);
@@ -116,24 +146,36 @@ function render() {
   if (!d) return;
   $("#cmp-a").textContent = d.a_name;
   $("#cmp-b").textContent = d.b_name;
-  $("#cmp-total").textContent = `${d.total} difference${d.total === 1 ? "" : "s"}`;
   const onlyChanged = $("#cmp-only-changed").checked;
 
   const cats = d.categories;
   const keys = ORDER.filter(k => cats[k]).concat(Object.keys(cats).filter(k => !ORDER.includes(k)));
   let html = "";
+  let shownTotal = 0;
   for (const key of keys) {
     const cat = cats[key];
     const c = cat.counts;
-    const shown = onlyChanged ? c.changed : (c.added + c.removed + c.changed);
+    const all = c.added + c.removed + c.changed;
+    const shown = onlyChanged ? c.changed : all;
+    shownTotal += shown;
     const badge = `<span class="d-add">+${c.added}</span> <span class="d-rem">-${c.removed}</span> <span class="d-chg">~${c.changed}</span>`;
     const tag = cat.editable ? ` <span class="tag">editable</span>` : "";
     html += `<div class="diff-grp"><h3>${esc(cat.label)} ${badge}${tag}</h3>`;
     if (cat.error) html += `<div class="empty">could not read: ${esc(cat.error)}</div>`;
-    else if (!shown) html += `<div class="empty">no ${onlyChanged ? "changes" : "differences"}</div>`;
+    else if (!shown) {
+      // say so when the filter is what's hiding this category's rows
+      const hidden = all - shown;
+      html += hidden
+        ? `<div class="empty">no changes — ${hidden} added/removed hidden by “changed only”</div>`
+        : `<div class="empty">no ${onlyChanged ? "changes" : "differences"}</div>`;
+    }
     else html += rowsHTML(key, cat, onlyChanged);
     html += `</div>`;
   }
+  // the header count must describe what's on screen, not the unfiltered total
+  $("#cmp-total").textContent = shownTotal === d.total
+    ? `${d.total} difference${d.total === 1 ? "" : "s"}`
+    : `${shownTotal} of ${d.total} differences`;
   $("#cmp-body").innerHTML = html;
   $("#cmp-results").classList.remove("hidden");
   updateExport();
@@ -156,8 +198,7 @@ $("#cmp-export").onclick = async () => {
   if (!b || !edits.size) return;
   const btn = $("#cmp-export");
   btn.disabled = true;
-  const orig = btn.textContent;
-  btn.textContent = "Exporting…";
+  btn.textContent = "Saving…";
   try {
     const fd = new FormData();
     fd.append("save_b", b);
@@ -175,6 +216,6 @@ $("#cmp-export").onclick = async () => {
     $("#cmp-error").textContent = err.message;
     $("#cmp-error").classList.remove("hidden");
   } finally {
-    btn.disabled = false; btn.textContent = orig;
+    updateExport();                          // restores label + the disabled state for the current edit count
   }
 };
