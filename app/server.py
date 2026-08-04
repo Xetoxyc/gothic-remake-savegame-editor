@@ -150,6 +150,7 @@ def patch():
     passage_adds = body.get("passage_adds") or []
     crime_forgive = body.get("crime_forgive") or []
     npc_stat_changes = body.get("npc_stat_changes") or []
+    npc_location_changes = body.get("npc_location_changes") or []
     npc_inv_changes = body.get("npc_inv_changes") or []
     npc_inv_adds = body.get("npc_inv_adds") or []
     npc_equip_changes = body.get("npc_equip_changes") or []
@@ -164,7 +165,7 @@ def patch():
     if not (quest_changes or attr_changes or skill_changes or inv_changes or inv_adds
             or passage_changes or passage_adds or crime_forgive
             or npc_stat_changes or npc_inv_changes or npc_inv_adds or npc_equip_changes
-            or npc_trade_changes or npc_trade_adds):
+            or npc_trade_changes or npc_trade_adds or npc_location_changes):
         return jsonify(error="no changes selected"), 400
 
     aedits = [{"base_off": int(ch["id"]), "value": ch["value"]} for ch in attr_changes]
@@ -182,6 +183,8 @@ def patch():
             payload = g1r.apply_crime_edits(payload, crime_forgive)       # length-neutral too
         if npc_stat_changes:
             payload = g1r.apply_npc_stat_edits(payload, npc_stat_changes)  # length-neutral
+        if npc_location_changes:
+            payload = g1r.apply_npc_location_edits(payload, npc_location_changes)  # length-neutral
         if npc_inv_changes:
             payload = g1r.apply_npc_inventory_edits(payload, npc_inv_changes)  # length-neutral
         if npc_trade_changes:
