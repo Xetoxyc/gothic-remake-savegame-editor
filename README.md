@@ -33,6 +33,10 @@ it instead.
   the save's own item database.
 - **Quests** — set any objective's state (`Available` / `Running` / `Succeeded` …);
   the classic fix is the stuck *Trial of Fire* `OBJ_WATERFALL` / `OBJ_SEA`.
+- **NPCs → Location** — read and overwrite any character's saved world position
+  (the `CharacterLocation` X / Y / Z vector) — in short, teleport them. Use it
+  when the game has parked an NPC in the wrong place, e.g. the **Milten bug**
+  introduced by game patch 1.0.5.
 - **Glossary** — creatures & locations bestiary, with the in-game unlock/entry
   dependencies modelled (overviews update automatically).
 
@@ -50,6 +54,13 @@ it instead.
 > The classic quest fix: the *Trial of Fire* objectives `OBJ_WATERFALL` /
 > `OBJ_SEA` get stuck on `Running` if you light the shrine early — set them to
 > `Succeeded` in the Quests tab.
+
+> **The Milten fix (game patch 1.0.5):** Milten can end up stuck in the Old Camp
+> instead of moving on with the story, which blocks everything that depends on
+> him. Open the **NPCs** tab → pick him → **Location** and write the coordinates
+> he should be at. The tab only shows up when the save actually contains a
+> readable `CharacterLocation` vector for that character, and it works for *any*
+> NPC, not just Milten.
 
 ## Using it with Steam Cloud
 
