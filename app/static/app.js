@@ -16,6 +16,7 @@ let npcSel = null;             // selected npc id
 let npcSub = "profile";        // active sub-tab
 const npcCache = {};           // id -> detail {stats, inventory, attitude}
 const npcStatChanges = new Map(); // "id base_off" -> value
+const npcLocationChanges = new Map(); // id -> {x, y, z}
 const npcInvChanges = new Map();
 const npcInvAdds = [];
 const npcEquip = new Map();
@@ -105,7 +106,7 @@ async function upload(file) {
     passages = j.passages || []; passAdds.length = 0; passageDb = j.passage_db || [];
     npcs = j.npcs || []; npcSel = null; npcSub = "profile";
     for (const k in npcCache) delete npcCache[k];
-    npcStatChanges.clear(); npcInvChanges.clear(); npcInvAdds.length = 0; npcEquip.clear(); npcTradeChanges.clear(); npcTradeAdds.length = 0;
+    npcStatChanges.clear(); npcLocationChanges.clear(); npcInvChanges.clear(); npcInvAdds.length = 0; npcEquip.clear(); npcTradeChanges.clear(); npcTradeAdds.length = 0;
     behaviours = j.behaviours || [];
     crimes = j.crimes || []; crimeForgive.clear();
     questChanges.clear(); attrChanges.clear(); skillChanges.clear(); invChanges.clear(); passChanges.clear();
@@ -826,13 +827,14 @@ function renderNpcDetail() {
       : `<span class="bstat Other">Default</span>`);
   const tab = (k, lbl) => `<button class="subtab ${npcSub === k ? "active" : ""}" data-sub="${k}">${lbl}</button>`;
   if (npcSub === "merchant" && !d.is_trader) npcSub = "inventory";   // tab hidden for non-traders
+  if (npcSub === "location" && !d.location) npcSub = "profile";      // tab hidden when unavailable
   el.innerHTML = `
     <div class="npc-head">
       <div><h3>${esc(d.name)}</h3>
         <span class="muted">${esc(d.role)}${d.area ? " · " + esc(d.area) : ""} · <code>${esc(d.id)}</code></span></div>
       ${att}
     </div>
-    <nav class="subtabs">${tab("profile", "Profile")}${tab("inventory", "Inventory")}${d.is_trader ? tab("merchant", "Merchant") : ""}</nav>
+    <nav class="subtabs">${tab("profile", "Profile")}${d.location ? tab("location", "Location") : ""}${tab("inventory", "Inventory")}${d.is_trader ? tab("merchant", "Merchant") : ""}</nav>
     <div id="npc-sub" class="npc-subbody"></div>`;
   el.querySelectorAll(".subtab").forEach(b => b.onclick = () => { npcSub = b.dataset.sub; renderNpcDetail(); });
   renderNpcSub();
@@ -840,7 +842,14 @@ function renderNpcDetail() {
 
 function renderNpcSub() {
   const d = npcCache[npcSel], el = $("#npc-sub");
-  if (npcSub === "profile") {
+  if (npcSub === "location") {
+    const loc = d.location;
+    const pending = npcLocationChanges.get(d.id) || loc;
+    el.innerHTML = `<p class="muted">Saved current position. Coordinates are editable only when the save contains a valid <b>CharacterLocation</b> vector.</p>
+      <div class="grid npc-grid">${["x", "y", "z"].map(axis => `<div class="attr ${npcLocationChanges.has(d.id) ? "changed" : ""}">
+        <label>${axis.toUpperCase()}</label><input type="number" step="any" data-location="${axis}" data-orig="${loc[axis]}" value="${pending[axis]}"></div>`).join("")}</div>`;
+    el.querySelectorAll("input[data-location]").forEach(i => i.oninput = onNpcLocation);
+  } else if (npcSub === "profile") {
     const rows = d.stats.map(s => {
       const key = `${d.id} ${s.base_off}`;
       const val = npcStatChanges.has(key) ? npcStatChanges.get(key) : s.value;
@@ -1024,6 +1033,17 @@ function onNpcStat(e) {
   updateBar();
 }
 
+function onNpcLocation(e) {
+  const d = npcCache[npcSel], axis = e.target.dataset.location, v = e.target.value;
+  const cur = npcLocationChanges.get(d.id) || d.location;
+  const next = { x: cur.x, y: cur.y, z: cur.z };
+  next[axis] = v === "" ? d.location[axis] : +v;
+  if (["x", "y", "z"].every(k => next[k] === d.location[k])) npcLocationChanges.delete(d.id);
+  else npcLocationChanges.set(d.id, next);
+  e.target.closest(".attr").classList.toggle("changed", npcLocationChanges.has(d.id));
+  updateBar();
+}
+
 function onNpcInv(e) {
   const key = `${npcSel} ${e.target.dataset.inv}`, orig = +e.target.dataset.orig, v = e.target.value;
   if (v === "" || +v === orig) npcInvChanges.delete(key);
@@ -1040,7 +1060,7 @@ const _splitNpcKey = (k) => { const i = k.lastIndexOf(" "); return [k.slice(0, i
 function updateBar() {
   const n = attrChanges.size + questChanges.size + skillChanges.size + invChanges.size
     + invAdds.length + passChanges.size + passAdds.length + crimeForgive.size
-    + npcStatChanges.size + npcInvChanges.size + npcInvAdds.length + npcEquip.size
+    + npcStatChanges.size + npcLocationChanges.size + npcInvAdds.length + npcEquip.size
     + npcTradeChanges.size + npcTradeAdds.length;
   $("#pending").textContent = n === 1 ? "1 change" : `${n} changes`;
   $("#generate").disabled = n === 0;
@@ -1050,7 +1070,7 @@ function updateBar() {
 $("#clear").onclick = () => {
   attrChanges.clear(); questChanges.clear(); skillChanges.clear(); invChanges.clear();
   invAdds.length = 0; passChanges.clear(); passAdds.length = 0; crimeForgive.clear();
-  npcStatChanges.clear(); npcInvChanges.clear(); npcInvAdds.length = 0; npcEquip.clear(); npcTradeChanges.clear(); npcTradeAdds.length = 0;
+  npcStatChanges.clear(); npcLocationChanges.clear(); npcInvChanges.clear(); npcInvAdds.length = 0; npcEquip.clear(); npcTradeChanges.clear(); npcTradeAdds.length = 0;
   renderAttrs("character"); renderSkills();
   renderInventory(); renderNpcList(); renderNpcDetail(); renderPassages(); renderCrimes(); renderQuests(); updateBar();
 };
@@ -1069,6 +1089,7 @@ $("#generate").onclick = async () => {
       passage_adds: passAdds.map(a => ({ name: a.name, value: a.value })),
       crime_forgive: [...crimeForgive].map(k => ({ criminal: k.split("|")[0], guild: k.split("|").slice(1).join("|") })),
       npc_stat_changes: [...npcStatChanges].map(([k, value]) => { const [npc, off] = _splitNpcKey(k); return { npc, base_off: +off, value }; }),
+      npc_location_changes: [...npcLocationChanges].map(([npc, v]) => ({ npc, x: v.x, y: v.y, z: v.z })),
       npc_inv_changes: [...npcInvChanges].map(([k, value]) => { const [npc, id] = _splitNpcKey(k); return { npc, id, value }; }),
       npc_inv_adds: npcInvAdds.map(a => ({ npc: a.npc, item: a.item, count: a.count })),
       npc_equip_changes: [...npcEquip].map(([k, v]) => { const [npc, slot_type] = _splitNpcKey(k); return { npc, slot_type, item: v.item }; }),

@@ -9,6 +9,7 @@ Reverse-engineering credit: the container format + the recompress trick come
 from wealth's gist (gist.github.com/wealth/de5a461e02ab49060d5f418a520ee1e8).
 """
 import ctypes
+import math
 import struct
 
 import catalog
@@ -1116,6 +1117,7 @@ _NPC_STATE = b"\x15\x00\x00\x00AttributeSetsByClass\x00"
 _NPC_INV_ITEMS = b"\x0f\x00\x00\x00InventoryItems\x00"
 _NPC_HP_PAT = _re.compile(b"\x07\x00\x00\x00Health\x00\x0a\x00\x00\x00BaseValue\x00" + _re.escape(_FLOAT))
 _NPC_MHP_PAT = _re.compile(b"\x0a\x00\x00\x00MaxHealth\x00\x0a\x00\x00\x00BaseValue\x00" + _re.escape(_FLOAT))
+_NPC_LOCATION = b"CharacterLocation\x00"
 _NPC_ROLE2 = {"KDW": "Water Mage", "KDF": "Fire Mage", "GRD": "Guard", "NOV": "Novice",
               "VLK": "Townsfolk", "ORG": "Digger", "TPL": "Templar", "SLD": "Mercenary",
               "GUR": "Guru", "BAN": "Bandit", "STT": "Townsperson", "EBR": "Ore Baron",
@@ -1261,6 +1263,50 @@ def _npc_region(payload, key):
             end = anchors[i + 1][0] if i + 1 < len(anchors) else min(off + 0x20000, len(payload))
             return off, end
     return None
+
+
+def _npc_location(payload, key):
+    """Return the saved CharacterLocation vector and its internal payload offset."""
+    key_bytes = key.encode("ascii")
+    owners = []
+    pos = 0
+    while True:
+        pos = payload.find(key_bytes, pos)
+        if pos < 0:
+            break
+        owners.append(pos)
+        pos += len(key_bytes)
+    candidates = []
+    for marker in _re.finditer(_re.escape(_NPC_LOCATION), payload):
+        name_off = marker.start() - 4
+        if name_off < 0 or not owners:
+            continue
+        try:
+            name, type_start = _fstr(payload, name_off)
+            root, value_start = _typename(payload, type_start)
+            value_start, value_end, size = _value_end(payload, value_start, root)
+        except (IndexError, struct.error, UnicodeDecodeError, ValueError):
+            continue
+        if name != "CharacterLocation" or root != "StructProperty" or size != 24:
+            continue
+        if value_end > len(payload):
+            continue
+        owner = max((o for o in owners if o < marker.start()), default=-1)
+        distance = marker.start() - owner
+        if owner < 0 or distance > 2048:
+            continue
+        candidates.append((distance, value_start))
+    if not candidates:
+        return None
+    distance = min(d for d, _ in candidates)
+    nearest = [o for d, o in candidates if d == distance]
+    if len(nearest) != 1:
+        return None
+    o = nearest[0]
+    return {"x": struct.unpack_from("<d", payload, o)[0],
+            "y": struct.unpack_from("<d", payload, o + 8)[0],
+            "z": struct.unpack_from("<d", payload, o + 16)[0],
+            "payload_offset": o}
 
 
 def _inv_entries(payload):
@@ -1495,12 +1541,16 @@ def npc_detail(payload, key):
            for it in npc_inventory(payload, key)]
     trade = [{k: v for k, v in t.items() if k != "offs"} for t in npc_trade(payload, key)]
     stats = _attrs_in_region(payload, *reg) if reg else []
+    location = _npc_location(payload, key)
+    if location is not None:
+        location = {"x": location["x"], "y": location["y"], "z": location["z"]}
     hp = next((s for s in stats if s["name"] == "Health"), None)
     mh = next((s for s in stats if s["name"] == "MaxHealth"), None)
     dead = bool(hp and hp["value"] == 0 and mh and mh["value"] > 0)
     return {"id": key, "name": name, "role": role, "area": area, "human": human,
             "attitude": _npc_attitudes(payload).get(key, "Default"), "dead": dead,
-            "stats": stats, "inventory": inv, "trade": trade, "is_trader": bool(trade)}
+            "stats": stats, "location": location, "inventory": inv, "trade": trade,
+            "is_trader": bool(trade)}
 
 
 def apply_npc_stat_edits(payload, edits):
@@ -1518,6 +1568,27 @@ def apply_npc_stat_edits(payload, edits):
         struct.pack_into("<f", d, a["base_off"], v)
         struct.pack_into("<f", d, a["current_off"], v)
     return bytes(d)
+
+
+def apply_npc_location_edits(payload, edits):
+    """edits: [{npc, x, y, z}] -> overwrite a found CharacterLocation vector."""
+    d = bytearray(payload)
+    cache = {}
+    for e in edits:
+        npc = e["npc"]
+        if npc not in cache:
+            cache[npc] = _npc_location(payload, npc)
+        location = cache[npc]
+        if location is None:
+            raise ValueError("npc location is not available")
+        values = [float(e[axis]) for axis in ("x", "y", "z")]
+        if not all(math.isfinite(v) for v in values):
+            raise ValueError("npc location must be finite")
+        struct.pack_into("<3d", d, location["payload_offset"], *values)
+    out = bytes(d)
+    if not validate(out):
+        raise ValueError("npc location edit produced an invalid structure")
+    return out
 
 
 def apply_npc_inventory_edits(payload, edits):
