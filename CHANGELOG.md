@@ -1,5 +1,13 @@
 # Changelog
 
+## [1.7.0](https://github.com/Xetoxyc/gothic-remake-savegame-editor/compare/v1.6.0...v1.7.0) (2026-08-05)
+
+
+### Features
+
+* allow editing NPC location (Milten bug fix) ([bd8edf8](https://github.com/Xetoxyc/gothic-remake-savegame-editor/commit/bd8edf836e33c3840bf8e9ac3b2a87b74edeb872))
+* allow editing NPC location (Milten bug fix) ([f97df1b](https://github.com/Xetoxyc/gothic-remake-savegame-editor/commit/f97df1b0e49c07e09657c99a049d51c59c479015))
+
 ## [1.6.0](https://github.com/Xetoxyc/gothic-remake-savegame-editor/compare/v1.5.0...v1.6.0) (2026-07-27)
 
 
